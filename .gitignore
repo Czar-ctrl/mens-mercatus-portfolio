@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Never commit secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets/
+appsettings.*.json
+
+# Scratch
+*.log
+tmp/
