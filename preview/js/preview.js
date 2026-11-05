@@ -49,8 +49,10 @@
     });
   }
 
-  // Restrained in-view motion (no-op when prefers-reduced-motion)
+  // Restrained in-view motion (additive; content stays visible without this path)
+  const reveals = [...document.querySelectorAll('.reveal')];
   if (!reduce && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-motion');
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -58,9 +60,9 @@
           io.unobserve(entry.target);
         }
       }
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    for (const el of reveals) io.observe(el);
   } else {
-    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in'));
+    for (const el of reveals) el.classList.add('is-in');
   }
 })();

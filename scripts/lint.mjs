@@ -24,6 +24,14 @@ if (/ARCANUM/i.test(html)) errors.push('ARCANUM found in preview HTML');
 if (!/prefers-reduced-motion/.test(readFileSync(join(root, 'preview/css/preview.css'), 'utf8'))) {
   errors.push('reduced-motion rules missing from CSS');
 }
+const css = readFileSync(join(root, 'preview/css/preview.css'), 'utf8');
+if (/\.reveal\s*\{[^}]*opacity:\s*0/.test(css)) {
+  errors.push('reveal defaults to opacity 0 — cards must be visible without scroll/JS');
+}
+if (!/html\.js-motion/.test(css)) {
+  errors.push('js-motion progressive-enhancement gate missing from CSS');
+}
+
 if (!/data-filter/.test(html) || !/aria-pressed/.test(html)) errors.push('accessible filters missing');
 if (!/>406</.test(html) || !/>20</.test(html) || !/>24</.test(html)) errors.push('verified proof figures missing');
 if (!/See the systems/.test(html)) errors.push('stronger hero CTA missing');

@@ -1,12 +1,12 @@
 {
   "url": "http://127.0.0.1:4173/",
-  "transferBytesApprox": 341124,
+  "transferBytesApprox": 341395,
   "transferKB": 333,
   "byType": {
     "document": 18606,
     "image": 308324,
-    "stylesheet": 11701,
-    "script": 2493
+    "stylesheet": 11894,
+    "script": 2571
   },
   "resources": [
     {
@@ -61,13 +61,13 @@
       "url": "http://127.0.0.1:4173/css/preview.css",
       "type": "stylesheet",
       "status": 200,
-      "bytes": 11701
+      "bytes": 11894
     },
     {
       "url": "http://127.0.0.1:4173/js/preview.js",
       "type": "script",
       "status": 200,
-      "bytes": 2493
+      "bytes": 2571
     },
     {
       "url": "http://127.0.0.1:4173/media/mm-seal.svg",

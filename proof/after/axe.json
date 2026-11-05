@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-11-05T15:41:24.331Z",
+  "timestamp": "2026-11-05T15:47:41.880Z",
   "url": "http://127.0.0.1:4173/",
   "toolOptions": {
     "runOnly": {
@@ -3576,7 +3576,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"js-motion\">",
           "target": [
             "html"
           ]
@@ -4733,6 +4733,1956 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">01 · Career pipeline</p>",
+          "target": [
+            "#jobnet > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">Public: drafts only</span>",
+          "target": [
+            "#jobnet > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>JobNet Application</h3>",
+          "target": [
+            "#jobnet > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> Applying by hand is slow; blind auto-apply bots are unsafe.</p>",
+          "target": [
+            "#jobnet > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#jobnet > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\">",
+          "target": [
+            "#jobnet > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#jobnet > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#jobnet > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Designed and operated the pipeline</dd>",
+          "target": [
+            "#jobnet > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#jobnet > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Agents · Gmail · macOS automation · CV tailoring</dd>",
+          "target": [
+            "#jobnet > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/case-studies/jobnet/\" rel=\"noopener\">Read case study</a>",
+          "target": [
+            "#jobnet > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"https://mensmercatus.online/apps/jobnet/\" rel=\"noopener\">Open public demo</a>",
+          "target": [
+            "#jobnet > .card-body > .card-actions > .btn-secondary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">02 · Multimodal assistant</p>",
+          "target": [
+            "#assist > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">Live + labelled DEMO</span>",
+          "target": [
+            "#assist > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Mercatus Assist</h3>",
+          "target": [
+            "#assist > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> Recruiters and clients need grounded answers about the work, not a general chatbot.</p>",
+          "target": [
+            "#assist > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#assist > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\"><strong>Result</strong> On-device retrieval plus a server-side Gemini call through ASP.NET Core; citations checked; labelled DEMO when the live path is down. API key never reaches the browser.</p>",
+          "target": [
+            "#assist > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#assist > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#assist > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Built the API, proxy boundary, and assistant UI</dd>",
+          "target": [
+            "#assist > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#assist > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>C# · ASP.NET Core 8 · MiniLM · Gemini · nginx</dd>",
+          "target": [
+            "#assist > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/case-studies/assist/\" rel=\"noopener\">Read case study</a>",
+          "target": [
+            "#assist > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"https://mensmercatus.online/apps/mercatus-assist/\" rel=\"noopener\">Open Assist</a>",
+          "target": [
+            "#assist > .card-body > .card-actions > .btn-secondary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">03 · Workspace</p>",
+          "target": [
+            "#think > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">LIVE, capped</span>",
+          "target": [
+            "#think > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>THINK</h3>",
+          "target": [
+            "#think > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> A portfolio needs a real multimodal desk visitors can try without shipping provider keys to the browser.</p>",
+          "target": [
+            "#think > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#think > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\"><strong>Result</strong> React 19 + Vite workspace; chat, image and live voice via same-origin proxy to ASP.NET Core 8; per-IP caps; honest DEMO label on health failure.</p>",
+          "target": [
+            "#think > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#think > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#think > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Built the workspace and proxy API</dd>",
+          "target": [
+            "#think > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#think > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>React 19 · TypeScript · ASP.NET Core 8 · Gemini</dd>",
+          "target": [
+            "#think > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/case-studies/assist/\" rel=\"noopener\">Read case study</a>",
+          "target": [
+            "#think > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"https://mensmercatus.online/think/\" rel=\"noopener\">Open THINK</a>",
+          "target": [
+            "#think > .card-body > .card-actions > .btn-secondary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">04 · Research system</p>",
+          "target": [
+            "#forex > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">Paper only</span>",
+          "target": [
+            "#forex > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Forex Mercatus Codex</h3>",
+          "target": [
+            "#forex > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> Market research tools are easy to mistake for brokerages.</p>",
+          "target": [
+            "#forex > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#forex > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\"><strong>Result</strong> Hosted paper desk with session-scoped paper bot, up to 24 sessions and a public health JSON that reports paper_only. No broker credentials, no live orders.</p>",
+          "target": [
+            "#forex > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#forex > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#forex > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Built, hosted, and bounded the desk</dd>",
+          "target": [
+            "#forex > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#forex > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Python · Highcharts · Ubuntu VPS</dd>",
+          "target": [
+            "#forex > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/case-studies/forex/\" rel=\"noopener\">Read case study</a>",
+          "target": [
+            "#forex > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"https://mensmercatus.online/apps/forex-codex/\" rel=\"noopener\">Open paper desk</a>",
+          "target": [
+            "#forex > .card-body > .card-actions > .btn-secondary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">05 · Browser studio</p>",
+          "target": [
+            "#soundx > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">On-device</span>",
+          "target": [
+            "#soundx > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>SoundX AI</h3>",
+          "target": [
+            "#soundx > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> Beat production usually needs a DAW install and uploaded audio.</p>",
+          "target": [
+            "#soundx > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#soundx > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\"><strong>Result</strong> A browser studio with 20 on-device AI tools; audio stays on the machine; the Producer proposes and a person applies.</p>",
+          "target": [
+            "#soundx > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#soundx > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#soundx > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Built the studio, on-device tools and Producer Agent</dd>",
+          "target": [
+            "#soundx > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#soundx > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>React · Web Audio · TypeScript · on-device ML</dd>",
+          "target": [
+            "#soundx > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/case-studies/soundx/\" rel=\"noopener\">Read case study</a>",
+          "target": [
+            "#soundx > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"https://mensmercatus.online/apps/soundx-ai/\" rel=\"noopener\">Open SoundX AI</a>",
+          "target": [
+            "#soundx > .card-body > .card-actions > .btn-secondary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"idx\">06 · Guided route</p>",
+          "target": [
+            "#concierge > .card-body > .card-top > .idx"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"badge\">DEMO · guide shell</span>",
+          "target": [
+            "#concierge > .card-body > .card-top > .badge"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "19.8pt (26.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Mercatus Concierge</h3>",
+          "target": [
+            "#concierge > .card-body > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"problem\"><strong>Problem</strong> Visitors need an honest path through the desks without fake “all green” status.</p>",
+          "target": [
+            "#concierge > .card-body > .problem"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Problem</strong>",
+          "target": [
+            "#concierge > .card-body > .problem > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "11.0pt (14.72px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"result\"><strong>Result</strong> A guided shell that links into the live apps and shows real status — paper, demo, draft-only or local. No payments, no sign-in.</p>",
+          "target": [
+            "#concierge > .card-body > .result"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.6pt (11.52px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Result</strong>",
+          "target": [
+            "#concierge > .card-body > .result > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Role</dt>",
+          "target": [
+            "#concierge > .card-body > dl > div:nth-child(1) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Built the guide shell and status framing</dd>",
+          "target": [
+            "#concierge > .card-body > dl > div:nth-child(1) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "7.8pt (10.4px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dt>Stack</dt>",
+          "target": [
+            "#concierge > .card-body > dl > div:nth-child(2) > dt"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<dd>Static guide on the portfolio site</dd>",
+          "target": [
+            "#concierge > .card-body > dl > div:nth-child(2) > dd"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#c8102e",
+                "contrastRatio": 5.88,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://mensmercatus.online/apps/mercatus-concierge/\" rel=\"noopener\">Open Concierge walkthrough</a>",
+          "target": [
+            "#concierge > .card-body > .card-actions > .btn-primary.btn[rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "10.6pt (14.08px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-secondary\" href=\"../apps/mercatus-concierge/\">App notes in this repo</a>",
+          "target": [
+            "a[href$=\"mercatus-concierge/\"]:nth-child(2)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
                 "bgColor": "#f6f3f1",
                 "contrastRatio": 5.32,
                 "fontSize": "8.6pt (11.52px)",
@@ -4800,6 +6750,456 @@
           "html": "<p style=\"color:var(--muted);max-width:40rem\">AI-assisted means a model returns a bounded output: a draft, a summary, a setting. Agentic means the system can pick an approved tool, keep state, and propose the next step. It does not mean the system hides a failure.</p>",
           "target": [
             "#method > .wrap > p:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">01</div>",
+          "target": [
+            "li:nth-child(1) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Intent</h3>",
+          "target": [
+            "li:nth-child(1) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>What the person asked for</p>",
+          "target": [
+            "ol > li:nth-child(1) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">02</div>",
+          "target": [
+            "li:nth-child(2) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Context</h3>",
+          "target": [
+            "li:nth-child(2) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Only the data that task needs</p>",
+          "target": [
+            "ol > li:nth-child(2) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">03</div>",
+          "target": [
+            "li:nth-child(3) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Router</h3>",
+          "target": [
+            "li:nth-child(3) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Model, tool, or fallback</p>",
+          "target": [
+            "ol > li:nth-child(3) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">04</div>",
+          "target": [
+            "li:nth-child(4) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Tools</h3>",
+          "target": [
+            "li:nth-child(4) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Approved APIs and files</p>",
+          "target": [
+            "li:nth-child(4) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">05</div>",
+          "target": [
+            "li:nth-child(5) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Human gate</h3>",
+          "target": [
+            "li:nth-child(5) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Stop before irreversible acts</p>",
+          "target": [
+            "li:nth-child(5) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#c8102e",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.88,
+                "fontSize": "8.4pt (11.2px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.88"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"n\">06</div>",
+          "target": [
+            "li:nth-child(6) > .n"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#0a0a0a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 19.79,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 19.79"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Record</h3>",
+          "target": [
+            "li:nth-child(6) > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#5c5558",
+                "bgColor": "#ffffff",
+                "contrastRatio": 7.25,
+                "fontSize": "10.2pt (13.6px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 7.25"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Status, latency, source</p>",
+          "target": [
+            "li:nth-child(6) > p"
           ]
         },
         {
@@ -6251,7 +8651,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"js-motion\">",
           "target": [
             "html"
           ]
@@ -6398,7 +8798,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"js-motion\">",
           "target": [
             "html"
           ]
@@ -6437,7 +8837,7 @@
             }
           ],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"js-motion\">",
           "target": [
             "html"
           ]

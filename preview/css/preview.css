@@ -316,12 +316,21 @@ section + section { border-top: 1px solid var(--border); }
 }
 .flag strong { color: var(--fg); }
 
-/* Motion: in-view reveal (disabled under reduced-motion via media query above) */
+/* Motion: progressive enhancement — content always readable without JS/scroll.
+   Restrained rise animation only when html.js-motion is set and motion is OK. */
 .reveal {
-  opacity: 0; transform: translateY(12px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  opacity: 1;
+  transform: none;
 }
-.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: no-preference) {
+  html.js-motion .reveal.is-in {
+    animation: reveal-rise 0.45s ease both;
+  }
+}
+@keyframes reveal-rise {
+  from { transform: translateY(12px); }
+  to { transform: none; }
+}
 
 @media print {
   .site-header, .skip, .filters { position: static; }
