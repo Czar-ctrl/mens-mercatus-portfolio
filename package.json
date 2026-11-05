@@ -1,0 +1,19 @@
+{
+  "name": "mens-mercatus-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mens Mercatus public showcase + reviewable portfolio preview",
+  "scripts": {
+    "preview": "npx --yes serve preview -l 4173",
+    "lint": "node scripts/lint.mjs",
+    "test": "node scripts/content-check.mjs",
+    "test:e2e": "playwright test",
+    "proof:axe": "node scripts/axe-run.mjs",
+    "proof:weight": "node scripts/page-weight.mjs",
+    "proof:pdf": "node scripts/export-pdf.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.49.1"
+  }
+}
