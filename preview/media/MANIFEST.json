@@ -1,0 +1,58 @@
+[
+  {
+    "src": "apps/jobnet/screenshots/jobnet-application.png",
+    "dst": "preview/media/jobnet.webp",
+    "label": "JobNet Application public demo",
+    "w": 1280,
+    "h": 800,
+    "bytes": 47896
+  },
+  {
+    "src": "apps/mercatus-assist/screenshots/assist.png",
+    "dst": "preview/media/assist.webp",
+    "label": "Mercatus Assist",
+    "w": 1280,
+    "h": 800,
+    "bytes": 63998
+  },
+  {
+    "src": "apps/think/screenshots/chat.png",
+    "dst": "preview/media/think.webp",
+    "label": "THINK chat",
+    "w": 1280,
+    "h": 800,
+    "bytes": 26898
+  },
+  {
+    "src": "apps/forex-codex/screenshots/god-mode-desk.png",
+    "dst": "preview/media/forex.webp",
+    "label": "Forex Mercatus Codex God Mode",
+    "w": 1280,
+    "h": 800,
+    "bytes": 56618
+  },
+  {
+    "src": "apps/soundx-ai/screenshots/studio.png",
+    "dst": "preview/media/soundx.webp",
+    "label": "SoundX AI studio",
+    "w": 1280,
+    "h": 800,
+    "bytes": 51612
+  },
+  {
+    "src": "apps/mercatus-concierge/screenshots/concierge.png",
+    "dst": "preview/media/concierge.webp",
+    "label": "Mercatus Concierge",
+    "w": 1280,
+    "h": 800,
+    "bytes": 33174
+  },
+  {
+    "src": "assets/mercatus-cartel-badge.png",
+    "dst": "preview/media/mm-badge.webp",
+    "label": "Mens Mercatus Mercatus Cartel badge",
+    "w": 512,
+    "h": 512,
+    "bytes": 27322
+  }
+]

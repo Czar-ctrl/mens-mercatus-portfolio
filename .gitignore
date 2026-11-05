@@ -1,19 +1,5 @@
-# OS / editor
+node_modules/
+test-results/
+playwright-report/
 .DS_Store
-Thumbs.db
-*.swp
-.vscode/
-.idea/
-
-# Never commit secrets
-.env
-.env.*
-*.pem
-*.key
-*.p12
-secrets/
-appsettings.*.json
-
-# Scratch
-*.log
-tmp/
+proof/after/playwright-results.json

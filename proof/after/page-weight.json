@@ -1,0 +1,80 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "transferBytesApprox": 341124,
+  "transferKB": 333,
+  "byType": {
+    "document": 18606,
+    "image": 308324,
+    "stylesheet": 11701,
+    "script": 2493
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:4173/media/assist.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 63998
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/forex.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 56618
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/soundx.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 51612
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/jobnet.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 47896
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/concierge.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 33174
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/mm-badge.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 27322
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/think.webp",
+      "type": "image",
+      "status": 200,
+      "bytes": 26898
+    },
+    {
+      "url": "http://127.0.0.1:4173/",
+      "type": "document",
+      "status": 200,
+      "bytes": 18606
+    },
+    {
+      "url": "http://127.0.0.1:4173/css/preview.css",
+      "type": "stylesheet",
+      "status": 200,
+      "bytes": 11701
+    },
+    {
+      "url": "http://127.0.0.1:4173/js/preview.js",
+      "type": "script",
+      "status": 200,
+      "bytes": 2493
+    },
+    {
+      "url": "http://127.0.0.1:4173/media/mm-seal.svg",
+      "type": "image",
+      "status": 200,
+      "bytes": 806
+    }
+  ],
+  "note": "Local static transfer sizes (uncompressed body lengths). Not a full Lighthouse lab run."
+}

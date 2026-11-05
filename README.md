@@ -21,7 +21,7 @@ Mens Mercatus is the AI agents and LLM automation practice of **Katlego Mokoto**
 |---|---|---|---|
 | [Mercatus Assist](apps/mercatus-assist/) | LIVE + labelled DEMO | AI assistant that answers from the site's own pages and cites its sources | [Open](https://mensmercatus.online/apps/mercatus-assist/) |
 | [THINK](apps/think/) | LIVE, capped | Gemini multimodal workspace: chat, image and live voice, key kept on the server | [Open](https://mensmercatus.online/think/) |
-| [JobNet Application](apps/jobnet/) | Drafts only | Career pipeline: shortlist, explainable match and tailored drafts a person reviews and sends | [Open](https://mensmercatus.online/apps/jobnet/) |
+| [JobNet Application](apps/jobnet/) | Public: drafts only · Private: capped gated send | Career pipeline: shortlist, match and tailored drafts on the public demo; private pipeline may send only with a printed verified employer address and quality checks | [Open](https://mensmercatus.online/apps/jobnet/) |
 | [Forex Mercatus Codex](apps/forex-codex/) | Paper only | Research terminal and session-scoped paper bot, built so it can't be mistaken for a brokerage | [Open](https://mensmercatus.online/apps/forex-codex/) |
 | [SoundX AI](apps/soundx-ai/) | Browser demo | Beat studio in a browser tab with on-device AI tools; audio stays on the machine | [Open](https://mensmercatus.online/apps/soundx-ai/) |
 | [Mercatus Concierge](apps/mercatus-concierge/) | DEMO · guide shell | A guided route through the desks, with honest status for each one | [Open](https://mensmercatus.online/apps/mercatus-concierge/) |
@@ -32,8 +32,8 @@ Smaller builds and explainers on the site: [Event Net](https://mensmercatus.onli
 
 Every system in this portfolio follows the same rules:
 
-1. **A human yes on irreversible steps.** Sends, payments, refunds, applications and orders wait for a named person. Agents prepare, recommend and flag; people decide.
-2. **Drafts only.** Outbound messages are produced as drafts. JobNet never auto-applies and never auto-sends — every email waits in Gmail as a draft until a person presses Send.
+1. **A human yes on irreversible steps.** Sends, payments, refunds, applications and orders wait for a named person by default. Agents prepare, recommend and flag; people decide.
+2. **Drafts on the public JobNet demo; gated sends only in the private pipeline.** The public JobNet page is drafts-only and never auto-applies. Separately, the private server pipeline may send a capped letter only when the posting prints a verified employer address and the letter passes quality checks; otherwise the send is held. Do not read the private system as “never sending.”
 3. **Keys stay server-side.** Model calls go through a same-origin proxy to a C# / ASP.NET Core service. The browser never receives a provider key.
 4. **Caps and a labelled demo mode.** Per-IP daily caps on public AI paths, exponential backoff on 429/5xx, and a visible DEMO state when the live path is unhealthy — live and demo are never the same state.
 5. **Honest scope.** Paper is labelled paper, demo is labelled demo, and limits are written down on every app page.
