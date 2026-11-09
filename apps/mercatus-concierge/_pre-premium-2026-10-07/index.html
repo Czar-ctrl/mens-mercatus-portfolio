@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mercatus Concierge — high-end product desk for cold-call demos and portfolio video. Blueprint Assist at the core.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Mercatus Concierge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pitch-anim/pitch.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="mark" href="#">Mercatus <span>Concierge</span></a>
+      <ul class="nav-links">
+        <li><a href="#value">Value</a></li>
+        <li><a href="#desks">Desks</a></li>
+        <li><a href="#cta">Open</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: pitch reel (primary) + Assist (compact secondary) -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Product · Live · Blueprint</p>
+          <h1>Mercatus Concierge</h1>
+          <p class="hero-sub">The desk that sells the work before the call ends.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#" id="open-concierge" title="Concierge app is a separate Origin build">Open Concierge</a>
+            <a class="btn btn-ghost" href="#cta">Book a walkthrough</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <!-- Primary hero visual: CSS/JS pitch motion graphic -->
+          <div class="pitch-reel" data-pitch-reel aria-label="Mercatus Concierge pitch animation">
+            <div class="pitch-scene" aria-hidden="true">
+              <div class="pitch-desk"></div>
+              <div class="pitch-canvas">
+                <video class="pitch-video" muted loop playsinline preload="auto"
+                  src="pitch-video/mercatus-concierge-pitch.mp4"></video>
+                <div class="pitch-canvas-frame"></div>
+                <div class="pitch-canvas-label">Concierge</div>
+              </div>
+              <div class="pitch-hand"></div>
+              <div class="pitch-phone">
+                <div class="pitch-phone-bezel">
+                  <div class="pitch-phone-screen">
+                    <div class="pitch-ui-stub">
+                      <div class="pitch-ui-bar"></div>
+                      <div class="pitch-ui-title">Concierge</div>
+                      <div class="pitch-ui-line mid"></div>
+                      <div class="pitch-ui-line short"></div>
+                      <div class="pitch-ui-line mid"></div>
+                      <div class="pitch-ui-card"><span>Desk live</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pitch-figure">
+                <div class="pitch-figure-glow"></div>
+                <div class="pitch-figure-body"></div>
+              </div>
+              <div class="pitch-narration">
+                <p>Your digital footprint.<br><span>One concierge.</span></p>
+              </div>
+              <div class="pitch-fade"></div>
+            </div>
+            <div class="pitch-still" aria-hidden="true">
+              <video muted playsinline preload="metadata"
+                src="pitch-video/mercatus-concierge-pitch.mp4"></video>
+              <div class="pitch-still-overlay">
+                <div class="pitch-still-badge">Mercatus Concierge</div>
+                <p>Your digital footprint.<br><span>One concierge.</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assist remains accessible as compact secondary card (IDs preserved) -->
+          <div class="assist-stage assist-stage--compact" aria-label="Mercatus Assist product stage">
+            <div class="stage-canvas" aria-hidden="true"></div>
+
+            <div class="stage-frame">
+              <div class="stage-chrome">
+                <div class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="chrome-label">Concierge · <em>Assist</em></div>
+                <div class="chrome-badge">.NET</div>
+              </div>
+
+              <div class="stage-body">
+                <!-- Collapsed: robot silhouette -->
+                <div class="assist-collapsed" id="assist-collapsed" role="button" tabindex="0" aria-label="Talk with Assist">
+                  <div class="robot-sil" aria-hidden="true">
+                    <div class="head">
+                      <span class="eye l"></span>
+                      <span class="eye r"></span>
+                    </div>
+                    <div class="torso"><div class="core"></div></div>
+                  </div>
+                  <span class="talk-cta">Talk with Assist</span>
+                </div>
+
+                <!-- Expanded: styled chat panel (deep-links to live Assist) -->
+                <div class="assist-panel" id="assist-panel" hidden>
+                  <div class="assist-msgs">
+                    <div class="msg msg-bot">
+                      <strong>Assist</strong>
+                      Blueprint policy coach online. Ask about desks, demos, or weight class.
+                    </div>
+                    <div class="msg msg-hint">
+                      Send opens the live .NET robot on mensmercatus.online
+                    </div>
+                  </div>
+                  <form class="assist-compose" id="assist-form" autocomplete="off">
+                    <input type="text" id="assist-input" name="q" placeholder="Ask Assist…" maxlength="280" aria-label="Message for Assist">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </form>
+                  <div class="panel-footer">
+                    <button type="button" id="assist-collapse">Collapse</button>
+                    <a href="https://mensmercatus.online/apps/mercatus-assist/" id="assist-open-full" target="_blank" rel="noopener">Open full Assist ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="captions" aria-hidden="true">
+              <div class="cap on">Cold-call ready</div>
+              <div class="cap">Portfolio video</div>
+              <div class="cap">Assist · live</div>
+              <div class="cap">Blueprint chrome</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE -->
+    <section class="section" id="value">
+      <div class="wrap">
+        <p class="section-label">Value</p>
+        <div class="value-grid">
+          <article class="pillar">
+            <h3>High-end product</h3>
+            <p>Surface the work like inventory worth buying—not a brochure.</p>
+          </article>
+          <article class="pillar">
+            <h3>Digital footprint</h3>
+            <p>One place that proves presence, motion, and finish.</p>
+          </article>
+          <article class="pillar">
+            <h3>Right market</h3>
+            <p>Aimed at buyers who already speak quality.</p>
+          </article>
+          <article class="pillar">
+            <h3>Right weight class</h3>
+            <p>Sized for serious desks—not noise, not fluff.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESKS -->
+    <section class="section desks" id="desks">
+      <div class="wrap">
+        <p class="section-label">Desks</p>
+        <div class="desk-grid">
+          <article class="desk">
+            <div>
+              <div class="desk-num">01</div>
+              <h3>Ops Launch</h3>
+              <p>Stand up the runbook and keep it tight.</p>
+            </div>
+          </article>
+          <article class="desk">
+            <div>
+              <div class="desk-num">02</div>
+              <h3>Client Portal</h3>
+              <p>Shared surface for status, assets, decisions.</p>
+            </div>
+          </article>
+          <article class="desk">
+            <div>
+              <div class="desk-num">03</div>
+              <h3>Launch Path</h3>
+              <p>From demo to live without the fog.</p>
+            </div>
+          </article>
+          <article class="desk">
+            <div>
+              <div class="desk-num">04</div>
+              <h3>Deploy Path</h3>
+              <p>Ship the build where it belongs.</p>
+            </div>
+          </article>
+          <article class="desk">
+            <div>
+              <div class="desk-num">05</div>
+              <h3>Meeting Desk</h3>
+              <p>Walkthroughs that stay on product.</p>
+            </div>
+          </article>
+          <article class="desk">
+            <div>
+              <div class="desk-num">06</div>
+              <h3>Workspace</h3>
+              <p>Your day desk—files, Assists, next move.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="wrap">
+        <h2>Open the desk.</h2>
+        <p>Concierge app ships as a separate Origin build. Assist is live now.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" id="cta-open" title="Concierge app is a separate Origin build">Open Concierge</a>
+          <a class="btn btn-ghost" href="mailto:hello@mensmercatus.online?subject=Concierge%20walkthrough">Book a walkthrough</a>
+        </div>
+        <p class="cta-note">App · Origin · separate · Assist · mensmercatus.online</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span>© Mercatus Concierge</span>
+      <a href="https://mensmercatus.online/apps/mercatus-assist/" target="_blank" rel="noopener">Mercatus Assist</a>
+    </div>
+  </footer>
+
+  <!-- Same-window Assist launch overlay (no iframe — CSP frame-ancestors blocks) -->
+  <div class="assist-overlay" id="assist-overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title" hidden>
+    <div class="overlay-bar">
+      <div class="chrome-label">Concierge · <em>Assist</em> · .NET</div>
+      <div class="overlay-actions">
+        <a id="overlay-go" href="https://mensmercatus.online/apps/mercatus-assist/" rel="noopener">Continue to Assist</a>
+        <button type="button" id="overlay-close">Close</button>
+      </div>
+    </div>
+    <div class="overlay-frame-wrap">
+      <div class="robot-sil overlay-robot" aria-hidden="true">
+        <div class="head">
+          <span class="eye l"></span>
+          <span class="eye r"></span>
+        </div>
+        <div class="torso"><div class="core"></div></div>
+      </div>
+      <h2 id="overlay-title">Talk with Assist</h2>
+      <p>Live Blueprint robot on mensmercatus.online. Host CSP blocks iframe embed—opening full Assist in this tab.</p>
+      <a class="btn btn-primary" id="overlay-launch" href="https://mensmercatus.online/apps/mercatus-assist/">Launch Assist</a>
+    </div>
+  </div>
+
+  <script src="pitch-anim/pitch.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

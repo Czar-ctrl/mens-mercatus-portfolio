@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-humankind-4476147900",
+  "jobId": "li-humankind-4476147900",
+  "title": "Lead Software Engineer",
+  "company": "Humankind Group",
+  "location": "Johannesburg Metropolitan Area",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4476147900",
+  "signal": "medium",
+  "packet": "Here's a draft apply packet for the Lead Software Engineer role at Humankind Group.\n\n**Cover Draft:**\n\nDear Humankind Group Hiring Team,\n\nI am writing to express my keen interest in the Lead Software Engineer position in Johannesburg, as advertised. With a strong background in AI and Systems Engineering, coupled with hands-on experience in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems, I am confident in my ability to contribute significantly to your CI/CD, DevSecOps, and AI-assisted development initiatives. I am eager to leverage my player-coach approach to drive architectural decisions and modernise your development processes.\n\n**Fit Notes:**\n\n*   **Player-Coach:** My experience blends deep technical expertise with leadership, enabling me to guide and mentor teams while remaining hands-on with development.\n*   **Modernisation:** I have a proven track record in implementing and optimising CI/CD pipelines, integrating DevSecOps practices, and exploring cutting-edge AI applications like RAG and agents.\n*   **Technical Stack:** My proficiency in Python, TypeScript, .NET, and distributed systems aligns directly with the requirements for modern software architecture and development.\n*   **AI Focus:** My background in AI and Systems Engineering provides a unique perspective for integrating AI-assisted development tools and strategies.\n\n**How to Submit:**\n\n1.  Visit the Humankind Group careers page.\n2.  Locate the Lead Software Engineer (Johannesburg) position.\n3.  Follow the instructions on the employer's site to submit your application.\n4.  Ensure all required fields are completed accurately.\n5.  Upload your CV and any supplementary documents as requested.\n\nNext: Open the employer's site to submit your application.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:38.811842+00:00"
+}

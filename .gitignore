@@ -17,3 +17,9 @@ appsettings.*.json
 # Scratch
 *.log
 tmp/
+
+# Preview tooling
+node_modules/
+test-results/
+playwright-report/
+proof/after/playwright-results.json

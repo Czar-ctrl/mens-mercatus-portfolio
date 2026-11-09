@@ -1,0 +1,69 @@
+WEBVTT
+
+1
+00:00:04.100 --> 00:00:06.479
+This is Mens Mercatus Fleet, a maintenance
+
+2
+00:00:06.499 --> 00:00:08.650
+desk for South African vehicle fleets.
+
+3
+00:00:08.620 --> 00:00:10.808
+It runs as a FastAPI app, and on
+
+4
+00:00:10.828 --> 00:00:13.360
+a Mac mini as a standalone macOS app.
+
+5
+00:00:13.380 --> 00:00:17.390
+Every vehicle, workshop and price you see here is example data.
+
+6
+00:00:17.410 --> 00:00:20.350
+The Vehicle Desk approves minor repairs by rule.
+
+7
+00:00:20.370 --> 00:00:23.165
+Fault to Repair turns a fault code and a workshop quote
+
+8
+00:00:23.185 --> 00:00:25.570
+into a fair price in rand and an approval tier.
+
+9
+00:00:25.590 --> 00:00:29.102
+Fifteen Fleet Intelligence tools cover warranty blocks, service
+
+10
+00:00:29.122 --> 00:00:32.298
+reminders, pre-trip photo checks, fuel slip checks, South
+
+11
+00:00:32.318 --> 00:00:35.270
+African compliance, theft alerts and driver coaching.
+
+12
+00:00:35.290 --> 00:00:38.783
+The Godmode desk adds two tickers, a command palette, an offline
+
+13
+00:00:38.803 --> 00:00:42.350
+Gauteng map with trip replay, and a hash-chained decision ledger.
+
+14
+00:00:42.370 --> 00:00:45.909
+WhatsApp and Teams messages stay drafts, and virtual cards are
+
+15
+00:00:45.929 --> 00:00:48.550
+mock only, so a person signs off every action.
+
+16
+00:00:48.570 --> 00:00:51.922
+Twelve optional integrations are switched by flags, each with a
+
+17
+00:00:51.942 --> 00:00:54.920
+fallback, and four hundred and six automated tests pass.

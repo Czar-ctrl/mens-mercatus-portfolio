@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Mercatus Assist">
+  <rect width="32" height="32" fill="#030303"/>
+  <circle cx="16" cy="16" r="10" fill="none" stroke="#c8102e" stroke-width="2"/>
+  <circle cx="16" cy="16" r="3.5" fill="#c8102e"/>
+  <path d="M16 6.5c1.2 2.2 1.2 4.4 0 6.5-1.2-2.1-1.2-4.3 0-6.5z" fill="#c9a227" opacity="0.9"/>
+</svg>

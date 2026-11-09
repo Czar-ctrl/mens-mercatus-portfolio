@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-the-4474044276",
+  "jobId": "li-the-4474044276",
+  "title": "Solutions Architect",
+  "company": "The Shoprite Group of Companies",
+  "location": "Brackenfell, Western Cape, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474044276",
+  "signal": "medium",
+  "packet": "Here's a draft for your Solutions Architect application packet.\n\n**Cover Letter Draft:**\n\nDear Hiring Team,\n\nI am writing to express my keen interest in the Solutions Architect position at The Shoprite Group of Companies, as advertised. With a strong background in AI and Systems Engineering, coupled with expertise in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems, I am confident in my ability to contribute to your data, application, and technology architecture initiatives. My experience in designing and implementing complex systems aligns well with the requirements of this role, and I am eager to leverage my skills to drive innovation within the enterprise retail sector.\n\nThank you for considering my application.\n\nSincerely,\n[Your Name]\n\n**Fit Notes:**\n\n*   **Role Alignment:** Solutions Architect at The Shoprite Group.\n*   **Company Focus:** Data/application/technology architecture across portfolios. Enterprise retail architecture experience is a plus.\n*   **Candidate Strengths:** AI/Systems Engineer with skills in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems.\n*   **Key Match:** Your experience in distributed systems and AI technologies can be applied to modernizing retail architecture. Your engineering background provides a solid foundation for understanding and designing complex solutions.\n\n**How to Submit:**\n\n1.  **Open Employer Site:** Navigate to The Shoprite Group of Companies careers portal.\n2.  **Locate Role:** Search for the \"Solutions Architect\" position in Brackenfell, Western Cape.\n3.  **Prepare Documents:** Have your CV and this cover letter draft ready.\n4.  **Complete Application Form:** Fill in all required fields accurately.\n5.  **Upload Documents:** Submit your CV and the drafted cover letter.\n6.  **Review and Submit:** Double-check all information before final submission.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:43.142982+00:00"
+}

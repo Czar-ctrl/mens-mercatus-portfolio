@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cartel" data-nav="flow" data-stage="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Mercatus Concierge — guided desk for client digital presence and marketing. Plan, studio, paint, Ops, and role kits by Katlego Mokoto / Mens Mercatus.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Mercatus Concierge · Mens Mercatus</title>
+  <link rel="canonical" href="https://mensmercatus.online/apps/makedas-canvas/">
+  <meta property="og:title" content="Mercatus Concierge · Mens Mercatus">
+  <meta property="og:description" content="Mercatus Concierge — design direction, Plan/Build, studio, paint, and Ops. Editorial black, brown, gold, and hazel.">
+  <meta property="og:url" content="https://mensmercatus.online/apps/makedas-canvas/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+  <meta property="og:site_name" content="Mens Mercatus">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mercatus Concierge · Mens Mercatus">
+  <meta name="twitter:description" content="Mercatus Concierge by Katlego Mokoto / Mens Mercatus.">
+  <meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261014ux4">
+<!-- preview showcase AI --><script>document.documentElement.classList.add('mm-sc-dark')</script><script src="/js/ai/config.js?v=m3"></script><link rel="stylesheet" href="/css/preview-ai.css?v=w3c"/><script defer src="/js/ai/ai-boot.js?v=m1"></script><!-- /preview showcase AI --><!-- mm-seo --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mercatus Concierge", "url": "https://mensmercatus.online/apps/makedas-canvas/", "description": "Mercatus Concierge — guided desk for client digital presence and marketing. Plan, studio, paint, Ops, and role kits by Katlego Mokoto / Mens Mercatus.", "applicationCategory": "WebApplication", "operatingSystem": "Web browser", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}, "isAccessibleForFree": true}</script><!-- /mm-seo --></head>
+<body>
+  <div id="direction-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="direction-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">Design direction</p>
+          <h2 id="direction-title">Pick a look for the shell</h2>
+          <p class="modal-sub">Click a shell look to apply it straight away. You stay on the page you were on.</p>
+        </div>
+        <button type="button" class="icon-btn" data-close-modal aria-label="Close">✕</button>
+      </div>
+      <div class="direction-grid" id="direction-grid">
+        <button type="button" class="direction-card is-selected" data-theme="cartel" aria-pressed="true">
+          <div class="direction-preview direction-preview--cartel" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+          <strong>Maison</strong>
+          <span>Black / brown · gold · hazel</span>
+        </button>
+        <button type="button" class="direction-card" data-theme="cream" aria-pressed="false">
+          <div class="direction-preview direction-preview--cream" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+          <strong>Cream atelier</strong>
+          <span>Warm paper · soft ink · gallery</span>
+        </button>
+        <button type="button" class="direction-card" data-theme="night" aria-pressed="false">
+          <div class="direction-preview direction-preview--night" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+          <strong>Night Shift</strong>
+          <span>Black / yellow · high contrast</span>
+        </button>
+      </div>
+      <section class="hero-presets" aria-labelledby="hero-presets-title">
+        <h3 class="eyebrow" id="hero-presets-title">Studio hero presets</h3>
+        <p class="modal-sub small">Changes the Studio preview hero only, not the shell look. Opens Studio so you can see it.</p>
+        <div class="direction-grid hero-grid" id="hero-grid">
+          <button type="button" class="direction-card hero-card" data-hero="none" aria-pressed="false">
+            <div class="direction-preview direction-preview--plain" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+            <strong>None</strong>
+            <span>Plain Studio preview</span>
+          </button>
+          <button type="button" class="direction-card hero-card" data-hero="globe" aria-pressed="false">
+            <div class="direction-preview direction-preview--globe" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+            <strong>Immersive globe</strong>
+            <span>Blue orb behind the hero</span>
+          </button>
+          <button type="button" class="direction-card hero-card" data-hero="aurora" aria-pressed="false">
+            <div class="direction-preview direction-preview--aurora" aria-hidden="true"><span class="dp-bar"></span><span class="dp-rail"></span><span class="dp-stage"></span></div>
+            <strong>Aurora hero</strong>
+            <span>Soft gradient behind the hero</span>
+          </button>
+        </div>
+      </section>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-ghost" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden role="status"></div>
+
+  <a class="skip-link" href="#stage">Skip to content</a>
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button type="button" class="icon-btn nav-toggle" id="btn-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="app-nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <a class="brand" href="../../index.html" title="Mens Mercatus home">
+          <img src="../../assets/marks/mark-wheat-16.svg" width="18" height="18" alt="">
+          <span class="brand-word">Mercatus Concierge</span>
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <span class="topbar-crumb" id="topbar-crumb">Home</span>
+        <!-- Product chrome only — Publish / Untitled controls stay hidden -->
+        <label class="project-name builder-chrome" hidden>
+          <span class="sr-only">Project name</span>
+          <input id="project-name" type="text" value="Untitled project" maxlength="64" spellcheck="false" tabindex="-1">
+        </label>
+      </div>
+      <div class="topbar-actions">
+        <button type="button" class="btn btn-ghost btn-sm topbar-home" data-goto="home">Home</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="btn-look" data-open-look>Change look</button>
+        <button type="button" class="icon-btn rail-collapse" id="btn-rail-collapse" aria-pressed="false" aria-label="Collapse navigation" title="Collapse navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM9 5v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+        </button>
+        <button type="button" class="btn btn-ghost builder-chrome" id="btn-overview" hidden tabindex="-1" aria-hidden="true" aria-pressed="false">Overview</button>
+        <button type="button" class="btn btn-ghost builder-chrome" id="btn-new-look" hidden tabindex="-1" aria-hidden="true">New look</button>
+        <button type="button" class="btn btn-ghost builder-chrome" id="btn-preview" hidden tabindex="-1" aria-hidden="true" aria-pressed="true">Preview</button>
+        <button type="button" class="btn btn-primary builder-chrome" id="btn-publish" hidden tabindex="-1" aria-hidden="true">Publish</button>
+      </div>
+    </header>
+
+    <!-- Legacy stage strip: kept (hidden) so older modules that anchor to it still work. Primary nav is the left rail. -->
+    <div class="puzzle-strip" id="puzzle-strip" hidden aria-hidden="true">
+      <div class="puzzle-track" id="puzzle-track"></div>
+    </div>
+    <div class="overview-floor" id="overview-floor" hidden>
+      <div class="tile-grid" id="tile-grid"></div>
+    </div>
+
+    <div class="body" id="flow-body" data-layout="full">
+      <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+      <nav class="icon-rail app-nav" id="app-nav" aria-label="Concierge sections">
+        <div class="nav-group">
+          <div class="nav-items" role="tablist" aria-orientation="vertical" aria-label="Start">
+            <button type="button" class="rail-btn" role="tab" data-stage="home" title="Home" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6v8H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 19v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Home</span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading" id="nav-h-create">Create</p>
+          <div class="nav-items" role="tablist" aria-orientation="vertical" aria-labelledby="nav-h-create">
+            <button type="button" class="rail-btn" role="tab" data-stage="intent" title="Plan (project brief)" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+              <span>Plan</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="design" title="Design" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M7 14l4-8 3 5 2-3 4 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Design</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="chat" title="Chat" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <span>Chat</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="studio" title="Studio" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Studio</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="paint" title="Paint" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c4-1 8-8 6-12 2 1 5 4 4 7-3 5-7 6-10 5z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="10" r="1.2" fill="currentColor"/></svg>
+              <span>Paint</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="atelier" title="Concierge overview" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4zM8 7V5h8v2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Concierge</span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading" id="nav-h-run">Run</p>
+          <div class="nav-items" role="tablist" aria-orientation="vertical" aria-labelledby="nav-h-run">
+            <button type="button" class="rail-btn" role="tab" data-stage="ops" title="Ops Launch" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 9h8M8 13h5M8 17h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Ops</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="launch" title="Launch Path" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Launch Path</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="roles" title="Role Kits" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 18c1.5-2.5 3.5-3.5 5-3.5S12.5 15.5 14 18M14 18c1-1.8 2.2-2.5 3.5-2.5S20 16.8 21 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Role Kits</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="portal" title="Client Portal" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Client Portal</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="meeting" title="Meeting Desk" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M17 10l4-2v8l-4-2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Meeting Desk</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="replit" title="Agent Lab" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="7" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13" y="5" width="7" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="13" width="7" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13" y="13" width="7" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <span>Agent Lab</span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading" id="nav-h-present">Present</p>
+          <div class="nav-items" role="tablist" aria-orientation="vertical" aria-labelledby="nav-h-present">
+            <button type="button" class="rail-btn" role="tab" data-stage="slides" title="Slides" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Slides</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="ide" title="IDE" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v12H5zM9 10l2 2-2 2M13 14h3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>IDE</span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading" id="nav-h-other">Other</p>
+          <div class="nav-items" role="tablist" aria-orientation="vertical" aria-labelledby="nav-h-other">
+            <button type="button" class="rail-btn" role="tab" data-stage="habit" title="Focus timer" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 9v4l3 2M10 3h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Focus</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="games" title="Games" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="12" r="1.2" fill="currentColor"/><circle cx="15" cy="12" r="1.2" fill="currentColor"/></svg>
+              <span>Games</span>
+            </button>
+            <button type="button" class="rail-btn" role="tab" data-stage="settings" title="Settings" aria-selected="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Settings</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+
+      <aside class="left-panel" id="left-panel">
+        <!-- Intent -->
+        <section class="panel-view is-active" data-view="intent">
+          <div class="panel-head"><h1>Plan your project</h1></div>
+          <p class="panel-copy">Describe what you are building in a sentence or two. Your brief seeds the Plan chat, First Look and Launch Path.</p>
+          <label class="field">
+            <span>Project intent</span>
+            <textarea id="intent-text" rows="4" maxlength="400" placeholder="e.g. Landing page for Mens Mercatus Blueprint event — bold, red/black, CTA to Open Concierge"></textarea>
+          </label>
+          <div class="settings-block" id="first-look-block">
+            <p class="eyebrow">First Look</p>
+            <p class="panel-copy small">Turns your brief into a sharper one-liner with a rough preview score. Runs locally — a heuristic, not AI.</p>
+            <button type="button" class="btn btn-ghost btn-block" id="btn-first-look">Sharpen with First Look</button>
+            <div id="first-look-out" class="lp-first-look" hidden></div>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="btn-save-intent">Save brief &amp; continue to Design</button>
+          <button type="button" class="btn btn-ghost btn-block" data-goto="launch">Score it in Launch Path</button>
+        </section>
+
+        <!-- Design -->
+        <section class="panel-view" data-view="design" hidden>
+          <div class="panel-head"><h1>Design</h1></div>
+          <p class="panel-copy">Choose a look and edit the preview copy. Changes show live in the preview on the right.</p>
+          <div class="settings-block">
+            <p class="eyebrow">Active theme</p>
+            <p id="active-theme-label" class="settings-value">Blueprint</p>
+            <button type="button" class="btn btn-ghost btn-block" id="btn-open-directions">Change design direction</button>
+          </div>
+          <div class="settings-block">
+            <p class="eyebrow">Studio artboard copy</p>
+            <label class="field"><span>Headline</span><input type="text" id="art-headline" value="Mens Mercatus" maxlength="48"></label>
+            <label class="field"><span>Subline</span><input type="text" id="art-subline" value="Systems · Atelier · Blueprint" maxlength="64"></label>
+            <label class="field"><span>Accent note</span><input type="text" id="art-note" value="Free local preview — no AI credits" maxlength="80"></label>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" data-goto="chat">Continue to Chat</button>
+        </section>
+
+        <!-- Chat -->
+        <section class="panel-view" data-view="chat" hidden>
+          <div class="panel-head">
+            <h1>Concierge chat</h1>
+            <div class="mode-toggle" role="tablist" aria-label="Chat mode">
+              <button type="button" class="mode-btn is-active" data-mode="plan" role="tab" aria-selected="true">Plan</button>
+              <button type="button" class="mode-btn" data-mode="build" role="tab" aria-selected="false">Build</button>
+            </div>
+          </div>
+          <p class="mode-hint" id="mode-hint">Plan — advisory replies. Local demo only · free.</p>
+          <p class="panel-copy small">Plan gives you a page outline. Build generates the landing page in the preview and edits it with follow-ups. Replies come from local templates, not AI.</p>
+          <div class="prompt-chips" id="prompt-chips" aria-label="Richer attachment prompts"></div>
+          <div class="chat-log" id="chat-log" aria-live="polite"></div>
+          <div class="attach-chips" id="attach-chips" hidden></div>
+          <form class="chat-compose" id="chat-form">
+            <button type="button" class="icon-btn attach-btn" id="btn-attach" title="Attach image or PDF" aria-label="Attach file">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8v7a4 4 0 1 1-8 0V7a2.5 2.5 0 0 1 5 0v8a1 1 0 1 1-2 0V8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </button>
+            <input type="file" id="file-input" accept="image/*,.pdf,application/pdf" hidden multiple>
+            <input type="text" id="chat-input" placeholder="Describe a layout, palette, or tweak…" autocomplete="off" maxlength="500">
+            <button type="submit" class="btn btn-primary btn-send">Send</button>
+          </form>
+        </section>
+
+        <!-- Studio (tools + copy) -->
+        <section class="panel-view" data-view="studio" hidden>
+          <div class="panel-head"><h1>Studio</h1></div>
+          <p class="panel-copy">Describe a page in the build bar, then refine it: select blocks, edit text in place, sketch annotations or pin comments.</p>
+          <div class="settings-block">
+            <p class="eyebrow">How to use the tools</p>
+            <ul class="bullet-list">
+              <li><strong>Select</strong> — click a block to highlight it.</li>
+              <li><strong>Edit text</strong> — click any text and type.</li>
+              <li><strong>Annotate</strong> — drag to draw (Shift for a box).</li>
+              <li><strong>Comment</strong> — click to drop a numbered pin.</li>
+            </ul>
+          </div>
+          <div class="settings-block" id="artifact-block">
+            <p class="eyebrow">Project type</p>
+            <p class="panel-copy small">Tag what this project is. Saved locally as shared context.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" data-goto="paint">Continue to Paint</button>
+        </section>
+
+        <!-- Atelier -->
+        <section class="panel-view" data-view="atelier" hidden>
+          <div class="panel-head"><h1>Concierge</h1></div>
+          <p class="panel-copy">An overview of everything in Mercatus Concierge, with shortcuts. Want two views side by side? Open a second copy in a new tab.</p>
+          <a class="btn btn-primary btn-block" href="/apps/makedas-canvas/" target="_blank" rel="noopener">Open Concierge in new tab ↗</a>
+          <ul class="bullet-list">
+            <li>Path: <code>/apps/makedas-canvas/</code></li>
+            <li>Embedding is limited to this site (<code>SAMEORIGIN</code>), so other sites can't frame it.</li>
+          </ul>
+        </section>
+
+        <!-- Paint -->
+        <section class="panel-view" data-view="paint" hidden>
+          <div class="panel-head"><h1>Paint</h1></div>
+          <p class="panel-copy">Drag on the white canvas to draw. Your drawing is saved in this browser automatically.</p>
+          <p class="panel-copy small">Tools, size, colour, Undo and Export sit in the bar above the canvas. Ctrl/Cmd+Z undoes the last stroke.</p>
+        </section>
+
+
+        <!-- Ops Launch -->
+        <section class="panel-view" data-view="ops" hidden>
+          <div class="panel-head"><h1>Ops Launch</h1></div>
+          <p class="panel-copy">Founders Launch–style ops suite: spreadsheet desk, recruiting Kanban, real-estate strip, AI ops team builder. Local demo · free.</p>
+          <div class="ops-tabs" role="tablist" aria-label="Ops modules">
+            <button type="button" class="ops-tab is-active" data-ops="sheet" role="tab" aria-selected="true">Sheet</button>
+            <button type="button" class="ops-tab" data-ops="recruit" role="tab" aria-selected="false">Recruit</button>
+            <button type="button" class="ops-tab" data-ops="estate" role="tab" aria-selected="false">Estate</button>
+            <button type="button" class="ops-tab" data-ops="team" role="tab" aria-selected="false">AI team</button>
+          </div>
+          <div class="ops-hint" id="ops-hint">Spreadsheet desk — edit cells, add rows, CSV in/out.</div>
+          <button type="button" class="btn btn-ghost btn-block" data-goto="launch" style="margin-top:8px">Continue → Launch Path</button>
+          <button type="button" class="btn btn-ghost btn-block" data-goto="roles" style="margin-top:8px">Continue → Roles</button>
+        </section>
+
+        <section class="panel-view" data-view="launch" hidden>
+          <div class="panel-head"><h1>Launch Path</h1></div>
+          <p class="panel-copy">Venture coach loop: Learn → Submit → Evaluate → Improve → Progress. Seven stages, gated unlocks, Idea Vault, capability radar. Honest scores — local only.</p>
+          <p class="panel-copy small">When active, Plan chat replies in coach rubric format. Cross-links seed Ops, Atelier/Paint, Marketers, Portal, Slides.</p>
+          <button type="button" class="btn btn-primary btn-block" data-goto="launch">Open journey map</button>
+        </section>
+
+        <section class="panel-view" data-view="roles" hidden>
+          <div class="panel-head"><h1>Role Kits</h1></div>
+          <p class="panel-copy">Role kits for common desks. Switch kit:</p>
+          <label class="field"><span>Active role</span>
+            <select id="role-switcher">
+              <option value="marketers">Marketers</option>
+              <option value="sales">Sales</option>
+              <option value="ops">Ops</option>
+              <option value="people">People / HR</option>
+              <option value="designers">Designers</option>
+              <option value="product">Product</option>
+              <option value="founders">Founders</option>
+            </select>
+          </label>
+          <p class="panel-copy small" id="role-hint">Campaign hub · UTM · funnel · checklist.</p>
+          <button type="button" class="btn btn-ghost btn-block" data-goto="settings">Continue → Settings</button>
+        </section>
+
+        <section class="panel-view" data-view="portal" hidden>
+          <div class="panel-head"><h1>Client Portal</h1></div>
+          <p class="panel-copy">Mercatus Client Portal (Atelier Desk). Mock OTP · no real auth/payments. Sales/Ops/Founders role kits can open it.</p>
+          <button type="button" class="btn btn-primary btn-block" data-goto="portal">Open portal stage</button>
+        </section>
+        <section class="panel-view" data-view="ide" hidden>
+          <div class="panel-head"><h1>IDE chrome</h1></div>
+          <p class="panel-copy">Bolt-style file tree + terminal + preview. Local mock — no WebContainers.</p>
+        </section>
+        <section class="panel-view" data-view="slides" hidden>
+          <div class="panel-head"><h1>Bolt Slides</h1></div>
+          <p class="panel-copy">Interactive deck · speaker notes · password gate · present mode.</p>
+        </section>
+        <!-- Settings -->
+        <section class="panel-view" data-view="settings" hidden>
+          <div class="panel-head"><h1>Settings</h1></div>
+          <p class="panel-copy">Look, layout preferences and a backup of your data. Everything here stays in this browser.</p>
+          <div class="settings-block">
+            <p class="eyebrow">Look</p>
+            <p class="panel-copy small">Current look: <strong id="settings-theme-label">Maison</strong></p>
+            <button type="button" class="btn btn-ghost btn-block" data-open-look>Change look</button>
+          </div>
+          <div class="settings-block">
+            <p class="eyebrow">Shell</p>
+            <label class="check"><input type="checkbox" id="opt-show-iframe" checked><span>Show Concierge overview card</span></label>
+            <label class="check"><input type="checkbox" id="opt-dense" checked><span>Dense spacing</span></label>
+          </div>
+          <div class="settings-block">
+            <p class="eyebrow">Your data</p>
+            <div id="cdb-host"></div>
+            <p class="panel-copy small">Export a backup file, or import one to move your work to another browser.</p>
+          </div>
+        </section>
+      </aside>
+
+      <main class="stage" id="stage" tabindex="-1">
+        <div class="stage-split" id="stage-split">
+          <!-- Home / Start -->
+          <section class="home-pane stage-pane" data-pane="home" id="home-pane" aria-labelledby="home-title" hidden>
+            <div class="home-inner">
+              <p class="eyebrow">Mercatus Concierge · Mens Mercatus</p>
+              <h1 id="home-title">What do you want to do?</h1>
+              <p class="home-sub">Pick a task to jump straight in. Everything runs in this browser and saves locally — no account, no credits.</p>
+              <div class="home-resume" id="home-resume" hidden>
+                <span>Pick up where you left off:</span>
+                <button type="button" class="btn btn-accent" id="home-resume-btn">Continue</button>
+              </div>
+              <div class="task-grid" role="list">
+                <button type="button" class="task-card" role="listitem" data-goto="intent">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg></span>
+                  <strong>Plan a project</strong>
+                  <span class="task-desc">Write a short brief, sharpen it with First Look, then pick a look.</span>
+                  <span class="task-cta">Start planning →</span>
+                </button>
+                <button type="button" class="task-card" role="listitem" data-goto="paint">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19c4-1 8-8 6-12 2 1 5 4 4 7-3 5-7 6-10 5z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+                  <strong>Paint or sketch</strong>
+                  <span class="task-desc">Draw with pen, brush or eraser. Undo, clear and export a PNG.</span>
+                  <span class="task-cta">Open canvas →</span>
+                </button>
+                <button type="button" class="task-card" role="listitem" data-goto="launch">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+                  <strong>Launch Path coach</strong>
+                  <span class="task-desc">Submit a venture asset and get an honest score out of 100 with feedback.</span>
+                  <span class="task-cta">Get scored →</span>
+                </button>
+                <button type="button" class="task-card" role="listitem" data-goto="ops">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 10h16M10 5v14" stroke="currentColor" stroke-width="1.7"/></svg></span>
+                  <strong>Ops sheet</strong>
+                  <span class="task-desc">Edit a spreadsheet, recruiting board, deal strip and AI team roster.</span>
+                  <span class="task-cta">Open sheet →</span>
+                </button>
+                <button type="button" class="task-card" role="listitem" data-goto="portal">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+                  <strong>Client Portal</strong>
+                  <span class="task-desc">Walk through the mock client desk: demo login, orders, invoices, messages.</span>
+                  <span class="task-cta">Open portal →</span>
+                </button>
+                <button type="button" class="task-card" role="listitem" data-goto="slides">
+                  <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+                  <strong>Slides</strong>
+                  <span class="task-desc">Present a short deck with speaker notes and present mode.</span>
+                  <span class="task-cta">Open deck →</span>
+                </button>
+              </div>
+              <h2 class="home-h2">More tools</h2>
+              <div class="home-more">
+                <button type="button" class="btn btn-ghost" data-goto="studio">Studio preview</button>
+                <button type="button" class="btn btn-ghost" data-goto="chat">Plan / Build chat</button>
+                <button type="button" class="btn btn-ghost" data-goto="roles">Role kits</button>
+                <button type="button" class="btn btn-ghost" data-goto="meeting">Meeting desk</button>
+                <button type="button" class="btn btn-ghost" data-goto="replit">Agent Lab</button>
+                <button type="button" class="btn btn-ghost" data-goto="ide">IDE</button>
+                <button type="button" class="btn btn-ghost" data-goto="habit">Focus timer</button>
+                <button type="button" class="btn btn-ghost" data-goto="games">Games</button>
+                <button type="button" class="btn btn-ghost" data-open-look>Change look</button>
+              </div>
+              <div class="home-snapshot" id="home-snapshot"></div>
+              <p class="home-honest">Mocks stay mocks: chat replies, scores and the portal are local demos. No payments, no real sign-in, no AI calls.</p>
+            </div>
+          </section>
+
+          <section class="studio-pane stage-pane" data-pane="studio" id="studio-pane" aria-label="Studio preview" hidden>
+            <div class="pane-label">
+              <span id="studio-pane-title">Live preview</span>
+              <span class="pane-badge">Local</span>
+              <span class="pane-hint" id="studio-pane-hint">Edits on the left show up here.</span>
+            </div>
+            <div class="artboard-wrap mc-studio-wrap">
+              <div class="mc-studio-bar" role="toolbar" aria-label="Studio build bar">
+                <label class="sr-only" for="mc-studio-prompt">Describe what to build</label>
+                <input type="text" id="mc-studio-prompt" class="mc-studio-prompt" placeholder="Describe what to build, e.g. Launch page for a coffee brand" autocomplete="off">
+                <button type="button" class="btn btn-primary btn-sm" id="mc-studio-generate">Generate preview</button>
+                <div class="mc-studio-frames" role="group" aria-label="Preview frame">
+                  <button type="button" class="mc-frame-btn is-active" data-frame="desktop" aria-pressed="true">Desktop</button>
+                  <button type="button" class="mc-frame-btn" data-frame="tablet" aria-pressed="false">Tablet</button>
+                  <button type="button" class="mc-frame-btn" data-frame="mobile" aria-pressed="false">Mobile</button>
+                </div>
+              </div>
+              <div class="preview-toolbar" id="preview-toolbar" role="toolbar" aria-label="Preview tools">
+                <button type="button" class="tool-btn is-active" data-tool="select" title="Select" aria-pressed="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l6 16 2-7 7-2L5 4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                  <span>Select</span>
+                </button>
+                <button type="button" class="tool-btn" data-tool="edit" title="Edit text" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14M8 15l8-10 3 2.5L11 17H8v-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                  <span>Edit text</span>
+                </button>
+                <button type="button" class="tool-btn" data-tool="annotate" title="Annotate" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l3-1 10-10-2-2L6 16l-1 3z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                  <span>Annotate</span>
+                </button>
+                <button type="button" class="tool-btn" data-tool="comment" title="Comment" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v9H9l-3 3V6z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                  <span>Comment</span>
+                </button>
+                <span class="tool-sep" aria-hidden="true"></span>
+                <button type="button" class="tool-btn tool-btn--ghost" id="btn-clear-ann" title="Clear annotations and comments">Clear marks</button>
+              </div>
+              <div class="artboard mc-studio-frame is-desktop" id="artboard" data-frame="desktop">
+                <div class="art-hero selectable" data-label="Hero" data-id="hero">
+                  <p class="art-kicker editable-text" data-field="kicker">MERCATUS CONCIERGE</p>
+                  <h2 class="art-title editable-text" data-field="headline" id="artboard-headline">Mercatus Concierge</h2>
+                  <p class="art-sub editable-text" data-field="subline" id="artboard-subline">Plan · Build · Studio · Ops</p>
+                  <p class="art-note editable-text" data-field="note" id="artboard-note">First-party studio — your product, not a third-party builder</p>
+                  <div class="art-cta-row">
+                    <span class="art-pill selectable" data-label="CTA" data-id="cta">Open Concierge</span>
+                    <span class="art-pill art-pill--ghost selectable" data-label="Secondary" data-id="sec">Design direction</span>
+                  </div>
+                </div>
+                <div class="art-cards">
+                  <div class="art-card selectable" data-label="Card A" data-id="card-a">
+                    <span class="art-card-tag editable-text">Plan</span>
+                    <strong class="editable-text">Advisory rail</strong>
+                    <p class="editable-text">Structured replies without mutating the shell.</p>
+                  </div>
+                  <div class="art-card selectable" data-label="Card B" data-id="card-b">
+                    <span class="art-card-tag editable-text">Build</span>
+                    <strong class="editable-text">Apply tweaks</strong>
+                    <p class="editable-text">Theme and layout tokens on this shell.</p>
+                  </div>
+                  <div class="art-card selectable" data-label="Card C" data-id="card-c">
+                    <span class="art-card-tag editable-text">Ship</span>
+                    <strong class="editable-text">Live preview</strong>
+                    <p class="editable-text">Editable artboard — select, edit, annotate, comment.</p>
+                  </div>
+                </div>
+                <canvas id="annotate-layer" class="annotate-layer" aria-hidden="true"></canvas>
+                <div id="comment-layer" class="comment-layer" aria-hidden="true"></div>
+                <div id="select-overlay" class="select-overlay" hidden></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Concierge overview (native — this page IS the Concierge, so nothing is iframed) -->
+          <section class="iframe-pane stage-pane" data-pane="atelier" id="iframe-pane" aria-label="Concierge overview" hidden>
+            <div class="pane-label">
+              <span>Mercatus Concierge</span>
+              <span class="pane-badge">Overview</span>
+            </div>
+            <div id="atelier-iframe" class="atelier-native" role="region" aria-labelledby="atelier-title">
+              <div class="atelier-card">
+                <p class="eyebrow">You are in the Concierge</p>
+                <h2 id="atelier-title">Mercatus Concierge runs right here</h2>
+                <p class="atelier-lead">This page is the Concierge itself, so there is nothing to embed. Jump to a tool below, or open a second copy in a new tab to work side by side.</p>
+                <a class="btn btn-primary btn-lg" href="/apps/makedas-canvas/" target="_blank" rel="noopener">Open Concierge in new tab ↗</a>
+                <div class="atelier-links" role="list">
+                  <button type="button" class="atelier-link" role="listitem" data-goto="studio"><strong>Studio</strong><span>Build and mark up a page preview</span></button>
+                  <button type="button" class="atelier-link" role="listitem" data-goto="paint"><strong>Paint</strong><span>Sketch on a canvas, export PNG</span></button>
+                  <button type="button" class="atelier-link" role="listitem" data-goto="ops"><strong>Ops</strong><span>Sheet, recruiting, deals, AI team</span></button>
+                  <button type="button" class="atelier-link" role="listitem" data-goto="launch"><strong>Launch Path</strong><span>Scored venture coach, 7 stages</span></button>
+                  <button type="button" class="atelier-link" role="listitem" data-goto="portal"><strong>Client Portal</strong><span>Mock client desk</span></button>
+                  <button type="button" class="atelier-link" role="listitem" data-goto="slides"><strong>Slides</strong><span>Deck with speaker notes</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="iframe-fallback" id="iframe-fallback" hidden>
+              <div class="atelier-card">
+                <p class="eyebrow">Overview hidden</p>
+                <h2 id="fallback-title">The Concierge overview can't show here</h2>
+                <p class="atelier-lead" id="fallback-reason">The overview card is switched off in Settings. You can still open the full Concierge in a new tab.</p>
+                <a class="btn btn-primary btn-lg" href="/apps/makedas-canvas/" target="_blank" rel="noopener">Open Concierge in new tab ↗</a>
+                <button type="button" class="btn btn-ghost" id="fallback-show">Show the overview again</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Launch Path stage -->
+          <section class="launch-pane stage-pane" data-pane="launch" id="launch-pane" aria-label="Launch Path" hidden>
+            <div class="launch-host" id="launch-host"></div>
+          </section>
+
+
+          <section class="ops-pane stage-pane" data-pane="ops" id="ops-pane" aria-label="Ops Launch" hidden>
+            <div class="pane-label">
+              <span>Ops Launch</span>
+              <span class="pane-badge">Founders-style · local</span>
+            </div>
+            <div class="ops-modules" id="ops-modules">
+              <div class="ops-mod is-active" data-ops-mod="sheet">
+                <div class="ops-mod-head">
+                  <strong>Spreadsheet desk</strong>
+                  <div class="btn-row">
+                    <button type="button" class="btn btn-ghost btn-sm" id="sheet-add-row">Add row</button>
+                    <button type="button" class="btn btn-ghost btn-sm" id="sheet-add-col">Add col</button>
+                    <label class="btn btn-ghost btn-sm" style="cursor:pointer">Import CSV<input type="file" id="sheet-import" accept=".csv,text/csv" hidden></label>
+                    <button type="button" class="btn btn-primary btn-sm" id="sheet-export">Export CSV</button>
+                  </div>
+                </div>
+                <div class="sheet-wrap"><table class="ops-sheet" id="ops-sheet" aria-label="Ops spreadsheet"></table></div>
+              </div>
+              <div class="ops-mod" data-ops-mod="recruit" hidden>
+                <div class="ops-mod-head">
+                  <strong>Recruiting pipeline</strong>
+                  <button type="button" class="btn btn-primary btn-sm" id="recruit-add">Add candidate</button>
+                </div>
+                <div class="kanban" id="recruit-board" role="list"></div>
+              </div>
+              <div class="ops-mod" data-ops-mod="estate" hidden>
+                <div class="ops-mod-head">
+                  <strong>Real-estate workflow</strong>
+                  <button type="button" class="btn btn-primary btn-sm" id="estate-add">Add deal</button>
+                </div>
+                <div class="estate-strip" id="estate-strip" role="list"></div>
+              </div>
+              <div class="ops-mod" data-ops-mod="team" hidden>
+                <div class="ops-mod-head">
+                  <strong>AI ops team builder</strong>
+                  <button type="button" class="btn btn-primary btn-sm" id="team-add">Add coworker</button>
+                </div>
+                <div class="team-roster" id="team-roster"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="portal-pane stage-pane" data-pane="portal" id="portal-pane" aria-label="Client Portal" hidden>
+            <div class="pane-label"><span>Client Portal</span><span class="pane-badge">Atelier Desk · mock</span></div>
+            <div class="portal-host" id="portal-host"></div>
+          </section>
+          <section class="ide-pane stage-pane" data-pane="ide" id="ide-pane" hidden>
+            <div class="pane-label"><span>IDE</span><span class="pane-badge">Bolt chrome · local</span></div>
+            <div class="ide-host" id="ide-host"></div>
+          </section>
+          <section class="slides-pane stage-pane" data-pane="slides" id="slides-pane" hidden>
+            <div class="pane-label"><span>Slides</span><span class="pane-badge">Present · notes</span></div>
+            <div class="slides-host" id="slides-host"></div>
+          </section>
+          <section class="habit-pane stage-pane" data-pane="habit" id="habit-pane" hidden>
+            <div class="pane-label"><span>Focus</span><span class="pane-badge">Habit · Pomodoro</span></div>
+            <div class="habit-host" id="habit-host"></div>
+          </section>
+          <section class="roles-pane stage-pane" data-pane="roles" id="roles-pane" aria-label="Role Kits" hidden>
+            <div class="pane-label">
+              <span>Role Kits</span>
+              <span class="pane-badge" id="role-badge">Marketers</span>
+            </div>
+            <div class="roles-body" id="roles-body"></div>
+          </section>
+
+          <!-- Paint canvas -->
+          <section class="paint-pane stage-pane" data-pane="paint" id="paint-pane" aria-label="Paint canvas" hidden>
+            <div class="pane-label paint-label">
+              <span>Canvas</span>
+              <span class="pane-badge">Saved locally</span>
+              <div class="paint-toolbar-inline" role="toolbar" aria-label="Paint tools">
+                <div class="seg" role="group" aria-label="Tool">
+                  <button type="button" class="seg-btn is-active" data-paint-tool="pen" aria-pressed="true">Pen</button>
+                  <button type="button" class="seg-btn" data-paint-tool="brush" aria-pressed="false">Brush</button>
+                  <button type="button" class="seg-btn" data-paint-tool="eraser" aria-pressed="false">Eraser</button>
+                </div>
+                <label class="mini"><span>Size</span><input type="range" id="paint-size-inline" min="1" max="48" value="6" aria-label="Brush size"></label>
+                <input type="color" id="paint-color-inline" value="#c8102e" title="Colour" aria-label="Brush colour">
+                <button type="button" class="btn btn-ghost btn-sm" id="paint-undo-inline">Undo</button>
+                <button type="button" class="btn btn-ghost btn-sm" id="paint-clear-inline">Clear</button>
+                <button type="button" class="btn btn-primary btn-sm" id="paint-export-inline">Export PNG</button>
+              </div>
+            </div>
+            <div class="paint-surface-wrap">
+              <canvas id="paint-canvas" width="1200" height="720" role="img" aria-label="Painting surface — drag to draw"></canvas>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <nav class="bottom-bar" id="bottom-bar" aria-label="Quick navigation">
+      <button type="button" class="bb-btn" data-goto="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6v8H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Home</span></button>
+      <button type="button" class="bb-btn" data-goto="intent"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><span>Plan</span></button>
+      <button type="button" class="bb-btn" data-goto="paint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c4-1 8-8 6-12 2 1 5 4 4 7-3 5-7 6-10 5z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span>Paint</span></button>
+      <button type="button" class="bb-btn" data-goto="launch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span>Launch</span></button>
+      <button type="button" class="bb-btn" id="btn-bb-more" aria-controls="app-nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>More</span></button>
+    </nav>
+  </div>
+
+  <script src="db.js?v=20261014ux4"></script>
+  <script src="device.js?v=20261014ux4"></script>
+  <script src="launch.js?v=bp1"></script>
+  <script src="meeting.js?v=20261014ux4"></script>
+  <script src="replit.js?v=20261014ux4"></script>
+  <script src="portal.js?v=bp1"></script>
+  <script src="builder.js?v=20261014ux4"></script>
+  <script src="bolt.js?v=bp1"></script>
+  <script src="app.js?v=bp1"></script>
+</body>
+</html>

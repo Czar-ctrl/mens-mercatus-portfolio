@@ -1,0 +1,27 @@
+/* BP: four flagship cards + compact "More builds" list (apps index, home, services example). Dark, responsive, no layout shift. */
+.mm-problem{margin:.2rem 0 .45rem;font-size:.9rem;color:#f5f5f5}
+.mm-problem strong{color:#ff4d6a;font-weight:600;margin-right:.25rem}
+.mm-more-head{margin-top:3rem}
+.mm-more{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.7rem}
+.mm-more a{display:flex;flex-direction:column;gap:.25rem;height:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.025);color:#f5f5f5;text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+.mm-more a:hover,.mm-more a:focus-visible{border-color:rgba(200,16,46,.6);background:rgba(200,16,46,.08);transform:translateY(-2px);outline:none}
+.mm-more strong{font-size:.98rem;font-weight:600}
+.mm-more span{font-size:.82rem;line-height:1.45;color:rgba(245,245,245,.64)}
+.mm-more .mm-more-tag{font:700 .62rem/1 "Space Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#c8102e}
+@media (prefers-reduced-motion:reduce){.mm-more a{transition:none}.mm-more a:hover{transform:none}}
+html.mm-light .mm-more a{background:#fff;border-color:rgba(0,0,0,.1);color:#0a0a0a}html.mm-light .mm-more span{color:rgba(10,10,10,.65)}html.mm-light .mm-problem{color:#0a0a0a}
+/* home: problem line on flagship reel tiles + More builds strip */
+.pv-tile .pv-tcap--prob{display:flex;flex-direction:column;gap:.3rem;right:12px;border-radius:12px;line-height:1.15;padding:9px 11px}
+.pv-tile .pv-tcap--prob small{font:400 .74rem/1.35 Inter,system-ui,sans-serif;letter-spacing:0;color:rgba(245,245,245,.78)}
+@media (max-width:640px){.pv-tile .pv-tcap--prob small{font-size:.68rem}}
+.mm-more-home{position:relative;z-index:12;background:#0a0809;border-top:1px solid rgba(255,255,255,.06)}
+.mm-more-wrap{max-width:72rem;margin:0 auto;padding:clamp(2rem,5vw,3.5rem) 1.5rem}
+.mm-more-h{margin:.3rem 0 1.1rem;font-size:clamp(1.3rem,2.6vw,1.8rem);color:#f5f5f5;font-weight:600}
+.mm-more-all{margin:1rem 0 0;font-size:.88rem}.mm-more-all a{color:#ff4d6a;text-decoration:none}.mm-more-all a:hover{text-decoration:underline}
+html:not(.dark) .mm-more-home{background:#f6f3f1}html:not(.dark) .mm-more-h{color:#0a0a0a}
+html:not(.dark) .mm-more-home .mm-more a{background:#fff;border-color:rgba(0,0,0,.1);color:#0a0a0a}html:not(.dark) .mm-more-home .mm-more span{color:rgba(10,10,10,.65)}
+/* apps index: the four flagship cards are the first screen, so show them at first paint (no fade-in delaying LCP) */
+.section--apps.mm-reveal,.section--apps .section-head.mm-reveal,.section--apps .discover-grid.mm-reveal{opacity:1;transform:none;transition:none}
+
+/* Merge perf: the featured first card is the /apps/ LCP image; skip its 0.55s entrance so LCP is not held back by an animation. The rest still rise. */
+.section--apps .discover-card--featured{animation:none}

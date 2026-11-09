@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0d0b06" />
+  <title>SoundX MPC · Pad Controller</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css?v=20261008md" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>SoundX MPC</h1>
+      <p class="sub">Pad controller → SoundX deck · any network</p>
+    </div>
+    <div class="conn" data-conn>
+      <span class="dot" data-dot></span>
+      <span data-status>Connecting…</span>
+    </div>
+  </header>
+
+  <section class="cfg" data-cfg data-mode="relay">
+    <label class="room">Room code
+      <input type="text" data-room inputmode="text" autocapitalize="characters" autocomplete="off" maxlength="12" placeholder="e.g. K7Q2MX" />
+    </label>
+    <label class="mode">Link
+      <select data-link-mode>
+        <option value="relay">Online room</option>
+        <option value="lan">LAN hub</option>
+      </select>
+    </label>
+    <label class="lan">LAN hub WS
+      <input type="text" data-ws-url placeholder="ws://192.168.x.x:8791/ws" autocomplete="off" />
+    </label>
+    <button type="button" class="btn" data-reconnect>Connect</button>
+  </section>
+  <p class="deckstate" data-deckstate hidden></p>
+
+  <section class="vel">
+    <label>Velocity <output data-vel-out>0.90</output>
+      <input type="range" min="0.1" max="1" step="0.01" value="0.9" data-vel />
+    </label>
+  </section>
+
+  <section class="patterns" aria-label="Patterns">
+    <button type="button" class="chip active" data-pattern="mm-trap">Trap</button>
+    <button type="button" class="chip" data-pattern="mm-house">House</button>
+    <button type="button" class="chip" data-pattern="mm-boombap">Boom-Bap</button>
+    <button type="button" class="chip" data-pattern="mm-hats">Hats</button>
+    <button type="button" class="chip" data-pattern="scene:1">Scene 1</button>
+    <button type="button" class="chip" data-pattern="scene:2">Scene 2</button>
+  </section>
+
+  <section class="transport" aria-label="Transport">
+    <button type="button" class="btn transport" data-transport="play">▶ Play</button>
+    <button type="button" class="btn transport" data-transport="pause">⏸ Pause</button>
+    <button type="button" class="btn transport" data-transport="stop">■ Stop</button>
+  </section>
+
+  <main class="pads" data-pads aria-label="MPC pads"></main>
+
+  <footer class="foot">
+    <p data-hint>Open SoundX on the computer → <b>Pair phone</b> → scan the QR (or type the room code). Works on mobile data or any Wi‑Fi. Add to Home Screen for PWA.</p>
+  </footer>
+  <script src="app.js?v=20261008md" type="module"></script>
+</body>
+</html>

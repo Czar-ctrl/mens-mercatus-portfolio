@@ -1,0 +1,75 @@
+/* System blueprints: animated inline-SVG diagrams. Theme: #0a0a0a base, red #c8102e, white text,
+   amber DEMO, green LIVE, cyan data packets. Motion is CSS transforms + one rAF loop (js/mm-blueprints.js). */
+.bp-section{padding-top:clamp(2.5rem,6vw,4.5rem);--bp-red:#c8102e;--bp-red2:#ff4d6a;--bp-cyan:#5fd4ff;--bp-amber:#f5b942;--bp-green:#34d399;--bp-ink:#f5f5f5;--bp-dim:rgba(245,245,245,.6);padding-bottom:1rem}
+.bp-defs{position:absolute;width:0;height:0;overflow:hidden}
+.bp-jumps{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1rem}
+.bp-jump{font:600 .74rem/1 var(--font-mono,monospace);letter-spacing:.04em;color:var(--bp-ink);text-decoration:none;padding:.5rem .75rem;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.03);transition:border-color .2s,background .2s,transform .2s}
+.bp-jump:hover,.bp-jump:focus-visible{border-color:var(--bp-red);background:rgba(200,16,46,.14);transform:translateY(-1px);outline:none}
+.bp-legend{display:flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:center;margin:0 0 1.6rem;font:.72rem/1.2 var(--font-mono,monospace);color:var(--bp-dim)}
+.bp-chip{display:inline-flex;align-items:center;gap:.35rem;font:700 .66rem/1 var(--font-mono,monospace);letter-spacing:.08em;padding:.32rem .55rem;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.bp-chip::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:currentColor}
+.bp-chip--live{color:var(--bp-green)}.bp-chip--demo{color:var(--bp-amber)}.bp-chip--preview{color:var(--bp-red2);border-style:dashed}
+.bp-chip--device{color:#e8e8e8}.bp-chip--build{color:rgba(245,245,245,.6);border-style:dotted}
+.bp-key{display:inline-flex;align-items:center;gap:.35rem}
+.bp-k{display:inline-block;width:22px;height:0;border-top:2px solid rgba(245,245,245,.5)}
+.bp-k--http{border-color:rgba(200,16,46,.85)}.bp-k--ws{border-top-style:dashed;border-color:var(--bp-cyan)}.bp-k--data{border-color:rgba(95,212,255,.6)}
+.bp-k--local{border-color:rgba(245,245,245,.45)}.bp-k--build{border-top-style:dotted;border-color:rgba(245,245,245,.45)}
+.bp-pk{display:inline-block;width:8px;height:8px;border-radius:50%}.bp-pk--req{background:var(--bp-red2);box-shadow:0 0 8px var(--bp-red)}.bp-pk--res{background:var(--bp-cyan);box-shadow:0 0 8px var(--bp-cyan)}
+.bp-fig{margin:0 0 2.2rem;padding:1.1rem 1.1rem .9rem;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));scroll-margin-top:90px}
+.bp-cap{display:grid;grid-template-columns:auto 1fr;gap:.25rem .7rem;align-items:center;margin-bottom:.8rem}
+.bp-cap h3{margin:0;font-size:1.08rem;color:var(--bp-ink)}
+.bp-cap p{grid-column:1/-1;margin:0;color:var(--bp-dim);font-size:.9rem;max-width:72ch}
+.bp-stage{position:relative}
+.bp-svg{display:block;width:100%;height:auto;overflow:visible}
+.bp-svg--m{display:none}
+@media (max-width:720px){.bp-svg--d{display:none}.bp-svg--m{display:block}.bp-fig{padding:.8rem .6rem}}
+.bp-lane rect{fill:rgba(255,255,255,.018);stroke:rgba(255,255,255,.05)}
+.bp-lane text{fill:rgba(245,245,245,.42);font:700 10px var(--font-mono,monospace);letter-spacing:.14em}
+.bp-e{fill:none;stroke:rgba(245,245,245,.22);stroke-width:1.4;transition:stroke .25s,stroke-width .25s,opacity .25s}
+.bp-e--http{stroke:rgba(200,16,46,.55)}.bp-e--ws{stroke:rgba(95,212,255,.5);stroke-dasharray:5 4}
+.bp-e--data{stroke:rgba(95,212,255,.32)}.bp-e--build{stroke-dasharray:2 4}.bp-e--local{stroke:rgba(245,245,245,.2)}
+.bp-ar{fill:rgba(245,245,245,.45)}.bp-ar--http{fill:rgba(200,16,46,.9)}.bp-ar--ws,.bp-ar--data{fill:rgba(95,212,255,.8)}
+.bp-n{cursor:pointer;outline:none}
+.bp-n rect{fill:#121212;stroke:rgba(255,255,255,.14);stroke-width:1.2;transition:stroke .25s,fill .25s}
+.bp-n--preview rect{stroke:rgba(255,77,106,.7);stroke-dasharray:5 4}
+.bp-n--build rect{stroke-dasharray:2 3}
+.bp-n--live .bp-dot{fill:var(--bp-green)}.bp-n--demo .bp-dot{fill:var(--bp-amber)}.bp-n--preview .bp-dot{fill:var(--bp-red2)}
+.bp-n--device .bp-dot{fill:none;stroke:#eaeaea;stroke-width:1.4}.bp-n--build .bp-dot{fill:rgba(245,245,245,.35)}
+.bp-l{fill:var(--bp-ink);font:600 13px var(--font-sans,system-ui,sans-serif)}
+.bp-s{fill:rgba(245,245,245,.58);font:400 10.5px var(--font-sans,system-ui,sans-serif)}
+.bp-n:hover rect,.bp-n:focus-visible rect,.bp-n.is-hot rect{stroke:var(--bp-red);fill:#1a0c0f}
+.bp-n:focus-visible rect{stroke-width:2.4}
+.bp-svg.is-focus .bp-n:not(.is-hot):not(.is-near){opacity:.32}
+.bp-svg.is-focus .bp-e:not(.is-hot){opacity:.12}
+.bp-svg.is-focus .bp-e.is-hot{stroke-width:2.4;stroke:var(--bp-red2)}
+.bp-svg.is-focus .bp-e--ws.is-hot,.bp-svg.is-focus .bp-e--data.is-hot{stroke:var(--bp-cyan)}
+.bp-n,.bp-e{transition:opacity .25s}
+.bp-pkt{pointer-events:none}
+.bp-pkt--req{fill:var(--bp-red2);filter:drop-shadow(0 0 3px rgba(200,16,46,.9))}
+.bp-pkt--res,.bp-pkt--data,.bp-pkt--ws{fill:var(--bp-cyan);filter:drop-shadow(0 0 3px rgba(95,212,255,.9))}
+.bp-pkt--build,.bp-pkt--local{fill:#f5f5f5;opacity:.75}
+.bp-role{min-height:2.9em;margin:.7rem 0 .2rem;font-size:.88rem;color:var(--bp-dim)}
+.bp-role strong{color:var(--bp-ink)}.bp-role .bp-role-k{color:var(--bp-ink)}
+.bp-conn{font-size:.82rem;color:var(--bp-dim)}
+.bp-conn summary{cursor:pointer;font-family:var(--font-mono,monospace);font-size:.72rem;letter-spacing:.05em;color:rgba(245,245,245,.7)}
+.bp-conn ul{margin:.5rem 0 0;padding-left:1.1rem;columns:2 320px}.bp-conn li{margin:.15rem 0;break-inside:avoid}.bp-conn strong{color:var(--bp-ink);font-weight:600}
+/* Bubbles move: slow drift + subtle dot pulse. Paused off-screen / tab hidden via .is-paused */
+@keyframes bp-drift{0%,100%{transform:translate(0,0)}25%{transform:translate(1.2px,-1.8px)}50%{transform:translate(-.8px,-2.6px)}75%{transform:translate(-1.4px,-.6px)}}
+@keyframes bp-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.65}}
+.bp-float{animation:bp-drift 7.5s ease-in-out infinite;animation-delay:calc(var(--d,0s) * -1)}
+.bp-dot{transform-box:fill-box;transform-origin:center;animation:bp-pulse 2.8s ease-in-out infinite;animation-delay:calc(var(--d,0s) * -1)}
+.bp-fig.is-paused .bp-float,.bp-fig.is-paused .bp-dot{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.bp-float,.bp-dot{animation:none}.bp-jump,.bp-n rect,.bp-e{transition:none}}
+/* Blueprint page chip/bubble clusters (cards, tags, banner) drift gently too */
+@keyframes bp-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.bp-bob{animation:bp-bob 6s ease-in-out infinite;will-change:transform}
+.bp-bob:nth-child(3n+2){animation-duration:7s;animation-delay:-2s}.bp-bob:nth-child(3n){animation-duration:8s;animation-delay:-4s}
+@media (prefers-reduced-motion:reduce){.bp-bob{animation:none}}
+html.mm-light .bp-section{--bp-ink:#0a0a0a;--bp-dim:rgba(10,10,10,.65)}
+html.mm-light .bp-n rect{fill:#fff}html.mm-light .bp-l{fill:#0a0a0a}html.mm-light .bp-s{fill:rgba(10,10,10,.6)}
+html.mm-light .bp-fig{background:#fff;border-color:rgba(0,0,0,.1)}html.mm-light .bp-lane text{fill:rgba(10,10,10,.5)}
+html.mm-light .bp-jump{color:#0a0a0a;border-color:rgba(0,0,0,.2)}
+
+/* Merge fix: the hub's outer .section holds all eleven diagrams, so it is taller than the viewport ÷ 0.12 and mm-silk's
+   12% reveal threshold can never fire. Show that wrapper immediately (the diagrams keep their own drift/packets). */
+.mm-reveal:has(.bp-section){opacity:1!important;transform:none!important;transition:none!important}

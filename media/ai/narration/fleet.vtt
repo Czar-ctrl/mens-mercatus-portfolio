@@ -1,0 +1,38 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:05.060
+Mens Mercatus Fleet is a maintenance desk for South African vehicle fleets.
+
+2
+00:00:05.010 --> 00:00:16.540
+Katlego built a FastAPI server in Python with a SQLite store, a rule engine for minor-repair approval and a NumPy price regressor trained on 160 fictional invoices.
+
+3
+00:00:16.540 --> 00:00:24.260
+Repairs up to two thousand five hundred rand, and within eight and a half percent of the fair price, are approved by rule.
+
+4
+00:00:24.260 --> 00:00:30.820
+A counter or manager band runs to fifteen thousand rand, and anything above goes to an executive.
+
+5
+00:00:30.820 --> 00:00:37.190
+Fault to Repair turns a fault code and a workshop quote into a fair price in rand and an approval tier.
+
+6
+00:00:37.190 --> 00:00:47.980
+Fifteen Fleet Intelligence tools cover warranty, service reminders, pre-trip checks, fuel slips, compliance, theft alerts and driver coaching.
+
+7
+00:00:47.980 --> 00:00:55.070
+WhatsApp and Teams messages are drafts and virtual cards are mock only, so a person signs off every action.
+
+8
+00:00:55.070 --> 00:00:59.180
+Every vehicle, workshop and price is example data.
+
+9
+00:00:59.180 --> 00:01:05.750
+This is a local demo, not a deployed product, and four hundred and six automated tests pass.
+

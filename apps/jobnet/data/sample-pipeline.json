@@ -1,0 +1,78 @@
+{
+ "note": "SAMPLE DATA - fictional companies and text written for this demo.",
+ "window": "last 14 days (sample)",
+ "funnel": [
+  [
+   "Scraped (LinkedIn + Glassdoor)",
+   412
+  ],
+  [
+   "Shortlisted by fit model",
+   58
+  ],
+  [
+   "Tailored CV + letter",
+   31
+  ],
+  [
+   "Drafts in Gmail (human sends)",
+   31
+  ],
+  [
+   "Sent by Katlego",
+   22
+  ],
+  [
+   "Replies",
+   9
+  ],
+  [
+   "Interviews",
+   3
+  ]
+ ],
+ "drafts": [
+  {
+   "id": "d1",
+   "role": "AI Engineer (sample)",
+   "age_h": 30
+  },
+  {
+   "id": "d2",
+   "role": "Full-Stack .NET (sample)",
+   "age_h": 26
+  },
+  {
+   "id": "d3",
+   "role": "GenAI Developer (sample)",
+   "age_h": 11
+  },
+  {
+   "id": "d4",
+   "role": "Automation Dev (sample)",
+   "age_h": 4
+  }
+ ],
+ "schedule": [
+  [
+   "12:00",
+   "Noon scrape",
+   "LinkedIn + Glassdoor public listings, dedupe, shortlist"
+  ],
+  [
+   "15:00",
+   "Tailor + draft",
+   "Tailored CV + letter saved as Gmail drafts, never sent"
+  ],
+  [
+   "09:30 / 17:30",
+   "Inbox watch",
+   "Reply classifier labels interview / reject / ack"
+  ],
+  [
+   "+24h",
+   "Nudge",
+   "Reminder for drafts still unsent after 24 hours"
+  ]
+ ]
+}

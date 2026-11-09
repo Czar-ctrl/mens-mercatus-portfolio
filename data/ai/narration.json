@@ -1,0 +1,636 @@
+{
+ "voice_engine": "edge-tts 7.3.1 (Microsoft Edge neural voices, en-ZA)",
+ "items": [
+  {
+   "id": "jobnet",
+   "title": "JobNet",
+   "voice": "en-ZA-LukeNeural",
+   "url": "/case-studies/jobnet/",
+   "source": "/case-studies/jobnet/",
+   "duration": 51.0,
+   "audio": "/media/ai/narration/jobnet.mp3",
+   "captions": "/media/ai/narration/jobnet.vtt",
+   "words": 150,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 2.97,
+     "text": "JobNet is Katlego's daily career pipeline."
+    },
+    {
+     "start": 2.92,
+     "end": 7.98,
+     "text": "Applying across many boards by hand is slow, and tools that submit on their own are unsafe."
+    },
+    {
+     "start": 7.98,
+     "end": 13.52,
+     "text": "So the job was to shorten research and drafting, without giving the system permission to apply or send mail."
+    },
+    {
+     "start": 13.52,
+     "end": 17.81,
+     "text": "Every day at eight p.m. South African time, it collects public listings."
+    },
+    {
+     "start": 17.81,
+     "end": 23.27,
+     "text": "A hashed sentence embedding ranks each posting against the case studies, and keeps one role per company."
+    },
+    {
+     "start": 23.27,
+     "end": 26.37,
+     "text": "A report of the previous run arrives at three p.m."
+    },
+    {
+     "start": 26.37,
+     "end": 29.65,
+     "text": "A letter is prepared only for a role that clears the ranker."
+    },
+    {
+     "start": 29.65,
+     "end": 31.72,
+     "text": "Then comes the send gate."
+    },
+    {
+     "start": 31.72,
+     "end": 38.15,
+     "text": "Mail leaves only if the address is printed on the posting, the domain resolves, and the letter names that title and company."
+    },
+    {
+     "start": 38.15,
+     "end": 40.99,
+     "text": "Missing addresses are held, not guessed."
+    },
+    {
+     "start": 40.99,
+     "end": 45.64,
+     "text": "The public demo is a read-only shortlist, so visitors cannot trigger applications."
+    },
+    {
+     "start": 45.64,
+     "end": 48.15,
+     "text": "AI assists with ranking and drafting."
+    },
+    {
+     "start": 48.15,
+     "end": 51.01,
+     "text": "A person makes every irreversible decision."
+    }
+   ]
+  },
+  {
+   "id": "assist",
+   "title": "Mercatus Assist & THINK",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/case-studies/assist/",
+   "source": "/case-studies/assist/",
+   "duration": 58.2,
+   "audio": "/media/ai/narration/assist.mp3",
+   "captions": "/media/ai/narration/assist.vtt",
+   "words": 141,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 7.85,
+     "text": "Mercatus Assist and THINK answer a simple question: can a portfolio assistant make a real model call without leaking a key?"
+    },
+    {
+     "start": 7.8,
+     "end": 18.02,
+     "text": "Katlego built an ASP.NET Core 8 minimal API in C sharp that calls Gemini through an OpenAI-compatible client, so the provider can change in config."
+    },
+    {
+     "start": 18.02,
+     "end": 25.6,
+     "text": "It runs as a systemd service on an Ubuntu VPS, behind nginx, with the static site behind Cloudflare."
+    },
+    {
+     "start": 25.6,
+     "end": 29.51,
+     "text": "A same-origin proxy keeps the API key on the server."
+    },
+    {
+     "start": 29.51,
+     "end": 38.34,
+     "text": "The client retries with exponential backoff on HTTP 429 and 5xx errors, and public paths have daily caps per IP."
+    },
+    {
+     "start": 38.34,
+     "end": 48.51,
+     "text": "THINK is the React 19, Vite and TypeScript workspace: chat, image, live voice over WebSocket, sites, code and a learning path."
+    },
+    {
+     "start": 48.51,
+     "end": 52.91,
+     "text": "And when the robot's health check fails, the screen says so."
+    },
+    {
+     "start": 52.91,
+     "end": 58.17,
+     "text": "It switches to a labelled demo, because live and demo are not the same state."
+    }
+   ]
+  },
+  {
+   "id": "forex",
+   "title": "Forex Mercatus Codex",
+   "voice": "en-ZA-LukeNeural",
+   "url": "/case-studies/forex/",
+   "source": "/case-studies/forex/",
+   "duration": 46.9,
+   "audio": "/media/ai/narration/forex.mp3",
+   "captions": "/media/ai/narration/forex.vtt",
+   "words": 136,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 5.12,
+     "text": "Forex Mercatus Codex is a research desk built so it cannot be mistaken for a brokerage."
+    },
+    {
+     "start": 5.07,
+     "end": 8.03,
+     "text": "The hard part is the boundary, not the chart."
+    },
+    {
+     "start": 8.03,
+     "end": 17.2,
+     "text": "It is a Python and Highcharts desk with Chart, Multi, Whales, Flow and Bot views, about eighty-seven megabytes, hosted on a VPS over HTTPS."
+    },
+    {
+     "start": 17.2,
+     "end": 24.7,
+     "text": "Public feeds from Yahoo, Kraken and Binance are fused, and when a feed is down the desk falls back to synthetic tape, which is labelled."
+    },
+    {
+     "start": 24.7,
+     "end": 28.05,
+     "text": "Each browser tab gets its own session-scoped paper bot."
+    },
+    {
+     "start": 28.05,
+     "end": 35.6,
+     "text": "There is a cap of twenty-four sessions, idle sessions expire after two hours, and public mid rates refresh about every sixty seconds."
+    },
+    {
+     "start": 35.6,
+     "end": 38.11,
+     "text": "The health JSON reports paper only."
+    },
+    {
+     "start": 38.11,
+     "end": 41.09,
+     "text": "There are no broker credentials and no order route."
+    },
+    {
+     "start": 41.09,
+     "end": 44.41,
+     "text": "The bot can summarise data and propose a paper action."
+    },
+    {
+     "start": 44.41,
+     "end": 46.88,
+     "text": "A policy gate blocks anything live."
+    }
+   ]
+  },
+  {
+   "id": "soundx",
+   "title": "SoundX",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/case-studies/soundx/",
+   "source": "/case-studies/soundx/",
+   "duration": 55.6,
+   "audio": "/media/ai/narration/soundx.mp3",
+   "captions": "/media/ai/narration/soundx.vtt",
+   "words": 135,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 4.02,
+     "text": "SoundX is a studio you can open in a browser tab."
+    },
+    {
+     "start": 3.97,
+     "end": 8.08,
+     "text": "Most music demos send your audio to someone else's server."
+    },
+    {
+     "start": 8.08,
+     "end": 10.07,
+     "text": "This one does not."
+    },
+    {
+     "start": 10.07,
+     "end": 18.93,
+     "text": "Katlego built it as a browser DAW, with a library, pattern and song views, a mixer and a master bus, all on Web Audio."
+    },
+    {
+     "start": 18.93,
+     "end": 27.42,
+     "text": "A four-step path lets anyone Load Demo, press Play, shape the master, and Generate, with no account and no sign-in."
+    },
+    {
+     "start": 27.42,
+     "end": 34.34,
+     "text": "The AI Producer takes a written request and proposes drums, bass, keys or an arrangement idea."
+    },
+    {
+     "start": 34.34,
+     "end": 38.82,
+     "text": "Generate can listen to the buffer and estimate tempo from onsets."
+    },
+    {
+     "start": 38.82,
+     "end": 42.04,
+     "text": "But it never silently overwrites the session."
+    },
+    {
+     "start": 42.04,
+     "end": 46.78,
+     "text": "The producer proposes, and the session changes only when you apply it."
+    },
+    {
+     "start": 46.78,
+     "end": 52.44,
+     "text": "Synthesis, the optional microphone path, and export all stay in the browser."
+    },
+    {
+     "start": 52.44,
+     "end": 55.58,
+     "text": "Closing the tab leaves nothing on a server."
+    }
+   ]
+  },
+  {
+   "id": "sound-deck-ai",
+   "title": "Sound Deck AI",
+   "voice": "en-ZA-LukeNeural",
+   "url": "/apps/soundx-ai/",
+   "source": "/ (Sound Deck AI card) and the Sound Deck AI README",
+   "duration": 45.0,
+   "audio": "/media/ai/narration/sound-deck-ai.mp3",
+   "captions": "/media/ai/narration/sound-deck-ai.vtt",
+   "words": 132,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 8.97,
+     "text": "Sound Deck AI is Katlego's newest browser studio: an AI drum station with twenty on-device AI tools, a plugin rack, Afro sample packs and twenty-two themes."
+    },
+    {
+     "start": 8.92,
+     "end": 11.85,
+     "text": "Everything works offline with no API key."
+    },
+    {
+     "start": 11.85,
+     "end": 14.98,
+     "text": "Audio stays on the machine, and there is no sign-in."
+    },
+    {
+     "start": 14.98,
+     "end": 20.94,
+     "text": "Tempo and key detection, hum to MIDI, clash-fixing EQ and Mix QA all run in the browser."
+    },
+    {
+     "start": 20.94,
+     "end": 27.92,
+     "text": "The Producer Agent turns a written brief into a full beat in one click, setting the pattern, tempo, swing, pack and plugins."
+    },
+    {
+     "start": 27.92,
+     "end": 35.24,
+     "text": "The sample packs, including Amapiano, Gqom, Afro-house and 808, are original and released as CC0."
+    },
+    {
+     "start": 35.24,
+     "end": 39.44,
+     "text": "Gemini is optional, and if it is switched on it only ever runs on the server."
+    },
+    {
+     "start": 39.44,
+     "end": 45.0,
+     "text": "It is a separate product from SoundX, with its own build, so each can grow without breaking the other."
+    }
+   ]
+  },
+  {
+   "id": "blueprints",
+   "title": "Mens Mercatus Blueprint",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/blueprint/",
+   "source": "/blueprint/ and /labs/",
+   "duration": 55.1,
+   "audio": "/media/ai/narration/blueprints.mp3",
+   "captions": "/media/ai/narration/blueprints.vtt",
+   "words": 120,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 7.11,
+     "text": "Mens Mercatus Blueprint is a static portfolio pack: reference drawings and screens, not a live service."
+    },
+    {
+     "start": 7.06,
+     "end": 9.6,
+     "text": "It holds seven schematics."
+    },
+    {
+     "start": 9.6,
+     "end": 23.59,
+     "text": "The overall system architecture, the AI Assist integration pipeline, a Kubernetes topology, the event mode data flow, close friends GPS and ping, compliance gates, and the five jobs pillars."
+    },
+    {
+     "start": 23.59,
+     "end": 34.13,
+     "text": "The event mode screens walk through a signup gate, rate lock, check-in, points, vehicle checklist, no-show, dispute, payout and settings."
+    },
+    {
+     "start": 34.13,
+     "end": 42.38,
+     "text": "Compliance is designed in, with consent gates for minimum wage, POPIA and transport rules documented beside the mockups."
+    },
+    {
+     "start": 42.38,
+     "end": 48.82,
+     "text": "And an AI in every tool plan shows how Assist wires into each surface, refusals included."
+    },
+    {
+     "start": 48.82,
+     "end": 54.99,
+     "text": "It is the thinking behind the products: how a system should behave before a single request goes live."
+    }
+   ]
+  },
+  {
+   "id": "think-app",
+   "title": "THINK",
+   "voice": "en-ZA-LukeNeural",
+   "url": "/think/",
+   "source": "/think/, /case-studies/assist/ and /resume/",
+   "duration": 37.6,
+   "audio": "/media/ai/narration/think-app.mp3",
+   "captions": "/media/ai/narration/think-app.vtt",
+   "words": 108,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 8.67,
+     "text": "THINK is a Gemini multimodal workspace: chat, live voice, Net Sites, Net Code, Netzar Protocol and Net Learn, hosted on Mens Mercatus."
+    },
+    {
+     "start": 8.62,
+     "end": 14.45,
+     "text": "It is the live multimodal desk, with chat, image and live paths through the portfolio's Gemini proxy."
+    },
+    {
+     "start": 14.45,
+     "end": 21.71,
+     "text": "Katlego built it as a React 19 workspace, with Vite and TypeScript, a server-side proxy and a live-voice WebSocket relay."
+    },
+    {
+     "start": 21.71,
+     "end": 23.91,
+     "text": "The model key stays on the server."
+    },
+    {
+     "start": 23.91,
+     "end": 28.62,
+     "text": "Live voice and image are capped per IP, and that cap is the control, not a bug."
+    },
+    {
+     "start": 28.62,
+     "end": 33.43,
+     "text": "THINK is a portfolio workspace with caps, not an unlimited production assistant."
+    },
+    {
+     "start": 33.43,
+     "end": 37.58,
+     "text": "And the feed copy inside THINK is product content, not a résumé claim."
+    }
+   ]
+  },
+  {
+   "id": "assist-app",
+   "title": "Mercatus Assist",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/apps/mercatus-assist/",
+   "source": "/apps/mercatus-assist/ (Assist v2 page copy)",
+   "duration": 46.5,
+   "audio": "/media/ai/narration/assist-app.mp3?v=m2",
+   "captions": "/media/ai/narration/assist-app.vtt?v=m2",
+   "words": 110,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 4.12,
+     "text": "Mercatus Assist answers questions about Katlego's work."
+    },
+    {
+     "start": 4.07,
+     "end": 8.94,
+     "text": "Retrieval and intent routing run on your device with a small embedding model."
+    },
+    {
+     "start": 8.94,
+     "end": 15.34,
+     "text": "Gemini writes the answer from the sources it was given, and every claim links back to the page it came from."
+    },
+    {
+     "start": 15.34,
+     "end": 18.15,
+     "text": "When it doesn't know, it says so."
+    },
+    {
+     "start": 18.15,
+     "end": 25.28,
+     "text": "A confidence meter, computed from retrieval similarity, makes a weak match visible instead of hidden."
+    },
+    {
+     "start": 25.28,
+     "end": 31.53,
+     "text": "Paste a job post for a requirement-by-requirement match against the real CV, with honest gaps."
+    },
+    {
+     "start": 31.53,
+     "end": 40.28,
+     "text": "It can explain a project for a recruiter, a business owner or an engineer, in English, isiZulu, Afrikaans or Sesotho."
+    },
+    {
+     "start": 40.28,
+     "end": 43.75,
+     "text": "The conversation lives in this browser tab only."
+    },
+    {
+     "start": 43.75,
+     "end": 46.48,
+     "text": "No cookies, no tracking."
+    }
+   ]
+  },
+  {
+   "id": "concierge",
+   "title": "Mercatus Concierge",
+   "voice": "en-ZA-LukeNeural",
+   "url": "/apps/mercatus-concierge/",
+   "source": "/apps/mercatus-concierge/ and /apps/makedas-canvas/",
+   "duration": 44.1,
+   "audio": "/media/ai/narration/concierge.mp3?v=m2",
+   "captions": "/media/ai/narration/concierge.vtt?v=m2",
+   "words": 136,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 6.94,
+     "text": "Mercatus Concierge is the guide through Mens Mercatus: a narrative shell over the desks already running, not another product silo."
+    },
+    {
+     "start": 6.89,
+     "end": 11.91,
+     "text": "The journey opens live into existing URLs only, with a status chip for each desk."
+    },
+    {
+     "start": 11.91,
+     "end": 22.72,
+     "text": "It points you to Mercatus Assist, to AI Hawk in JobNet Application, which stays draft-only, to Forex Mercatus Codex, a paper-trading desk with no live-broker claim, to SoundX AI and to THINK."
+    },
+    {
+     "start": 22.72,
+     "end": 29.07,
+     "text": "Where a surface lives only in Mercatus Lab on the Mac Mini, Concierge names it honestly, and shows no fake green."
+    },
+    {
+     "start": 29.07,
+     "end": 32.25,
+     "text": "The builder shell lets you pick a task and jump straight in."
+    },
+    {
+     "start": 32.25,
+     "end": 36.79,
+     "text": "Everything runs in the browser and saves locally, with no account and no credits."
+    },
+    {
+     "start": 36.79,
+     "end": 44.04,
+     "text": "Mocks stay mocks: chat replies, scores and the portal are local demos, with no payments, no real sign-in and no AI calls."
+    }
+   ],
+   "urls": [
+    "/apps/mercatus-concierge/",
+    "/apps/makedas-canvas/"
+   ]
+  },
+  {
+   "id": "jobnet-app",
+   "title": "JobNet Application",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/apps/jobnet/",
+   "source": "/apps/jobnet/",
+   "duration": 45.3,
+   "audio": "/media/ai/narration/jobnet-app.mp3?v=m1",
+   "captions": "/media/ai/narration/jobnet-app.vtt?v=m1",
+   "words": 113,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 4.26,
+     "text": "JobNet Application is one app for the whole job-search loop."
+    },
+    {
+     "start": 4.21,
+     "end": 11.89,
+     "text": "JobNet scrapes public LinkedIn and Glassdoor listings off this site, and the shortlist comes from its read-only public API."
+    },
+    {
+     "start": 11.89,
+     "end": 23.56,
+     "text": "Sentence embeddings, running in a background worker on your device, compare each requirement with real CV evidence, and BM25 takes over instantly when the model isn't loaded."
+    },
+    {
+     "start": 23.56,
+     "end": 30.47,
+     "text": "AI Hawk, formerly Drop Net, then drafts a tailored cover note and CV synopsis for the role you pick."
+    },
+    {
+     "start": 30.47,
+     "end": 36.75,
+     "text": "It runs from templates on this device, with no model call, and nothing is stored or sent."
+    },
+    {
+     "start": 36.75,
+     "end": 41.63,
+     "text": "You review the draft, then copy it or forward it by email yourself."
+    },
+    {
+     "start": 41.63,
+     "end": 45.22,
+     "text": "Nothing is ever sent or applied for automatically."
+    }
+   ],
+   "urls": [
+    "/apps/jobnet/",
+    "/apps/drop-net/"
+   ]
+  },
+  {
+   "id": "fleet",
+   "title": "Mens Mercatus Fleet",
+   "voice": "en-ZA-LeahNeural",
+   "url": "/case-studies/fleet/",
+   "source": "/case-studies/fleet/",
+   "duration": 65.8,
+   "audio": "/media/ai/narration/fleet.mp3",
+   "captions": "/media/ai/narration/fleet.vtt",
+   "words": 162,
+   "cues": [
+    {
+     "start": 0.1,
+     "end": 5.06,
+     "text": "Mens Mercatus Fleet is a maintenance desk for South African vehicle fleets."
+    },
+    {
+     "start": 5.01,
+     "end": 16.54,
+     "text": "Katlego built a FastAPI server in Python with a SQLite store, a rule engine for minor-repair approval and a NumPy price regressor trained on 160 fictional invoices."
+    },
+    {
+     "start": 16.54,
+     "end": 24.26,
+     "text": "Repairs up to two thousand five hundred rand, and within eight and a half percent of the fair price, are approved by rule."
+    },
+    {
+     "start": 24.26,
+     "end": 30.82,
+     "text": "A counter or manager band runs to fifteen thousand rand, and anything above goes to an executive."
+    },
+    {
+     "start": 30.82,
+     "end": 37.19,
+     "text": "Fault to Repair turns a fault code and a workshop quote into a fair price in rand and an approval tier."
+    },
+    {
+     "start": 37.19,
+     "end": 47.98,
+     "text": "Fifteen Fleet Intelligence tools cover warranty, service reminders, pre-trip checks, fuel slips, compliance, theft alerts and driver coaching."
+    },
+    {
+     "start": 47.98,
+     "end": 55.07,
+     "text": "WhatsApp and Teams messages are drafts and virtual cards are mock only, so a person signs off every action."
+    },
+    {
+     "start": 55.07,
+     "end": 59.18,
+     "text": "Every vehicle, workshop and price is example data."
+    },
+    {
+     "start": 59.18,
+     "end": 65.75,
+     "text": "This is a local demo, not a deployed product, and four hundred and six automated tests pass."
+    }
+   ]
+  }
+ ]
+}

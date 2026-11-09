@@ -1,0 +1,261 @@
+/* Mercatus Cartel Robot — minimal R/B/W, mobile-first, no oversized logo */
+
+:root {
+  --mm-black: #0a0a0a;
+  --mm-white: #f5f5f5;
+  --mm-muted: #8a8a8a;
+  --mm-red: #c8102e;
+  --mm-line: #222;
+  --mm-safe-b: env(safe-area-inset-bottom, 0px);
+  --mm-safe-t: env(safe-area-inset-top, 0px);
+  --mm-safe-l: env(safe-area-inset-left, 0px);
+  --mm-safe-r: env(safe-area-inset-right, 0px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--mm-black);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Shell: full-bleed on phones, centered card on large screens */
+.mm-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding:
+    max(0.5rem, var(--mm-safe-t))
+    max(0.5rem, var(--mm-safe-r))
+    max(0.5rem, var(--mm-safe-b))
+    max(0.5rem, var(--mm-safe-l));
+}
+
+@media (min-width: 640px) {
+  .mm-shell {
+    align-items: center;
+    padding: 1.5rem;
+  }
+}
+
+.mm-robot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  height: calc(100dvh - max(0.5rem, var(--mm-safe-t)) - max(0.5rem, var(--mm-safe-b)) - 1rem);
+  max-height: 100%;
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid var(--mm-line);
+  color: var(--mm-white);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (min-width: 640px) {
+  .mm-robot {
+    height: min(640px, calc(100dvh - 3rem));
+    border-radius: 2px;
+  }
+}
+
+/* Header: wordmark only — tiny mark, never a hero logo */
+.mm-robot__header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--mm-line);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mm-white);
+}
+
+/* Unobtrusive mark: 16px bullseye, not a crest overlay */
+.mm-robot__mark {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--mm-red);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.mm-robot__mark::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mm-red);
+}
+
+.mm-robot__title {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mm-robot__messages {
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.mm-robot__msg {
+  font-size: clamp(0.85rem, 2.8vw, 0.92rem);
+  line-height: 1.45;
+  max-width: min(92%, 36rem);
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.mm-robot__msg--user { align-self: flex-end; color: var(--mm-muted); text-align: right; }
+.mm-robot__msg--bot { align-self: flex-start; }
+
+.mm-robot__form {
+  display: flex;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.65rem 0.75rem calc(0.65rem + var(--mm-safe-b));
+  border-top: 1px solid var(--mm-line);
+}
+
+.mm-robot__input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid var(--mm-line);
+  color: var(--mm-white);
+  padding: 0.65rem 0.7rem;
+  font-size: 16px; /* avoid iOS zoom */
+  outline: none;
+  border-radius: 0;
+}
+.mm-robot__input:focus { border-color: var(--mm-red); }
+.mm-robot__input::placeholder { color: #555; }
+
+.mm-robot__send {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--mm-red);
+  color: var(--mm-red);
+  padding: 0 0.75rem;
+  min-height: 44px; /* touch target */
+  cursor: pointer;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.mm-robot__send:hover,
+.mm-robot__send:focus-visible { background: var(--mm-red); color: var(--mm-white); }
+.mm-robot__send:disabled { opacity: 0.4; cursor: default; }
+
+/* Welcome — compact on phones; no logo stack */
+.mm-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding:
+    max(1rem, var(--mm-safe-t))
+    max(1rem, var(--mm-safe-r))
+    max(1rem, var(--mm-safe-b))
+    max(1rem, var(--mm-safe-l));
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.mm-welcome__card {
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.15rem 1.2rem;
+  background: var(--mm-black);
+  border: 1px solid var(--mm-line);
+  color: var(--mm-white);
+}
+
+.mm-welcome__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mm-muted);
+}
+
+.mm-welcome__card h2 {
+  margin: 0 0 0.65rem;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+}
+
+.mm-welcome__card p {
+  margin: 0 0 0.55rem;
+  color: var(--mm-muted);
+  font-size: clamp(0.82rem, 3vw, 0.9rem);
+  line-height: 1.45;
+}
+
+.mm-welcome__card button {
+  margin-top: 0.65rem;
+  width: 100%;
+  min-height: 44px;
+  background: var(--mm-red);
+  color: white;
+  border: 0;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .mm-welcome__card button { width: auto; }
+}
+
+
+/* Tablet: breathing room, still single column */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mm-shell { padding: 1.25rem; align-items: center; }
+  .mm-robot {
+    max-width: 520px;
+    height: min(720px, calc(100dvh - 2.5rem));
+  }
+  .mm-robot__header { font-size: 0.75rem; padding: 0.75rem 1rem; }
+  .mm-welcome__card { max-width: 26rem; }
+}
+
+/* Large displays: calm centered panel, never stretch chat edge-to-edge */
+@media (min-width: 1024px) {
+  .mm-shell { padding: 2rem; align-items: center; }
+  .mm-robot {
+    max-width: 440px;
+    height: min(680px, calc(100dvh - 4rem));
+    box-shadow: 0 0 0 1px #1a1a1a;
+  }
+  .mm-robot__mark { width: 16px; height: 16px; } /* stay small on big screens */
+}
+
+/* Never float a large emblem over content */
+.mm-logo-hero,
+.mm-robot img.logo-large,
+.mm-robot .crest-overlay {
+  display: none !important;
+}

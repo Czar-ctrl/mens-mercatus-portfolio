@@ -1,0 +1,16 @@
+# SoundX Studio is merged into SoundX AI (Option E2). Every old Studio URL redirects to the merged app,
+# keeping the query string (room codes) and, in the browser, the #hash.
+# controller/sw.js is still served so that installed controller PWAs pick up a worker that retires itself.
+# 302 for now so a rollback takes effect at once; change R=302 to R=301 once the merge has settled.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^controller/sw\.js$ - [L]
+  RewriteRule ^(controller|mic)(?:/(.*))?$ https://%{HTTP_HOST}/apps/soundx-ai/$1/$2 [R=302,L,QSA]
+  RewriteRule ^ https://%{HTTP_HOST}/apps/soundx-ai/ [R=302,L,QSA]
+</IfModule>
+<IfModule mod_headers.c>
+  Header unset Permissions-Policy
+  Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>

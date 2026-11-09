@@ -1,0 +1,26 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/themes-Bl6HtdIb.js","assets/sx-boot-DVWb5FAW.js","assets/index-BJxPYnZq.js","assets/index-C466cxsO.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./index-BJxPYnZq.js";var t=`mm-sound-deck-ns-surface`;function n(){try{let e=localStorage.getItem(t);return e===null||e===`1`||e===`true`}catch{return!0}}function r(e){try{localStorage.setItem(t,e?`1`:`0`)}catch{}}var i=[{id:`label`,label:`Label`},{id:`roster`,label:`Roster`},{id:`releases`,label:`Releases`},{id:`sessions`,label:`Sessions`}],a={label:{kicker:`Night Shift · SoundX`,title:`SOUNDS AFTER <span>DARK</span>`,cards:[{h:`Signal yellow`,p:`Lemon #F2E000 on near-black — the only accent. Soft depth, no hard strokes.`,w:`72%`},{h:`B / Y / W`,p:`Black · lemon yellow · white only — Blink Night Shift record-label lock.`,w:`48%`},{h:`Tactile cards`,p:`Pillowy panels sit in space — shadow separation instead of borders.`,w:`61%`}]},roster:{kicker:`Artists`,title:`ROSTER ON <span>ROTATION</span>`,cards:[{h:`Live Loops`,p:`Clip grid scenes — launch without leaving the night shell.`,w:`55%`},{h:`AI Producer`,p:`Chat-side ideas with the same warm furniture chrome.`,w:`40%`},{h:`Ghost layer`,p:`Tape-echo buffer as a soft secondary surface.`,w:`66%`}]},releases:{kicker:`Catalog`,title:`CUT · MASTER · <span>SHIP</span>`,cards:[{h:`Arrange`,p:`Song view timeline with soft clip pillows.`,w:`58%`},{h:`Mixer`,p:`Collapse dock still works — blue wash hit targets only.`,w:`44%`},{h:`Export`,p:`WAV / FLAC / MP3 / Ogg — unchanged audio path.`,w:`70%`}]},sessions:{kicker:`Studio`,title:`SESSION <span>VERSIONS</span>`,cards:[{h:`Snapshots`,p:`Roll back arrangements without leaving Night Shift.`,w:`52%`},{h:`Stem DNA`,p:`Analysis cards reuse the same soft radius language.`,w:`63%`},{h:`Co-producer`,p:`Suggestion chips as furniture pills, not outlined boxes.`,w:`37%`}]}};function o(t,o){if(!t)return null;let s=n(),c=`label`,l=t.querySelector(`[data-sx-ns-surface]`),u=t.querySelector(`[data-sx-ns-reopen]`);if(!l){l=document.createElement(`section`),l.className=`sx-ns-surface`,l.setAttribute(`data-sx-ns-surface`,``),l.setAttribute(`aria-label`,`Night Shift app surface`),l.innerHTML=`
+      <aside class="sx-ns-side">
+        <p class="sx-ns-mark">NS <em>SHIFT</em></p>
+        <nav class="sx-ns-nav" data-sx-ns-nav role="tablist" aria-label="Night Shift sections"></nav>
+      </aside>
+      <div class="sx-ns-main">
+        <div class="sx-ns-top">
+          <div>
+            <p class="sx-ns-kicker" data-sx-ns-kicker></p>
+            <h2 class="sx-ns-title" data-sx-ns-title></h2>
+          </div>
+          <div class="sx-ns-actions">
+            <button type="button" class="btn primary sm" data-sx-ns-apply>USE NIGHT SHIFT</button>
+            <button type="button" class="sx-ns-dismiss" data-sx-ns-dismiss title="Hide Night Shift surface">Hide</button>
+          </div>
+        </div>
+        <div class="sx-ns-cards" data-sx-ns-cards></div>
+      </div>
+    `;let e=t.querySelector(`[data-transport]`)||t.querySelector(`header`),n=t.querySelector(`[data-workspace]`);e&&e.parentNode?e.insertAdjacentElement(`afterend`,l):n?n.insertAdjacentElement(`beforebegin`,l):t.prepend(l)}u||(u=document.createElement(`button`),u.type=`button`,u.className=`sx-ns-reopen`,u.setAttribute(`data-sx-ns-reopen`,``),u.textContent=`Show Night Shift`,u.hidden=s,l.insertAdjacentElement(`afterend`,u));let d=l.querySelector(`[data-sx-ns-nav]`);d&&!d.children.length&&(d.innerHTML=i.map(e=>`<button type="button" role="tab" data-sx-ns-pane="${e.id}" aria-selected="false">${e.label}</button>`).join(``));function f(){let e=a[c]||a.label,t=l.querySelector(`[data-sx-ns-kicker]`),n=l.querySelector(`[data-sx-ns-title]`),r=l.querySelector(`[data-sx-ns-cards]`);t&&(t.textContent=e.kicker),n&&(n.innerHTML=e.title),r&&(r.innerHTML=e.cards.map(e=>`
+        <article class="sx-ns-card">
+          <h4>${e.h}</h4>
+          <p>${e.p}</p>
+          <div class="sx-ns-bar"><i style="--w:${e.w}"></i></div>
+        </article>
+      `).join(``)),d?.querySelectorAll(`[data-sx-ns-pane]`).forEach(e=>{let t=e.dataset.sxNsPane===c;e.classList.toggle(`active`,t),e.setAttribute(`aria-selected`,t?`true`:`false`)}),l.hidden=!s,l.classList.toggle(`is-collapsed`,!s),u.hidden=s}function p(e,t){s=!!e,r(s),f(),t&&o?.(s?`Night Shift surface · on`:`Night Shift surface · hidden`)}d?.addEventListener(`click`,e=>{let t=e.target.closest(`[data-sx-ns-pane]`);t&&(c=t.dataset.sxNsPane,f())}),l.querySelector(`[data-sx-ns-dismiss]`)?.addEventListener(`click`,()=>p(!1,!0)),u.addEventListener(`click`,()=>p(!0,!0)),l.querySelector(`[data-sx-ns-apply]`)?.addEventListener(`click`,async()=>{try{let{setTheme:t}=await e(async()=>{let{setTheme:e}=await import(`./themes-Bl6HtdIb.js`);return{setTheme:e}},__vite__mapDeps([0,1,2,3]));t(`night-shift`,o),p(!0,!1)}catch(e){console.warn(`[Sound Deck] night-shift theme`,e)}});let m=document.querySelector(`.transport-actions`);if(m&&!m.querySelector(`[data-sx-ns-toggle]`)){let e=document.createElement(`button`);e.type=`button`,e.className=`btn ghost sm`,e.setAttribute(`data-sx-ns-toggle`,``),e.setAttribute(`data-sx-tip`,`Toggle Night Shift mini-app surface under transport`),e.textContent=`Night Shift`,m.prepend(e),e.addEventListener(`click`,()=>p(!s,!0))}return f(),{setOpen:p,isOpen:()=>s}}export{o as mountNightShiftSurface};

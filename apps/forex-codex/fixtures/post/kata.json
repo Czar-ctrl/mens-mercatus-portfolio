@@ -1,0 +1,1 @@
+{"ok":true,"source":"template","code":"// lxScript: return {plots:{name:[...]}, positions?:[...]}\nconst fast = ta.ema(close, 9), slow = ta.ema(close, 21);\nreturn { plots: { 'EMA 9': fast, 'EMA 21': slow } };","host_error":"No module named 'tools'"}

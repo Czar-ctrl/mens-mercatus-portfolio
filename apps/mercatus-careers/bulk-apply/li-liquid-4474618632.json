@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-liquid-4474618632",
+  "jobId": "li-liquid-4474618632",
+  "title": "AI Engineer (Intermediate) \u2014 listed as Ai Developer",
+  "company": "Liquid Thought",
+  "location": "Cape Town, Western Cape, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474618632",
+  "signal": "high",
+  "packet": "Here's a draft application packet for the AI Engineer role at Liquid Thought, tailored to your skills and experience.\n\n---\n\n**Cover Letter Draft**\n\nSubject: Application for AI Engineer (Ai Developer) \u2013 [Your Name]\n\nDear Liquid Thought Hiring Team,\n\nI am writing to express my keen interest in the AI Engineer (Ai Developer) position in Cape Town, as advertised. With a strong background in AI and systems engineering, I am eager to contribute to building and deploying production AI solutions for your client platforms.\n\nMy expertise spans Python, TypeScript, LLMs, RAG, and agent-based systems, complemented by experience in .NET and distributed systems. I have a proven track record in developing and implementing AI solutions that drive automated workflows, personalisation, and intelligent assistance, directly aligning with the core responsibilities of this role.\n\nMy work on projects like the Mercatus Assist / THINK demo has provided me with practical experience in bringing advanced AI capabilities into production environments. I am confident that my skills and passion for creating impactful AI solutions would be a valuable asset to Liquid Thought.\n\nThank you for considering my application. I look forward to the opportunity to discuss how I can contribute to your team.\n\nSincerely,\n[Your Name]\n[Your Contact Information]\n\n---\n\n**Fit Notes**\n\nThis role is an excellent match because:\n*   Your skills (Python, TypeScript, LLMs, RAG, agents, .NET, distributed systems) directly align with the technical requirements.\n*   Your experience with \"Mercatus Assist / THINK demo\" demonstrates practical, production-level AI deployment, which is key for \"building and deploying production AI for client platforms.\"\n*   The role's focus on LLM-powered assistants, automated workflows, and personalisation perfectly matches your stated \"why.\"\n\n---\n\n**How to Submit Checklist**\n\n1.  **Visit Liquid Thought's Careers Page:** Navigate to their official website and find the specific \"Ai Developer\" job listing.\n2.  **Customise Your Cover Letter:** Adapt the draft above with your specific achievements and ensure it flows naturally with your CV.\n3.  **Prepare Your CV/Resume:** Ensure it's up-to-date and highlights your relevant AI and systems engineering experience.\n4.  **Complete Application Form:** Fill out any required online application forms on their site.\n5.  **Submit:** Upload your customised cover letter and CV as requested.\n\nRemember, you will need to submit your application directly through Liquid Thought's official channels.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:47:39.335776+00:00"
+}

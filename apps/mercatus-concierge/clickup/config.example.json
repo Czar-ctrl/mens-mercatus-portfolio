@@ -1,0 +1,26 @@
+{
+  "team_id": "YOUR_CLICKUP_TEAM_ID",
+  "space_id": "YOUR_SPACE_ID",
+  "space_name": "Mercatus Concierge",
+  "lists": {
+    "cold_calls": {
+      "id": "YOUR_LIST_ID_COLD_CALLS",
+      "name": "Cold-call pipeline"
+    },
+    "dropnet_leads": {
+      "id": "YOUR_LIST_ID_DROPNET",
+      "name": "DropNet follow-ups"
+    },
+    "concierge_build": {
+      "id": "YOUR_LIST_ID_BUILD",
+      "name": "Concierge build"
+    },
+    "meeting_desk": {
+      "id": "YOUR_LIST_ID_MEETING",
+      "name": "Meeting Desk prep"
+    }
+  },
+  "proxy_base": "http://127.0.0.1:8788",
+  "production_proxy": "https://api.mensmercatus.online/clickup/",
+  "clickup_app_url": "https://app.clickup.com/"
+}

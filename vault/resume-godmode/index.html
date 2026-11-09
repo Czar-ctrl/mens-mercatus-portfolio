@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Katlego Mokoto CV variants — Mens Mercatus Godmode">
+<title>CV · Katlego Mokoto · Mens Mercatus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0a0a; --panel:#111; --line:#242424; --white:#f5f5f5; --muted:#8a8a8a;
+  --red:#c8102e; --font:"Inter",system-ui,sans-serif; --mono:"Space Mono",monospace;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:var(--font); background:var(--bg); color:var(--white); min-height:100vh;
+  background-image: radial-gradient(ellipse 70% 50% at 50% -20%, rgba(200,16,46,.28), transparent 55%);
+}
+.wrap { max-width:1100px; margin:0 auto; padding:3rem 1.25rem 4rem; }
+.kicker {
+  font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:.75rem;
+}
+h1 { font-size:clamp(2rem,5vw,3.2rem); letter-spacing:-.03em; margin-bottom:.5rem; }
+.lead { color:var(--muted); max-width:36rem; margin-bottom:2.5rem; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+@media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+.card {
+  display:flex; flex-direction:column; border:1px solid var(--line); border-radius:18px;
+  overflow:hidden; background:var(--panel); text-decoration:none; color:inherit;
+  transition: border-color .2s, transform .2s, box-shadow .2s; min-height:320px;
+}
+.card:hover {
+  border-color:rgba(200,16,46,.55); transform:translateY(-3px);
+  box-shadow:0 20px 50px rgba(200,16,46,.12);
+}
+.preview {
+  height:140px; position:relative; border-bottom:1px solid var(--line);
+  display:flex; align-items:flex-end; padding:1rem;
+}
+.preview.a {
+  background:
+    linear-gradient(135deg, #0a0a0a 40%, rgba(200,16,46,.5)),
+    repeating-linear-gradient(90deg, transparent, transparent 12px, rgba(255,255,255,.03) 12px, rgba(255,255,255,.03) 13px);
+}
+.preview.b {
+  background: linear-gradient(160deg, #0a0a0a 30%, #c8102e 120%);
+}
+.preview.c {
+  background: linear-gradient(90deg, #111 35%, #0a0a0a 35%);
+}
+.preview span {
+  font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+}
+.body { padding:1.25rem 1.35rem 1.5rem; flex:1; display:flex; flex-direction:column; }
+.body h2 { font-size:1.25rem; margin-bottom:.4rem; }
+.body p { color:var(--muted); font-size:.9rem; flex:1; margin-bottom:1rem; }
+.links { display:flex; flex-wrap:wrap; gap:.5rem; }
+.links a, .links span.tag {
+  font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase;
+  padding:.35rem .65rem; border-radius:999px; border:1px solid var(--line); color:var(--white);
+  text-decoration:none;
+}
+.links a:hover { border-color:var(--red); color:#ff6b7a; }
+.links span.tag { color:var(--muted); }
+.featured {
+  display:grid; grid-template-columns:1.3fr 1fr; gap:0; border:1px solid rgba(200,16,46,.55);
+  border-radius:22px; overflow:hidden; background:var(--panel); margin-bottom:2rem;
+  box-shadow:0 24px 70px rgba(200,16,46,.16);
+}
+@media (max-width:900px) { .featured { grid-template-columns:1fr; } }
+.featured .fprev {
+  min-height:260px; background:linear-gradient(160deg,#0a0a0a 25%,#c8102e 130%);
+  display:flex; flex-direction:column; justify-content:flex-end; padding:1.75rem; text-decoration:none; color:var(--white);
+}
+.featured .fprev .badge {
+  align-self:flex-start; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  background:var(--red); color:#fff; padding:.3rem .6rem; border-radius:999px; margin-bottom:auto;
+}
+.featured .fprev strong { font-size:clamp(1.6rem,3.5vw,2.4rem); letter-spacing:-.03em; line-height:1.05; }
+.featured .fbody { padding:1.75rem; display:flex; flex-direction:column; gap:1rem; justify-content:center; }
+.featured .fbody p { color:var(--muted); font-size:.95rem; }
+.cta { display:flex; flex-wrap:wrap; gap:.6rem; }
+.cta a {
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;
+  padding:.65rem 1rem; border-radius:999px; border:1px solid var(--line); color:var(--white);
+}
+.cta a.primary { background:var(--red); border-color:var(--red); color:#fff; }
+.cta a:hover { border-color:var(--red); }
+.sub { font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 1rem; }
+.foot {
+  margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--line);
+  font-size:.85rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem;
+}
+.foot a { color:var(--white); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="kicker">Mens Mercatus · Resume Godmode · 2026-10-06</p>
+  <h1>Katlego Mokoto</h1>
+  <p class="lead">Featured: the polished magazine editorial CV. Alternate high-end variants grounded in mensmercatus.online and the AI Engineering resume PDF. Shared content via <code style="color:#e8a0a8">resume-data.js</code>. Honest DEMO labels on flagships.</p>
+  <section class="featured" aria-label="Featured CV">
+    <a href="cv-editorial.html" class="fprev"><span class="badge">Featured · Recommended</span><strong>Magazine Editorial CV</strong></a>
+    <div class="fbody">
+      <p>The polished, print-ready editorial CV — full-bleed hero, award typography, Mens Mercatus red / black / white. This is the primary CV to read or download.</p>
+      <div class="cta">
+        <a class="primary" href="cv-editorial.html">Read CV</a>
+        <a href="cv-editorial.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+    </div>
+  </section>
+  <p class="sub">Other variants</p>
+  <div class="grid">
+    <article class="card">
+      <a href="cv-editorial.html" class="preview b"><span>Variant B</span></a>
+      <div class="body">
+        <h2>Magazine editorial <span style="color:#ff6b7a;font-size:.75rem;font-family:var(--mono)">FEATURED</span></h2>
+        <p>Full-bleed hero, award typography, less chrome — still Mens Mercatus red / black / white. Print-ready twin.</p>
+        <div class="links">
+          <a href="cv-editorial.html">Open HTML</a>
+          <a href="cv-editorial.pdf">PDF</a>
+          <span class="tag">B</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="cv-godmode.html" class="preview a"><span>Variant A</span></a>
+      <div class="body">
+        <h2>Godmode HUD</h2>
+        <p>Inter + Space Mono, #0a0a0a, red accent, glow, pills, HUD labels. Interactive screen + print CSS for clean 1–2 page PDF.</p>
+        <div class="links">
+          <a href="cv-godmode.html">Open HTML</a>
+          <a href="cv-godmode.pdf">PDF</a>
+          <span class="tag">A</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="cv-screen.html" class="preview c"><span>Variant C</span></a>
+      <div class="body">
+        <h2>Split stack</h2>
+        <p>Interactive screen twin with tabbed HUD rail, plus a clean ATS / plain professional page (no heavy graphics).</p>
+        <div class="links">
+          <a href="cv-screen.html">Screen</a>
+          <a href="cv-ats.html">ATS HTML</a>
+          <a href="cv-ats.pdf">ATS PDF</a>
+          <span class="tag">C</span>
+        </div>
+      </div>
+    </article>
+  </div>
+  <footer class="foot">
+    <span>katlego.mokoto.km@gmail.com · mensmercatus.online · Johannesburg</span>
+    <span><a href="/vault/">Vault</a></span>
+  </footer>
+</main>
+</body>
+</html>

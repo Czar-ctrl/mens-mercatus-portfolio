@@ -1,0 +1,53 @@
+/* Mercatus Cartel — high-end cursor-reactive background (red / black / white)
+   Minimal: soft spotlight + faint vignette. No particles, no noise overlays. */
+
+:root {
+  --mm-black: #0a0a0a;
+  --mm-white: #f5f5f5;
+  --mm-red: #c8102e;
+  --mm-red-dim: rgba(200, 16, 46, 0.18);
+  --mm-white-dim: rgba(245, 245, 245, 0.06);
+  --mx: 50%;
+  --my: 50%;
+}
+
+.mm-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--mm-black);
+  background-image:
+    radial-gradient(
+      600px circle at var(--mx) var(--my),
+      var(--mm-red-dim) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      900px circle at calc(var(--mx) + 8%) calc(var(--my) - 6%),
+      var(--mm-white-dim) 0%,
+      transparent 50%
+    ),
+    radial-gradient(ellipse at 50% 120%, #141414 0%, var(--mm-black) 60%);
+  transition: background-position 0s; /* position driven by CSS vars */
+}
+
+/* Optional thin edge light — still minimal */
+.mm-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(245, 245, 245, 0.04) 0%,
+    transparent 45%
+  );
+}
+
+/* Content sits above */
+.mm-app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  color: var(--mm-white);
+}

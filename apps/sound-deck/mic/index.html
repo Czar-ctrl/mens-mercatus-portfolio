@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0d0b06" />
+  <title>SoundX Mic · Mercatus Bot</title>
+  <link rel="stylesheet" href="style.css?v=20261008md" />
+</head>
+<body>
+  <header>
+    <h1>SoundX Mic</h1>
+    <p class="sub">Phone mic → SoundX deck voice commands &amp; takes · any network</p>
+    <div class="conn"><span class="dot" data-dot></span><span data-status>Connecting…</span></div>
+  </header>
+
+  <section class="cfg" data-cfg data-mode="relay">
+    <label class="room">Room code
+      <input type="text" data-room autocapitalize="characters" autocomplete="off" maxlength="12" placeholder="e.g. K7Q2MX" />
+    </label>
+    <label class="mode">Link
+      <select data-link-mode>
+        <option value="relay">Online room</option>
+        <option value="lan">LAN hub</option>
+      </select>
+    </label>
+    <label class="lan">LAN hub WS
+      <input type="text" data-ws-url placeholder="ws://192.168.x.x:8791/ws" />
+    </label>
+    <button type="button" class="btn" data-reconnect>Connect</button>
+  </section>
+
+  <section class="mode">
+    <span class="badge" data-mode-badge>Phone STT</span>
+    <p class="hint" data-mic-hint>Speak: your phone turns speech into text (Web Speech, LIVE) and the deck runs it as a command. Record: the take is sent to the deck as an audio clip on a “Phone Mic” track (LAN hub with whisper.cpp can transcribe it instead).</p>
+    <p class="hint" data-perm></p>
+  </section>
+
+  <section class="actions">
+    <button type="button" class="btn primary big" data-listen>🎙 Speak a command</button>
+    <button type="button" class="btn big" data-record>● Record take → deck</button>
+    <button type="button" class="btn ghost" data-stop hidden>Stop</button>
+  </section>
+
+  <section class="transcript" aria-live="polite">
+    <span class="label">Transcript</span>
+    <p data-text>Say “make a beat”, “play”, “set BPM 120”, “launch scene 1”…</p>
+  </section>
+
+  <section class="chips" aria-label="Quick commands">
+    <button type="button" data-chip="make a beat">make a beat</button>
+    <button type="button" data-chip="play">play</button>
+    <button type="button" data-chip="stop">stop</button>
+    <button type="button" data-chip="set BPM 120">BPM 120</button>
+    <button type="button" data-chip="launch scene 1">scene 1</button>
+    <button type="button" data-chip="turn up reverb">more reverb</button>
+  </section>
+
+  <footer><p data-hint>Open SoundX on the computer → <b>Pair phone</b> → Mic tab → scan the QR (or type the room code).</p></footer>
+  <script src="app.js?v=20261008md" type="module"></script>
+</body>
+</html>

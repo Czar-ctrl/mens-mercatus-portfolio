@@ -1,0 +1,5 @@
+# Mercatus Assist v2: allow the microphone for voice questions (Web Speech API, on click only). Parent blocks mic elsewhere.
+<IfModule mod_headers.c>
+  Header unset Permissions-Policy
+  Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>

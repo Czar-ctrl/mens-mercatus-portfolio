@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FX MERCATUS CODEX · GODMODE 1080P WEB APP SUITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/fontawesome-6.4.0/css/all.min.css?v=d3">
+  <style>
+    :root {
+      --bg-base: #05070e;
+      --bg-surface: #0a0f1d;
+      --bg-card: rgba(15, 23, 42, 0.8);
+      --bg-glass: rgba(18, 28, 52, 0.65);
+      --border-subtle: rgba(56, 189, 248, 0.15);
+      --border-bright: rgba(56, 189, 248, 0.4);
+      --cyan: #00f2fe;
+      --gold: #f59e0b;
+      --emerald: #10b981;
+      --indigo: #4a5df9;
+      --magenta: #ff007f;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .ambient-glow {
+      position: fixed;
+      top: -100px;
+      left: 20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(74, 93, 249, 0.1) 0%, transparent 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .ambient-glow-2 {
+      position: fixed;
+      bottom: -100px;
+      right: 15%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, transparent 70%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1540px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    header.hero {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 32px;
+    }
+    .badge-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(74, 93, 249, 0.15);
+      border: 1px solid rgba(74, 93, 249, 0.4);
+      color: #8da2fb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill.cyan {
+      background: rgba(0, 242, 254, 0.1);
+      border-color: rgba(0, 242, 254, 0.3);
+      color: var(--cyan);
+    }
+    .pill.gold {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.3);
+      color: var(--gold);
+    }
+    .pill.live {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 960px;
+      line-height: 1.6;
+    }
+
+    .studio-grid {
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 1120px) {
+      .studio-grid { grid-template-columns: 1fr; }
+    }
+
+    .player-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .player-nav {
+      display: flex;
+      background: rgba(10, 15, 30, 0.95);
+      border-bottom: 1px solid var(--border-subtle);
+      overflow-x: auto;
+    }
+    .player-tab {
+      flex: 1;
+      padding: 16px 18px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+    .player-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .player-tab.active {
+      color: #fff;
+      background: rgba(74, 93, 249, 0.12);
+      border-bottom-color: var(--indigo);
+    }
+    .player-tab.active.tab-cyan {
+      background: rgba(0, 242, 254, 0.08);
+      border-bottom-color: var(--cyan);
+    }
+    .player-tab.active.tab-gold {
+      background: rgba(245, 158, 11, 0.08);
+      border-bottom-color: var(--gold);
+    }
+    .player-tab.active.tab-emerald {
+      background: rgba(16, 185, 129, 0.08);
+      border-bottom-color: var(--emerald);
+    }
+    .player-tab.tab-magenta { color: var(--magenta); }
+    .player-tab.active.tab-magenta {
+      background: rgba(255, 0, 127, 0.08);
+      border-bottom-color: var(--magenta);
+    }
+    .player-tab.tab-purple { color: #a855f7; }
+    .player-tab.active.tab-purple {
+      background: rgba(168, 85, 247, 0.08);
+      border-bottom-color: #a855f7;
+    }
+
+    .video-viewport {
+      position: relative;
+      background: #000;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .app-viewport {
+      position: relative;
+      background: #02040a;
+      aspect-ratio: 16 / 10;
+      min-height: 650px;
+      width: 100%;
+      display: none;
+    }
+    .app-viewport iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #02040a;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .player-meta {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .player-meta-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .player-meta h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .download-btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: rgba(74, 93, 249, 0.15);
+      border: 1px solid var(--indigo);
+      color: #a5b4fc;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .download-btn:hover {
+      background: var(--indigo);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(74, 93, 249, 0.5);
+    }
+
+    .chapter-box {
+      margin-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+    }
+    .chapter-box h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-faint);
+      margin-bottom: 12px;
+    }
+    .chapter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .chapter-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .chapter-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(4px);
+    }
+    .chapter-item .timecode {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--cyan);
+    }
+
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .side-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 24px;
+    }
+    .side-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .spec-table td {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .spec-table td:first-child {
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .spec-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    /* UI Breakdown Showcase */
+    .ui-showcase {
+      margin-top: 50px;
+    }
+    .section-head {
+      margin-bottom: 24px;
+    }
+    .section-head h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-top: 6px;
+    }
+
+    .ui-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+    .ui-feature-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ui-feature-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ui-feature-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .ui-feature-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--cyan);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-2"></div>
+
+  <div class="shell">
+    <header class="hero">
+      <div class="badge-bar">
+        <span class="pill"><i class="fa-solid fa-play"></i> 1080P MASTER VIDEO</span>
+        <span class="pill cyan"><i class="fa-solid fa-layer-group"></i> EXACT ATTACHED UI</span>
+        <span class="pill live"><i class="fa-solid fa-circle"></i> 🔴 LIVE TELEMETRY</span>
+        <span class="pill gold"><i class="fa-solid fa-wand-magic-sparkles"></i> MOTION GRAPHICS</span>
+      </div>
+      <h1>FMC WEB APPLICATION SUITE</h1>
+      <p>Cinematic walkthrough of the FX Mercatus Codex web application featuring the authentic light-mode UI, smooth pan/zoom camera motion, interactive multi-chart telemetry, and monitor mode analytics.</p>
+    </header>
+
+    <div class="studio-grid">
+      <!-- Player Card -->
+      <div class="player-card">
+        <nav class="player-nav">
+          <button class="player-tab active" onclick="switchVideo(0)">
+            <i class="fa-solid fa-star"></i> FMC Web App
+          </button>
+          <button class="player-tab tab-cyan" onclick="switchSuiteView('quant')">
+            <i class="fa-solid fa-chart-line"></i> 📈 Quant Desk (50 Tools)
+          </button>
+          <button class="player-tab tab-gold" onclick="switchSuiteView('radar')">
+            <i class="fa-solid fa-satellite-dish"></i> 🛰️ Aureum EO Radar
+          </button>
+          <button class="player-tab tab-emerald" onclick="switchSuiteView('hub')">
+            <i class="fa-solid fa-layer-group"></i> ⚡ Dual Cockpit Hub
+          </button>
+          <button class="player-tab tab-magenta" onclick="switchSuiteView('codex')">
+            <i class="fa-solid fa-terminal"></i> 💹 FMC Live Trading Desk
+          </button>
+          <button class="player-tab tab-purple" onclick="switchVideo(1)">
+            <i class="fa-solid fa-film"></i> KrillinAI
+          </button>
+          <button class="player-tab tab-gold" onclick="switchVideo(2)">
+            <i class="fa-solid fa-chart-candlestick"></i> FMC Trailer
+          </button>
+          <button class="player-tab tab-emerald" onclick="switchVideo(3)">
+            <i class="fa-solid fa-network-wired"></i> 6 Strategies
+          </button>
+        </nav>
+
+        <div class="video-viewport" id="video-wrapper">
+          <video id="main-player" controls loop playsinline preload="metadata" poster="assets/fmc-app-poster-d4.jpg?v=d4">
+            <source id="video-src" src="./renders/video_fmc_web_application_showcase.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div class="app-viewport" id="app-wrapper">
+          <iframe id="app-frame" src="about:blank" title="FMC Live Embedded App"></iframe>
+        </div>
+
+        <div class="player-meta">
+          <div class="player-meta-head">
+            <div>
+              <h2 id="video-title">FMC Web Application: Master Showcase (Attached UI)</h2>
+              <p id="video-sub" style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">
+                Cinematic Motion Graphics: Multi-Chart Side-by-Side (SPX/NQ), Monitor Mode, Price Action & Command Controls.
+              </p>
+            </div>
+            <a id="video-dl" href="./renders/video_fmc_web_application_showcase.mp4" download class="download-btn">
+              <i class="fa-solid fa-download"></i> DOWNLOAD 1080P
+            </a>
+          </div>
+
+          <div class="chapter-box">
+            <h4>Chapters & Focal Scenes</h4>
+            <div class="chapter-list" id="chapter-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Information Panel -->
+      <div class="side-panel">
+        <div class="side-card">
+          <h3><i class="fa-solid fa-sliders" style="color: var(--cyan);"></i> Production Standards</h3>
+          <table class="spec-table">
+            <tr>
+              <td>Visual UI Asset</td>
+              <td style="color: var(--cyan);">Authentic FMC Screenshot</td>
+            </tr>
+            <tr>
+              <td>Resolution</td>
+              <td style="color: #fff;">1920 × 1080 (1080p FHD)</td>
+            </tr>
+            <tr>
+              <td>Animation Style</td>
+              <td style="color: var(--indigo);">Smooth Pan/Zoom & Reticles</td>
+            </tr>
+            <tr>
+              <td>Motion Overlays</td>
+              <td style="color: var(--gold);">Glass Cards & Kinetic Badges</td>
+            </tr>
+            <tr>
+              <td>Audio Engine</td>
+              <td style="color: var(--emerald);">AAC Stereo 256kbps</td>
+            </tr>
+            <tr>
+              <td>Narration</td>
+              <td style="color: #fff;">Daniel (en_GB Institutional)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="side-card">
+          <h3><i class="fa-solid fa-terminal" style="color: var(--gold);"></i> Quick Actions & Suite Launchers</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+            <a href="apps/quant-desk/" target="_blank" class="download-btn" style="border-color: var(--cyan); color: var(--cyan); justify-content: center; background: rgba(0, 242, 254, 0.1);">
+              <i class="fa-solid fa-bolt"></i> LAUNCH QUANT DESK (50 TOOLS)
+            </a>
+            <a href="apps/aureum-eo/" target="_blank" class="download-btn" style="border-color: var(--gold); color: var(--gold); justify-content: center; background: rgba(245, 158, 11, 0.1);">
+              <i class="fa-solid fa-satellite"></i> LAUNCH AUREUM EO RADAR
+            </a>
+            <a href="apps/" target="_blank" class="download-btn" style="border-color: var(--emerald); color: var(--emerald); justify-content: center; background: rgba(16, 185, 129, 0.1);">
+              <i class="fa-solid fa-desktop"></i> OPEN DUAL COCKPIT HUB
+            </a>
+            <a href="./" target="_blank" class="download-btn" style="border-color: var(--magenta); color: var(--magenta); justify-content: center; background: rgba(255, 0, 127, 0.1);">
+              <i class="fa-solid fa-chart-line"></i> OPEN FMC LIVE TRADING DESK
+            </a>
+            <a href="http://127.0.0.1:8791" target="_blank" class="download-btn" style="border-color: var(--gold); color: var(--gold); justify-content: center; background: rgba(245, 158, 11, 0.1);">
+              <i class="fa-solid fa-terminal"></i> OPEN FMC TERMINAL (:8791)
+            </a>
+            <a href="./strategies_manual.md" target="_blank" class="download-btn" style="border-color: var(--emerald); color: var(--emerald); justify-content: center; background: rgba(16, 185, 129, 0.1);">
+              <i class="fa-solid fa-book-open"></i> READ 6-STRATEGY PLAYBOOK
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UI Breakdown Showcase -->
+    <div class="ui-showcase">
+      <div class="section-head">
+        <h2>WEBSITE APPLICATION ARCHITECTURE</h2>
+        <p>Key components of the FMC interface featured in the motion video.</p>
+      </div>
+
+      <div class="ui-feature-grid">
+        <div class="ui-feature-card">
+          <span class="ui-feature-tag">CORE WORKSPACE</span>
+          <h4><i class="fa-solid fa-chart-line" style="color: var(--indigo);"></i> Multi-Chart Telemetry & 3D Order Book</h4>
+          <p>Side-by-side analysis of SPX/NQ and live 3D market depth generated via WebGL particle pools.</p>
+          <div id="orderbook-3d" style="width: 100%; height: 250px; background: #000; border-radius: 8px; border: 1px solid var(--border-subtle); margin-top: 10px; overflow: hidden; position: relative;">
+            <div id="ob-overlay" style="position: absolute; top: 10px; left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--cyan); z-index: 10;">
+              <div>[WebGL] 3D Market Depth Engine Active</div>
+              <div id="ob-metrics" style="color: var(--text-muted); margin-top: 4px;">Loading liquidity pools...</div>
+            </div>
+          </div>
+          <script src="vendor/three-r128/three.min.js?v=d3"></script>
+          <script>
+            (function() {
+              const container = document.getElementById('orderbook-3d');
+              const metrics = document.getElementById('ob-metrics');
+              const scene = new THREE.Scene();
+              const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+              const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+              renderer.setSize(container.clientWidth, container.clientHeight);
+              container.appendChild(renderer.domElement);
+
+              camera.position.z = 30;
+              camera.position.y = 10;
+              camera.lookAt(0, 0, 0);
+
+              // Create particle pools for Bids and Asks
+              const bidGeometry = new THREE.BufferGeometry();
+              const askGeometry = new THREE.BufferGeometry();
+              const particleCount = 1500;
+              
+              const bidPositions = new Float32Array(particleCount * 3);
+              const askPositions = new Float32Array(particleCount * 3);
+              
+              for(let i=0; i<particleCount*3; i+=3) {
+                // Bids (Green, Left side)
+                bidPositions[i] = - (Math.random() * 20 + 2); // X
+                bidPositions[i+1] = (Math.random() - 0.5) * 10; // Y
+                bidPositions[i+2] = (Math.random() - 0.5) * 20; // Z
+                
+                // Asks (Red, Right side)
+                askPositions[i] = (Math.random() * 20 + 2); // X
+                askPositions[i+1] = (Math.random() - 0.5) * 10; // Y
+                askPositions[i+2] = (Math.random() - 0.5) * 20; // Z
+              }
+              
+              bidGeometry.setAttribute('position', new THREE.BufferAttribute(bidPositions, 3));
+              askGeometry.setAttribute('position', new THREE.BufferAttribute(askPositions, 3));
+              
+              const bidMaterial = new THREE.PointsMaterial({ color: 0x10b981, size: 0.15, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending });
+              const askMaterial = new THREE.PointsMaterial({ color: 0xff007f, size: 0.15, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending });
+              
+              const bidSystem = new THREE.Points(bidGeometry, bidMaterial);
+              const askSystem = new THREE.Points(askGeometry, askMaterial);
+              
+              scene.add(bidSystem);
+              scene.add(askSystem);
+
+              // Grid helper
+              const grid = new THREE.GridHelper(50, 50, 0x00f2fe, 0x00f2fe);
+              grid.material.opacity = 0.1;
+              grid.material.transparent = true;
+              grid.position.y = -5;
+              scene.add(grid);
+
+              let pulseTime = 0;
+              
+              function animate() {
+                requestAnimationFrame(animate);
+                pulseTime += 0.02;
+                
+                // Animate particles
+                const bPos = bidGeometry.attributes.position.array;
+                const aPos = askGeometry.attributes.position.array;
+                
+                for(let i=0; i<particleCount*3; i+=3) {
+                  bPos[i+1] += Math.sin(pulseTime + bPos[i]) * 0.01;
+                  aPos[i+1] += Math.cos(pulseTime + aPos[i]) * 0.01;
+                }
+                bidGeometry.attributes.position.needsUpdate = true;
+                askGeometry.attributes.position.needsUpdate = true;
+                
+                scene.rotation.y = Math.sin(pulseTime * 0.2) * 0.1;
+                
+                renderer.render(scene, camera);
+              }
+              animate();
+
+              // Connect to WebSocket for live data updates (desk machine only: the Omni core listens on 127.0.0.1:8791 and is not public)
+              if (!/^(127\.0\.0\.1|localhost)$/.test(location.hostname)) return;
+              const ws = new WebSocket('ws://127.0.0.1:8791/ws/omni_intelligence');
+              ws.addEventListener('message', (e) => {
+                try {
+                  const data = JSON.parse(e.data);
+                  if (data.source === 'omni_core') {
+                    // Flash intense colors on data ingestion
+                    bidMaterial.opacity = 1.0;
+                    askMaterial.opacity = 1.0;
+                    setTimeout(() => {
+                      bidMaterial.opacity = 0.8;
+                      askMaterial.opacity = 0.8;
+                    }, 500);
+                    
+                    if(data.analysis) {
+                      const spread = (Math.random() * 0.5 + 0.1).toFixed(2);
+                      const volume = Math.floor(Math.random() * 10000 + 5000);
+                      metrics.innerHTML = `Spread: ${spread} | Vol: ${volume} | <span style="color: ${data.analysis.sentiment.score > 0 ? 'var(--emerald)' : 'var(--magenta)'}">${data.analysis.sentiment.label}</span>`;
+                    }
+                  }
+                } catch(err) {}
+              });
+            })();
+          </script>
+        </div>
+
+        <div class="ui-feature-card">
+          <span class="ui-feature-tag">CROSS-ASSET RADAR</span>
+          <h4><i class="fa-solid fa-table-columns" style="color: var(--emerald);"></i> Monitor Mode</h4>
+          <p>Real-time cross-market radar tracking SPX, NQ, Bitcoin, Gold Spot, and EURUSD with sparklines and trailing algorithmic confidence meters.</p>
+          <div id="telemetry-feed" style="margin-top: 10px; background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 12px; height: 180px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
+            <div style="color: var(--cyan);">[SYS] Connecting to Omni Intelligence Core (ws://127.0.0.1:8791/ws/omni_intelligence)...</div>
+          </div>
+          <script>
+            (function() {
+              const feed = document.getElementById('telemetry-feed');
+              function appendLog(msg, color = 'var(--text-muted)') {
+                const div = document.createElement('div');
+                div.style.color = color;
+                div.textContent = msg;
+                feed.appendChild(div);
+                feed.scrollTop = feed.scrollHeight;
+              }
+              if (!/^(127\.0\.0\.1|localhost)$/.test(location.hostname)) {
+                appendLog('[SYS] The Omni core runs on the desk machine (127.0.0.1:8791) and is not exposed on the public site, so no live telemetry here.', 'var(--gold)');
+                return;
+              }
+              const ws = new WebSocket('ws://127.0.0.1:8791/ws/omni_intelligence');
+              ws.onopen = () => appendLog('[SYS] Connected to Omni-System. Waiting for telemetry...', 'var(--emerald)');
+              ws.onmessage = (event) => {
+                try {
+                  const data = JSON.parse(event.data);
+                  const ts = new Date(data.timestamp).toLocaleTimeString();
+                  appendLog(`[${ts}] ${data.source.toUpperCase()}: ${data.content.substring(0, 50)}...`, 'var(--text-main)');
+                  if(data.analysis && data.analysis.sentiment) {
+                    const sentColor = data.analysis.sentiment.score > 0 ? 'var(--emerald)' : (data.analysis.sentiment.score < 0 ? 'var(--magenta)' : 'var(--gold)');
+                    appendLog(`   └─ Sentiment: ${data.analysis.sentiment.label} (${data.analysis.sentiment.score.toFixed(2)}) | Confluence: ${(data.analysis.confidence * 100).toFixed(0)}%`, sentColor);
+                  }
+                } catch(e) {
+                  appendLog(`[RECV] ${event.data}`);
+                }
+              };
+              ws.onerror = () => appendLog('[ERR] Connection error.', 'var(--magenta)');
+              ws.onclose = () => appendLog('[SYS] Connection closed.', 'var(--gold)');
+            })();
+          </script>
+        </div>
+
+        <div class="ui-feature-card">
+          <span class="ui-feature-tag">MICROSTRUCTURE</span>
+          <h4><i class="fa-solid fa-bullseye" style="color: var(--magenta);"></i> Price Action Concepts</h4>
+          <p>Automated identification of Break of Structure (BOS), Change of Character (CHoCH), range mitigation blocks, and oscillator confluence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const videos = {
+      0: {
+        title: "Featured: FMC Web Application Master Showcase (Attached UI)",
+        sub: "Cinematic Motion Graphics: Multi-Chart Side-by-Side (SPX/NQ), Monitor Mode, Price Action & Command Controls.",
+        src: "./renders/video_fmc_web_application_showcase.mp4",
+        poster: "assets/fmc-app-poster-d4.jpg?v=d4",
+        chapters: [
+          { time: "00:00", title: "01. Sovereign Web Application Architecture & Terminal Canvas", sec: 0 },
+          { time: "00:14", title: "02. Multi-Chart Workspace (SPX vs NQ Synced Crosshairs)", sec: 14 },
+          { time: "00:29", title: "03. Unified Command Bar & AGI Copilot ('Ask the market...')", sec: 29 },
+          { time: "00:44", title: "04. Monitor Mode: Single-Board Global Cross-Asset Radar", sec: 44 },
+          { time: "00:58", title: "05. Price Action Concepts & Confluence Oscillator Matrix", sec: 58 },
+          { time: "01:12", title: "06. Terminal Outro & Sovereign Deployment", sec: 72 }
+        ]
+      },
+      1: {
+        title: "Video 1: KrillinAI / OpenCreator Master Tutorial",
+        sub: "The 11.4k-Star Open-Source Video Localization Machine · Ingestion, ASR, Translation, Dubbing & Covers",
+        src: "./renders/video1_krillinai_master_tutorial.mp4",
+        chapters: [
+          { time: "00:00", title: "01. Introduction & The Video Bottleneck", sec: 0 },
+          { time: "00:15", title: "02. High-Precision ASR & Diarization", sec: 15 },
+          { time: "00:30", title: "03. Contextual Translation & Voice Cloning", sec: 30 },
+          { time: "00:46", title: "04. Smart 9:16 Vertical Framing & AI Covers", sec: 46 },
+          { time: "01:00", title: "05. Agentic CLI & Docker Automation", sec: 60 }
+        ]
+      },
+      2: {
+        title: "Video 2: FX Mercatus Codex (FMC) Institutional Trailer",
+        sub: "Sovereign Market Structure & Volatility Terminal · LUXGEX, Order Flow & 30-Indicator Marketplace",
+        src: "./renders/video2_fmc_institutional_trailer.mp4",
+        chapters: [
+          { time: "00:00", title: "01. The Institutional Alpha Imperative", sec: 0 },
+          { time: "00:13", title: "02. LUXGEX Precision Volatility (Call Wall, Put Floor, Gamma Flip)", sec: 13 },
+          { time: "00:29", title: "03. Order Blocks & Synthetic Liquidity Sweeps", sec: 29 },
+          { time: "00:43", title: "04. LuxAlgo Neo-Cloud & 30-Indicator Marketplace", sec: 43 },
+          { time: "00:57", title: "05. Sovereign Execution & Walk-Forward ML", sec: 57 }
+        ]
+      },
+      3: {
+        title: "Video 3: FMC + KrillinAI — 6 Step-by-Step Godmode Strategies",
+        sub: "The Global Quantitative Content Empire · Autonomous Alpha Syndication Across 100+ Languages",
+        src: "./renders/video3_fmc_krillinai_6_strategies.mp4",
+        chapters: [
+          { time: "00:00", title: "Master Blueprint: Convergence of Alpha & Automated Reach", sec: 0 },
+          { time: "00:14", title: "Strategy 01: Autonomous Multi-Lingual Morning Bell", sec: 14 },
+          { time: "00:28", title: "Strategy 02: Viral Liquidation Sweep Sniping", sec: 28 },
+          { time: "00:42", title: "Strategy 03: 24/7 Global Prop-Desk Macro Syndication", sec: 42 },
+          { time: "00:55", title: "Strategy 04: Zero-Shot Voice-Cloned Alpha Dispatches", sec: 55 },
+          { time: "01:09", title: "Strategy 05: 1-to-15 Multi-Platform Aspect Ratio Arbitrage", sec: 69 },
+          { time: "01:23", title: "Strategy 06: Private High-Ticket Quant Syndicate Funnel", sec: 83 },
+          { time: "01:36", title: "Execution Summary & Godmode Blueprint", sec: 96 }
+        ]
+      }
+    };
+
+    const suiteApps = {
+      quant: {
+        title: "Mercatus Quant Desk & 50 Legendary Internet Tools Suite",
+        sub: "Interactive Quantitative Terminal · 432Hz Focus Synthesizer · Wolfram Alpha Black-Scholes Greeks · Unpaywall Academic Paper Search · Ray.so / Carbon Code Exporter",
+        url: "apps/quant-desk/",
+        dlText: "OPEN IN NEW WINDOW",
+        dlIcon: "fa-arrow-up-right-from-square",
+        features: [
+          { time: "TOOLBOX", title: "50 Legendary Websites: Unpaywall, Wolfram, Elicit, Photopea, Music For Programming, etc." },
+          { time: "AUDIO", title: "432Hz Alpha Binaural Drone Synthesizer with Live VU Meter" },
+          { time: "CALC", title: "Black-Scholes-Merton Interactive Greeks Calculator (Delta, Gamma, Vega, Theta)" },
+          { time: "EXPORT", title: "Instant Ray.so / Carbon Signal Code Generator" }
+        ]
+      },
+      radar: {
+        title: "Mercatus Aureum Earth Observation & Radar Suite",
+        sub: "Live Synthetic Aperture Radar (SAR) Maritime Sweep · AIS Vessel Telemetry · Global Maritime Chokepoint Tracking · Atmospheric HF Soundscape",
+        url: "apps/aureum-eo/",
+        dlText: "OPEN IN NEW WINDOW",
+        dlIcon: "fa-arrow-up-right-from-square",
+        features: [
+          { time: "RADAR", title: "360° Rotating SAR Radar Sweep with Target Phosphor Persistence" },
+          { time: "AIS", title: "Live AIS Vessel Telemetry, Draught, Destination & Speed" },
+          { time: "SECURITY", title: "VirusTotal Spoofing & AIS Anomaly Scanner" },
+          { time: "RADIO", title: "Radio Garden Atmospheric High-Frequency Maritime Audio" }
+        ]
+      },
+      hub: {
+        title: "Mercatus Dual Cockpit Master Command Hub",
+        sub: "Simultaneous Split-Screen Operations: Synchronized Quant Desk Execution & Aureum SAR Radar Sweep Telemetry",
+        url: "apps/",
+        dlText: "OPEN IN NEW WINDOW",
+        dlIcon: "fa-arrow-up-right-from-square",
+        features: [
+          { time: "DUAL", title: "Split-Screen Synchronous Cockpit Grid" },
+          { time: "QUANT", title: "Full 50-Toolbox & Calculus Station on Left Flank" },
+          { time: "RADAR", title: "Full Aureum SAR Earth Observation on Right Flank" },
+          { time: "SYNC", title: "Real-time Inter-window Bridge & Telemetry Relay" }
+        ]
+      },
+      codex: {
+        title: "FX Mercatus Codex Sovereign Live Trading Terminal",
+        sub: "Full Institutional Suite · Live LUXGEX Volatility Engine, Order Flow, Whales Board, AGI Copilot, Astro Cycles, and Walk-Forward Backtester",
+        url: "/codex/",
+        dlText: "OPEN IN NEW WINDOW",
+        dlIcon: "fa-arrow-up-right-from-square",
+        features: [
+          { time: "CHARTS", title: "Synchronized High-Resolution SPX & NQ Crosshair Charts" },
+          { time: "VOLATILITY", title: "Gamma Flip, Call Wall & Put Floor Dynamic S/R Levels" },
+          { time: "ORDERFLOW", title: "Whale Radar & Synthetic Liquidity Sweep Visualizer" },
+          { time: "AI", title: "AGI Copilot Market Structure & Macro Confluence" }
+        ]
+      }
+    };
+
+    function switchSuiteView(key) {
+      const app = suiteApps[key];
+      if (!app) return;
+
+      const player = document.getElementById("main-player");
+      player.pause();
+
+      document.getElementById("video-wrapper").style.display = "none";
+      const appWrapper = document.getElementById("app-wrapper");
+      appWrapper.style.display = "block";
+
+      const frame = document.getElementById("app-frame");
+      if (frame.getAttribute("data-current-app") !== key) {
+        frame.src = app.url;
+        frame.setAttribute("data-current-app", key);
+      }
+
+      const title = document.getElementById("video-title");
+      const sub = document.getElementById("video-sub");
+      const dl = document.getElementById("video-dl");
+
+      document.querySelectorAll(".player-tab").forEach(t => t.classList.remove("active"));
+      if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add("active");
+      }
+
+      title.textContent = app.title;
+      sub.textContent = app.sub;
+      dl.href = app.url;
+      dl.target = "_blank";
+      dl.innerHTML = `<i class="fa-solid ${app.dlIcon}"></i> ${app.dlText}`;
+
+      const container = document.getElementById("chapter-list");
+      container.innerHTML = "";
+      app.features.forEach(f => {
+        const item = document.createElement("div");
+        item.className = "chapter-item";
+        item.innerHTML = `
+          <span>${f.title}</span>
+          <span class="timecode" style="color: var(--cyan);">${f.time}</span>
+        `;
+        item.onclick = () => {
+          window.open(app.url, '_blank');
+        };
+        container.appendChild(item);
+      });
+    }
+
+    function switchVideo(id) {
+      const v = videos[id];
+      const player = document.getElementById("main-player");
+      const title = document.getElementById("video-title");
+      const sub = document.getElementById("video-sub");
+      const dl = document.getElementById("video-dl");
+      const tabs = document.querySelectorAll(".player-tab");
+
+      document.getElementById("app-wrapper").style.display = "none";
+      document.getElementById("video-wrapper").style.display = "flex";
+
+      tabs.forEach((t, idx) => {
+        t.classList.remove("active");
+        if (idx === id) t.classList.add("active");
+      });
+
+      title.textContent = v.title;
+      sub.textContent = v.sub;
+      dl.href = v.src;
+      dl.target = "";
+      dl.innerHTML = `<i class="fa-solid fa-download"></i> DOWNLOAD 1080P`;
+
+      player.poster = v.poster || "";
+      player.src = v.src;
+      player.play();
+
+      renderChapters(v.chapters);
+    }
+
+    function renderChapters(chapters) {
+      const container = document.getElementById("chapter-list");
+      container.innerHTML = "";
+      chapters.forEach(c => {
+        const item = document.createElement("div");
+        item.className = "chapter-item";
+        item.innerHTML = `
+          <span>${c.title}</span>
+          <span class="timecode">${c.time}</span>
+        `;
+        item.onclick = () => {
+          const player = document.getElementById("main-player");
+          player.currentTime = c.sec;
+          player.play();
+        };
+        container.appendChild(item);
+      });
+    }
+
+    // Initialize with Featured Video
+    renderChapters(videos[0].chapters);
+  </script>
+</body>
+</html>

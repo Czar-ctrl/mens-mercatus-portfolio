@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Mens Mercatus Inc emblem">
+  <title>emblem-mens-mercatus-inc</title>
+  <circle cx="512" cy="512" r="480" fill="#0A0A0A"/>
+  <circle cx="512" cy="512" r="455" fill="#C8102E"/>
+  <circle cx="512" cy="512" r="340" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="6"/>
+  <polygon points="512,262 728,387 728,637 512,762 296,637 296,387" fill="none" stroke="#0A0A0A" stroke-width="8"/>
+  <!-- M pillars -->
+  <rect x="392" y="472" width="50" height="200" fill="#0A0A0A"/>
+  <rect x="582" y="472" width="50" height="200" fill="#0A0A0A"/>
+  <polygon points="417,452 512,602 607,452 582,432 512,542 442,432" fill="#0A0A0A"/>
+  <!-- red-dot-with-ring at M apex -->
+  <circle cx="512" cy="422" r="78" fill="none" stroke="#C8102E" stroke-width="8"/>
+  <circle cx="512" cy="422" r="56" fill="#C8102E"/>
+  <!-- wordmarks -->
+  <defs>
+    <path id="topArc" d="M 220,420 A 395,395 0 0 1 804,420" fill="none"/>
+    <path id="botArc" d="M 804,604 A 395,395 0 0 1 220,604" fill="none"/>
+  </defs>
+  <text fill="#0A0A0A" font-family="Arial Black, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="8">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">MENS</textPath>
+  </text>
+  <text fill="#0A0A0A" font-family="Arial Black, Helvetica, sans-serif" font-size="40" font-weight="700" letter-spacing="4">
+    <textPath href="#botArc" startOffset="50%" text-anchor="middle">MERCATUS INC</textPath>
+  </text>
+</svg>

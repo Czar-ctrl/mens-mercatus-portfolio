@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="430" viewBox="0 0 1020 430" role="img" aria-label="Close friends GPS ping flow">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#2A2A2A" stroke-width="0.5" opacity="0.45"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#C8102E"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="430" fill="url(#fade)"/>
+  <rect width="1020" height="430" fill="url(#grid)" opacity="0.55"/>
+  <rect x="0" y="0" width="1020" height="3" fill="#C8102E"/>
+  
+    <g transform="translate(32,28)">
+      <rect x="0" y="0" width="16" height="16" rx="2" fill="#0A0A0A" stroke="#2A2A2A"/>
+      <g fill="#C8102E">
+        <rect x="7.3" y="8.5" width="1.4" height="6.2" rx="0.4"/>
+        <ellipse cx="8" cy="7.2" rx="1.35" ry="1.9"/>
+        <ellipse cx="8" cy="4.6" rx="1.25" ry="1.7"/>
+        <ellipse cx="8" cy="2.3" rx="1.1" ry="1.45"/>
+        <ellipse cx="5.4" cy="6.4" rx="1.15" ry="1.55" transform="rotate(-28 5.4 6.4)"/>
+        <ellipse cx="5.55" cy="4.0" rx="1.05" ry="1.4" transform="rotate(-32 5.55 4.0)"/>
+        <ellipse cx="10.6" cy="6.4" rx="1.15" ry="1.55" transform="rotate(28 10.6 6.4)"/>
+        <ellipse cx="10.45" cy="4.0" rx="1.05" ry="1.4" transform="rotate(32 10.45 4.0)"/>
+        <rect x="7.55" y="0.3" width="0.9" height="1.4" rx="0.35"/>
+      </g>
+    </g>
+    <text x="56" y="40" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="15" font-weight="600">Close friends · GPS + live ping</text>
+    <text x="56" y="56" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Consented P2P payment location · per-friend ping default off</text>
+    <text x="960" y="40" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" text-anchor="end">MENS MERCATUS INC</text>
+    
+    <g filter="url(#soft)">
+      <rect x="60" y="100" width="220" height="140" rx="10" fill="#1C1C1C" stroke="#C8102E" stroke-width="1.2"/>
+      <rect x="60" y="100" width="4" height="140" rx="2" fill="#C8102E"/>
+      <text x="76" y="122" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">You</text>
+    <rect x="216" y="110" width="52" height="18" rx="9" fill="#0A0A0A" stroke="#C8102E"/>
+        <text x="242" y="123" fill="#C8102E" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" text-anchor="middle" font-weight="600">SELF</text><text x="76" y="144" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Master GPS consent</text><text x="76" y="160" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">for P2P payment notes</text><text x="76" y="176" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Quiet UI</text></g>
+    <g filter="url(#soft)">
+      <rect x="400" y="90" width="220" height="80" rx="10" fill="#141414" stroke="#2A2A2A" stroke-width="1.2"/>
+      <rect x="400" y="90" width="4" height="80" rx="2" fill="#2A2A2A"/>
+      <text x="416" y="112" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">P2P payment</text>
+    <rect x="556" y="100" width="52" height="18" rx="9" fill="#0A0A0A" stroke="#C8102E"/>
+        <text x="582" y="113" fill="#C8102E" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" text-anchor="middle" font-weight="600">PAY</text><text x="416" y="134" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Amount + time</text><text x="416" y="150" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Optional coarse GPS</text><text x="416" y="166" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Netza ledger</text></g>
+    <g filter="url(#soft)">
+      <rect x="400" y="200" width="220" height="80" rx="10" fill="#1C1C1C" stroke="#C8102E" stroke-width="1.2"/>
+      <rect x="400" y="200" width="4" height="80" rx="2" fill="#C8102E"/>
+      <text x="416" y="222" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">Live location ping</text>
+    <rect x="556" y="210" width="52" height="18" rx="9" fill="#0A0A0A" stroke="#C8102E"/>
+        <text x="582" y="223" fill="#C8102E" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" text-anchor="middle" font-weight="600">PING</text><text x="416" y="244" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Per-friend allow/deny</text><text x="416" y="260" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Default OFF</text><text x="416" y="276" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Mutual allow</text></g>
+    <g filter="url(#soft)">
+      <rect x="740" y="100" width="220" height="140" rx="10" fill="#141414" stroke="#2A2A2A" stroke-width="1.2"/>
+      <rect x="740" y="100" width="4" height="140" rx="2" fill="#2A2A2A"/>
+      <text x="756" y="122" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">Friend</text>
+    <rect x="896" y="110" width="52" height="18" rx="9" fill="#0A0A0A" stroke="#C8102E"/>
+        <text x="922" y="123" fill="#C8102E" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" text-anchor="middle" font-weight="600">PEER</text><text x="756" y="144" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Sees time + price</text><text x="756" y="160" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">with location</text><text x="756" y="176" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">when allowed</text></g><g stroke="#C8102E" stroke-width="1.4" fill="none" marker-end="url(#arr)">
+  <path d="M280 150 H400"/>
+  <path d="M280 200 C320 200 320 240 400 240"/>
+  <path d="M620 130 H740"/>
+  <path d="M620 240 C680 240 680 180 740 170"/>
+</g>
+    <g filter="url(#soft)">
+      <rect x="60" y="300" width="900" height="90" rx="10" fill="#141414" stroke="#2A2A2A" stroke-width="1.2"/>
+      <rect x="60" y="300" width="4" height="90" rx="2" fill="#2A2A2A"/>
+      <text x="76" y="322" fill="#FFFFFF" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">POPIA notes</text>
+    <text x="76" y="344" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Location is personal information — minimise retention and purpose-limit to P2P context / mutual ping.</text><text x="76" y="360" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">No always-on tracking. Ping is explicit, revocable, and off by default per friend.</text><text x="76" y="376" fill="#8A8A8A" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Assist explains consent state; never enables ping silently.</text></g>
+</svg>

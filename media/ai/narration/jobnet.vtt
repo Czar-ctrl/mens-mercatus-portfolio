@@ -1,0 +1,53 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.971
+JobNet is Katlego's daily career pipeline.
+
+2
+00:00:02.921 --> 00:00:07.981
+Applying across many boards by hand is slow, and tools that submit on their own are unsafe.
+
+3
+00:00:07.981 --> 00:00:13.522
+So the job was to shorten research and drafting, without giving the system permission to apply or send mail.
+
+4
+00:00:13.522 --> 00:00:17.813
+Every day at eight p.m. South African time, it collects public listings.
+
+5
+00:00:17.813 --> 00:00:23.269
+A hashed sentence embedding ranks each posting against the case studies, and keeps one role per company.
+
+6
+00:00:23.269 --> 00:00:26.370
+A report of the previous run arrives at three p.m.
+
+7
+00:00:26.370 --> 00:00:29.651
+A letter is prepared only for a role that clears the ranker.
+
+8
+00:00:29.651 --> 00:00:31.719
+Then comes the send gate.
+
+9
+00:00:31.719 --> 00:00:38.149
+Mail leaves only if the address is printed on the posting, the domain resolves, and the letter names that title and company.
+
+10
+00:00:38.149 --> 00:00:40.986
+Missing addresses are held, not guessed.
+
+11
+00:00:40.986 --> 00:00:45.637
+The public demo is a read-only shortlist, so visitors cannot trigger applications.
+
+12
+00:00:45.637 --> 00:00:48.149
+AI assists with ranking and drafting.
+
+13
+00:00:48.149 --> 00:00:51.010
+A person makes every irreversible decision.

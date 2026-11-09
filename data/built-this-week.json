@@ -1,0 +1,33 @@
+{
+ "note": "Shipped (live) work only. Each entry is tied to a commit in the portfolio, soundx-ai or forex-codex-godmode repo. Dates are the time it went live on mensmercatus.online, in SAST (UTC+2). Appended by the Friday routine via tools/g/built_this_week.py.",
+ "updated": "2026-10-21T22:40+02:00",
+ "entries": [
+  {"date": "2026-10-21T11:42+02:00", "project": "Portfolio", "title": "Hero tags and CV PDF updated to the new title",
+   "summary": "Hero tags now read AI & ML Engineer and Full-stack developer. The ATS CV PDF carries the new title.", "link": "/", "status": "live",
+   "source": [{"repo": "portfolio", "commit": "25cbdf9", "committed": "2026-10-21T11:42+02:00"}]},
+  {"date": "2026-10-21T11:13+02:00", "project": "SoundX AI", "title": "SoundX Studio merged into SoundX AI",
+   "summary": "One app instead of two: site strip, four-step demo walkthrough and 11 accent presets carried over. Old Studio links redirect.", "link": "/apps/soundx-ai/", "status": "live",
+   "source": [{"repo": "soundx-ai", "commit": "399b630", "committed": "2026-10-21T07:51+02:00"}, {"repo": "portfolio", "commit": "0d67ca9", "committed": "2026-10-21T08:10+02:00"}]},
+  {"date": "2026-10-21T07:46+02:00", "project": "Portfolio", "title": "New title: AI & ML Engineer / Full-Stack Developer",
+   "summary": "Hero, page titles, social previews, structured data, résumé and site search all use the new title.", "link": "/", "status": "live",
+   "source": [{"repo": "portfolio", "commit": "331cad4", "committed": "2026-10-21T07:46+02:00"}]},
+  {"date": "2026-10-21T07:25+02:00", "project": "Forex Mercatus Codex", "title": "Clean poster for the showcase video",
+   "summary": "The showcase opens on a clean screenshot of the live app and no longer autoplays.", "link": "/apps/forex-codex/godmode.html", "status": "live",
+   "source": [{"repo": "forex-codex-godmode", "commit": "0ed3dc3", "committed": "2026-10-21T07:25+02:00"}, {"repo": "portfolio", "commit": "f95d864", "committed": "2026-10-21T07:25+02:00"}]},
+  {"date": "2026-10-21T06:55+02:00", "project": "Forex Mercatus Codex", "title": "Icons and 3D fixed without loosening security",
+   "summary": "Font Awesome and three.js are self-hosted, so the strict content security policy stays and the console errors are gone.", "link": "/apps/forex-codex/godmode.html", "status": "live",
+   "source": [{"repo": "forex-codex-godmode", "commit": "7669497", "committed": "2026-10-21T06:54+02:00"}, {"repo": "portfolio", "commit": "0063386", "committed": "2026-10-21T06:54+02:00"}]},
+  {"date": "2026-10-21T06:13+02:00", "project": "Portfolio", "title": "Motion layer: cursor, reactive background, live ticker",
+   "summary": "Animated cursor, a dot field that follows the mouse or phone tilt, a ticker with real market prices and the latest JobNet posts, and live service health in the footer.", "link": "/", "status": "live",
+   "source": [{"repo": "portfolio", "commit": "1c2dcd0", "committed": "2026-10-21T04:43+02:00"}, {"repo": "portfolio", "commit": "d5c53bc", "committed": "2026-10-21T06:20+02:00"}]},
+  {"date": "2026-10-21T04:23+02:00", "project": "Portfolio", "title": "AI automation plan demo, proof strips and SEO",
+   "summary": "The /plan/ demo for small businesses, measured proof strips on eight pages, and sitemap, robots and social tags.", "link": "/plan/", "status": "live",
+   "source": [{"repo": "portfolio", "commit": "4bd606a", "committed": "2026-10-21T03:45+02:00"}, {"repo": "portfolio", "commit": "6472284", "committed": "2026-10-21T04:28+02:00"}]},
+  {"date": "2026-10-21T04:23+02:00", "project": "SoundX AI", "title": "Loading screen for SoundX AI",
+   "summary": "A static loading screen shows while the studio starts, instead of a blank page.", "link": "/apps/soundx-ai/", "status": "live",
+   "source": [{"repo": "soundx-ai", "commit": "3ac9bf3", "committed": "2026-10-21T04:28+02:00"}]},
+  {"date": "2026-10-21T02:02+02:00", "project": "Forex Mercatus Codex", "title": "God Mode research terminal went live",
+   "summary": "Real historical data, on-device machine learning, a strategy lab, risk tools, a scanner, sessions, a journal and a paper simulator. Paper trading only.", "link": "/apps/forex-codex/", "status": "live",
+   "source": [{"repo": "forex-codex-godmode", "commit": "1568632", "committed": "2026-10-20T18:45+02:00"}]}
+ ]
+}

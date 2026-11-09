@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-nutun-4474036608",
+  "jobId": "li-nutun-4474036608",
+  "title": "Lead / Senior AI Engineer",
+  "company": "Nutun",
+  "location": "Johannesburg Metropolitan Area",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474036608",
+  "signal": "high",
+  "packet": "Here is a draft application packet for the Lead / Senior AI Engineer role at Nutun.\n\n---\n\n**Cover Letter Draft**\n\nSubject: Application for Lead / Senior AI Engineer - Johannesburg\n\nDear Hiring Team at Nutun,\n\nI am writing to express my keen interest in the Lead / Senior AI Engineer position in Johannesburg. With a strong background in AI and systems engineering, I am eager to contribute my expertise in Python, LLMs, RAG, and agent systems to your production environment, particularly in conversational voice and text agents.\n\nMy experience includes designing robust API solutions and implementing efficient GitHub workflows, ensuring scalable and maintainable AI systems. I thrive in environments that demand deep LLM integration and have a proven track record in distributed systems. I am particularly drawn to the player-coach aspect of this role, ready to lead technical initiatives while mentoring a team.\n\nThank you for considering my application. I look forward to discussing how my skills can benefit Nutun.\n\nSincerely,\n\n[Your Name]\n\n---\n\n**Fit Notes**\n\n*   **Core Alignment**: Your skills in Python, LLMs, RAG, and agent systems directly match Nutun's focus on deep LLM integration and conversational agents.\n*   **Production Readiness**: Experience with API design, GitHub workflow, and distributed systems is crucial for building and deploying production-grade AI agents.\n*   **Player-Coach Potential**: While leadership is a stretch, your systems engineering background provides a strong foundation for technical leadership. Frame this as an opportunity to grow into a player-coach role, leading by example in code and architecture, and guiding the team on best practices.\n*   **Broader Skills**: TypeScript and .NET experience adds versatility, showing you can adapt to various tech stacks within a complex system.\n\n---\n\n**How-to-Submit Checklist**\n\n1.  **Visit Nutun Careers**: Go to the official Nutun company website and navigate to their careers or jobs section.\n2.  **Find the Role**: Locate the \"Lead / Senior AI Engineer\" position for the Johannesburg Metropolitan Area.\n3.  **Prepare Documents**: Ensure your CV/resume is up-to-date and tailored to the role.\n4.  **Adapt Cover Letter**: Copy the draft above into your preferred document format and adjust any specifics as needed.\n5.  **Submit Application**: Follow the instructions on Nutun's career portal to upload your CV and cover letter.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:47:44.955465+00:00"
+}

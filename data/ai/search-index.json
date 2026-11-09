@@ -1,0 +1,276 @@
+{
+ "items": [
+  {
+   "id": "project-0",
+   "type": "project",
+   "title": "JobNet",
+   "desc": "A daily career pipeline that turns public job posts into a ranked shortlist and tailored drafts, and sends a letter only when the posting prints an employer address.",
+   "url": "/case-studies/jobnet/",
+   "keywords": "career pipeline agents gmail automation cv tailoring send gate recruiter"
+  },
+  {
+   "id": "project-1",
+   "type": "project",
+   "title": "Mercatus Assist & THINK",
+   "desc": "A C# / ASP.NET Core service and a React workspace that call Gemini from the server, keep the API key off the browser, and say so when the live path is down.",
+   "url": "/case-studies/assist/",
+   "keywords": "asp.net core c# dotnet gemini react 19 multimodal assistant chat live voice nginx systemd"
+  },
+  {
+   "id": "project-2",
+   "type": "project",
+   "title": "Forex Mercatus Codex",
+   "desc": "A hosted Python terminal for charts, multi-market views and a session-scoped paper bot, built so it cannot be mistaken for a brokerage.",
+   "url": "/case-studies/forex/",
+   "keywords": "python highcharts yfinance paper trading research desk vps"
+  },
+  {
+   "id": "project-3",
+   "type": "project",
+   "title": "SoundX",
+   "desc": "A beat studio in a browser tab: load a demo, play it, shape the master and generate. Audio stays on the machine. No sign-in.",
+   "url": "/case-studies/soundx/",
+   "keywords": "music browser daw web audio ai producer dsp"
+  },
+  {
+   "id": "project-4",
+   "type": "project",
+   "title": "SoundX AI",
+   "desc": "An AI drum station and studio with 20 on-device AI tools, a plugin rack, Afro sample packs and 22 themes. Audio stays on the machine.",
+   "url": "/apps/soundx-ai/",
+   "keywords": "music beats drum machine amapiano gqom afro house 808 producer agent hum to midi tempo key detection"
+  },
+  {
+   "id": "project-5",
+   "type": "project",
+   "title": "Mens Mercatus Blueprint",
+   "desc": "Event-flow screens and architecture diagrams: signup, rate lock, check-in, payout, disputes, compliance gates. Reference drawings, not a live service.",
+   "url": "/blueprint/",
+   "keywords": "blueprints schematics kubernetes compliance popia event mode"
+  },
+  {
+   "id": "project-6",
+   "type": "project",
+   "title": "THINK",
+   "desc": "Gemini multimodal workspace: chat, live voice, Net Sites, Net Code, Netzar Protocol, and Net Learn. The model key stays on the server.",
+   "url": "/think/",
+   "keywords": "think gemini multimodal react 19 vite live voice websocket workspace"
+  },
+  {
+   "id": "project-7",
+   "type": "project",
+   "title": "Mercatus Concierge",
+   "desc": "The guide through Mens Mercatus — a narrative shell over the desks you already run, not another product silo.",
+   "url": "/apps/mercatus-concierge/",
+   "keywords": "concierge journey guide builder shell launch path digital footprint"
+  },
+  {
+   "id": "project-8",
+   "type": "project",
+   "title": "JobNet Application",
+   "desc": "Live shortlist, explainable on-device matching, AI Hawk cover note and CV synopsis drafts, review and email forwarding. Draft-only: it never applies or sends mail.",
+   "url": "/apps/jobnet/",
+   "keywords": "jobnet application ai hawk drop net job matching cover note cv synopsis draft forward skill gap radar outcome model"
+  },
+  {
+   "id": "demo-9",
+   "type": "demo",
+   "title": "Open SoundX AI",
+   "desc": "The browser studio. Everything works offline with no API key.",
+   "url": "/apps/soundx-ai/",
+   "keywords": "music studio app demo"
+  },
+  {
+   "id": "demo-10",
+   "type": "demo",
+   "title": "Open Mercatus Assist",
+   "desc": "Live path through the VPS proxy, with a labelled demo fallback.",
+   "url": "/apps/mercatus-assist/",
+   "keywords": "assistant chat gemini demo"
+  },
+  {
+   "id": "demo-11",
+   "type": "demo",
+   "title": "Open THINK",
+   "desc": "React workspace: pulse, chat, live voice, sites and code. The model key stays on the server.",
+   "url": "/think/",
+   "keywords": "think workspace multimodal demo"
+  },
+  {
+   "id": "demo-12",
+   "type": "demo",
+   "title": "Open the JobNet live shortlist",
+   "desc": "Read-only shortlist from JobNet's public API, so a reviewer can see the pipeline without touching a mailbox.",
+   "url": "/apps/jobnet/#match",
+   "keywords": "jobnet shortlist careers live demo"
+  },
+  {
+   "id": "demo-13",
+   "type": "demo",
+   "title": "Open Mercatus Concierge (builder)",
+   "desc": "Pick a task to jump straight in. Everything runs in this browser and saves locally — no account, no credits.",
+   "url": "/apps/makedas-canvas/",
+   "keywords": "concierge builder brief paint studio ops role kits demo"
+  },
+  {
+   "id": "demo-14",
+   "type": "demo",
+   "title": "Open JobNet Application",
+   "desc": "Shortlist → match → AI Hawk draft → review → forward. Models run in your browser. Draft-only: it never applies or sends mail.",
+   "url": "/apps/jobnet/",
+   "keywords": "jobnet application ai hawk drop net demo matching draft"
+  },
+  {
+   "id": "demo-15",
+   "type": "demo",
+   "title": "Open the Forex paper desk",
+   "desc": "Paper label, session scope, delayed quotes and a four-step tour.",
+   "url": "/apps/forex-codex/",
+   "keywords": "forex paper desk demo charts"
+  },
+  {
+   "id": "demo-16",
+   "type": "demo",
+   "title": "SoundX Studio (now in SoundX AI)",
+   "desc": "SoundX Studio is merged into SoundX AI: AI Producer, Pattern picker, Night Shift, Snapshot/Vault and phone pairing in one app.",
+   "url": "/apps/soundx-ai/",
+   "keywords": "soundx studio music demo"
+  },
+  {
+   "id": "article-17",
+   "type": "article",
+   "title": "Case studies overview",
+   "desc": "Every flagship uses one skeleton so a recruiter and an engineer can read them the same way.",
+   "url": "/case-studies/",
+   "keywords": "case studies challenge architecture result limits"
+  },
+  {
+   "id": "article-18",
+   "type": "article",
+   "title": "RAG, an agent, and a desk of three",
+   "desc": "Retrieval, a single agent, and a three-step desk, animated, with a one-page PDF.",
+   "url": "/rag/",
+   "keywords": "rag retrieval agents multi-agent architecture"
+  },
+  {
+   "id": "article-19",
+   "type": "article",
+   "title": "Labs",
+   "desc": "Experiments that stay off the first screen: RAG map, Blueprints, Concierge, Project Antigravity, Flutter overlay, ProxNet.",
+   "url": "/labs/",
+   "keywords": "labs experiments antigravity ollama flutter"
+  },
+  {
+   "id": "page-20",
+   "type": "page",
+   "title": "Home",
+   "desc": "AI & ML Engineer / Full-Stack Developer, Johannesburg.",
+   "url": "/",
+   "keywords": "home start"
+  },
+  {
+   "id": "page-21",
+   "type": "page",
+   "title": "Selected work",
+   "desc": "Five systems worth an interview.",
+   "url": "/work/",
+   "keywords": "work projects portfolio"
+  },
+  {
+   "id": "page-22",
+   "type": "page",
+   "title": "Résumé",
+   "desc": "Selected systems, stack and experience.",
+   "url": "/resume/",
+   "keywords": "resume cv experience stack skills"
+  },
+  {
+   "id": "page-23",
+   "type": "page",
+   "title": "Contact",
+   "desc": "Hire me: 065 842 4274, katlego.mokoto.km@gmail.com, on-site, hybrid or remote.",
+   "url": "/contact/",
+   "keywords": "contact email phone hire book a call"
+  },
+  {
+   "id": "page-24",
+   "type": "page",
+   "title": "Apps",
+   "desc": "All apps on the site.",
+   "url": "/apps/",
+   "keywords": "apps demos"
+  },
+  {
+   "id": "page-25",
+   "type": "page",
+   "title": "CV (PDF)",
+   "desc": "Download the CV.",
+   "url": "/cv/katlego-mokoto-cv.pdf",
+   "keywords": "cv pdf download"
+  },
+  {
+   "id": "page-26",
+   "type": "page",
+   "title": "ATS CV (PDF)",
+   "desc": "Plain copy for application systems.",
+   "url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+   "keywords": "ats cv pdf"
+  },
+  {
+   "id": "ai-27",
+   "type": "ai",
+   "title": "AI Lab",
+   "desc": "Eight on-device AI tools in one place.",
+   "url": "/ai/",
+   "keywords": "ai lab tools"
+  },
+  {
+   "id": "ai-28",
+   "type": "ai",
+   "title": "Recruiter Match",
+   "desc": "Paste a job description, get a fit score per requirement and a tailored one-page CV.",
+   "url": "/ai/#match",
+   "keywords": "recruiter job description fit score tailored cv"
+  },
+  {
+   "id": "ai-29",
+   "type": "ai",
+   "title": "AI Playground",
+   "desc": "Hum or tap a beat, read a sample till slip, watch an agent route a task.",
+   "url": "/ai/#playground",
+   "keywords": "playground hum pitch beat ocr till slip agent pipeline"
+  },
+  {
+   "id": "ai-30",
+   "type": "ai",
+   "title": "Case-study narrator",
+   "desc": "60-second spoken walkthroughs with synced captions.",
+   "url": "/ai/#narrator",
+   "keywords": "narrator audio walkthrough listen captions"
+  },
+  {
+   "id": "ai-31",
+   "type": "ai",
+   "title": "Build in public",
+   "desc": "Timeline of shipped work from real change logs.",
+   "url": "/ai/#feed",
+   "keywords": "changelog shipped timeline build in public"
+  },
+  {
+   "id": "project-fleet",
+   "type": "project",
+   "title": "Mens Mercatus Fleet",
+   "desc": "A maintenance desk for South African fleets: rule-based repair approvals, fair prices in rand and drafts a person signs off. Example data only.",
+   "url": "/case-studies/fleet/",
+   "keywords": "fleet vehicle maintenance repair quote fair price rand approval tier workshop warranty fuel compliance theft driver coaching fastapi python sqlite numpy"
+  },
+  {
+   "id": "demo-fleet",
+   "type": "demo",
+   "title": "Watch the Mens Mercatus Fleet walkthrough",
+   "desc": "A 60-second screen recording of the local app with captions. Example data.",
+   "url": "/media/demo-fleet-voice.mp4",
+   "keywords": "fleet video walkthrough demo"
+  }
+ ]
+}

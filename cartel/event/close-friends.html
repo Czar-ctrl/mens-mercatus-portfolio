@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="author" content="Mens Mercatus Inc"/>
+<meta name="robots" content="noindex"/>
+<title>Close friends · Mercatus Blueprints</title>
+<link rel="stylesheet" href="../../css/tokens.css?v=20261005h">
+<link rel="stylesheet" href="../../css/base.css?v=20261005h">
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- mm-seo --><meta name="description" content="Consented GPS for P2P payment context, plus live location ping per friend (default off). Quiet UI — time and price with location."><link rel="canonical" href="https://mensmercatus.online/cartel/event/close-friends.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="Close friends · Mercatus Blueprints"><meta property="og:description" content="Consented GPS for P2P payment context, plus live location ping per friend (default off). Quiet UI — time and price with location."><meta property="og:url" content="https://mensmercatus.online/cartel/event/close-friends.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Close friends · Mercatus Blueprints"><meta name="twitter:description" content="Consented GPS for P2P payment context, plus live location ping per friend (default off). Quiet UI — time and price with location."><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Close friends · Mercatus Blueprints", "url": "https://mensmercatus.online/cartel/event/close-friends.html", "description": "Consented GPS for P2P payment context, plus live location ping per friend (default off). Quiet UI — time and price with location.", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <img class="mark" src="assets/mark-wheat-16.svg" width="16" height="16" alt="" decoding="async" />
+    <div class="wordmark">Mercatus Blueprints <span>· Event</span></div>
+    <div class="spacer"></div>
+    <span class="chip">Static mockup</span>
+  </header>
+  <main class="main">
+
+<a class="nav-back" href="index.html">← Hub</a>
+<p class="kicker">P2P</p>
+<h1>Close friends</h1>
+<p class="lead">Consented GPS for P2P payment context, plus live location ping per friend (default off). Quiet UI — time and price with location.</p>
+
+<div class="gate">
+  <strong>Consent gate</strong>
+  <ul>
+    <li>GPS for P2P payment context is opt-in and consented.</li>
+    <li>Live location ping is per-friend allow/deny — default <em>off</em>.</li>
+    <li>Show time + price alongside location; no noisy map chrome.</li>
+    <li>POPIA: location is personal information — minimise retention.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="toggle">
+    <div><div class="label">Share GPS on P2P payments</div><div class="hint">Attaches coarse location to payment notes you send</div></div>
+    <button type="button" class="switch" data-toggle="cf.gpsPayments" aria-checked="false"></button>
+  </div>
+</div>
+
+<div class="friend">
+  <div class="avatar">TN</div>
+  <div class="info"><div class="name">Friend · TN</div><div class="loc">Ping off · last pay 28 Sep · Sandton</div></div>
+  <div class="price">R120.00</div>
+</div>
+<div class="card" style="margin-top:-4px">
+  <div class="toggle">
+    <div><div class="label">Allow live location ping</div><div class="hint">Default off · friend must also allow you</div></div>
+    <button type="button" class="switch" data-toggle="cf.ping.TN" aria-checked="false"></button>
+  </div>
+</div>
+
+<div class="friend">
+  <div class="avatar">JM</div>
+  <div class="info"><div class="name">Friend · JM</div><div class="loc">Ping on · 2 min ago · Rosebank · R85.00</div></div>
+  <div class="price">R85.00</div>
+</div>
+<div class="card" style="margin-top:-4px">
+  <div class="toggle">
+    <div><div class="label">Allow live location ping</div><div class="hint">Mutual allow required</div></div>
+    <button type="button" class="switch on" data-toggle="cf.ping.JM" aria-checked="true"></button>
+  </div>
+</div>
+
+<button type="button" class="btn btn-assist btn-block" data-assist="cf" data-assist-text="Ping defaults stay off until both sides allow. Price and time show beside location — keep the UI quiet.">Assist</button>
+<div class="assist-strip" data-assist-strip="cf"></div>
+
+  </main>
+  <footer class="footer">Mens Mercatus Inc · Illustrative UI · Assist DEMO strips</footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

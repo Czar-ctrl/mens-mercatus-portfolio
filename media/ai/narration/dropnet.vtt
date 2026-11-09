@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:06.552
+Drop Net, or AI Hawk, is the draft step of the JobNet pipeline, as a demo you can try.
+
+2
+00:00:06.502 --> 00:00:12.103
+Paste a vacancy, generate a draft, review it, and copy it out.
+
+3
+00:00:12.103 --> 00:00:17.284
+You get a tailored cover note and a CV synopsis, drafted in your browser.
+
+4
+00:00:17.284 --> 00:00:20.000
+It runs locally from templates.
+
+5
+00:00:20.000 --> 00:00:24.988
+There is no model call, no scrape, and nothing is stored or sent.
+
+6
+00:00:24.988 --> 00:00:28.618
+The sample vacancies are fictional and employer-free.
+
+7
+00:00:28.618 --> 00:00:36.490
+The real pipeline runs as scheduled routines off this host, and its sanitised shortlist is browsable read-only on JobNet.
+
+8
+00:00:36.490 --> 00:00:43.570
+It is the same human-gated loop as JobNet: draft only, never auto-send, never auto-apply.

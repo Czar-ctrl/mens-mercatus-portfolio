@@ -1,0 +1,1543 @@
+{
+"version": 1,
+"built": "2026-11-03 04:40 SAST",
+"count": 192,
+"chunks": [
+{
+"id": "65406d3ab3",
+"url": "/",
+"title": "Home",
+"section": "Home",
+"kind": "page",
+"text": "Johannesburg, South Africa · SAST (UTC+2)."
+},
+{
+"id": "88b4a8190c",
+"url": "/",
+"title": "Home",
+"section": "Katlego Mokoto",
+"kind": "page",
+"text": "AI & ML Engineer / Full-Stack Developer. I build AI systems that do the slow work and stop for a human yes: RAG assistants, career pipelines, research desks and on-device tools on .NET/C#, React and Python. Open them and test them here. Availability. Available immediately. Engagement. On-site, hybrid, or remote. Johannesburg, Pretoria, Cape Town, Durban, and remote teams. See all five systems. LinkedIn Contact 065 842 4274. Request a code walkthrough. Selected work."
+},
+{
+"id": "4e6a5fc4b8",
+"url": "/",
+"title": "Home",
+"section": "Five systems worth an interview",
+"kind": "page",
+"text": "Open the case studies. 01 · Career pipeline. Human approval required."
+},
+{
+"id": "a2d5b2156e",
+"url": "/",
+"title": "Home",
+"section": "JobNet Application",
+"kind": "page",
+"text": "A daily career pipeline that turns public job posts into a ranked shortlist and tailored drafts, and sends a letter only when the posting prints an employer address. Role. Designed and operated the pipeline. Stack. Agents · Gmail · macOS automation · CV tailoring. Result. 20:00 SAST scrape, sentence ranker, one role per company. A note is sent only when the posting prints an employer address, that mailbox verifies, and the letter cites the role. Otherwise the send is held. The previous run is reported at 15:00 SAST. Open JobNet Application. 02 · Multimodal assistant. Live, with a labelled fallback."
+},
+{
+"id": "f5cb72611d",
+"url": "/",
+"title": "Home",
+"section": "Mercatus Assist & THINK",
+"kind": "page",
+"text": "A C# / ASP.NET Core service and a React workspace that call Gemini from the server, keep the API key off the browser, and say so when the live path is down. Role. Built the API, the proxy, and the workspace. Stack. C# · ASP.NET Core 8 · React 19 · TypeScript · Gemini · nginx · systemd. Result. Provider-swappable chat completions, exponential backoff on 429 and 5xx, per-IP caps, and a labelled demo mode when the robot is unhealthy. Open Mercatus Assist. 03 · Research system. Paper research desk."
+},
+{
+"id": "fe33cb26a3",
+"url": "/",
+"title": "Home",
+"section": "Forex Mercatus Codex",
+"kind": "page",
+"text": "A hosted Python terminal for charts, multi-market views, and a session-scoped paper bot — built so it cannot be mistaken for a brokerage. Role. Built, hosted, and bounded the desk. Stack. Python · Highcharts · yfinance · Ubuntu VPS. Result. About 87 MB on disk, quotes refreshing near every 60 seconds, up to 24 sessions with a 2-hour idle TTL, and a public health JSON. Open the paper desk. 04 · Browser studio. Runs in the browser."
+},
+{
+"id": "33835a9d25",
+"url": "/",
+"title": "Home",
+"section": "SoundX AI",
+"kind": "page",
+"text": "An AI drum station and studio with 20 on-device AI tools, a plugin rack, Afro sample packs and 22 themes. Audio stays on the machine. No sign-in. Role. Built the studio, the on-device AI tools and the Producer Agent. Stack. React · Web Audio · TypeScript · on-device ML. Result. A brief becomes a full beat in one click. Tempo and key detection, hum-to-MIDI, clash-fixing EQ and Mix QA all run in the browser. Open SoundX AI. 05 · Fleet operations. Local demo · example data."
+},
+{
+"id": "f9f1402cbc",
+"url": "/",
+"title": "Home",
+"section": "Mens Mercatus Fleet",
+"kind": "page",
+"text": "A fleet maintenance desk with rule-based repair approvals, fair-price checks in rand and 15 Fleet Intelligence tools. Messages stay drafts, cards are mock-only, and all data is example data. Role. Built the FastAPI server, the Vehicle Desk, the voice path and the Mac app. Stack. Python · FastAPI · SQLite · NumPy · vanilla JS · pytest. Result. A fault code and a workshop quote become a fair price and an approval tier. 406 automated tests pass. A person signs off every action. Watch the walkthrough. How the systems are built."
+},
+{
+"id": "7f738adc16",
+"url": "/",
+"title": "Home",
+"section": "Agentic workflows, with a person on the irreversible step",
+"kind": "page",
+"text": "AI-assisted means a model returns a bounded output: a draft, a summary, a setting. Agentic means the system can pick an approved tool, keep state, and propose the next step. It does not mean the system sends mail, places orders, or hides a failure. 0 1. Intent. What the person asked for. 0 2. Context. Only the data that task needs. 0 3. Router. Model, tool, or fallback. 0 4. Tools. Approved APIs and files. 0 5. Human gate. Stop before irreversible acts. 0 6. Record. Status, latency, source. About."
+},
+{
+"id": "9f0d2636fd",
+"url": "/",
+"title": "Home",
+"section": "Who you would be hiring",
+"kind": "page",
+"text": "I want a team that ships applied AI with clear ownership: model calls behind a service, a human decision before anything irreversible, and production habits — retries, rate limits, health checks — on the first public version. Self-taught. 4 years’ experience. Available immediately. Read the résumé. Mar 2026 – present. AI systems architect and founder. Project Antigravity. Ongoing. Full-stack, .NET, and AI systems. Before the portfolio. Operations and optimization. Earlier systems work."
+},
+{
+"id": "7901d33911",
+"url": "/work/",
+"title": "Selected work",
+"section": "Five systems, one card each",
+"kind": "page",
+"text": "Ten minutes is enough to judge the fit. Each card names my role, the stack and the result, and links to the live system. The case study adds the problem, the path and the limits. 01 · Career pipeline. Human approval required."
+},
+{
+"id": "eb886af225",
+"url": "/work/",
+"title": "Selected work",
+"section": "Production evidence",
+"kind": "page",
+"text": "These are the checks a reviewer can do without a private repo. Screens of the live flows are the demos themselves — open them from the cards. Repositories. No public GitHub profile is listed on the résumé. Ask for a walkthrough of the flagship codebases. Tests. Automated suites stay with the private source. Public checks are the health JSON, the labelled fallback, and the no-send rule. Deployment. Ubuntu VPS, systemd for the .NET robot, nginx, Cloudflare in front of the static site, Python desk on port 8790. Monitoring. Forex publishes health JSON. Assist exposes failure by switching to a labelled demo instead of a silent error. Security."
+},
+{
+"id": "33eaa48ca4",
+"url": "/work/",
+"title": "Selected work",
+"section": "Production evidence",
+"kind": "page",
+"text": "Security. API keys stay on the VPS. Per-IP caps on THINK. JobNet sends only when a posting prints an address. The paper desk cannot place an order. Performance. Published numbers only: ~60s quote refresh, 24 sessions / 2h idle, ~87 MB desk, backoff on 429 and 5xx. Continue to the case studies."
+},
+{
+"id": "72bfa03ef4",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "The same story, five times",
+"kind": "page",
+"text": "Every flagship uses one skeleton so a recruiter and an engineer can read them the same way. Other experiments live in Labs. 0 1 Challenge. 0 2 Role and scope. 0 3 Architecture. 0 4 60–90 second demo. 0 5 AI behavior. 0 6 Result. 0 7 Limits. 01 · Career pipeline."
+},
+{
+"id": "c516bbdc1e",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "Mercatus Assist & THINK",
+"kind": "page",
+"text": "A C# / ASP.NET Core service and a React workspace that call Gemini from the server, keep the API key off the browser, and say so when the live path is down. 03 · Research system."
+},
+{
+"id": "b58b57dbf4",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "Forex Mercatus Codex",
+"kind": "page",
+"text": "A hosted Python terminal for charts, multi-market views, and a session-scoped paper bot — built so it cannot be mistaken for a brokerage. 04 · Browser studio."
+},
+{
+"id": "cc47daab33",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "SoundX",
+"kind": "page",
+"text": "A beat studio in a browser tab: load a demo, play it, shape the master and generate. Audio stays on the machine. No sign-in. 05 · Fleet operations."
+},
+{
+"id": "04b026debb",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "Fleet",
+"kind": "page",
+"text": "A maintenance desk for South African fleets: rule-based repair approvals, fair prices in rand and drafts a person signs off. Example data only."
+},
+{
+"id": "9532a51926",
+"url": "/case-studies/",
+"title": "Case studies",
+"section": "Shared architecture",
+"kind": "page",
+"text": "The products look different. The control model is the same: a narrow context, an approved tool, a human gate, and a visible failure mode. 0 1. Intent. What the person asked for. 0 2. Context. Only the data that task needs. 0 3. Router. Model, tool, or fallback. 0 4. Tools. Approved APIs and files. 0 5. Human gate. Stop before irreversible acts. 0 6. Record. Status, latency, source."
+},
+{
+"id": "fae3c5464f",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Challenge",
+"kind": "case-study",
+"text": "Applying across many AI and engineering boards by hand is slow, and tools that submit on their own are unsafe. The job was to shorten the research and drafting loop without giving the system permission to apply or send mail."
+},
+{
+"id": "b34627b6a7",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Designed and operated the pipeline. Set a daily 20:00 SAST scrape, then a rank against the case studies. The previous run is mailed at 15:00 SAST. Kept a human confirm step before any submit. The system queues work; it does not apply. Added inbox watching so replies can be noticed, with notify paths that still require a person to send. Published a live read-only shortlist so a reviewer can see the pipeline without touching a mailbox."
+},
+{
+"id": "41490a85a7",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Stack",
+"kind": "case-study",
+"text": "Agents. Gmail. macOS automation. CV tailoring."
+},
+{
+"id": "6f7e3e5896",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Measured result",
+"kind": "case-study",
+"text": "Scrape. Every day at 20:00 SAST. LinkedIn guest search. A 15:00 SAST mail reports the previous run. Tailor. 15:00 SAST. Report of the previous 20:00 scrape, mailed to the candidate. Shortlist. 11 posts. Read-only desk on 7 Oct 2026. Hub also listed 18 Gmail drafts. Sends. Gated. A letter leaves only when the posting prints an employer address."
+},
+{
+"id": "1f8ed01743",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Architecture",
+"kind": "case-study",
+"text": "0 1. Collect. Daily scrape at 20:00 SAST across public listings. Read-only collection. 0 2. Match. A hashed sentence embedding ranks each posting against JobNet, Assist, THINK, Forex, and SoundX, and keeps one role per company. The report names the closest case study and a line from the posting. 0 3. Draft. The 15:00 SAST report covers the previous run. A letter is prepared only for a role that clears the ranker. 0 4. Send gate. Mail leaves only if the address is on the posting, the domain resolves, and the letter names that title, company, and summary. Missing addresses are held, not guessed."
+},
+{
+"id": "824738742a",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "60–90 second demo",
+"kind": "case-study",
+"text": "Open the read-only shortlist. You should see roles, not a send button that fires mail. Open one queued draft and read the source it was written from. Look for the approval state. If the only next step is a human send, the gate is doing its job. Stop there. The 90-second demo is the boundary, not a live application."
+},
+{
+"id": "11585bfb34",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Flows to look at",
+"kind": "case-study",
+"text": "Read-only shortlist. Captured from the public JobNet desk: 11 posts, draft-only, scraped 7 Oct 2026."
+},
+{
+"id": "7cc62d6f0a",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "AI behavior",
+"kind": "case-study",
+"text": "AI-assisted: classification and a tailored draft from résumé context. Agentic: scheduled collection, retrieval of the relevant CV context, and placement into a review queue. Not autonomous: no auto-apply, no auto-send, no irreversible decision. Provenance to ask for in a code review: which source was used, when the draft was created, and what the human changed."
+},
+{
+"id": "3f133063d7",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Security",
+"kind": "case-study",
+"text": "Mailbox send is outside the agent’s permissions. The public demo is read-only so visitors cannot trigger applications. Personal application data should be reviewed, retained, or deleted by the operator — ask for that policy in a code walkthrough."
+},
+{
+"id": "c3d81e8736",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Monitoring",
+"kind": "case-study",
+"text": "Scheduled jobs are the heartbeat: if 20:00 or 15:00 does not run, the queue goes stale. The public surface is a read-only shortlist, separate from the private mailbox routine."
+},
+{
+"id": "70a08b135e",
+"url": "/case-studies/jobnet/",
+"title": "JobNet case study",
+"section": "Limits",
+"kind": "case-study",
+"text": "This is a personal operating system for a job search, not a multi-tenant product. Draft quality still depends on the source posting and the résumé context. Automated test files are in the private source. Public proof is the read-only demo, the schedule, and the send gate. Contact me View the résumé All case studies."
+},
+{
+"id": "1f1a35d450",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Mercatus Assist & THINK",
+"kind": "case-study",
+"text": "A C# / ASP.NET Core service and a React workspace that call Gemini from the server, keep the API key off the browser, and say so when the live path is down. Live, with a labelled fallback. Open Mercatus Assist."
+},
+{
+"id": "b493412792",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Challenge",
+"kind": "case-study",
+"text": "A portfolio assistant is easy to fake with a browser key. The engineering problem was a real model call, a swap-able provider, a safe public surface, and an honest screen when the service is down."
+},
+{
+"id": "1491668118",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Built the API, the proxy, and the workspace. Shipped an ASP.NET Core 8 minimal API in C# that calls Gemini through an OpenAI-compatible chat completions client, so the provider can change in config. Ran that API as a systemd service on an Ubuntu VPS, behind nginx, with the static site behind Cloudflare. Put a same-origin proxy in front so the API key stays on the server. Built THINK as a React 19, Vite, and TypeScript workspace: chat, image, live voice over WebSocket, plus sites, code, and a learning path. Labelled the fallback. If the live robot is unhealthy, the UI says it is demo coaching instead of pretending."
+},
+{
+"id": "8d9b9c5883",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Stack",
+"kind": "case-study",
+"text": "C#. ASP.NET Core 8. React 19. TypeScript. Gemini. nginx. systemd."
+},
+{
+"id": "287f446214",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Measured result",
+"kind": "case-study",
+"text": "Retries. 429 and 5xx. Exponential backoff on the ASP.NET client. Key location. VPS only. Same-origin proxy. Not shipped to the browser. Caps. Per IP. Daily caps on chat, image, video, and live voice. Fallback. Labelled. Demo coaching when the robot health check fails."
+},
+{
+"id": "bf749c4c61",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Architecture",
+"kind": "case-study",
+"text": "0 1. Experience. Mercatus Assist for guided chat. THINK for multimodal work: chat, image, live voice, sites, code, and learning. 0 2. Gateway. Same-origin proxy to the VPS. The browser never receives the provider key. 0 3. Robot. ASP.NET Core 8 minimal API. OpenAI-compatible client. Exponential backoff on HTTP 429 and 5xx. 0 4. Fallback. Health failure switches the surface to a labelled demo path. Live and demo are not the same state."
+},
+{
+"id": "6443c76bdf",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "60–90 second demo",
+"kind": "case-study",
+"text": "Play the 60-second walkthrough on this page, then open Mercatus Assist. Ask one question. Note whether the reply is marked live or demo. Open THINK and try chat only. Live voice and image are capped per IP — that cap is the control, not a bug. If the robot is down, the honest outcome is the labelled fallback, not a blank error."
+},
+{
+"id": "80e65d71f1",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Flows to look at",
+"kind": "case-study",
+"text": "Mercatus Assist. Live path through the VPS proxy. The banner names Gemini and the retry behavior. Feed copy inside THINK is product content, not a résumé claim. THINK. React workspace: pulse, chat, live voice, sites, and code. The model key stays on the server."
+},
+{
+"id": "30d143a9fa",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "AI behavior",
+"kind": "case-study",
+"text": "AI-assisted: one bounded model response for chat, image, or voice. Agentic: routing across approved surfaces (chat, voice relay, tool-style paths) with session context. Human-controlled: the visitor chooses the path. The service does not take external actions on their behalf. Observability: live versus demo is a visible state. Rate limits are per IP on chat, image, video, and live voice."
+},
+{
+"id": "75f9254827",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Security",
+"kind": "case-study",
+"text": "API key isolation on the VPS. Per-IP rate limits on the public multimodal paths. Provider is config-swappable, so a key rotation does not require a UI rewrite. No private prompts are published here to prove the architecture."
+},
+{
+"id": "1996e6169a",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Monitoring",
+"kind": "case-study",
+"text": "The fallback itself is a health signal: visitors see demo mode instead of a silent failure. Process supervision is systemd on Ubuntu, with nginx in front and Cloudflare on the static site."
+},
+{
+"id": "2597f9f2ec",
+"url": "/case-studies/assist/",
+"title": "Mercatus Assist & THINK case study",
+"section": "Limits",
+"kind": "case-study",
+"text": "THINK is a portfolio workspace with caps, not an unlimited production assistant. A public GitHub profile is not on the résumé. The service code is available in a walkthrough. Unit-test counts are not published. The public checks are the fallback label, the proxy boundary, and the retry policy. Contact me View the résumé All case studies."
+},
+{
+"id": "263c05652f",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Forex Mercatus Codex",
+"kind": "case-study",
+"text": "A hosted Python terminal for charts, multi-market views, and a session-scoped paper bot — built so it cannot be mistaken for a brokerage. Paper research desk. Open the paper desk."
+},
+{
+"id": "563c92e236",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Challenge",
+"kind": "case-study",
+"text": "Show market structure, multi-panel analysis, and a bot loop without letting a visitor believe they are placing a real order. The hard part is the boundary, not the chart."
+},
+{
+"id": "b0eb63012e",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Built, hosted, and bounded the desk. Built a Python and Highcharts desk covering Chart, Multi, Whales, Flow, and Bot. Hosted it on the VPS. The process listens on port 8790 and is published over HTTPS. Gave each browser tab its own session-scoped paper bot instead of one shared tape. Fused public feeds (Yahoo, Kraken, Binance) and fell back to synthetic tape when a feed is unavailable. Cut inventory and load path so cold start and static serving are clearer on an ~87 MB app."
+},
+{
+"id": "2912b8d7f5",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Measured result",
+"kind": "case-study",
+"text": "Footprint. ~87 MB. Python desk size cited on the résumé. Freshness. ~60 seconds. Public mid rates refresh on that cadence. Sessions. 24 max. 2-hour idle TTL. Session-scoped paper bots. Orders. None. Health reports paper_only. No broker connection."
+},
+{
+"id": "5cdda5a330",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Architecture",
+"kind": "case-study",
+"text": "0 1. Feeds. Public market data, with synthetic tape when a source is down. A delayed snapshot, not a broker feed. 0 2. Desk. Chart, multi-symbol compare, flow and whale views, and a paper bot. Highcharts for the portfolio demo. 0 3. Session. One paper bot per browser tab. Cap of 24 sessions. Idle sessions expire after 2 hours. 0 4. Policy. paper_only is true. Sign-in and journal edits stay off on the public desk. No order can be placed."
+},
+{
+"id": "d4b1452919",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "60–90 second demo",
+"kind": "case-study",
+"text": "Open the desk and confirm the paper label before you touch a symbol. Pick one symbol, then compare a second market in the multi view. Run one paper action. It should change simulated state only. Open the health JSON and check paper_only, the symbol list, and the session cap."
+},
+{
+"id": "383ebfab9e",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Flows to look at",
+"kind": "case-study",
+"text": "Paper desk. Public entry: paper label, session scope, delayed quotes, and a four-step tour. The embedded chart loads after this screen."
+},
+{
+"id": "5af1a84de6",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "AI behavior",
+"kind": "case-study",
+"text": "The bot is a constrained research assistant on simulated state. It can summarize retrieved data and propose a paper-only action. A policy gate blocks live orders. The simulated state is explicit. Useful provenance on a response: timestamp, data source, and whether the line is observation, analysis, or simulation."
+},
+{
+"id": "f0010f6faf",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Security",
+"kind": "case-study",
+"text": "No broker credentials and no order route. Public desk disables sign-in and journal edits. Each visitor session is isolated from other visitors’ paper state."
+},
+{
+"id": "fe8dd11c26",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Monitoring",
+"kind": "case-study",
+"text": "Published health JSON: paper_only, symbols, data sources, session cap, idle TTL. Symbols on that health snapshot include SPX, NQ, BTC, XAU, and EURUSD. Data sources noted there include synthetic tape, Yahoo, Binance, CFTC, and Forex Factory."
+},
+{
+"id": "51a6e3cc7e",
+"url": "/case-studies/forex/",
+"title": "Forex Mercatus Codex case study",
+"section": "Limits",
+"kind": "case-study",
+"text": "This is simulated research, not a brokerage, not an exchange, and not advice. Quotes are delayed public snapshots. A missing feed becomes synthetic tape, which is labelled. Highcharts is used as a non-commercial portfolio demo. Test suites are in the private source. The public check is the health endpoint plus the paper-only UI. Contact me View the résumé All case studies."
+},
+{
+"id": "2e9fcef9f7",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "SoundX",
+"kind": "case-study",
+"text": "A beat studio in a browser tab: load a demo, play it, shape the master and generate. Audio stays on the machine. No sign-in. Runs in the browser. Open SoundX AI."
+},
+{
+"id": "c8d4af0515",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Challenge",
+"kind": "case-study",
+"text": "A music demo usually sends audio to someone else’s server. The job was a studio you can open in a tab: playback, a mixer, and an assistant that suggests settings without taking the session away from you."
+},
+{
+"id": "f1a377ec97",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Built the browser DAW and the AI Producer. Built SoundX as a browser DAW: library, pattern and song views, mixer, and a master bus. Added a four-step demo path so a visitor can Load Demo, press Play, shape the master, and Generate without an account. Shipped an AI Producer that takes a request and proposes drums, bass, keys, or arrangement ideas. It does not silently overwrite the session. Kept synthesis, the microphone path, and export in the browser. There is no hosted listening session."
+},
+{
+"id": "49d7c7e6a3",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Stack",
+"kind": "case-study",
+"text": "Web Audio. TypeScript. DSP. AI Producer."
+},
+{
+"id": "c7fb9ec0e8",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Measured result",
+"kind": "case-study",
+"text": "Demo path. 4 steps. Load Demo, Play, Shape master, Generate. Sign-in. None. The public studio opens without an account. Audio. In the browser. Web Audio. No hosted listening session. Apply. You confirm. The producer proposes. The session changes when you apply."
+},
+{
+"id": "43b9999e6a",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Architecture",
+"kind": "case-study",
+"text": "0 1. Session. The studio state lives in the tab. Closing it leaves nothing on a server. 0 2. Engine. Web Audio for playback, stems, the mixer, and the master EQ and reverb path. 0 3. AI Producer. A local assistant. It proposes a pattern or a processing chain and explains it. You apply or dismiss it. 0 4. Export. The demo UI offers WAV, FLAC, MP3, and Ogg from the browser. The mic is optional and permissioned."
+},
+{
+"id": "81eae5d646",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "60–90 second demo",
+"kind": "case-study",
+"text": "Open SoundX. You should see the demo path, not a login wall. Load Demo, then press Play. The transport should move without an account. Open Shape master and move one control. The change stays in this tab. Ask the AI Producer for a change and apply it yourself. It should not replace the session on its own."
+},
+{
+"id": "ae58cb8896",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Flows to look at",
+"kind": "case-study",
+"text": "SoundX. The public studio: demo path, transport, mixer, and the AI Producer panel."
+},
+{
+"id": "af6fb47dda",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "AI behavior",
+"kind": "case-study",
+"text": "AI-assisted: a suggested drum, bass, keys, or arrangement idea from a written request. Agentic: the producer can pick a demo path step and propose the next control change. Human-controlled: Apply and Dismiss stay with the person. The session is not overwritten in the background. The public studio describes the producer as local logic, not a cloud model call."
+},
+{
+"id": "857c603299",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Security",
+"kind": "case-study",
+"text": "No account and no upload of the session to a portfolio server. Microphone capture is optional and asks the browser for permission. The producer cannot export or publish on its own."
+},
+{
+"id": "3bd97c5e42",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Monitoring",
+"kind": "case-study",
+"text": "This demo has no server health endpoint. The check is local: Play makes sound, and the demo path chips advance. If Web Audio is blocked, the page still shows the studio and the written path."
+},
+{
+"id": "196dc34e5b",
+"url": "/case-studies/soundx/",
+"title": "SoundX case study",
+"section": "Limits",
+"kind": "case-study",
+"text": "This is a browser demo, not a hosted DAW with saved cloud projects. Sound quality and export depend on the browser’s Web Audio support. Automated tests sit with the private source. The public check is the four-step path on /apps/sound-deck/. Contact me View the résumé All case studies."
+},
+{
+"id": "55006e5722",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Mens Mercatus Fleet",
+"kind": "case-study",
+"text": "A maintenance desk for South African vehicle fleets: rule-based repair approvals, fair-price checks in rand and fifteen Fleet Intelligence tools, with every outgoing message kept as a draft for a person to sign off. Local demo · example data. Watch the walkthrough. Ask for a code walkthrough."
+},
+{
+"id": "c5c0b21020",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Challenge",
+"kind": "case-study",
+"text": "Fleet managers approve many small repairs from phone calls, WhatsApp photos and workshop quotes. The engineering problem was a desk that prices a quote fairly, applies the approval rules the same way every time, and never sends a message or pays a card without a person saying yes."
+},
+{
+"id": "a7dce2fe34",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Built the server, the desk and the Mac app. Built a FastAPI server in Python with a SQLite store, a rule engine for minor-repair approvals and a NumPy price regressor trained on 160 fictional invoices. Wrote the Vehicle Desk as one vanilla-JS page: calls and quotes, checks, fleet, supply and money, admin, Fleet Intelligence and a Godmode desk. Added fifteen Fleet Intelligence tools, from fault-to-repair pricing and warranty blocks to fuel slip checks, SA compliance, theft alerts and driver coaching. Kept a voice path for calls: Twilio Media Streams, Deepgram speech-to-text, a Claude, OpenAI or Ollama model and ElevenLabs speech, with mock providers so it runs without keys."
+},
+{
+"id": "815cd3f577",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Role and scope",
+"kind": "case-study",
+"text": "Kept a voice path for calls: Twilio Media Streams, Deepgram speech-to-text, a Claude, OpenAI or Ollama model and ElevenLabs speech, with mock providers so it runs without keys. Packaged it as a standalone macOS app for a Mac mini, and covered the server with 406 automated tests."
+},
+{
+"id": "36bc8ad0e6",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Stack",
+"kind": "case-study",
+"text": "Python. FastAPI. SQLite. NumPy. Vanilla JS. pytest. macOS app."
+},
+{
+"id": "b9d0e9317e",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Measured result",
+"kind": "case-study",
+"text": "Tests. 406 passing. pytest on the build machine, 3 Nov 2026. 2 skipped. Tools. 15. Fleet Intelligence capabilities on the desk. Integrations. 12 optional. Switched by flags, each with a fallback. Sign-off. Drafts only. WhatsApp and Teams messages are drafts. Virtual cards are mock-only."
+},
+{
+"id": "06eb95727b",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Architecture",
+"kind": "case-study",
+"text": "0 1. Desk. Vehicle Desk with seven sections, plus a Godmode desk: tickers, command palette, offline Gauteng map with trip replay and a decision ledger. 0 2. Rules. Auto-approve up to R2,500 and within 8.5% of the fair price. Counter or manager band up to R15,000. Executive above that. 0 3. Server. FastAPI on 127.0.0.1 with SQLite and a NumPy price model. Calls stream through Twilio, Deepgram, an LLM and ElevenLabs, or mock providers. 0 4. Sign-off. WhatsApp, Teams and dealer messages are written as drafts. Card payments are mock-only. A person approves every outgoing action."
+},
+{
+"id": "30b006a602",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "60–90 second demo",
+"kind": "case-study",
+"text": "Play the 60-second walkthrough on this page. It is a screen recording of the app running on the build machine. Watch Fault to Repair price a workshop quote against a fault code and pick an approval tier. See the Godmode map replay a trip on the offline Gauteng map, then the decision ledger. Every vehicle, workshop, price and person shown is example data, not a client fleet."
+},
+{
+"id": "a049ac5ffa",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Flows to look at",
+"kind": "case-study",
+"text": "Vehicle Desk. The Vehicle Desk front page: team notices, example KPIs and the seven sections. Every figure on this screen is example data. Fault to Repair. A fault code and a R2,950 quote become a fair price, a counter-offer and a draft WhatsApp approval. Nothing is sent. Play the walkthrough in a new tab."
+},
+{
+"id": "9029badd7f",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "AI behavior",
+"kind": "case-study",
+"text": "AI-assisted: one model reply per call turn on the voice path, and a small price regressor for quotes. Agentic: kept narrow. The desk proposes approvals, counters and drafts; it does not act on its own. Human-controlled: a person approves every draft message and every mock card payment. Observability: decisions go to a hash-chained ledger, and a sandbox replays them with a changed rule config without touching stored decisions."
+},
+{
+"id": "4b465143eb",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Security",
+"kind": "case-study",
+"text": "The server binds to 127.0.0.1 by default. Provider keys are optional and read from the environment; mock providers run without them. WhatsApp is a local test webhook and simulator. No message reaches a real number. No client data: the fleet, workshops, prices and people are fictional."
+},
+{
+"id": "e6ed103c04",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Monitoring",
+"kind": "case-study",
+"text": "The desk shows its state: test-mode banners, labelled example figures and limits marked “placeholder — owner to set”. 406 automated tests run with pytest; 2 are skipped."
+},
+{
+"id": "bc7bddcdea",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet case study",
+"section": "Limits",
+"kind": "case-study",
+"text": "This is a local demo on example data, not a deployed fleet product. There is no public live app. The macOS app runs on one Mac mini and is not offered as a public download. The code is available in a walkthrough. isiZulu and Afrikaans strings still need a native-speaker review before real use. Contact me View the résumé All case studies."
+},
+{
+"id": "df3dc1d246",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Résumé",
+"kind": "page",
+"text": "Résumé · Available · SAST (UTC+2)."
+},
+{
+"id": "57ae57c230",
+"url": "/resume/",
+"title": "Résumé",
+"section": "JobNet",
+"kind": "page",
+"text": "20:00 SAST scrape, sentence ranker, one role per company. A note is sent only when the posting prints an employer address, that mailbox verifies, and the letter cites the role. Otherwise the send is held. The previous run is reported at 15:00 SAST. 02 · Multimodal assistant."
+},
+{
+"id": "02ee247822",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Mercatus Assist & THINK",
+"kind": "page",
+"text": "Provider-swappable chat completions, exponential backoff on 429 and 5xx, per-IP caps, and a labelled demo mode when the robot is unhealthy. 03 · Research system."
+},
+{
+"id": "3c232039f0",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Forex Mercatus Codex",
+"kind": "page",
+"text": "About 87 MB on disk, quotes refreshing near every 60 seconds, up to 24 sessions with a 2-hour idle TTL, and a public health JSON. 04 · Browser studio."
+},
+{
+"id": "b88130074d",
+"url": "/resume/",
+"title": "Résumé",
+"section": "SoundX",
+"kind": "page",
+"text": "A guided four-step demo — Load Demo, Play, Shape master, Generate. Generate can listen to the buffer, estimate tempo from onsets, and wait for you to apply it. Stack."
+},
+{
+"id": "f17289b0be",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Tools I ship with",
+"kind": "page",
+"text": "Python. Forex Mercatus Codex engine, FastAPI, Pandas, NumPy, yfinance, paper-bot and session models. Languages. Python, TypeScript, C#, JavaScript, SQL, Bash. Frontend. React 19, Next.js, Vite, TypeScript, Tailwind, Flutter, Web Audio studio UI. AI. LLM orchestration, RAG, LangChain, ChromaDB, Ollama, Gemini, Agent Zero, tool-using agents with human approval. Machine learning. Pandas, NumPy, yfinance, OR-Tools, regime and paper-research models, DSP and stem analysis. Backend. ASP.NET Core 8, FastAPI, Node.js, WebSockets, Redis. Data. PostgreSQL, Pandas, NumPy, yfinance, OR-Tools. Infra. Docker, Linux, systemd, nginx, Cloudflare, Ubuntu VPS, Nebius."
+},
+{
+"id": "04661f0915",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Education",
+"kind": "page",
+"text": "Self-taught. AI engineering, full-stack .NET, and product engineering roles. Open to teams in South Africa and remote. Experience."
+},
+{
+"id": "6149889864",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Where the work sits",
+"kind": "page",
+"text": "0 1. Mar 2026 – present."
+},
+{
+"id": "e9f009c790",
+"url": "/resume/",
+"title": "Résumé",
+"section": "AI systems architect and founder",
+"kind": "page",
+"text": "Project Antigravity. Local-first agent tooling on Apple Silicon M4 with Ollama. Agent Zero and Cursor for orchestration. Nebius for training and deploy experiments. 0 2. Ongoing."
+},
+{
+"id": "2c2ac8502e",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Full-stack, .NET, and AI systems",
+"kind": "page",
+"text": "Mercatus Assist: ASP.NET Core 8 service calling Gemini through an OpenAI-compatible client, with retries, systemd, nginx, and Cloudflare. THINK: React 19 workspace with a server-side proxy and live-voice WebSocket relay. JobNet, Mercatus Assist, Forex Mercatus Codex, and SoundX, documented as the case studies on this site. 0 3. Before the portfolio."
+},
+{
+"id": "883a7bc1e7",
+"url": "/resume/",
+"title": "Résumé",
+"section": "Operations and optimization",
+"kind": "page",
+"text": "Earlier systems work. Fleet and logistics optimization with OR-Tools. Diesel and mechanical operations — systems thinking under physical constraints."
+},
+{
+"id": "827b0e9bcf",
+"url": "/contact/",
+"title": "Contact",
+"section": "Hire me",
+"kind": "page",
+"text": "Available immediately for AI engineering and full-stack .NET/C# roles. Johannesburg, Pretoria, Cape Town, Durban, and remote teams . On-site, hybrid, or remote . katlego.mokoto.km@gmail.com. ATS PDF. Call or WhatsApp 065 842 4274 for the fastest answer. The form goes straight to my inbox. Loading the form…."
+},
+{
+"id": "85125098f3",
+"url": "/labs/",
+"title": "Labs",
+"section": "Everything that is not a flagship",
+"kind": "page",
+"text": "Experiments that stay off the first screen. SoundX remains with the case studies."
+},
+{
+"id": "18cc824072",
+"url": "/labs/",
+"title": "Labs",
+"section": "RAG and agents",
+"kind": "page",
+"text": "Retrieval, a single agent, and a three-step desk, animated. A one-page PDF sits beside the drawing. Assist and JobNet are the live cuts of those shapes. RAG · Agent · PDF."
+},
+{
+"id": "967c056ec3",
+"url": "/labs/",
+"title": "Labs",
+"section": "Blueprints",
+"kind": "page",
+"text": "Event-flow screens and architecture diagrams: signup, rate lock, check-in, payout, disputes, compliance gates. Reference drawings, not a live service. SVG · Static UI."
+},
+{
+"id": "760bbdf47e",
+"url": "/labs/",
+"title": "Labs",
+"section": "Mercatus Concierge",
+"kind": "page",
+"text": "A venture-coach shell for plan and build notes, design picks, and role kits. Exploratory UI, not a flagship case study. Product UI."
+},
+{
+"id": "f03ef58721",
+"url": "/labs/",
+"title": "Labs",
+"section": "Project Antigravity",
+"kind": "page",
+"text": "Since March 2026: terminal-first local models on Apple Silicon M4 with Ollama, Agent Zero, and Cursor, plus Nebius for training and deploy experiments. Ollama · Agent Zero · Nebius."
+},
+{
+"id": "e7e8efac05",
+"url": "/labs/",
+"title": "Labs",
+"section": "Flutter overlay",
+"kind": "page",
+"text": "A Flutter package for z-order between a sound bar and a social band, with a theme extension, haptics, and a demo app. Flutter · Dart."
+},
+{
+"id": "1c75126d94",
+"url": "/labs/",
+"title": "Labs",
+"section": "ProxNet",
+"kind": "page",
+"text": "Offline-first BLE and WebRTC mesh experiments, and local SSD layout for model weights and vector stores. React Native · WebRTC."
+},
+{
+"id": "b517fc4521",
+"url": "/rag/",
+"title": "RAG and agents",
+"section": "RAG, an agent, and a desk of three",
+"kind": "page",
+"text": "The same three shapes as the reference drawing, walked in order. A pulse marks the live step. Assist is the retrieval path. JobNet is the agent path. The nightly script is the small multi-agent desk. Download the one-page PDF. Playing. Retrieve, then answer."
+},
+{
+"id": "131d9cee55",
+"url": "/rag/",
+"title": "RAG and agents",
+"section": "RAG",
+"kind": "page",
+"text": "Assist does this with the four case studies. The question is matched locally, the passage is named, then Gemini answers. Decide, then use a tool."
+},
+{
+"id": "4df3f79979",
+"url": "/rag/",
+"title": "RAG and agents",
+"section": "Agent",
+"kind": "page",
+"text": "JobNet is this shape. It ranks, checks the posting for an address, and holds the letter when the check fails. One desk, three workers."
+},
+{
+"id": "97c9508de3",
+"url": "/rag/",
+"title": "RAG and agents",
+"section": "Multi-agent RAG",
+"kind": "page",
+"text": "The drawing is the pattern. This portfolio runs the three jobs in one nightly script, not as separate cloud agents."
+},
+{
+"id": "9b06e0b0f2",
+"url": "/apps/",
+"title": "Apps",
+"section": "Schematics & docs",
+"kind": "page",
+"text": "Overall system · SVG. Integration pipeline · SVG. Topology · SVG. Data flow · SVG. GPS + ping · SVG. Gates · SVG. Pillars · SVG. Event pack viewer. Product pack overview. Plan · reader. Drop BLUEPRINT.pdf here. Apps."
+},
+{
+"id": "79b2aea1cf",
+"url": "/apps/",
+"title": "Apps",
+"section": "Four flagship systems",
+"kind": "page",
+"text": "The four systems to open first, each with the problem it solves. Everything is labelled LIVE, paper, draft-only or DEMO. Smaller builds are listed below."
+},
+{
+"id": "32c06a9598",
+"url": "/apps/",
+"title": "Apps",
+"section": "SoundX AI",
+"kind": "page",
+"text": "Solves: a full beat studio with AI, with no install, sign-in or upload. AI drum station & studio: 20 on-device AI tools, plugin rack, Afro sample packs and 22 themes. Runs in the browser — no sign-in, no upload. Open SoundX AI."
+},
+{
+"id": "2e39b220d0",
+"url": "/apps/",
+"title": "Apps",
+"section": "JobNet Application",
+"kind": "page",
+"text": "Solves: applying by hand is slow and auto-apply bots are unsafe. Live shortlist → on-device match → AI Hawk cover note + CV synopsis → review → forward by email. Draft-only — never auto-applies or sends mail. Open JobNet Application."
+},
+{
+"id": "688698fb1a",
+"url": "/apps/",
+"title": "Apps",
+"section": "Forex Mercatus Codex",
+"kind": "page",
+"text": "Solves: market research without broker risk. Paper only, not advice. Live paper desk with a guided tour — Chart · Multi · Flow · Bot. Session-scoped paper bot; not a brokerage. Live + DEMO."
+},
+{
+"id": "2adc353e27",
+"url": "/apps/",
+"title": "Apps",
+"section": "Mercatus Assist",
+"kind": "page",
+"text": "Solves: a live AI assistant that never leaks its key and says when it is in DEMO. Ask the Blueprint Robot — Gemini via the Blueprint API when healthy, labelled DEMO coaching when not. Guided tour chips. Open Mercatus Assist. More builds."
+},
+{
+"id": "66a710c98d",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Systems, schematics and docs",
+"kind": "page",
+"text": "Animated blueprints of how every app on this site is wired, then the static Blueprint pack for Messmakers / Mens Mercatus Inc / Netza. System blueprints."
+},
+{
+"id": "8376f98185",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "How every app is wired",
+"kind": "page",
+"text": "Each diagram is drawn from the real code and config: what runs in your browser, what sits at the edge, what lives on the API host, and how they talk. Packets show requests (red) and responses or data (cyan). PREVIEW · not live yet. BUILD-TIME / SCHEDULED. request → response. build / schedule."
+},
+{
+"id": "31859f395f",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "mensmercatus.online · the whole site",
+"kind": "page",
+"text": "Static and fast at the edge; anything that needs a secret, a model or live data sits behind api.mensmercatus.online. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "7bb071ddf1",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "SoundX AI · browser studio",
+"kind": "page",
+"text": "One static build with no API key: audio, ML and the AI Producer run on the device. Only phone pairing uses the network. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "9168f6974a",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "JobNet Application · scrape to Gmail draft",
+"kind": "page",
+"text": "JobNet, AI Hawk (formerly Drop Net) and JARVIS mode as one flow: shortlist, match, draft, a human review, then a Gmail draft or a forward. Nothing applies or sends by itself. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "e127cd118d",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Forex Mercatus Codex · paper research terminal",
+"kind": "page",
+"text": "A research terminal over the paper-only FX Codex API. Not a broker, not an exchange, not advice. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "3d1353f6a8",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "THINK · multimodal workspace",
+"kind": "page",
+"text": "A React workspace in front of a Node proxy that holds the key; live voice runs over a WebSocket relay. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "877fae91db",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Mercatus Assist v2 · grounded answers",
+"kind": "page",
+"text": "Intent routing and retrieval run in the browser; one grounded Gemini call goes through the same-origin proxy to the ASP.NET Core 8 API, and citations are checked before anything is shown. If the model is busy, it answers from the retrieved sources only. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "df7f27573b",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Mercatus Concierge · guide shell",
+"kind": "page",
+"text": "A narrative shell over the desks. No payments, no sign-in, no AI calls: it reads static JSON and two health checks. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "7f9be17e9c",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Mens Mercatus Blueprint · static pack",
+"kind": "page",
+"text": "Event-mode screens, concept schematics and sample books are static; the only live part is the robot chat panel and its policy prompt. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "eca98b3ab9",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "AI layer & Lab · /ai/",
+"kind": "page",
+"text": "A 6.1 KB boot script; models, WASM and OCR load only when a feature needs them. No cookies, no third-party requests. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "ae692ba5e1",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Event Net · one shift, simulated",
+"kind": "page",
+"text": "An in-browser DEMO that walks one event shift through the static Blueprint pack screens. Progress stays in the browser; nothing is sent. Hover or tab to a node to see its role and highlight what it talks to."
+},
+{
+"id": "bf5a82c240",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "NET Gemini workspace · guided tour",
+"kind": "page",
+"text": "A guided tour of the .NET + Gemini stack with sample request and response JSON. It makes no network calls; the shapes mirror the real robot. Hover or tab to a node to see its role and highlight what it talks to. Blueprint pack."
+},
+{
+"id": "ec8244261f",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Event mode screens",
+"kind": "page",
+"text": "Signup gate, rate lock, check-in, points, vehicle, no-show, dispute, payout, close friends, settings."
+},
+{
+"id": "19ebe0e572",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Seven schematics",
+"kind": "page",
+"text": "Architecture, AI Assist, K8s, event flow, GPS ping, compliance, five jobs pillars."
+},
+{
+"id": "061640fd4a",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "SAMPLE books",
+"kind": "page",
+"text": "Balance sheet / book / logbook examples."
+},
+{
+"id": "56bb5e9d54",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "System prompt",
+"kind": "page",
+"text": "Mercatus Blueprint Robot Assist / chat policy copy."
+},
+{
+"id": "e830d63619",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Event mode compliance",
+"kind": "page",
+"text": "NMW · POPIA · NLTA · consent gates documented for the mockups."
+},
+{
+"id": "68db4e6499",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "AI in every tool",
+"kind": "page",
+"text": "How Assist wires to each surface — refusals included."
+},
+{
+"id": "af2f930166",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Blueprints pack README",
+"kind": "page",
+"text": "Full product overview from the source pack. Gallery."
+},
+{
+"id": "4f2ea040b9",
+"url": "/blueprint/",
+"title": "Mens Mercatus Blueprint",
+"section": "Schematics preview",
+"kind": "page",
+"text": "Messmakers · Event · Jobs · Netza. toolId · context · inline result. Namespaces · services · ingress. Signup → payout. NMW · POPIA · NLTA. Discover · Escrow · Verify · Settle · Assist."
+},
+{
+"id": "bbd10c31d8",
+"url": "/apps/mercatus-assist/",
+"title": "Mercatus Assist",
+"section": "Mercatus Assist",
+"kind": "app",
+"text": "AI assistant · RAG · on-device ML · preview."
+},
+{
+"id": "085c099afe",
+"url": "/apps/mercatus-assist/",
+"title": "Mercatus Assist",
+"section": "Mercatus Assist",
+"kind": "app",
+"text": "Ask anything about Katlego's work. Retrieval and intent routing run on your device with a small embedding model; Gemini writes the answer from the sources it was given, and every claim links back to the page it came from. When it doesn't know, it says so."
+},
+{
+"id": "551900848d",
+"url": "/apps/mercatus-assist/",
+"title": "Mercatus Assist",
+"section": "Privacy",
+"kind": "app",
+"text": "The conversation lives in this browser tab only (sessionStorage) and the Clear button wipes it. No cookies, no tracking. Your question and the matched site text go to the existing Assist API to get an answer; nothing new is stored on a server."
+},
+{
+"id": "2b5c1f5eda",
+"url": "/apps/mercatus-assist/",
+"title": "Mercatus Assist",
+"section": "Go deeper",
+"kind": "app",
+"text": "Technical overview (PDF). Original policy-coach chat."
+},
+{
+"id": "a08714bb61",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Mercatus Concierge · Journey",
+"kind": "app",
+"text": "01 · Arrive · Mens Mercatus."
+},
+{
+"id": "05299a561f",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Your digital footprint. One concierge.",
+"kind": "app",
+"text": "Concierge is the guide through Mens Mercatus — a narrative shell over the desks you already run, not another product silo. Begin the journey. Portfolio apps ↗. Journey frame · status chips · Open live into existing URLs only. Your digital footprint. One concierge. 02 · Assist."
+},
+{
+"id": "16a341aeff",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Mercatus Assist",
+"kind": "app",
+"text": "The Blueprints policy coach — live .NET robot on the portfolio. Ask about desks, demos, or weight class; Concierge only points the way in. Mens Mercatus Blueprint chrome · Gemini-backed. Same robot health as Blueprints LIVE. Talk with Assist. Open full Assist ↗. 03 · Careers · JobNet Application."
+},
+{
+"id": "f0d3a3bded",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "AI Hawk in JobNet Application",
+"kind": "app",
+"text": "Daily leads desk — LinkedIn + Glassdoor digest, fit ranking, draft packets. Concierge reads the latest counts; JobNet Application stays draft-only. Open live → JobNet Application (AI Hawk step). Draft-only posture · no auto-apply from this shell. Open AI Hawk. JobNet Application ↗. 04 · Lab."
+},
+{
+"id": "b52fad2288",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Mercatus Lab · God Eye",
+"kind": "app",
+"text": "Workstations, God Eye, Forge, and the operator desks live in Mercatus Lab.app on the Mac Mini — not a public portfolio URL. Concierge names the surface honestly. God Eye · AI Arsenal · X Suite · Quant. Local Lab.app / Lab Desk — no fake “up” green. Lab.app · local only. 05 · Forex · Codex."
+},
+{
+"id": "cee4ec098b",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Paper desk",
+"kind": "app",
+"text": "Forex Mercatus Codex on the portfolio plus the API forex desk — paper trading surface. Concierge links both; no live-broker claim. Portfolio shell · Forex Mercatus Codex. API desk · api.mensmercatus.online/forex/. Open Forex Mercatus Codex. API forex ↗. 06 · SoundX AI."
+},
+{
+"id": "af6083281e",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Browser DAW",
+"kind": "app",
+"text": "SoundX AI — AI drum station & studio in the portfolio. Concierge highlights the desk; the app lives under /apps/soundx-ai/ . Cascade mixer · codecs · Ableton-weight polish. Open live into the existing SoundX AI build. Open SoundX AI. 07 · THINK."
+},
+{
+"id": "befd39e95f",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Gemini multimodal workspace",
+"kind": "app",
+"text": "THINK is the live multimodal desk — chat, image, and live paths through the portfolio’s Gemini proxy. Concierge surfaces status; the app stays at /think/ . Hybrid social & AI · Vite app on mensmercatus.online. Health via think-proxy when cache/probe allows. 08 · Close."
+},
+{
+"id": "118ebde258",
+"url": "/apps/mercatus-concierge/",
+"title": "Mercatus Concierge · Journey",
+"section": "Leave the desk warm.",
+"kind": "app",
+"text": "Cold-call leave-behinds: the pitch playbook PDF and Meeting Desk inside the portfolio Concierge entry. Book the walkthrough; send the PDF. Meeting Desk · Concierge ↗. Book a walkthrough. Local Mercatus Lab board — admin only. Concierge = journey guide · existing apps only."
+},
+{
+"id": "7121c76748",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "What do you want to do?",
+"kind": "app",
+"text": "Pick a task to jump straight in. Everything runs in this browser and saves locally — no account, no credits. Pick up where you left off:. Write a short brief, sharpen it with First Look, then pick a look. Start planning →. Draw with pen, brush or eraser. Undo, clear and export a PNG. Open canvas →. Submit a venture asset and get an honest score out of 100 with feedback. Get scored →. Edit a spreadsheet, recruiting board, deal strip and AI team roster. Open sheet →. Walk through the mock client desk: demo login, orders, invoices, messages. Open portal →."
+},
+{
+"id": "9c5758fbf7",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "What do you want to do?",
+"kind": "app",
+"text": "Open portal →. Present a short deck with speaker notes and present mode. Open deck →."
+},
+{
+"id": "5c4b83510f",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "More tools",
+"kind": "app",
+"text": "Mocks stay mocks: chat replies, scores and the portal are local demos. No payments, no real sign-in, no AI calls. Edits on the left show up here. MERCATUS CONCIERGE."
+},
+{
+"id": "73b19575a2",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "Mercatus Concierge",
+"kind": "app",
+"text": "Plan · Build · Studio · Ops. First-party studio — your product, not a third-party builder. Structured replies without mutating the shell. Theme and layout tokens on this shell. Editable artboard — select, edit, annotate, comment. You are in the Concierge."
+},
+{
+"id": "b1bf6e5171",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "Mercatus Concierge runs right here",
+"kind": "app",
+"text": "This page is the Concierge itself, so there is nothing to embed. Jump to a tool below, or open a second copy in a new tab to work side by side. Open Concierge in new tab ↗. Build and mark up a page preview. Sketch on a canvas, export PNG. Sheet, recruiting, deals, AI team. Scored venture coach, 7 stages. Mock client desk. Deck with speaker notes. Overview hidden."
+},
+{
+"id": "00ff365729",
+"url": "/apps/makedas-canvas/",
+"title": "Mercatus Concierge · Builder",
+"section": "The Concierge overview can't show here",
+"kind": "app",
+"text": "The overview card is switched off in Settings. You can still open the full Concierge in a new tab. Open Concierge in new tab ↗. Founders-style · local. Atelier Desk · mock. Bolt chrome · local. Present · notes. Habit · Pomodoro."
+},
+{
+"id": "b339fd6f10",
+"url": "/apps/jobnet/",
+"title": "JobNet Application",
+"section": "JobNet Application",
+"kind": "app",
+"text": "JobNet Application · Career pipeline · Preview."
+},
+{
+"id": "02c515da94",
+"url": "/apps/jobnet/",
+"title": "JobNet Application",
+"section": "A pipeline that thinks before it drafts.",
+"kind": "app",
+"text": "One app for the whole loop. JobNet scrapes public LinkedIn and Glassdoor listings, ranks them against real CV evidence, and AI Hawk (formerly Drop Net) drafts a tailored cover note and CV synopsis for the role you pick. You review it, then copy it or forward it by email yourself. In the real pipeline drafts land in Gmail as drafts . Nothing is ever sent or applied for automatically. Freelance mode points the same models at small businesses: it scores which ones have a real AI-automation problem worth solving, suggests the offer, and drafts outreach that a person reviews before anything is sent. Open the shortlist. Load semantic model."
+},
+{
+"id": "5328ba3f65",
+"url": "/apps/jobnet/",
+"title": "JobNet Application",
+"section": "A pipeline that thinks before it drafts.",
+"kind": "app",
+"text": "Load semantic model. Keyword mode (BM25) · instant. Loading the shortlist…. Nothing leaves your browser."
+},
+{
+"id": "e399649323",
+"url": "/apps/jobnet/",
+"title": "JobNet Application",
+"section": "CV order for this role",
+"kind": "app",
+"text": "DRAFT · NOT SENT. Choose “Draft with AI Hawk” on a shortlisted role, or paste a vacancy and press Generate draft. Forward by email. In Katlego's own pipeline this step becomes a Gmail draft for him to check and send. This public page only copies the text or opens your own mail app. Loading the toolkit…. The floor here is a demo value. Katlego's real pay expectations aren't published."
+},
+{
+"id": "86fd1f69f7",
+"url": "/apps/jobnet/",
+"title": "JobNet Application",
+"section": "Learning plan",
+"kind": "app",
+"text": "Sample emails written for this demo. No real inbox content, senders or recruiter names appear on this page. Scored on this device."
+},
+{
+"id": "fbb5e64ddf",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Cv",
+"kind": "cv",
+"text": "Katlego Mokoto AI & ML Engineer / Full-Stack Developer 065 842 4274 | katlego.mokoto.km@gmail.com | mensmercatus.online Johannesburg, South Africa | Open to Johannesburg, Pretoria, Cape Town, Durban, and remote teams | Available LinkedIn: linkedin.com/in/katlego-mokoto1759"
+},
+{
+"id": "20056f898c",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Summary",
+"kind": "cv",
+"text": "I build agentic workflows and full-stack systems a teammate can review, deploy, and trust: career pipelines, multimodal assistants, and research desks, with a human decision on every irreversible step. Targeting AI engineering, full-stack .NET, and product engineering roles."
+},
+{
+"id": "aa58339caf",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Selected Systems",
+"kind": "cv",
+"text": "JobNet - career pipeline - Daily scrape at 20:00 SAST. A sentence embedding ranks each posting against the case studies and keeps one role per company. - A letter is sent only when the posting prints an employer address. A 15:00 SAST mail reports the previous run. Mercatus Assist and THINK - multimodal assistant - ASP.NET Core 8 minimal API (C#) calls Gemini through an OpenAI-compatible client. Exponential backoff on HTTP 429 and 5xx. - systemd on Ubuntu, nginx, Cloudflare. API key stays on the VPS. Per-IP caps. Labelled demo fallback when unhealthy. - THINK front end: React 19, Vite, TypeScript, live-voice WebSocket relay."
+},
+{
+"id": "9a2bc31b26",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Selected Systems",
+"kind": "cv",
+"text": "Labelled demo fallback when unhealthy. - THINK front end: React 19, Vite, TypeScript, live-voice WebSocket relay. Forex Mercatus Codex - paper research desk - Python and Highcharts desk, about 87 MB, hosted on a VPS (port 8790) over HTTPS. - Pandas, NumPy, and yfinance feed the paper models. Session cap 24, 2-hour idle TTL, quotes about every 60 seconds. Public health JSON. No orders. SoundX - browser studio - TypeScript and Web Audio. Load demo, play, shape, generate. Audio stays in the browser. - AI Producer proposes a DSP chain. Generate can estimate tempo from onsets in the local buffer. The person applies it. No sign-in."
+},
+{
+"id": "933a2c2784",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Technical Stack",
+"kind": "cv",
+"text": "Python: Forex Mercatus Codex engine, FastAPI, Pandas, NumPy, yfinance, paper-bot and session models. Languages: Python, TypeScript, C#, JavaScript, SQL, Bash. Frontend: React 19, Next.js, Vite, TypeScript, Tailwind, Flutter, Web Audio studio UI. AI: LLM orchestration, RAG, LangChain, ChromaDB, Ollama, Gemini, Agent Zero, tool-using agents with human approval. Machine learning: Pandas, NumPy, yfinance, OR-Tools, regime and paper-research models, DSP and stem analysis. Backend: ASP.NET Core 8, FastAPI, Node.js, WebSockets, Redis. Data: PostgreSQL, Pandas, NumPy, yfinance, OR-Tools. Infra: Docker, Linux, systemd, nginx, Cloudflare, Ubuntu VPS, Nebius."
+},
+{
+"id": "74b1230d73",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Experience",
+"kind": "cv",
+"text": "Project Antigravity - AI systems architect and founder - Mar 2026 to present - Local-first agent tooling on Apple Silicon M4 with Ollama, Agent Zero, and Cursor. - Nebius for training and deploy experiments. Mens Mercatus - full-stack, .NET, and AI systems - ongoing - Mercatus Assist, THINK, JobNet, Forex Mercatus Codex, and SoundX: Python, React 19, ASP.NET Core 8, and local audio DSP. - Human approval on send, orders, and studio changes. API keys stay on the VPS. Earlier systems work - operations and optimization - Fleet and logistics optimization with OR-Tools. - Diesel and mechanical operations. Systems thinking under physical constraints."
+},
+{
+"id": "7809467094",
+"url": "/cv/katlego-mokoto-ats.pdf?v=e3title",
+"title": "CV (ATS copy)",
+"section": "Links",
+"kind": "cv",
+"text": "Portfolio case studies, ATS copy of this CV, and contact: this site. Live demos remain on mensmercatus.online. A public GitHub profile is not listed. Repository walkthroughs are available on request."
+},
+{
+"id": "537f32d58c",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Sound Deck AI",
+"kind": "docs",
+"text": "Bundle id: com.mensmercatus.sounddeckai · package: sound-deck-ai · v1.1.1 A browser drum station and studio for producers, with a full plugin rack, on-device AI, CC0 sample packs (Amapiano, Gqom, Afro-house, 808) and DAW/SoundX integration. Everything works offline with no API key. Gemini is optional and only ever runs on the server. It is a separate product built from the \"SoundDeck Pro\" Google AI Studio export. It is not the live SoundX app, SoundX Studio or the portfolio site, and it shares no code or deployment with them."
+},
+{
+"id": "15bcad4048",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "or, for development with HMR:",
+"kind": "docs",
+"text": "npm run dev Node 20+ is needed. npm start serves dist/ and also provides the phone-remote WebSocket relay and the /api/sda/ endpoints. dist/ also works on any static host. In that case the phone remote and the optional Gemini features are unavailable, but all other features still work. Optional cloud extras Optional local model: set OLLAMA_BASE_URL (and OLLAMA_MODEL ) before npm start so the Producer Agent can refine briefs with a local LLM. It is off by default. To enable the optional extras, copy .env.example to .env and set GEMINI_API_KEY ."
+},
+{
+"id": "73be6f3281",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "or, for development with HMR:",
+"kind": "docs",
+"text": "To enable the optional extras, copy .env.example to .env and set GEMINI_API_KEY . Without a key: - the header chip reads \"Gemini: off — offline AI\" - the Producer Agent's \"Cloud refine\" toggle is disabled and explains why - the original AI Studio Suite generators return a clear 503 message The key is never sent to the browser and never logged."
+},
+{
+"id": "4ca5300735",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Where things are",
+"kind": "docs",
+"text": "Area How to open it What it does --- --- --- Sound Deck AI hub Header rack menu or sidebar → Sound Deck AI Hub Producer Agent, Plugin Rack, AI Lab, AI+ Top 20 , Mercatus Lab , Sample Packs, Integration and 15 Ideas Light / dark Header switch Toggles Studio Dark ↔ Studio Light."
+},
+{
+"id": "0582b6d304",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Where things are",
+"kind": "docs",
+"text": "Follows the system setting on first run and is saved in localStorage Theme presets Header palette button Studio Dark/Light, Neon Night, Liquid Glass, Tape Room, Ubuntu Sunset and High Contrast, plus 15 classic palettes Pads / sequencer / mixer / FX The original views Kept from the export, rebranded, and themed Phone remote Hub → Integration → Start remote room Opens /remote.html?room=… on a phone on the same Wi-Fi AI+ Top 20 (v1.1) Hub → AI+ Top 20 20 on-device AI/ML tools: timbre search, tagger, kit builder, clash EQ, sidechain, gain staging, chords + key change, kick-follow bass, groove extraction, motif, fills, learned mastering, live pitch, preset morph, energy curve, practice coach, style transfer, new packs, memory, mix QA Mercatus Lab (v1.1) Hub → Mercatus Lab Resonator CoProducer, Audio Desk (arranger + loop launcher), Prompt & Lyric Forge (drafts only), Platform Master, Lab Bridge (DAW handoff ZIP, embed protocol, optional local model), Module Index"
+},
+{
+"id": "956a34b41d",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Scripts",
+"kind": "docs",
+"text": "Script Purpose --- --- npm run build Theme remap CSS + production bundle npm run lint tsc --noEmit over app, server, scripts and tests npx tsx tests/ml.test.ts DSP/ML unit tests (tempo, key, drums, LUFS, classifier, Markov, chords, hum-to-MIDI, HPSS…) npx tsx scripts/check-contrast.ts WCAG AA contrast audit of all 22 themes npm run verify Headless-Chrome end-to-end check plus screenshots. Start the server on :3100 first"
+},
+{
+"id": "96e0ea151a",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Docs",
+"kind": "docs",
+"text": "- CHANGES.md: what changed compared with the original export - FEATURES-15-IDEAS.md: the 15 ideas, and which are built, lite or coming - FEATURES-TOP20-AI-ML.md: the TOP 20 AI/ML wave (v1.1), with honest status - MERCATUS-LAB-INTEGRATION.md: what was pulled from MERCATUS LAB, how it was rebuilt, and what was left out - PLUGINS-RESEARCH.md: plugin families researched, with sources, and our original equivalents - SAMPLE-PACKS.md: sample sources and licences - API.md: window.soundDeckAI , HTTP, WebSocket, project and SoundX formats - THEMES.md: the theme system and contrast rules"
+},
+{
+"id": "985980b967",
+"url": "/apps/sound-deck-ai/",
+"title": "Sound Deck AI docs",
+"section": "Packaging later",
+"kind": "docs",
+"text": "dist/ plus server.ts is the complete runtime. For a Mac app, wrap it in Electron or Tauri pointing at server.ts (or at dist/ for static use) with bundle id com.mensmercatus.sounddeckai . Nothing here installs, signs or deploys anything."
+},
+{
+"id": "bf7782dc76",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Vehicle desk (Mens Mercatus vehicle maintenance call-centre robot)",
+"kind": "docs",
+"text": "(or pick Vehicle desk on the test page) turns the agent into a call-centre robot that mechanics phone for approval of minor repairs on fleet vehicles. Approval rules ( voice_agent/vehicle/data/rules.json ; override with ): parts at the market median x 1.15 rounded up to the nearest R250; labour at a rate with a per-job cap; a job ceiling; a photo of the old part is required; a per-VIN repeat window per category; anything out of scope (gearbox, engine internals, accident work, ...) goes to a person. The labour rate, labour cap, job ceiling, repeat windows and every other threshold are placeholder — owner to set ."
+},
+{
+"id": "5cdef7fa37",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Vehicle desk (Mens Mercatus vehicle maintenance call-centre robot)",
+"kind": "docs",
+"text": "The labour rate, labour cap, job ceiling, repeat windows and every other threshold are placeholder — owner to set . A quote over the cap gets a counter-offer the mechanic can accept; anything else escalates on the escalation ladder (robot up to the job ceiling → shift lead up to R15,000 → owner; suspected fraud always goes to the owner). The SQLite store lives at (default vehicle_data/vehicle_desk.sqlite , git-ignored; tests use :memory: )."
+},
+{
+"id": "98443e61b3",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Vehicle desk (Mens Mercatus vehicle maintenance call-centre robot)",
+"kind": "docs",
+"text": "The SQLite store lives at (default vehicle_data/vehicle_desk.sqlite , git-ignored; tests use :memory: ). Feature Test mode (no keys, default) Live mode 1 Voice biometrics + PIN/OTP fallback MFCC-style voiceprint in numpy, synthetic example speakers; PIN check; OTP drafted (code shown only in the draft) + / ; + Twilio keys only marks the gate as open: the demo still shows the code as a draft and never sends it. New dependency: segno==1.6.6 (pure Python, QR codes only; optional)."
+},
+{
+"id": "d8ce4f4562",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Fleet Intelligence (tab group VI on `/vehicle`)",
+"kind": "docs",
+"text": "Fifteen fleet features plus a WhatsApp simulator, all in test mode with no keys . Every person, vehicle, workshop, price and phone number is FICTIONAL; every outward message is a draft ( sent: false ) and nothing leaves the machine. Thresholds live in voice_agent/fleet/fleet_config.yaml (values marked EXAMPLE; owner to set)."
+},
+{
+"id": "ad7dbe9e2e",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Fleet Intelligence (tab group VI on `/vehicle`)",
+"kind": "docs",
+"text": "Thresholds live in voice_agent/fleet/fleet_config.yaml (values marked EXAMPLE; owner to set). Feature What it does (test mode) F1 Fault → repair DTC → labour + part; fair price from a small regressor on FICTIONAL invoices; AUTO ≤ R2,500 and within 8.5%, counter-offer band to R15,000, escalate above; WhatsApp approval draft F2 Warranty guard cosine ≥ 0.86 (local hashed embedding) + valid date + km → hard payment block + dealer-return draft F3 Odometer & service VLM hook (stub), OCR stub text or typed km; km/day trend → service forecast → parts pre-order draft F4 Pre-trip photos rejects blur (Laplacian variance < 110) and recycled photos (pHash distance ≤ 6), EXIF check; replies in en/zu/af F5 Repair or replace (repair + downtime at R850/h) ÷ book value ≥ 0.45 → REPLACE_REVIEW F6 Cited fleet Q&A rule-based text → SQL, read-only (SQLite mode=ro , query_only , authorizer), SELECT-only guard, row citations; change requests become a draft F7 Fuel slip check litres tank × 1.02, no GPS within 250 m, price R0.15/L off an EXAMPLE reference → score, reimbursement held F8 Trip replay harsh-braking / impact events around the claimed time; \"impact claimed but none recorded\" is a fraud signal F9 SA compliance licence disc 30 d, COF/roadworthy 45 d, PrDP 60 d alerts; reg/VIN/PrDP format checks; SARS logbook drafts the driver confirms on WhatsApp F10 Workshop ranking 40% price / 45% scorecard / 15% distance, ≤ 35 km, part in stock; PO drafted only after a named human approves F11 Driver coaching praise first, one tip, en/zu/af; manager approves; never sent F12 After-hours theft depot-geofence exit out of hours + open claim → escalation draft F13 Unapproved shop dwell ≥ 20 min more than 150 m from every approved workshop → fraud signal F14 Virtual card ( MOCK ) single-use, merchant-locked, exact cap, 48 h spec; a simulated authoriser checks it."
+},
+{
+"id": "2735a43087",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Fleet Intelligence (tab group VI on `/vehicle`)",
+"kind": "docs",
+"text": "Returns the reply as a draft, never sends. Images use pure numpy (PNG decode built in); OpenCV is not used because it isn't installed. JPEG decoding needs Pillow (not installed). New dependency: PyYAML==6.0.3 (config file). Screenshots: docs/screens/ . Limits (honest): the fair-price model is a simple regression on fictional data; VLM/OCR and dashcam scoring are stubs or supplied scores; zu/af text needs a native speaker's review; the fuel reference price is an EXAMPLE; the card is a MOCK spec only; the Postgres schema has not been run against a real Postgres; the test webhook has no signature verification; registration patterns are simplified; the simulator phone numbers are hardcoded fictional numbers."
+},
+{
+"id": "8947d6ff48",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Fleet Intelligence (tab group VI on `/vehicle`)",
+"kind": "docs",
+"text": "Tier order: a quote within tolerance but inside the counter band goes to MANAGER_APPROVAL; COUNTER_OFFER applies only above tolerance."
+},
+{
+"id": "14cdffc4e3",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "The Integrations panel shows each item as enabled (flag on and dependencies present), available (could be switched on) or fallback (what runs instead, and why). Self-check runs a small offline probe for every enabled item. Licences and attributions: THIRD_PARTY.md ."
+},
+{
+"id": "6ec420bfe8",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "Licences and attributions: THIRD_PARTY.md . Item Flag (default) Fallback 1 ocrmac (Apple Vision OCR, macOS) - odometer / fuel-slip reading RapidOCR, then manual entry 2 sqlglot AST guard for fleet Q&A SQL regex guard 3 OBDex fault codes, labour priced as OBDex hours x ZAR rate , built-in catalogue 4 shapely polygon geofences radius circles 5 Smart Turn v3 end-of-turn model (asked once per 160 ms pause) plain endpointing 6 Silero VAD energy (RMS) gate; also used if Silero errors mid-call 7 RapidOCR (ONNX, any OS) manual entry 8 Official DMPR fuel price table (Oct 2026) example price in fleet_config.yaml 9 Kokoro-82M local voice on the test page the browser's own voice 10 Traccar Client positions on /traccar → trip replay, geofences, dwell SIMULATED seed telematics 11 Car damage type classifier ( DEMO-GRADE ) coarse rules hint 12 ServiceNow EVA export + scorecard lines export only; scorecard lines always on Screenshots: docs/screens/integrations-default.png (bare install) and docs/screens/integrations-all-on.png (optional packages installed, flags on, after Self-check)."
+},
+{
+"id": "4f3b06cdac",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "Scorecard lines (item 12). Every scorecard now also shows P95 voice-to-voice < 1,500 ms: PASS/FAIL , a made-up facts counter (rand amounts and phone numbers the agent said that are not in the template's facts) and an unneeded disclaimer counter (\"as an AI…\", \"this is not financial advice\", \"please note that…\" when the caller did not ask). Both counters are simple pattern checks, not a judge model. Points are unchanged. With and the eva CLI installed (https://github.com/ServiceNow/eva) it then runs eva --run-id <id --metrics turn_taking . EVA's LLM-judged metrics need EVA's own keys; nothing is sent by this app. There is no public mode. 2."
+},
+{
+"id": "2624073a8c",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "2. Never use tailscale funnel , port forwarding or a public tunnel for this endpoint. 3. In Traccar Client set the server URL to http://<mac tailscale ip :<PORT /traccar (PORT defaults to 8080) (or the serve HTTPS name), the device id to the vehicle id (e.g. Points become telemetry rows; trip replay, the theft / after-hours and dwell checks label them \"N Traccar Client point(s) + SIMULATED seed telematics\"."
+},
+{
+"id": "56764c1204",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "Points become telemetry rows; trip replay, the theft / after-hours and dwell checks label them \"N Traccar Client point(s) + SIMULATED seed telematics\". Honest limits. - The damage classifier (item 11) has six classes (crack, scratch, flat tyre, dent, glass shatter, lamp broken) and no \"no damage\" class , so it always names a damage type; on random noise it said \"Glass Shatter\" at 0.91."
+},
+{
+"id": "fc067cc74c",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Integrations (12 optional upgrades, `/vehicle` → Admin → **Integrations**)",
+"kind": "docs",
+"text": "It is shown as a hint for the reviewer, never a decision, and the severity score is unchanged. - Smart Turn is not perfect: an unfinished sentence scored 0.65 in our test, above the 0.5 default; raise if it cuts callers off. - Kokoro is used only for the browser test page's server voice; phone calls keep the configured TTS provider. Pronunciation comes from misaki (not espeak), so rare words can sound off. - ocrmac only works on macOS; on Linux the OCR item uses RapidOCR. - The fuel CSV is the October 2026 adjustment; update it each month from the DMPR page."
+},
+{
+"id": "fca7d9b1d2",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "Everything here is local, offline and vanilla JS (no CDN, no libraries), in the gazette house style, and stamped In development — test mode . Data is the FICTIONAL demo fleet; simulated or example numbers say so on screen. Two tickers under the masthead ( /vehicle , and a slim copy on the Ava page / ): - TEAM NOTICES scrolls left. URGENT items carry a red stamp. - MARKET & FLEET WIRE scrolls right."
+},
+{
+"id": "7c37fa618c",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "URGENT items carry a red stamp. - MARKET & FLEET WIRE scrolls right. Each sparkline states what it measures, and example values are marked EXAMPLE. - How the tickers behave: - Both pause on hover, on keyboard focus, or with the ❚❚ button. - Clicking an item opens its panel. On / it goes to /vehicle tab . - A duplicated track makes the loop seamless."
+},
+{
+"id": "1b586d23e2",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "On / it goes to /vehicle tab . - A duplicated track makes the loop seamless. The visible track is aria-live=\"polite\" , and the copy is aria-hidden . - With prefers-reduced-motion the tickers do not move; they show as a static, wrapped list. - Teams adapter: a stub that never posts. - Test mode, with no , is the default. - Setting the URL only turns on auto-drafting for URGENT notices. Nothing is ever POSTed, and the URL is never logged, returned or shown; the status only reports webhook_set: true ."
+},
+{
+"id": "53631f789c",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "Nothing is ever POSTed, and the URL is never logged, returned or shown; the status only reports webhook_set: true . The 15 features: Feature What it does 1 Command palette Ctrl/⌘-K opens a fuzzy search over every tab and action. Arrow keys and Enter run the choice. 2 Keyboard shortcuts ? lists them. g then 1–7 opens a tab group; [ and ] step through tabs; n notices, m map, l ledger, p palette, / voice bar, e edition, t night edition. 3 Notification centre The bell opens a drawer. You can ack, snooze for 1 h or restore notices (saved in localStorage), and filter all, urgent or done."
+},
+{
+"id": "c0797a912f",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "You can ack, snooze for 1 h or restore notices (saved in localStorage), and filter all, urgent or done. It also previews the Teams card. 4 Fleet map and trip replay An offline SVG schematic of Gauteng shows vehicle pins, approved and unapproved workshops, client sites, outlets and depot geofences. A scrubber and play button replay a SIMULATED track. 5 Decision ledger A hash-chained timeline of quotes, drafts and stamps. Verify re-hashes the chain; Tamper test edits one word in a copy and shows where the chain breaks."
+},
+{
+"id": "11b4c15c01",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "Verify re-hashes the chain; Tamper test edits one word in a copy and shows where the chain breaks. 6 What-if simulator Sliders (parts markup, labour rate, ceiling, auto-approve limit, tolerance, fraud threshold) replay past quotes and claims and show what would change. Nothing is saved. Propose files a named draft. 7 Red-pen quote The quote is marked like a printed page: the quoted figure struck through, the fair figure in red ink, and a reason in the margin. 8 Drag-to-approve board Drag a claim onto APPROVE, COUNTER, ESCALATE or HOLD; the keys A, C, E and H work too."
+},
+{
+"id": "0ef2b849ea",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "8 Drag-to-approve board Drag a claim onto APPROVE, COUNTER, ESCALATE or HOLD; the keys A, C, E and H work too. Stamps the tier doesn't allow are refused, and an allowed stamp becomes a draft that needs your name and sign-off. 9 \"Why?\" drawer Explains any decision step by step and cites the table rows it used. 10 Voice and typed command bar Typed commands are parsed locally, e.g. \"open map\", \"compare W1 and W2\", \"why MMV-90003\". The 🎤 uses the browser's speech recognition, is opt-in, and is off when the browser doesn't support it. 11 Night edition An inverted gazette palette, remembered between visits."
+},
+{
+"id": "eb15a11b17",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "11 Night edition An inverted gazette palette, remembered between visits. 12 Health radar A six-axis SVG radar of each vehicle against the fleet average. 13 Sparkline KPIs A strip under the tickers with a 14-day trend line. Values without enough history say \"no trend yet\". 14 Printable edition /vehicle/edition is a print-styled one-page newspaper of today's notices, wire and ledger. 15 Split-screen compare Two workshops side by side, with the better value on each metric marked and a tally. Screens: docs/screens/godmode- .png . Both Chrome smokes check the ticker directions, hover pause, the reduced-motion path and all 15 features. Limits - In Chrome, speech recognition can send audio to Google."
+},
+{
+"id": "f335cd3b62",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "Godmode UI (tab group VII on `/vehicle`, plus two tickers on both pages)",
+"kind": "docs",
+"text": "Limits - In Chrome, speech recognition can send audio to Google. That is why the mic is opt-in and labelled; typed commands never leave the machine. - The map is a hand-simplified schematic, not a survey. - Track positions, KPI trends and market figures are SIMULATED or EXAMPLE values. - The Teams adapter is a stub and never posts. - What-if defaults match the shipped config."
+},
+{
+"id": "b354ab55fa",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "AI/ML UI layer (`GODMODE_AIML`, default `on`)",
+"kind": "docs",
+"text": "(or a comma list such as tickers,ledger ) turns features off; the earlier behaviour is the fallback everywhere. Synthetic numbers are labelled EXAMPLE DATA ; nothing is sent, Teams stays draft-only and no what-if is persisted ( mutation_persisted: false )."
+},
+{
+"id": "1cafaff8f8",
+"url": "/case-studies/fleet/",
+"title": "Mens Mercatus Fleet docs",
+"section": "AI/ML UI layer (`GODMODE_AIML`, default `on`)",
+"kind": "docs",
+"text": "Synthetic numbers are labelled EXAMPLE DATA ; nothing is sent, Teams stays draft-only and no what-if is persisted ( mutation_persisted: false ). Feature What it does Honest simplification Tickers Thompson sampling orders notices (urgent first) from your clicks (localStorage gm_ts ); wire slows 1.6× when a metric is out of band (\\ z\\ 2) Beta draws via uniform order statistics, per notice kind, not per item Palette Hashed char-trigram TF-IDF cosine + a small synonym lexicon + the old lexical score Not neural; WebGPU transformers.js + mxbai embeddings is a future flag (not vendored) Shortcuts ? overlay predicts the next tab (first-order Markov on your own desk:open sequence, gm_mk ) No smoothing beyond counts Notifications Incident clustering (2+ alerts on one vehicle in 6 h) and smart snooze 60 min × (1 + Σ 0.5^(age/72 h)) , cap 24 h / 2 h urgent Fixed window grouping, not HDBSCAN Map Constant-velocity Kalman smoothing; impossible jumps ( 160 km/h) rejected, harsh brake/accel ( 3 m/s²) circled Forward pass only (no RTS smoother); PMTiles/MapLibre basemap is future Ledger Merkle root over entry hashes; rubber-stamp velocity ( 3 approvals/5 min); threshold-split detector (within 8% under a cap, 2+ per vehicle in 7 d) One planted EXAMPLE split so the detector has something to show What-if 500-resample bootstrap 95% CIs; Pareto frontier over a 5×6 auto-approve × tolerance grid Grid dominance, not NSGA-II; quotes use seeded EXAMPLE inflation Red pen Duplicate-labour overlap (same code or token Jaccard ≥0.5 within 60 d) with word highlights and lift drivers Bag-of-words, no NLP model Why Additive attributions (signals sum to the score) + greedy counterfactual + tier counterfactual, with cited rows The rule score is additive, so this is exact; no TreeSHAP/DiCE Command bar Intent + slot parsing ( Hilux claims over ten thousand rand in Soweto ) Regex/lexicon, not an LLM Night APCA (W3 0.0.98G) contrast check; red stamps get an opaque paper chip when \\ Lc\\ < 60 Checks the stamp pair only Radar Weibull 30-day fault probability with 80/95% bands Shape/scale per vehicle kind are EXAMPLE parameters KPI Changepoint marker (binary segmentation, BIC penalty) + 3-day linear forecast fan PELT-lite, linear trend Daily edition \"Editor's picks\" via greedy facility location (non-redundant), each with a chained hash Greedy (1−1/e), token similarity Compare Empirical Bayes Beta-Binomial counter-offer rate with a 95% upper bound Method-of-moments prior; counts are EXAMPLE Drag guard A fast (<700 ms) drop of a high-risk card (≥80% of the hold threshold) on Approve asks to confirm and shows the top 2 risks Rule threshold, not a learned model Skipped on purpose: Double ML, TreeSHAP/DiCE libraries, HDBSCAN, NSGA-II proper (heavy dependencies, little gain on demo data)."
+},
+{
+"id": "9f62853173",
+"url": "/contact/",
+"title": "Profile facts",
+"section": "Availability and experience",
+"kind": "profile",
+"text": "Katlego Mokoto has 4 years of experience. He is available immediately. He is open to roles in Johannesburg, Pretoria, Cape Town and Durban, on-site, hybrid or remote. Contact: 065 842 4274, katlego.mokoto.km@gmail.com."
+}
+]
+}

@@ -1,0 +1,50 @@
+/* Enhanced cursor: red dot + lagging ring + hover label. Fine pointer only. */
+.mm-cur-dot, .mm-cur-ring, .mm-cur-label {
+  position: fixed; top: 0; left: 0; pointer-events: none; z-index: 10000;
+  will-change: transform; opacity: 0;
+}
+.mm-cur-dot {
+  width: 6px; height: 6px; margin: -3px 0 0 -3px;
+  border-radius: 50%; background: #c8102e;
+  mix-blend-mode: multiply;
+}
+.mm-cur-ring {
+  width: 28px; height: 28px; margin: -14px 0 0 -14px;
+  border: 1.5px solid #c8102e; border-radius: 50%;
+  transition: width 0.22s cubic-bezier(0.22,1,0.36,1),
+              height 0.22s cubic-bezier(0.22,1,0.36,1),
+              margin 0.22s cubic-bezier(0.22,1,0.36,1),
+              border-color 0.2s, background 0.2s;
+}
+.mm-cur-label {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
+  background: #c8102e; color: #fff; padding: 0.28rem 0.5rem;
+  white-space: nowrap; transform: translate3d(-100px,-100px,0);
+  margin-top: 18px; margin-left: 14px;
+}
+.mm-cur-dot.is-on, .mm-cur-ring.is-on { opacity: 1; }
+.mm-cur-label.is-on { opacity: 1; }
+.mm-cur-ring.is-hover {
+  width: 48px; height: 48px; margin: -24px 0 0 -24px;
+  background: rgba(200,16,46,0.08); border-color: #9e0c24;
+}
+.mm-cur-ring.is-press {
+  width: 18px; height: 18px; margin: -9px 0 0 -9px;
+}
+
+html.has-mm-cur, body.has-mm-cur { cursor: none; }
+body.has-mm-cur a, body.has-mm-cur button, body.has-mm-cur [role="button"],
+body.has-mm-cur input, body.has-mm-cur textarea, body.has-mm-cur .gz-card,
+body.has-mm-cur .gz-btn, body.has-mm-cur .gz-chip, body.has-mm-cur .gz-doc {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .mm-cur-dot, .mm-cur-ring, .mm-cur-label { display: none !important; }
+  html.has-mm-cur, body.has-mm-cur,
+  body.has-mm-cur a, body.has-mm-cur button { cursor: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-cur-ring { transition: none; }
+}

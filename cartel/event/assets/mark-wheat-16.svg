@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="Mercatus Cartel">
+  <g fill="#C8102E" stroke="none">
+    <!-- stem -->
+    <rect x="7.3" y="8.5" width="1.4" height="6.2" rx="0.4"/>
+    <!-- central grain column -->
+    <ellipse cx="8" cy="7.2" rx="1.35" ry="1.9"/>
+    <ellipse cx="8" cy="4.6" rx="1.25" ry="1.7"/>
+    <ellipse cx="8" cy="2.3" rx="1.1" ry="1.45"/>
+    <!-- left grains -->
+    <ellipse cx="5.4" cy="6.4" rx="1.15" ry="1.55" transform="rotate(-28 5.4 6.4)"/>
+    <ellipse cx="5.55" cy="4.0" rx="1.05" ry="1.4" transform="rotate(-32 5.55 4.0)"/>
+    <!-- right grains -->
+    <ellipse cx="10.6" cy="6.4" rx="1.15" ry="1.55" transform="rotate(28 10.6 6.4)"/>
+    <ellipse cx="10.45" cy="4.0" rx="1.05" ry="1.4" transform="rotate(32 10.45 4.0)"/>
+    <!-- tip awn -->
+    <rect x="7.55" y="0.3" width="0.9" height="1.4" rx="0.35"/>
+  </g>
+</svg>

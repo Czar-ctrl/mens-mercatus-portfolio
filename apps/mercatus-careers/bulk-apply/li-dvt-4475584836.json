@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-dvt-4475584836",
+  "jobId": "li-dvt-4475584836",
+  "title": "Senior AI Engineer (OZ) \u2014 contract",
+  "company": "DVT",
+  "location": "Johannesburg, Gauteng, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4475584836",
+  "signal": "high",
+  "packet": "Here's a concise application packet draft for the Senior AI Engineer (OZ) contract role at DVT in Johannesburg.\n\n### Cover Letter Draft\n\nSubject: Application for Senior AI Engineer (OZ) \u2014 Contract\n\nDear DVT Hiring Team,\n\nI am writing to express my strong interest in the Senior AI Engineer (OZ) contract position in Johannesburg, as advertised. My background as an AI/Systems Engineer, coupled with extensive experience in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems, aligns directly with the requirements for this role.\n\nI am particularly drawn to DVT's focus on advanced AI concepts such as LLMs, RAG, embeddings, vector databases, agentic workflows, observability, and human-in-the-loop systems. This mirrors my own expertise and passion for building robust Cognitive Core and governed-approval architectures. I am eager to contribute my skills to your innovative projects.\n\nThank you for considering my application. I have attached my CV for your review and welcome the opportunity to discuss how my experience can benefit DVT.\n\nSincerely,\n\n[Your Name]\n\n### Fit Notes\n\nYour profile is an excellent match for this role, especially given DVT's specific interest areas:\n\n*   **LLMs, RAG, Embeddings, Vector DBs:** Your stated skills in LLMs and RAG directly address these core requirements.\n*   **Agentic Workflows, Observability, Human-in-the-Loop:** Your experience with agents and distributed systems provides a strong foundation for building and managing complex agentic workflows, with a clear understanding of the need for observability and human oversight.\n*   **Cognitive Core / Governed-Approval Architecture:** Your direct mention of expertise in these areas is a near-perfect alignment with DVT's stated architectural focus.\n*   **Technical Stack:** Your proficiency in Python and TypeScript, alongside .NET and distributed systems, covers the likely technical environment for such a role.\n\n### How to Submit Checklist\n\n1.  **Visit DVT's Careers Portal:** Navigate to the official DVT company website and find their careers or jobs section.\n2.  **Locate the Role:** Search for \"Senior AI Engineer (OZ) \u2014 contract\" in Johannesburg, Gauteng.\n3.  **Prepare Your CV:** Ensure your CV is updated and tailored to highlight your relevant AI/Systems engineering experience and skills (Python, TypeScript, LLMs, RAG, agents, .NET, distributed systems).\n4.  **Customise Cover Letter:** Adapt the draft above with your specific details and any additional points you wish to emphasise.\n5.  **Submit Application:** Follow the instructions on DVT's portal to upload your CV and cover letter.\n\nNext: Review the draft and submit your application directly on the DVT careers site.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:47:52.607378+00:00"
+}

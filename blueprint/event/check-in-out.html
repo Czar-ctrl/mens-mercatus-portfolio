@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="author" content="Mens Mercatus Inc"/>
+<meta name="robots" content="noindex"/>
+<title>Check-in / out · Mens Mercatus Blueprint</title>
+<link rel="stylesheet" href="../../css/tokens.css?v=20261005h">
+<link rel="stylesheet" href="../../css/base.css?v=20261005h">
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- mm-seo --><meta name="description" content="Geo and time windows gate check-in. Payout waits on supervisor checkout."><link rel="canonical" href="https://mensmercatus.online/blueprint/event/check-in-out.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="Check-in / out · Mens Mercatus Blueprint"><meta property="og:description" content="Geo and time windows gate check-in. Payout waits on supervisor checkout."><meta property="og:url" content="https://mensmercatus.online/blueprint/event/check-in-out.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Check-in / out · Mens Mercatus Blueprint"><meta name="twitter:description" content="Geo and time windows gate check-in. Payout waits on supervisor checkout."><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Check-in / out · Mens Mercatus Blueprint", "url": "https://mensmercatus.online/blueprint/event/check-in-out.html", "description": "Geo and time windows gate check-in. Payout waits on supervisor checkout.", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <img class="mark" src="assets/mark-wheat-16.svg" width="16" height="16" alt="" decoding="async" />
+    <div class="wordmark">Mens Mercatus Blueprint <span>· Event</span></div>
+    <div class="spacer"></div>
+    <span class="chip">Static mockup</span>
+  </header>
+  <main class="main">
+
+<a class="nav-back" href="index.html">← Hub</a>
+<p class="kicker">Attendance</p>
+<h1>Check-in / out</h1>
+<p class="lead">Geo and time windows gate check-in. Payout waits on supervisor checkout.</p>
+
+<div class="gate">
+  <strong>Window gate</strong>
+  <ul>
+    <li>Check-in only inside the venue geofence and the published time window.</li>
+    <li>Checkout requires supervisor confirmation (or delegated lead).</li>
+    <li>Early self-checkout does not release escrow.</li>
+  </ul>
+</div>
+
+<div data-tabs>
+  <div class="tabs">
+    <button class="tab on" data-tab="in">Check-in</button>
+    <button class="tab" data-tab="out">Check-out</button>
+  </div>
+    <div data-panel="in">
+      <div class="card">
+        <div class="row between"><div class="title">Venue geofence</div><span class="badge red">Inside</span></div>
+        <div class="meta">Window 15:30–16:30 · Now illustrative 15:52</div>
+      </div>
+      <button class="btn btn-primary btn-block">Check in</button>
+    </div>
+    <div data-panel="out" class="hidden">
+      <div class="card">
+        <div class="title">Supervisor checkout</div>
+        <div class="meta">Lead must confirm end-of-shift before Netza release path opens.</div>
+        <div class="timeline" style="margin-top:12px">
+          <div class="step done"><div class="t">Worker requests out</div><div class="d">22:04</div></div>
+          <div class="step"><div class="t">Supervisor confirms</div><div class="d">Pending</div></div>
+          <div class="step"><div class="t">Escrow eligible for release</div><div class="d">After confirm · no open dispute</div></div>
+        </div>
+      </div>
+      <button class="btn btn-ghost btn-block" disabled>Waiting on supervisor</button>
+    </div>
+</div>
+<button type="button" class="btn btn-assist btn-block" data-assist="cio" data-assist-text="You are inside the window. Check-in is available. Checkout still needs supervisor.">Assist</button>
+<div class="assist-strip" data-assist-strip="cio"></div>
+
+  </main>
+  <footer class="footer">Mens Mercatus Inc · Illustrative UI · Assist DEMO strips</footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

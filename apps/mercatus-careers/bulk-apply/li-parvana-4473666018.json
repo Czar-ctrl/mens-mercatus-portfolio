@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-parvana-4473666018",
+  "jobId": "li-parvana-4473666018",
+  "title": "Full-Stack Developer (Senior)",
+  "company": "Parvana",
+  "location": "South Africa (remote)",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4473666018",
+  "signal": "medium",
+  "packet": "Here's a draft application packet for the Senior Full-Stack Developer role.\n\n**Cover Draft:**\n\nDear Hiring Manager,\n\nI am writing to express my keen interest in the Senior Full-Stack Developer position at Parvana, as advertised. With a strong foundation in AI and Systems Engineering, complemented by hands-on experience in .NET and distributed systems, I am confident in my ability to contribute effectively to your team. My background in developing REST APIs using C#/.NET Core and working with MS SQL Server aligns perfectly with the core requirements of this role. I am particularly drawn to Parvana's focus on cloud technologies and the opportunity to leverage my skills in a remote capacity within South Africa.\n\n**Fit Notes:**\n\n*   **Technical Alignment:** My experience with C#/.NET Core REST APIs and MS SQL Server directly matches the stated technical needs.\n*   **Remote Work:** I am based in South Africa and am seeking a remote position, fitting the role's location and work arrangement.\n*   **Broader Skills:** While the role emphasizes .NET, my proficiency in Python, TypeScript, LLMs, RAG, and agents demonstrates a broad technical aptitude and the ability to adapt and learn quickly, which is valuable in a senior capacity.\n*   **Distributed Systems:** My background in distributed systems is highly relevant for building scalable and robust cloud-based applications.\n\n**How to Submit:**\n\n1.  Visit the Parvana careers page or the specific job posting for the Senior Full-Stack Developer role.\n2.  Locate the \"Apply Now\" or similar button.\n3.  Complete the online application form, carefully entering all requested details.\n4.  Upload your CV/resume and any other required documents.\n5.  Paste the cover draft provided above into the designated cover letter section, tailoring it further if you wish.\n6.  Review all submitted information for accuracy before final submission.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:36.706195+00:00"
+}

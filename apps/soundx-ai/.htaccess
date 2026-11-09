@@ -1,0 +1,6 @@
+# Allow microphone under SoundX AI (Pair Phone mic, hum-to-MIDI, Mic tab). Parent account .htaccess still
+# blocks camera/geolocation and blocks mic everywhere else.
+<IfModule mod_headers.c>
+  Header unset Permissions-Policy
+  Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>

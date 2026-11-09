@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-10-02",
+  "generated_at": "2026-10-02T17:45:00+02:00",
+  "source": "Mens Mercatus hub \u00b7 four flagship only \u00b7 local",
+  "disclaimer": "Paper / local research only. Not live brokerage. Not investment advice. JobNet drafts are draft-only. Blueprint Event is a static pack.",
+  "teasers": [
+    {
+      "id": "soundx",
+      "app": "Mercatus SoundX",
+      "kicker": "Sound Deck \u00b7 local Web Audio",
+      "hook": "Generate \u00b7 stems \u00b7 continue \u00b7 Demo + Play \u00b7 Mic.",
+      "inner": "AI Producer \u00b7 Generate \u00b7 band-split stems \u00b7 mic \u00b7 transport Demo",
+      "line": "Opens /apps/soundx-ai/ \u2014 SoundX AI studio.",
+      "href": "apps/soundx-ai/"
+    },
+    {
+      "id": "jobnet",
+      "app": "JobNet",
+      "kicker": "Career pipeline \u00b7 draft-only",
+      "hook": "Noon scrape \u00b7 3 AM tailor \u00b7 inbox \u00b7 24h nudge.",
+      "inner": "18 Gmail drafts + reminder \u00b7 scrape artifacts \u00b7 demo video",
+      "line": "Opens /apps/jobnet/ \u2014 live read-only demo; human Send only.",
+      "href": "apps/jobnet/"
+    },
+    {
+      "id": "cartel",
+      "app": "Mercatus Blueprint",
+      "kicker": "Event mode pack",
+      "hook": "Twelve Event screens + schematics.",
+      "inner": "Signup \u00b7 rate lock \u00b7 payout \u00b7 close friends \u00b7 diagrams",
+      "line": "Opens /blueprint/ \u2014 static complete pack.",
+      "href": "blueprint/"
+    },
+    {
+      "id": "forex-codex",
+      "app": "Forex Mercatus Codex",
+      "kicker": "Live paper research desk \u00b7 simulated, no broker",
+      "hook": "Chart \u00b7 Multi \u00b7 Whales on one paper desk.",
+      "inner": "Chart \u00b7 Multi \u00b7 Whales \u00b7 live paper desk",
+      "line": "Opens /apps/forex-codex/ \u2014 paper only.",
+      "href": "/apps/forex-codex/"
+    }
+  ]
+}

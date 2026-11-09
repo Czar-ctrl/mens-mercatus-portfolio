@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:07.850
+Mercatus Assist and THINK answer a simple question: can a portfolio assistant make a real model call without leaking a key?
+
+2
+00:00:07.800 --> 00:00:18.017
+Katlego built an ASP.NET Core 8 minimal API in C sharp that calls Gemini through an OpenAI-compatible client, so the provider can change in config.
+
+3
+00:00:18.017 --> 00:00:25.601
+It runs as a systemd service on an Ubuntu VPS, behind nginx, with the static site behind Cloudflare.
+
+4
+00:00:25.601 --> 00:00:29.507
+A same-origin proxy keeps the API key on the server.
+
+5
+00:00:29.507 --> 00:00:38.341
+The client retries with exponential backoff on HTTP 429 and 5xx errors, and public paths have daily caps per IP.
+
+6
+00:00:38.341 --> 00:00:48.510
+THINK is the React 19, Vite and TypeScript workspace: chat, image, live voice over WebSocket, sites, code and a learning path.
+
+7
+00:00:48.510 --> 00:00:52.909
+And when the robot's health check fails, the screen says so.
+
+8
+00:00:52.909 --> 00:00:58.173
+It switches to a labelled demo, because live and demo are not the same state.

@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-10-07T05:24:28+02:00",
+  "timezone": "Africa/Johannesburg",
+  "probes": {
+    "blueprints": {
+      "label": "Mens Mercatus Blueprint robot",
+      "url": "https://api.mensmercatus.online/health",
+      "up": true,
+      "detail": "Production \u00b7 gemini-2.5-flash"
+    },
+    "think": {
+      "label": "THINK proxy",
+      "url": "https://api.mensmercatus.online/think/api/health",
+      "up": true,
+      "detail": "gemini-2.5-flash"
+    },
+    "assist": {
+      "label": "Mercatus Assist",
+      "url": "https://mensmercatus.online/apps/mercatus-assist/",
+      "up": true,
+      "detail": "via Blueprints robot"
+    },
+    "forex": {
+      "label": "Forex Mercatus Codex API desk",
+      "url": "https://api.mensmercatus.online/forex/",
+      "up": true,
+      "detail": "paper desk"
+    }
+  },
+  "dropnet": {
+    "counts": {
+      "total": 16,
+      "top_matches": 6,
+      "also_worth_a_look": 10,
+      "high": 6,
+      "medium": 8,
+      "low": 2
+    },
+    "generated_at": "2026-10-06T12:10:00+02:00",
+    "boards": [
+      "linkedin",
+      "glassdoor"
+    ]
+  }
+}

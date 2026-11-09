@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-mindworx-4474686426",
+  "jobId": "li-mindworx-4474686426",
+  "title": "Senior ML Engineer \u2014 contract",
+  "company": "Mindworx Consulting and Academy",
+  "location": "City of Johannesburg, Gauteng, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474686426",
+  "signal": "medium",
+  "packet": "Here is a concise application packet draft for the Senior ML Engineer contract role at Mindworx Consulting and Academy.\n\n---\n\n**Cover Letter Draft**\n\nSubject: Application for Senior ML Engineer (Contract) \u2014 Mindworx Consulting and Academy\n\nDear Mindworx Consulting and Academy Hiring Team,\n\nI am writing to express my keen interest in the Senior ML Engineer contract position in Johannesburg. With a strong background in AI and Systems Engineering, I am particularly drawn to your focus on production AI agents, RAG, and LLM deployment within Python/REST microservices environments.\n\nMy experience aligns well with the technical requirements, encompassing Python, TypeScript, LLMs, RAG, agent development, and distributed systems. While my direct hands-on depth with Databricks and AKS MLOps is an area I am actively expanding, I am a rapid learner with a solid foundation in scalable systems, eager to apply and grow these skills within your dynamic team.\n\nI am confident I can contribute effectively to your projects, leveraging my expertise to build robust and efficient AI solutions. Thank\n\nyou for your time and consideration.\n\nSincerely,\n\n[Your Name]\n\n---\n\n**Fit Notes**\n\n*   **Strong Match**: Python, LLMs, RAG, AI agents, REST microservices, distributed systems.\n*   **Growth Area**: Databricks/AKS MLOps. Frame this as a skill you are actively developing and keen to master on the job, leveraging your existing systems engineering background.\n\n---\n\n**How to Submit Checklist**\n\n1.  **Review and Personalise**: Read through the cover letter draft. Adjust any details to reflect your unique experience and voice.\n2.  **Update CV**: Ensure your CV highlights your Python, LLM, RAG, agent, and distributed systems experience. Briefly mention your interest in MLOps platforms like Databricks/AKS.\n3.  **Find the Job Posting**: Locate the official job advertisement for this role on Mindworx Consulting and Academy's career portal or the platform where you found the listing.\n4.  **Submit Application**: Follow the instructions on the employer's site to upload your customised cover letter and CV.\n\n---",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:25.323142+00:00"
+}

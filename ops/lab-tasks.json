@@ -1,0 +1,84 @@
+{
+  "space": "Mercatus Lab \u00b7 Concierge Ops",
+  "updated": "2026-10-07",
+  "columns": [
+    "backlog",
+    "doing",
+    "done"
+  ],
+  "lists": [
+    "Cold-call pipeline",
+    "DropNet follow-ups",
+    "Concierge build",
+    "Meeting Desk prep"
+  ],
+  "tasks": [
+    {
+      "id": "mock-1",
+      "name": "Warm intro \u2014 Cape Town atelier lead",
+      "status": "doing",
+      "list": "Cold-call pipeline",
+      "priority": "high",
+      "note": "Follow up after Monday leave-behind"
+    },
+    {
+      "id": "mock-2",
+      "name": "DropNet follow-up \u2014 JobNet careers handoff",
+      "status": "backlog",
+      "list": "DropNet follow-ups",
+      "priority": "normal",
+      "note": "Read-only from ops \u2014 pipeline untouched"
+    },
+    {
+      "id": "mock-3",
+      "name": "Polish Mercatus Ops desk board",
+      "status": "doing",
+      "list": "Concierge build",
+      "priority": "urgent",
+      "note": "Local mock \u00b7 no SaaS required"
+    },
+    {
+      "id": "mock-4",
+      "name": "Prep Meeting Desk brief for founder sync",
+      "status": "backlog",
+      "list": "Meeting Desk prep",
+      "priority": "normal",
+      "note": "Agenda + Blueprints frame notes"
+    },
+    {
+      "id": "mock-5",
+      "name": "Sequence three Johannesburg cold opens",
+      "status": "backlog",
+      "list": "Cold-call pipeline",
+      "priority": "normal",
+      "note": "Playbook PDF attached in leave-behind"
+    },
+    {
+      "id": "mock-6",
+      "name": "Confirm DropNet digest status chip",
+      "status": "done",
+      "list": "DropNet follow-ups",
+      "priority": "low",
+      "note": "Ops observes only"
+    },
+    {
+      "id": "mock-7",
+      "name": "Maison token pass on ops chrome",
+      "status": "done",
+      "list": "Concierge build",
+      "priority": "normal",
+      "note": "Charcoal \u00b7 ivory \u00b7 champagne \u00b7 red"
+    },
+    {
+      "id": "mock-8",
+      "name": "Book walkthrough slot \u2014 Meeting Desk",
+      "status": "doing",
+      "list": "Meeting Desk prep",
+      "priority": "high",
+      "note": "hello@mensmercatus.online"
+    }
+  ],
+  "engine": "Mercatus Lab",
+  "source": "ops/lab-tasks.json",
+  "banner": "Powered by Mercatus Lab (local)"
+}

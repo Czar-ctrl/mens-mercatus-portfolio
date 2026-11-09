@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-jobgether-4474691226",
+  "jobId": "li-jobgether-4474691226",
+  "title": "Lead Engineer, AI Platform",
+  "company": "Jobgether (partner listing)",
+  "location": "South Africa (remote)",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474691226",
+  "signal": "medium",
+  "packet": "Here's a draft application packet to help you apply for the Lead Engineer, AI Platform role at Jobgether.\n\n---\n\n**Cover Letter Draft**\n\nSubject: Application for Lead Engineer, AI Platform - [Your Name]\n\nDear Jobgether Hiring Team,\n\nI am writing to express my enthusiastic interest in the Lead Engineer, AI Platform position, as advertised. With a strong background in AI and systems engineering, I am particularly drawn to your focus on evaluation frameworks, observability, and diagnostics for AI agents in production environments.\n\nMy experience aligns well with the technical requirements, including proficiency in Python, TypeScript, LLMs, RAG, and distributed systems. I have a proven track record in developing robust AI solutions and managing complex system architectures. The opportunity to contribute to a remote, async-first team while based in South Africa is also highly appealing.\n\nWhile my primary focus has been on technical leadership and deep engineering, I am eager to grow into the people-management aspects of this role. I am confident that my technical expertise and passion for building scalable, observable AI platforms will allow me to make significant contributions to Jobgether.\n\nThank you for considering my application. I look forward to the possibility of discussing how my skills and vision can support your team.\n\nSincerely,\n[Your Name]\n\n---\n\n**Fit Notes**\n\n*   **Strong Fit:** Deep technical skills (Python, TypeScript, LLMs, RAG, agents, distributed systems), passion for AI platform challenges (evaluation frameworks, observability, diagnostics), experience with production AI agents, and preference for remote/async work in South Africa.\n*   **Stretch Area:** The people-management component is noted as a growth area. Frame this positively in your application as an eagerness to develop leadership skills alongside technical contributions.\n\n---\n\n**How-to-Submit Checklist**\n\n1.  **Visit Employer Site:** Navigate to the official Jobgether careers page or the specific job listing for this role.\n2.  **Review Full Posting:** Read the entire job description carefully to ensure you understand all requirements and responsibilities.\n3.  **Tailor Your CV:** Update your CV to highlight relevant experience and skills mentioned in the job description and your draft cover letter.\n4.  **Finalise Cover Letter:** Adapt the draft above to your personal voice and ensure it addresses any specific prompts on the application form.\n5.  **Complete Application Form:** Fill out all required fields on their application portal accurately.\n6.  **Attach Documents:** Upload your tailored CV and cover letter.\n7.  **Submit:** Double-check everything before submitting your application.\n\n---\n\nNext: Review the full job posting on Jobgether's site.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:32.219471+00:00"
+}

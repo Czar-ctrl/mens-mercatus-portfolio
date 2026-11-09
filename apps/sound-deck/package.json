@@ -1,0 +1,69 @@
+{
+  "name": "mens-mercatus-sound-deck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mens Mercatus Sound Deck \u2014 original browser + Electron DAW MVP",
+  "author": "Mens Mercatus",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "python3 -m http.server 8765",
+    "serve": "npx --yes serve -l 8765",
+    "electron": "electron .",
+    "pack:mac": "electron-builder --mac dmg zip",
+    "pack:mac:dir": "electron-builder --mac dir",
+    "hub": "node server/multidevice-hub.mjs",
+    "hub:install": "npm install --prefix server"
+  },
+  "build": {
+    "appId": "com.mensmercatus.sounddeck",
+    "productName": "Mens Mercatus Sound Deck",
+    "copyright": "Copyright \u00a9 Mens Mercatus",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "index.html",
+      "css/**/*",
+      "js/**/*",
+      "assets/**/*",
+      "electron/**/*",
+      "docs/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.music",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.png",
+      "darkModeSupport": true,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "title": "Mens Mercatus Sound Deck",
+      "background": null,
+      "contents": [
+        {
+          "x": 140,
+          "y": 200,
+          "type": "file"
+        },
+        {
+          "x": 420,
+          "y": 200,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "license": "UNLICENSED",
+  "type": "module"
+}

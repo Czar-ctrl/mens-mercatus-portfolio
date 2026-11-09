@@ -1,0 +1,55 @@
+{
+ "note": "Screen recordings of the live apps (headless Chrome) with an en-ZA edge-tts voice-over. Scripts state only facts published on the site.",
+ "items": [
+  {
+   "id": "soundx-ai",
+   "title": "SoundX AI",
+   "app_url": "https://mensmercatus.online/apps/soundx-ai/",
+   "video": "/media/g/videos/soundx-ai.mp4",
+   "captions": "/media/g/videos/soundx-ai.vtt",
+   "poster": "/media/g/videos/soundx-ai-poster.webp",
+   "poster_jpg": "/media/g/videos/soundx-ai-poster.jpg",
+   "duration": 30.7,
+   "bytes": 1584223,
+   "voice": "en-ZA-LeahNeural",
+   "transcript": "This is SoundX AI. It merges Sound Deck AI and the SoundX studio into one browser app. There are pads, a sequencer, a plugin rack, and song, pattern and piano views. The God Mode hub holds sixty cards. The AI Producer takes a written request, like add drums, and proposes a change. The session changes only when you apply it. It works offline, with no account and no API key.",
+   "script_sources": "SoundX AI README; /case-studies/soundx/; live app UI",
+   "recorded_utc": "2026-10-21T20:23:25.116Z",
+   "recording_text_scan": "clean"
+  },
+  {
+   "id": "jobnet-ai",
+   "title": "JobNet Application",
+   "app_url": "https://mensmercatus.online/apps/jobnet/",
+   "video": "/media/g/videos/jobnet-ai.mp4",
+   "captions": "/media/g/videos/jobnet-ai.vtt",
+   "poster": "/media/g/videos/jobnet-ai-poster.webp",
+   "poster_jpg": "/media/g/videos/jobnet-ai-poster.jpg",
+   "duration": 31.8,
+   "bytes": 2381785,
+   "voice": "en-ZA-LukeNeural",
+   "transcript": "This is JobNet Application, Katlego's career pipeline in one app. It ranks job listings against real CV evidence and explains every match, using on-device sentence embeddings or a keyword fallback. Pick a role, and AI Hawk drafts a cover note and CV synopsis built only from published facts. Anything it can't back up stays a placeholder. You review it, then copy it or forward it yourself. Nothing is ever sent or applied for automatically. Around the draft sits a toolkit of fifteen tools, from an honest ATS check to interview prep.",
+   "script_sources": "/apps/jobnet/ page copy (JobNet Application, new UI: shortlist, AI Hawk draft, toolkit, guardrails)",
+   "recorded_utc": "2026-10-22T00:30:23.501Z",
+   "recording_text_scan": "clean",
+   "rev": "52ca2b6c"
+  },
+  {
+   "id": "forex-godmode",
+   "title": "Forex Mercatus Codex",
+   "app_url": "https://mensmercatus.online/apps/forex-codex/",
+   "video": "/media/g/videos/forex-godmode.mp4",
+   "captions": "/media/g/videos/forex-godmode.vtt",
+   "poster": "/media/g/videos/forex-godmode-poster.webp",
+   "poster_jpg": "/media/g/videos/forex-godmode-poster.jpg",
+   "duration": 29.4,
+   "bytes": 1113610,
+   "voice": "en-ZA-LukeNeural",
+   "transcript": "This is Forex Mercatus Codex, a gold-first research terminal for paper trading only. There is no broker connection and no live orders. It charts real historical data for nine symbols. A strategy lab runs walk-forward tests and Monte Carlo, and on-device machine learning reports its honest out-of-sample score. Model outputs are probabilities with measured error, never guarantees. There are risk tools, a pattern scanner, a South African session clock and a trade journal. Everything runs in your browser.",
+   "script_sources": "/apps/forex-codex/ page copy; Forex Mercatus Codex God Mode README",
+   "recorded_utc": "2026-10-21T20:24:48.672Z",
+   "recording_text_scan": "clean",
+   "rev": "8c32b8af"
+  }
+ ]
+}

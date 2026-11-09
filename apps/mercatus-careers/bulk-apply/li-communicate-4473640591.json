@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-communicate-4473640591",
+  "jobId": "li-communicate-4473640591",
+  "title": "Lead AI Engineer & Senior AI Engineer",
+  "company": "Communicate Recruitment",
+  "location": "Sandton (City of Johannesburg), Gauteng, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4473640591",
+  "signal": "high",
+  "packet": "Here's a draft apply packet for the Lead/Senior AI Engineer role at Communicate Recruitment.\n\n---\n\n**Cover Letter Draft**\n\nSubject: Application for Lead/Senior AI Engineer - Communicate Recruitment\n\nDear Hiring Team,\n\nI am writing to express my keen interest in the Lead/Senior AI Engineer position at Communicate Recruitment, as advertised for your client in Sandton. My background as an AI/Systems Engineer, with strong expertise in Python, LLMs, RAG, and distributed systems, aligns perfectly with the demands of building and scaling a production conversational AI platform.\n\nI am particularly drawn to the opportunity to work with real customers, developing orchestration, agents, and evaluation frameworks. My skills in these areas, coupled with experience in TypeScript and distributed systems, prepare me to contribute immediately to your innovative environment.\n\nThank you for your time and consideration. I look forward to discussing how my experience can benefit your team.\n\nSincerely,\n\n[Your Name]\n\n---\n\n**Fit Notes**\n\nThis role is an excellent match given your skills and the company's focus:\n\n*   **Production LLMs & Orchestration:** Your experience with LLMs and distributed systems directly supports building and managing production-grade AI models and their workflows.\n*   **Agents & Evaluation Frameworks:** Your knowledge of agents aligns with developing autonomous AI components, and your systems engineering background is crucial for creating robust evaluation frameworks.\n*   **Python:** This is the core language for the platform, and your strong Python skills are a direct fit.\n*   **TypeScript:** Useful for front-end or API integration within a broader system.\n*   **.NET:** While the core AI platform is Python, your .NET background demonstrates broader systems engineering capabilities, which can be valuable in a complex tech environment.\n\n---\n\n**How to Submit Checklist**\n\n1.  **Review and Refine:** Read through the cover letter and ensure it accurately reflects your experience and enthusiasm.\n2.  **Update CV:** Make sure your CV is current and highlights your Python, LLM, RAG, agents, and distributed systems experience.\n3.  **Visit Employer Site:** Navigate to Communicate Recruitment's official website or the specific job posting link.\n4.  **Locate Application:** Find the \"Apply Now\" button or careers section.\n5.  **Submit Documents:** Upload your updated CV and the tailored cover letter. Complete any required application forms.\n\n---",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:08.999947+00:00"
+}

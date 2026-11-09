@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JobNet Application · Shortlist, match, AI Hawk draft and forward · Katlego Mokoto</title>
+<meta name="description" content="JobNet Application: live shortlist, explainable on-device matching, AI Hawk cover note and CV synopsis drafts, review and email forwarding. Models run in your browser. Draft-only: it never applies or sends mail.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://mensmercatus.online/apps/jobnet/">
+<script>
+/* Old deep links stay inside JobNet Application: Careers desk hashes (#/feed, #/boards …) → #match, Drop Net (#/drop) and the old #tailor → #hawk. */
+(function(){function legacy(){var h=location.hash,m={'#/drop':'#hawk','#tailor':'#hawk'};if(h&&(h.indexOf('#/')===0||m[h])){var t=m[h.split('?')[0]]||'#match';history.replaceState(null,'',location.pathname+location.search+t);}}addEventListener('hashchange',function(){legacy();var e=document.querySelector(location.hash);e&&e.scrollIntoView();});legacy();
+try{var m=localStorage.getItem('mm-color-mode');if(m==='light')document.documentElement.classList.add('light');}catch(e){}})();
+</script>
+<link rel="preload" href="/fonts/satoshi/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="modulepreload" href="js/ml.js?v=jna1">
+<link rel="stylesheet" href="css/jobnet-ai.css?v=jna1">
+<script type="module" src="js/app.js?v=jna1"></script>
+<script defer src="/js/proof-strip.js?v=3"></script><!-- mm-seo --><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="JobNet Application · Shortlist, match, AI Hawk draft and forward · Katlego Mokoto"><meta property="og:description" content="JobNet Application: live shortlist, explainable on-device matching, AI Hawk cover note and CV synopsis drafts, review and email forwarding. Models run in your browser. Draft-only: it never applies or sends mail."><meta property="og:url" content="https://mensmercatus.online/apps/jobnet/"><meta property="og:image" content="https://mensmercatus.online/media/jobnet.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="JobNet Application · Shortlist, match, AI Hawk draft and forward · Katlego Mokoto"><meta name="twitter:description" content="JobNet Application: live shortlist, explainable on-device matching, AI Hawk cover note and CV synopsis drafts, review and email forwarding. Models run in your browser. Draft-only: it never applies or sends mail."><meta name="twitter:image" content="https://mensmercatus.online/media/jobnet.webp"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JobNet Application", "url": "https://mensmercatus.online/apps/jobnet/", "description": "JobNet Application: live shortlist, explainable on-device matching, AI Hawk cover note and CV synopsis drafts, review and email forwarding. Models run in your browser. Draft-only: it never applies or sends mail.", "applicationCategory": "WebApplication", "operatingSystem": "Web browser", "image": "https://mensmercatus.online/media/jobnet.webp", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}, "isAccessibleForFree": true}</script><!-- /mm-seo --><!-- mm-motion --><script type="module">addEventListener("load",function(){var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";s.setAttribute('data-bg','');s.setAttribute('data-no-g','');s.setAttribute('data-no-status','');document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body data-mode="jobs">
+<a class="skip" href="#match">Skip to the shortlist</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="bar" role="banner">
+  <a class="brand" href="/" aria-label="Back to Katlego Mokoto's portfolio"><span class="dot"></span>JobNet<b>Application</b></a>
+  <nav class="secnav" aria-label="Sections">
+    <a href="#match">Shortlist &amp; match</a><a href="#hawk">AI Hawk draft</a><a href="#handoff">Review &amp; forward</a><a href="#toolkit">Toolkit</a><a href="#prioritise">Prioritise</a><a href="#radar">Skill radar</a>
+    <a href="#outcome">Outcome model</a><a href="#replies">Replies</a><a href="#leads">Freelance</a><a href="#pipeline">Pipeline</a>
+  </nav>
+  <div class="bar-actions">
+    <div class="seg" role="group" aria-label="Mode">
+      <button type="button" data-mode-btn="jobs" aria-pressed="true">Jobs</button><button type="button" data-mode-btn="freelance" aria-pressed="false">Freelance</button>
+    </div>
+    <button type="button" class="jv-btn" id="jv-open" aria-label="Open JARVIS mode (Ctrl+J)" title="JARVIS mode · Ctrl/⌘+J"><i aria-hidden="true"></i><span>JARVIS</span></button>
+    <button type="button" class="seg-btn" id="own-open" hidden>Bulk · owner</button>
+    <button type="button" class="icon-btn" id="theme" aria-label="Switch to light mode" title="Light / dark"><span class="sun"></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-h">
+  <p class="eyebrow"><span class="pulse"></span> JobNet Application · Career pipeline · Preview</p>
+  <h1 id="hero-h" class="display">
+    <span class="w">A</span> <span class="w">pipeline</span> <span class="w">that</span> <span class="w grad">thinks</span><br>
+    <span class="w">before</span> <span class="w">it</span> <span class="w">drafts.</span>
+  </h1>
+  <p class="lede" data-copy-jobs>One app for the whole loop. JobNet scrapes public LinkedIn and Glassdoor listings, ranks them against real CV evidence, and AI Hawk (formerly Drop Net) drafts a tailored cover note and CV synopsis for the role you pick. You review it, then copy it or forward it by email yourself. In the real pipeline drafts land in Gmail <em>as drafts</em>. Nothing is ever sent or applied for automatically.</p>
+  <p class="lede" data-copy-freelance hidden>Freelance mode points the same models at small businesses: it scores which ones have a real AI-automation problem worth solving, suggests the offer, and drafts outreach that a person reviews before anything is sent.</p>
+  <ol class="flow" aria-label="Pipeline stages">
+    <li><a href="#match"><b>1 · Shortlist</b><span class="tag ok" id="chip-shortlist">LIVE</span></a></li>
+    <li><a href="#match"><b>2 · Match</b><span class="tag mute">on-device</span></a></li>
+    <li><a href="#hawk"><b>3 · AI Hawk draft</b><span class="tag warn">DEMO · templates</span></a></li>
+    <li><a href="#handoff"><b>4 · Review</b><span class="tag mute">you</span></a></li>
+    <li><a href="#handoff"><b>5 · Handoff</b><span class="tag mute">copy · forward</span></a></li>
+  </ol>
+  <div class="hero-row">
+    <a class="btn primary magnet" href="#match"><span>Open the shortlist</span></a>
+    <button class="btn ghost" type="button" id="load-model"><span>Load semantic model</span><small>23 MB · on-device</small></button>
+    <span class="pill" id="model-pill" role="status" aria-live="polite"><i></i><span>Keyword mode (BM25) · instant</span></span>
+  </div>
+  <ul class="stats" aria-label="At a glance">
+    <li><b>8</b><span>live ML features</span></li>
+    <li><b>0</b><span>third-party calls</span></li>
+    <li><b>0</b><span>auto-sends, ever</span></li>
+    <li><b>100%</b><span>runs on this device</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="match" aria-labelledby="match-h" data-order="1">
+  <header class="sec-h"><span class="num">01</span><div><h2 id="match-h">Shortlist &amp; explainable match</h2>
+    <p>The shortlist comes from JobNet's read-only public API (the scheduled scrape runs off this site). Sentence embeddings (MiniLM, self-hosted, in a background worker) compare each requirement with real CV evidence; BM25 takes over instantly when the model isn't loaded. Pick a role, then send it straight to AI Hawk.</p></div></header>
+  <div class="src-row">
+    <div class="seg small" role="group" aria-label="Listings source">
+      <button type="button" data-src="live" aria-pressed="true">Live shortlist</button><button type="button" data-src="sample" aria-pressed="false">Sample listings</button>
+    </div>
+    <span class="tag" id="src-note">Loading the shortlist…</span>
+  </div>
+  <div class="match-grid">
+    <div class="card list" id="job-list" role="listbox" aria-label="Listings"></div>
+    <div class="card detail" id="job-detail" aria-live="polite"></div>
+  </div>
+  <details class="card paste">
+    <summary>Paste any job description</summary>
+    <label for="jd" class="sr">Job description</label>
+    <textarea id="jd" rows="5" placeholder="Paste a job description. It's scored on this device and never uploaded."></textarea>
+    <div class="row"><button class="btn primary" type="button" id="jd-go"><span>Score it</span></button><span class="hint">Nothing leaves your browser.</span></div>
+  </details>
+</section>
+
+<section class="sec" id="hawk" aria-labelledby="hawk-h" data-order="2">
+  <header class="sec-h"><span class="num">02</span><div><h2 id="hawk-h">AI Hawk draft</h2>
+    <p>The draft step that used to be the separate Drop Net page. AI Hawk writes a cover note and CV synopsis for one role, built only from facts on the published CV and case studies, with sources. Anything it can't back up stays a <b>[placeholder]</b> or is listed as a gap. It runs from templates on this device: no LLM call, nothing stored or sent.</p></div></header>
+  <div class="hawk-grid">
+    <div class="card">
+      <label for="hawk-job" class="lbl">Role from the shortlist</label><select id="hawk-job"></select>
+      <label for="hawk-in" class="lbl" style="margin-top:14px">Vacancy text</label>
+      <textarea id="hawk-in" rows="7" spellcheck="false" placeholder="Pick a role above, or paste a vacancy (title, location, requirements)…"></textarea>
+      <div class="chips" style="margin-top:10px"><span class="hint">Fictional samples:</span><button type="button" class="chip" data-hawk-sample="dotnet">.NET backend</button><button type="button" class="chip" data-hawk-sample="frontend">Frontend</button><button type="button" class="chip" data-hawk-sample="data">Quant / data</button></div>
+      <div class="row"><button class="btn primary" type="button" id="hawk-go"><span>Generate draft</span></button><button class="btn ghost small" type="button" id="hawk-clear"><span>Clear</span></button></div>
+      <h3 style="margin-top:18px">CV order for this role</h3><ol id="cv-order" class="cv-order"></ol>
+    </div>
+    <div class="card draft">
+      <div class="draft-h"><span class="stamp">DRAFT · NOT SENT</span><span class="tag" id="hawk-signal" hidden></span></div>
+      <label for="hawk-out" class="sr">AI Hawk draft (editable)</label>
+      <textarea id="hawk-out" class="hawk-out" rows="22" spellcheck="true" hidden></textarea>
+      <div class="hawk-empty" id="hawk-empty"><b>No draft yet</b><span>Choose “Draft with AI Hawk” on a shortlisted role, or paste a vacancy and press Generate draft.</span></div>
+      <div id="handoff" class="handoff">
+        <fieldset id="hawk-review" disabled><legend>Review before use</legend>
+          <label><input type="checkbox"> Replaced every [bracketed placeholder]</label>
+          <label><input type="checkbox"> Verified each claim against real experience</label>
+          <label><input type="checkbox"> Resolved or removed the listed gaps</label>
+        </fieldset>
+        <div class="row"><button class="btn primary small" type="button" id="hawk-copy" disabled><span>Copy draft</span></button><button class="btn ghost small" type="button" id="hawk-fwd" disabled><span>Forward by email</span></button><button class="btn ghost small" type="button" id="hawk-dl" disabled><span>Download .txt</span></button></div>
+        <p class="hint" id="hawk-gate" aria-live="polite"></p>
+        <p class="hint">In Katlego's own pipeline this step becomes a Gmail <b>draft</b> for him to check and send. This public page only copies the text or opens your own mail app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="toolkit" aria-labelledby="tk-h" data-order="2b">
+  <header class="sec-h"><span class="num">✦</span><div><h2 id="tk-h">Toolkit for <span id="tk-role">the selected role</span></h2>
+    <p>Fifteen tools around the draft: an honest ATS readability check, salary hint, interview prep, follow-up planner, duplicate finder, timeline, tone, PDF, share link, offline cache, GitHub stack and repo look-ups, and a per-role radar. Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> for the command palette or <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>J</kbd> for JARVIS mode.</p></div></header>
+  <div class="tk-grid" id="toolkit-grid"><p class="hint">Loading the toolkit…</p></div>
+</section>
+
+<section class="sec" id="prioritise" aria-labelledby="pri-h" data-order="3">
+  <header class="sec-h"><span class="num">03</span><div><h2 id="pri-h">Smart prioritiser</h2>
+    <p>Priority = fit<sup>a</sup> × freshness<sup>b</sup> × salary signal<sup>c</sup>. Freshness halves every 5 days; undisclosed pay gets a neutral 0.7. Drag the weights.</p></div></header>
+  <div class="card pri">
+    <div class="sliders">
+      <label>Fit weight <output id="o-wf">1.0</output><input type="range" id="w-fit" min="0" max="2" step="0.1" value="1"></label>
+      <label>Freshness weight <output id="o-wfr">1.0</output><input type="range" id="w-fresh" min="0" max="2" step="0.1" value="1"></label>
+      <label>Salary weight <output id="o-ws">1.0</output><input type="range" id="w-sal" min="0" max="2" step="0.1" value="1"></label>
+      <label>Demo salary floor <output id="o-floor">R50k</output><input type="range" id="floor" min="20000" max="120000" step="5000" value="50000"></label>
+      <p class="hint">The floor here is a demo value. Katlego's real pay expectations aren't published.</p>
+    </div>
+    <ol class="rank" id="rank"></ol>
+  </div>
+</section>
+
+<section class="sec" id="radar" aria-labelledby="radar-h" data-order="3">
+  <header class="sec-h"><span class="num">04</span><div><h2 id="radar-h">Skill-gap radar</h2>
+    <p>Market demand across the current listings vs. evidenced strength (shipped = 1, partial = 0.6, listed on CV = 0.45, not evidenced = 0). The biggest gaps become a learning plan with a proof-of-work project.</p></div></header>
+  <div class="radar-grid">
+    <div class="card"><svg id="radar-svg" viewBox="-120 -16 660 452" role="img" aria-labelledby="radar-t"><title id="radar-t">Radar chart of skill demand vs strength</title></svg>
+      <div class="legend"><span class="lg demand"></span>Demand in listings <span class="lg strength"></span>Evidenced strength</div></div>
+    <div class="card"><h3>Learning plan</h3><ol class="learn" id="learn"></ol></div>
+  </div>
+</section>
+
+<section class="sec" id="outcome" data-more aria-labelledby="out-h" data-order="5">
+  <header class="sec-h"><span class="num">05</span><div><h2 id="out-h">Application-outcome model</h2>
+    <p>A logistic regression that estimates the chance of a positive reply from how and where an application went. Toggle the inputs to see each feature's contribution.</p></div></header>
+  <div class="outcome-grid">
+    <div class="card"><fieldset id="feat"><legend>Application</legend></fieldset></div>
+    <div class="card"><div class="prob"><span id="prob">–</span><small>estimated chance of positive engagement</small></div><div id="contrib" class="contrib"></div></div>
+    <div class="card prov" id="model-prov"></div>
+  </div>
+</section>
+
+<section class="sec" id="replies" data-more aria-labelledby="rep-h" data-order="6">
+  <header class="sec-h"><span class="num">06</span><div><h2 id="rep-h">Inbox reply classifier</h2>
+    <p>Multinomial Naive Bayes (words + bigrams), trained in your browser on a small labelled set, then blended with embedding similarity when the model is loaded. It labels each reply as interview, rejection or acknowledgement and shows the cues it used.</p></div></header>
+  <div class="replies-grid">
+    <ul class="mail" id="mail"></ul>
+    <div class="card"><label for="reply-in" class="lbl">Try your own (stays on this device)</label>
+      <textarea id="reply-in" rows="5" placeholder="e.g. We'd like to invite you to a technical interview on Tuesday…"></textarea>
+      <div id="reply-out" class="reply-out" aria-live="polite"></div></div>
+  </div>
+  <p class="hint center">Sample emails written for this demo. No real inbox content, senders or recruiter names appear on this page.</p>
+</section>
+
+<section class="sec" id="leads" data-more aria-labelledby="leads-h" data-order="7">
+  <header class="sec-h"><span class="num">07</span><div><h2 id="leads-h">Freelance-lead mode</h2>
+    <p>Scores small businesses for AI-automation fit: repetitive pain, matching service, budget, size and digital readiness. It suggests the offer and drafts outreach for a person to review. It never sends anything.</p></div></header>
+  <div class="leads-grid" id="lead-cards"></div>
+  <details class="card paste">
+    <summary>Describe a business</summary>
+    <label for="lead-in" class="sr">Business description</label>
+    <textarea id="lead-in" rows="4" placeholder="e.g. A 20-person accounting firm retypes bank statements from PDFs and answers the same client emails every month-end…"></textarea>
+    <div class="row"><button class="btn primary" type="button" id="lead-go"><span>Score lead</span></button><span class="hint">Scored on this device.</span></div>
+    <div id="lead-out"></div>
+  </details>
+</section>
+
+<section class="sec" id="pipeline" data-more aria-labelledby="pipe-h" data-order="8">
+  <header class="sec-h"><span class="num">08</span><div><h2 id="pipe-h">Pipeline dashboard</h2>
+    <p>The daily loop at a glance: funnel, drafts waiting on a human, and the nudge clock. The numbers below are sample data that mirrors the real flow.</p></div></header>
+  <div class="pipe-grid">
+    <div class="card"><h3>Funnel <span class="tag">sample</span></h3><div id="funnel" class="funnel"></div></div>
+    <div class="card"><h3>Nudges due <span class="tag">24h rule</span></h3><ul id="nudges" class="nudges"></ul></div>
+    <div class="card wide"><h3>Daily schedule (SAST)</h3><ol id="sched" class="sched"></ol></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-grid">
+    <div><h3>Guardrails</h3><ul><li>Draft-only: never auto-applies and never sends email. “Forward by email” only opens your own mail app.</li><li>No sign-ins to LinkedIn or Glassdoor from this page.</li><li>Inbox content, recruiter names and pay expectations never reach the public site.</li></ul></div>
+    <div><h3>Data provenance</h3><ul id="prov"><li>Listings, emails, leads and funnel: <b>sample</b> data with fictional companies.</li><li>CV facts: the published <a href="/resume/">résumé</a> and case studies.</li><li id="prov-model">Outcome model: loading…</li><li>Shortlist: JobNet's own read-only public API (cached for 30 minutes in this tab), else the last published snapshot, else sample data. The chip says which.</li></ul></div>
+    <div><h3>More</h3><ul><li><a href="/case-studies/jobnet/">JobNet case study</a></li><li><a href="/apps/mercatus-careers/?desk=1">Full Careers desk (legacy view)</a></li><li><a href="/">Portfolio home</a></li></ul></div>
+  </div>
+  <p class="fine">JobNet Application (JobNet AI + AI Hawk, formerly Drop Net) · preview build 2026-10-21 · Katlego Mokoto · Models: all-MiniLM-L6-v2 (Apache-2.0), self-hosted.</p>
+</footer>
+<dialog id="fwd" class="fwd" aria-labelledby="fwd-h">
+  <form method="dialog" onsubmit="return false">
+    <h2 id="fwd-h">Forward by email</h2>
+    <p class="hint">Opens <b>your</b> mail app with this email filled in. Nothing is sent or stored by this site.</p>
+    <label for="fwd-to" class="lbl">To</label>
+    <input id="fwd-to" type="email" inputmode="email" autocomplete="email" multiple placeholder="you@example.com" aria-describedby="fwd-err">
+    <p class="fwd-err" id="fwd-err" role="alert"></p>
+    <p class="lbl">Subject</p><p class="fwd-subj" id="fwd-subj"></p>
+    <p class="lbl">Body</p><pre class="fwd-body" id="fwd-body" tabindex="0"></pre>
+    <p class="hint" id="fwd-trunc" hidden>The body was shortened to fit mail-app link limits. Use Copy email for the full text.</p>
+    <div class="row"><button class="btn primary small" type="button" id="fwd-open"><span>Open in my mail app</span></button><button class="btn ghost small" type="button" id="fwd-copy"><span>Copy email</span></button><button class="btn ghost small" type="button" id="fwd-close"><span>Close</span></button></div>
+  </form>
+</dialog>
+<dialog id="shared" class="fwd" aria-labelledby="sh-h"><form method="dialog"><h2 id="sh-h">Shared AI Hawk draft · read-only</h2><p class="hint">This text came from the link itself. Nothing was downloaded from a server.</p><pre class="fwd-body" style="max-height:60vh"></pre><div class="row"><button class="btn ghost small"><span>Close</span></button></div></form></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

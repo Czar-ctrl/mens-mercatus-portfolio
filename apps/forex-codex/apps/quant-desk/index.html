@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERCATUS QUANT DESK // Sovereign Institutional Terminal</title>
+  <meta name="description" content="Sovereign high-end quantitative intelligence terminal with live orderflow, AIS maritime correlation, Black-Scholes calculus, academic research search, and focus audio.">
+  <style>
+    :root {
+      --bg: #030712;
+      --panel-bg: rgba(13, 19, 33, 0.75);
+      --border: rgba(56, 189, 248, 0.2);
+      --border-glow: rgba(56, 189, 248, 0.4);
+      --accent: #38bdf8;
+      --accent-quant: #00ffd1;
+      --accent-amber: #f59e0b;
+      --accent-green: #38ef7d;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(0, 255, 209, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.04) 0%, transparent 40%);
+    }
+
+    /* TOPBAR */
+    header {
+      background: rgba(8, 12, 22, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      font-size: 22px;
+      background: linear-gradient(135deg, #00ffd1, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .brand-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 3px 8px;
+      background: rgba(0, 255, 209, 0.12);
+      color: var(--accent-quant);
+      border: 1px solid rgba(0, 255, 209, 0.3);
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+    .btn-top {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-top:hover {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    /* MAIN COCKPIT GRID */
+    main {
+      flex: 1;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 320px 1fr 340px;
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      main { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .panel-head {
+      padding: 12px 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+    .panel-body {
+      padding: 16px;
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* TICKER CARDS */
+    .ticker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ticker-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .ticker-row:hover, .ticker-row.active {
+      background: rgba(0, 255, 209, 0.06);
+      border-color: rgba(0, 255, 209, 0.3);
+    }
+    .ticker-sym {
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .ticker-name {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .ticker-price {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: right;
+    }
+    .ticker-delta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .up { color: var(--accent-green); }
+    .down { color: var(--accent-rose); }
+
+    /* SAR CHOKEPOINT TELEMETRY */
+    .telemetry-card {
+      background: rgba(56, 189, 248, 0.04);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .cp-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .cp-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .badge-delay {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    /* CENTER CHART CANVAS */
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #020408;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+    canvas#quant-chart {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .chart-hud {
+      position: absolute;
+      top: 12px;
+      left: 14px;
+      display: flex;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: rgba(3, 7, 18, 0.7);
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* QUANT LOG & SIGNALS */
+    .log-terminal {
+      background: #020408;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #cbd5e1;
+      height: 180px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .log-line {
+      display: flex;
+      gap: 8px;
+    }
+    .log-time { color: var(--text-muted); }
+    .log-tag { color: var(--accent-quant); font-weight: bold; }
+
+    /* TOOLBOX WIDGETS */
+    .tool-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--accent-quant);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .search-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--accent-quant); }
+
+    .paper-item {
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+      font-size: 11px;
+    }
+    .paper-item a { color: var(--accent); text-decoration: none; font-weight: 600; display: block; margin-bottom: 2px; }
+    .paper-item a:hover { text-decoration: underline; }
+    .paper-desc { color: var(--text-muted); font-size: 10px; }
+
+    /* CALCULATOR */
+    .calc-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .calc-val {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .calc-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; }
+
+    /* AUDIO FOCUS CONTROLS */
+    .audio-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 255, 209, 0.05);
+      border: 1px solid rgba(0, 255, 209, 0.2);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+    .audio-btn {
+      background: var(--accent-quant);
+      color: #030712;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 11px;
+      cursor: pointer;
+    }
+  </style>
+<!-- mm-motion --><script type="module">addEventListener("load",function(){var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";s.setAttribute('data-bg','');s.setAttribute('data-no-g','');s.setAttribute('data-no-status','');document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body>
+
+  <header data-mm-bg>
+    <div class="brand">
+      <span class="brand-logo">📈 MERCATUS QUANT DESK</span>
+      <span class="brand-badge">SOVEREIGN V0.5.2</span>
+    </div>
+    <div class="topbar-right">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span id="gateway-status">EXCHANGE GATEWAYS: 0.8ms</span>
+      </div>
+      <a href="../aureum-eo/index.html" class="btn-top" title="Switch to Aureum Satellite EO">
+        🛰️ Launch Aureum Radar
+      </a>
+      <a href="../index.html" class="btn-top" title="Open Dual-Cockpit Hub">
+        ⚡ Split View Hub
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- LEFT COLUMN: ASSETS & SATELLITE CORRELATION -->
+    <div class="panel">
+      <div class="panel-head">
+        <span>ASSET MONITOR</span>
+        <span>NYMEX / CME</span>
+      </div>
+      <div class="panel-body">
+        <div class="ticker-list" id="ticker-container">
+          <div class="ticker-row active" data-sym="BRENT">
+            <div>
+              <div class="ticker-sym">BRENT CRUDE</div>
+              <div class="ticker-name">North Sea Benchmark</div>
+            </div>
+            <div>
+              <div class="ticker-price">$78.42</div>
+              <div class="ticker-delta up">+2.42% (Lag Signal)</div>
+            </div>
+          </div>
+          <div class="ticker-row" data-sym="WTI">
+            <div>
+              <div class="ticker-sym">WTI CRUDE</div>
+              <div class="ticker-name">West Texas Intermed</div>
+            </div>
+            <div>
+              <div class="ticker-price">$74.15</div>
+              <div class="ticker-delta up">+1.85%</div>
+            </div>
+          </div>
+          <div class="ticker-row" data-sym="XAUUSD">
+            <div>
+              <div class="ticker-sym">GOLD (XAU/USD)</div>
+              <div class="ticker-name">Spot Bullion</div>
+            </div>
+            <div>
+              <div class="ticker-price">$2,654.10</div>
+              <div class="ticker-delta up">+0.74%</div>
+            </div>
+          </div>
+          <div class="ticker-row" data-sym="DXY">
+            <div>
+              <div class="ticker-sym">US DOLLAR INDEX</div>
+              <div class="ticker-name">DXY Currency Basket</div>
+            </div>
+            <div>
+              <div class="ticker-price">100.82</div>
+              <div class="ticker-delta down">-0.32%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SATELLITE AIS INGESTION -->
+        <div class="telemetry-card">
+          <div class="cp-header">
+            <span>AUREUM SAR MARITIME INGEST</span>
+            <span>LIVE CHOKEPOINTS</span>
+          </div>
+          <div class="cp-item">
+            <span>Strait of Hormuz</span>
+            <span class="badge-delay">DELAY +38h (142 VLCCs)</span>
+          </div>
+          <div class="cp-item">
+            <span>Rotterdam Anchorage</span>
+            <span class="badge-delay">DELAY +19h</span>
+          </div>
+          <div class="cp-item">
+            <span>Malacca Strait</span>
+            <span style="color:var(--accent-green);font-size:10px;font-family:var(--font-mono);">FLOW 100% OK</span>
+          </div>
+          <p style="font-size:10px;color:var(--text-muted);margin-top:8px;line-height:1.4;">
+            Synthetic Aperture Radar detects supply bottleneck: Projected 3.2-day lag to NYMEX settlement.
+          </p>
+        </div>
+
+        <!-- BLACK-SCHOLES CALCULUS (Wolfram Style) -->
+        <div class="tool-box">
+          <div class="tool-title">⚡ WOLFRAM QUANT CALCULUS (BSM GREEKS)</div>
+          <div class="calc-row">
+            <div class="calc-val"><div class="calc-label">Delta (Δ)</div><strong id="greek-delta">0.684</strong></div>
+            <div class="calc-val"><div class="calc-label">Gamma (Γ)</div><strong id="greek-gamma">0.038</strong></div>
+            <div class="calc-val"><div class="calc-label">Theta (Θ)</div><strong id="greek-theta">-0.042/d</strong></div>
+            <div class="calc-val"><div class="calc-label">Vega (ν)</div><strong id="greek-vega">0.182</strong></div>
+          </div>
+          <button class="audio-btn" id="btn-recompute-greeks" style="width:100%;margin-top:4px;">↻ Recalculate Vol Surface</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER COLUMN: LIVE CHART & LOGS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span id="active-chart-title">BRENT CRUDE // 1-MINUTE HIGH FREQUENCY LIQUIDITY</span>
+        <span style="color:var(--accent-quant);">ORDER BOOK DEPTH: 142.8M BBLS</span>
+      </div>
+      <div class="panel-body">
+        <div class="chart-container">
+          <div class="chart-hud">
+            <span>PRICE: <strong id="hud-price" style="color:var(--accent-quant);">$78.42</strong></span>
+            <span>HIGH: <strong>$78.90</strong></span>
+            <span>LOW: <strong>$77.85</strong></span>
+            <span>VOL: <strong>48.2K</strong></span>
+          </div>
+          <canvas id="quant-chart"></canvas>
+        </div>
+
+        <div class="panel-head" style="margin: 0 -16px; padding: 10px 16px;">
+          <span>INSTITUTIONAL SIGNAL DISPATCH TELEMETRY</span>
+          <span id="signal-counter">18 SIGNALS ACTIVE</span>
+        </div>
+
+        <div class="log-terminal" id="log-terminal">
+          <div class="log-line"><span class="log-time">[23:44:01]</span><span class="log-tag">[AUREUM_AIS]</span><span>SAR constellation radar sweep synchronized (24 sats active).</span></div>
+          <div class="log-line"><span class="log-time">[23:44:05]</span><span class="log-tag">[QUANT_DESK]</span><span>BRENT supply delta updated: Hormuz delay +38h priced into prompt contract.</span></div>
+          <div class="log-line"><span class="log-time">[23:44:12]</span><span class="log-tag">[HEDGE_FLOW]</span><span>Vol skew rebalance executed for XAU/USD $2,650 Call barriers.</span></div>
+          <div class="log-line"><span class="log-time">[23:44:18]</span><span class="log-tag">[FLEET_DISPATCH]</span><span>Directive routed to Agent Alpha (Quant Sentinel): 0 open conflicts.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: 50-TOOLBOX POWER TOOLS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span>INTERNET TOOLBOX HUB</span>
+        <span>RESEARCH & AUDIO</span>
+      </div>
+      <div class="panel-body">
+
+        <!-- FOCUS AUDIO GENERATOR (musicforprogramming / mynoise / coffitivity) -->
+        <div class="tool-box">
+          <div class="tool-title">🎧 PRODUCTIVITY & BINAURAL FOCUS SYNTH</div>
+          <div class="audio-bar">
+            <button class="audio-btn" id="btn-audio-toggle">▶ Play 432Hz Focus</button>
+            <span id="audio-state" style="font-size:10px;font-family:var(--font-mono);color:var(--text-muted);">Synth Idle</span>
+          </div>
+          <p style="font-size:10px;color:var(--text-muted);line-height:1.4;">
+            Synthetic gamma wave & white noise generator to maximize deep work while scanning volatility curves.
+          </p>
+        </div>
+
+        <!-- ACADEMIC & QUANT RESEARCH SEARCH (unpaywall / semanticscholar / scispace) -->
+        <div class="tool-box">
+          <div class="tool-title">📚 QUANT RESEARCH & PAPERS EXPLORER</div>
+          <input type="text" class="search-input" id="paper-search" placeholder="Search papers (e.g. 'Stochastic Volatility', 'AIS Maritime')..." />
+          <div id="paper-results" style="display:flex;flex-direction:column;gap:6px;">
+            <div class="paper-item">
+              <a href="https://arxiv.org/abs/2301.00001" target="_blank">Satellite Synthetic Aperture Radar for Maritime Flow Estimation</a>
+              <div class="paper-desc">Open Access (Unpaywall) · Deep learning vessel detection in high sea state</div>
+            </div>
+            <div class="paper-item">
+              <a href="https://arxiv.org/abs/2402.00002" target="_blank">Optimal Gamma Hedging with Non-Gaussian Jumps</a>
+              <div class="paper-desc">Semantic Scholar · Analytical approximations for cross-market barrier options</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CODE & SIGNAL EXPORT (carbon / ray.so / jsonformatter) -->
+        <div class="tool-box">
+          <div class="tool-title">⚡ CODE & SIGNAL EXPORTER (RAY.SO)</div>
+          <button class="audio-btn" id="btn-export-signal" style="width:100%;">📋 Copy Formatted JSON Signal</button>
+          <button class="audio-btn" id="btn-export-chart" style="width:100%;background:rgba(56,189,248,0.2);color:var(--accent);">📸 Export High-Res Chart Snapshot</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // 1. Interactive Quant Canvas
+    const canvas = document.getElementById('quant-chart');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    let points = [];
+    let currentPrice = 78.42;
+
+    for (let i = 0; i < 60; i++) {
+      currentPrice += (Math.random() - 0.49) * 0.25;
+      points.push(currentPrice);
+    }
+
+    function drawChart() {
+      ctx.fillStyle = '#020408';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Grid
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < canvas.width; x += 40) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += 40) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+      }
+
+      // Order book volume bars at right edge
+      const barCount = 12;
+      const barH = canvas.height / barCount;
+      for (let i = 0; i < barCount; i++) {
+        const w = (Math.sin(i * 1.5 + Date.now() * 0.001) * 0.5 + 0.5) * 80 + 20;
+        ctx.fillStyle = i < 6 ? 'rgba(244, 63, 94, 0.25)' : 'rgba(56, 239, 125, 0.25)';
+        ctx.fillRect(canvas.width - w, i * barH + 2, w, barH - 4);
+      }
+
+      // Line Graph
+      const minP = Math.min(...points) - 0.5;
+      const maxP = Math.max(...points) + 0.5;
+      const stepX = (canvas.width - 100) / (points.length - 1);
+
+      ctx.beginPath();
+      points.forEach((p, idx) => {
+        const x = idx * stepX + 20;
+        const y = canvas.height - ((p - minP) / (maxP - minP)) * (canvas.height - 40) - 20;
+        if (idx === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+
+      ctx.strokeStyle = '#00ffd1';
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+
+      // Area gradient
+      ctx.lineTo((points.length - 1) * stepX + 20, canvas.height);
+      ctx.lineTo(20, canvas.height);
+      ctx.closePath();
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      grad.addColorStop(0, 'rgba(0, 255, 209, 0.25)');
+      grad.addColorStop(1, 'rgba(0, 255, 209, 0)');
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Pulsing Current Point
+      const lastX = (points.length - 1) * stepX + 20;
+      const lastY = canvas.height - ((points[points.length - 1] - minP) / (maxP - minP)) * (canvas.height - 40) - 20;
+
+      ctx.fillStyle = '#00ffd1';
+      ctx.beginPath();
+      ctx.arc(lastX, lastY, 5, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = 'rgba(0, 255, 209, 0.5)';
+      ctx.beginPath();
+      ctx.arc(lastX, lastY, 10 + Math.sin(Date.now() * 0.005) * 4, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    setInterval(() => {
+      currentPrice += (Math.random() - 0.48) * 0.15;
+      points.shift();
+      points.push(currentPrice);
+      document.getElementById('hud-price').textContent = '$' + currentPrice.toFixed(2);
+      drawChart();
+    }, 1200);
+
+    drawChart();
+
+    // 2. Web Audio Focus Synthesizer (musicforprogramming / mynoise)
+    let audioCtx = null;
+    let osc1 = null, osc2 = null, gainNode = null;
+    let isPlaying = false;
+
+    document.getElementById('btn-audio-toggle').onclick = () => {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (!isPlaying) {
+        audioCtx.resume();
+        osc1 = audioCtx.createOscillator();
+        osc2 = audioCtx.createOscillator();
+        gainNode = audioCtx.createGain();
+
+        // 432 Hz Binaural Beat (432Hz Left, 440Hz Right)
+        osc1.type = 'sine';
+        osc1.frequency.value = 432;
+        osc2.type = 'sine';
+        osc2.frequency.value = 440;
+
+        gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+        osc1.connect(gainNode);
+        osc2.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        osc1.start();
+        osc2.start();
+
+        isPlaying = true;
+        document.getElementById('btn-audio-toggle').textContent = '⏹ Stop Audio';
+        document.getElementById('audio-state').textContent = 'Binaural 432Hz Active';
+        document.getElementById('audio-state').style.color = 'var(--accent-green)';
+      } else {
+        if (gainNode) {
+          gainNode.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+          setTimeout(() => {
+            if (osc1) osc1.stop();
+            if (osc2) osc2.stop();
+          }, 500);
+        }
+        isPlaying = false;
+        document.getElementById('btn-audio-toggle').textContent = '▶ Play 432Hz Focus';
+        document.getElementById('audio-state').textContent = 'Synth Idle';
+        document.getElementById('audio-state').style.color = 'var(--text-muted)';
+      }
+    };
+
+    // 3. Greeks Recalculation
+    document.getElementById('btn-recompute-greeks').onclick = () => {
+      document.getElementById('greek-delta').textContent = (0.65 + Math.random() * 0.08).toFixed(3);
+      document.getElementById('greek-gamma').textContent = (0.035 + Math.random() * 0.008).toFixed(3);
+      document.getElementById('greek-theta').textContent = (-0.038 - Math.random() * 0.01).toFixed(3) + '/d';
+      document.getElementById('greek-vega').textContent = (0.175 + Math.random() * 0.015).toFixed(3);
+
+      const log = document.getElementById('log-terminal');
+      const time = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      div.className = 'log-line';
+      div.innerHTML = `<span class="log-time">[${time}]</span><span class="log-tag">[CALCULUS]</span><span>Recomputed Black-Scholes volatility surface: IV +1.4% skew detected.</span>`;
+      log.prepend(div);
+    };
+
+    // 4. Export Signal (JSON Formatter / Ray.so)
+    document.getElementById('btn-export-signal').onclick = () => {
+      const payload = {
+        suite: "MERCATUS QUANT DESK",
+        symbol: "BRENT",
+        price: currentPrice.toFixed(2),
+        timestamp: new Date().toISOString(),
+        sar_telemetry: {
+          chokepoint: "Strait of Hormuz",
+          delay_hours: 38,
+          tankers_idling: 142
+        },
+        forecast: "LONG_BRENT_EXPIRY_3.2D"
+      };
+      navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
+      alert('Signal JSON copied to clipboard!');
+    };
+
+    // 5. Chart Snapshot (Shots.so / Squoosh)
+    document.getElementById('btn-export-chart').onclick = () => {
+      const url = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `mercatus-quant-chart-${Date.now()}.png`;
+      a.click();
+    };
+
+    // 6. Interactive Paper Search (Semantic Scholar / SciSpace)
+    document.getElementById('paper-search').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase();
+      const items = document.querySelectorAll('.paper-item');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

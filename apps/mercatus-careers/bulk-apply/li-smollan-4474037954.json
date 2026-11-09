@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-smollan-4474037954",
+  "jobId": "li-smollan-4474037954",
+  "title": "Senior Full Stack Developer",
+  "company": "Smollan Technologies",
+  "location": "City of Johannesburg, Gauteng, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474037954",
+  "signal": "high",
+  "packet": "Here is a draft application packet to help you apply for the Senior Full Stack Developer role at Smollan Technologies.\n\n### Cover Letter Draft\n\nSubject: Application for Senior Full Stack Developer \u2013 [Your Name]\n\nDear Smollan Technologies Hiring Team,\n\nI am writing to express my keen interest in the Senior Full Stack Developer position in the City of Johannesburg, as advertised. With a strong background as an AI/Systems Engineer, I am particularly drawn to your focus on TypeScript/Node and React full-stack development, especially the applied-AI inference pipeline orchestration.\n\nMy experience aligns well with the requirements of this role. I have extensive skills in TypeScript and Python, which are directly applicable to building robust full-stack solutions and integrating advanced AI capabilities. My work with LLMs, RAG, and agent-based systems has equipped me with practical experience in orchestrating complex AI pipelines, which I believe would be a significant asset to your team.\n\nI am proficient in developing distributed systems and have a solid understanding of REST/OpenAPI principles and PostgreSQL databases, crucial for scalable and efficient backend services. My background also includes .NET, further broadening my ability to contribute across diverse technology stacks.\n\nI am eager to leverage my expertise to contribute to Smollan Technologies' innovative projects and look forward to discussing how my skills and experience can benefit your team.\n\nThank you for your time and consideration.\n\nSincerely,\n\n[Your Name]\n[Your Contact Information]\n\n### Fit Notes\n\n*   **TypeScript/Node & React:** Your existing TypeScript skills are a direct match for the core technology stack. While React isn't explicitly listed in your skills, your full-stack experience implies front-end proficiency, and TypeScript knowledge makes adapting to React straightforward.\n*   **Applied-AI Inference Pipeline Orchestration:** Your expertise in LLMs, RAG, and agents directly addresses this key requirement, positioning you strongly for designing and managing AI workflows.\n*   **REST/OpenAPI & PostgreSQL:** Your systems engineering background and experience with distributed systems suggest a strong understanding of API design and database interactions, essential for the role.\n*   **Distributed Systems:** Your experience here is crucial for building scalable and resilient full-stack applications.\n*   **Python:** While the role highlights TypeScript/Node, Python is often complementary in AI/backend environments, adding to your versatility.\n\n### How-to-Submit Checklist\n\n1.  **Find the Job Posting:** Locate the official \"Senior Full Stack Developer\" listing on the Smollan Technologies careers website.\n2.  **Review Full Details:** Read the complete job description carefully for any additional requirements or specific instructions.\n3.  **Tailor Your CV:** Update your CV to highlight relevant experience and skills mentioned in the job description and the fit notes above.\n4.  **Prepare Your Packet:** Have your tailored CV and the drafted cover letter ready.\n5.  **Submit Online:** Follow the instructions on Smollan Technologies' careers portal to upload your application documents.\n\nNext: Visit the Smollan Technologies careers page to find the official job posting.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:01.402715+00:00"
+}

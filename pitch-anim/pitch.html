@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercatus Concierge — Pitch Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pitch.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #070708;
+      color: #F4EFE6;
+      font-family: "DM Sans", system-ui, sans-serif;
+      padding: 2rem 1.25rem;
+    }
+    .preview {
+      width: min(100%, 720px);
+    }
+    h1 {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c8102e;
+      margin: 0 0 1rem;
+    }
+    .hint {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #9a9590;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview">
+    <h1>Pitch reel · 14s loop</h1>
+    <div class="pitch-reel" data-pitch-reel aria-label="Mercatus Concierge pitch animation">
+      <div class="pitch-scene" aria-hidden="true">
+        <div class="pitch-desk"></div>
+        <div class="pitch-canvas">
+          <video class="pitch-video" muted loop playsinline preload="auto"
+            src="../pitch-video/mercatus-concierge-pitch.mp4"></video>
+          <div class="pitch-canvas-frame"></div>
+          <div class="pitch-canvas-label">Concierge</div>
+        </div>
+        <div class="pitch-hand"></div>
+        <div class="pitch-phone">
+          <div class="pitch-phone-bezel">
+            <div class="pitch-phone-screen">
+              <div class="pitch-ui-stub">
+                <div class="pitch-ui-bar"></div>
+                <div class="pitch-ui-title">Concierge</div>
+                <div class="pitch-ui-line mid"></div>
+                <div class="pitch-ui-line short"></div>
+                <div class="pitch-ui-line mid"></div>
+                <div class="pitch-ui-card"><span>Desk live</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pitch-figure">
+          <div class="pitch-figure-glow"></div>
+          <div class="pitch-figure-body"></div>
+        </div>
+        <div class="pitch-narration">
+          <p>Your digital footprint.<br><span>One concierge.</span></p>
+        </div>
+        <div class="pitch-fade"></div>
+      </div>
+      <div class="pitch-still" aria-hidden="true">
+        <video muted playsinline preload="metadata"
+          src="../pitch-video/mercatus-concierge-pitch.mp4"></video>
+        <div class="pitch-still-overlay">
+          <div class="pitch-still-badge">Mercatus Concierge</div>
+          <p>Your digital footprint.<br><span>One concierge.</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="hint">Maison Concierge · phone → canvas → figure · Mens Mercatus Blueprint</p>
+  </div>
+  <script src="pitch.js"></script>
+</body>
+</html>

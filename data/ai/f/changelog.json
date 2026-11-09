@@ -1,0 +1,156 @@
+{
+ "generated": "2026-10-21 11:26 SAST",
+ "note": "Generated from git commits on the build machine. Titles are commit subjects; no metrics invented.",
+ "entries": [
+  {
+   "hash": "8513482",
+   "date": "2026-10-21T11:16:09+02:00",
+   "title": "E2 executed and verified live",
+   "date_sast": "2026-10-21 11:16 SAST"
+  },
+  {
+   "hash": "242df84",
+   "date": "2026-10-21T08:27:56+02:00",
+   "title": "DEPLOY-PLAN: Option E2 (SoundX merge) prepared, dry run only",
+   "date_sast": "2026-10-21 08:27 SAST"
+  },
+  {
+   "hash": "fe879d7",
+   "date": "2026-10-21T08:27:20+02:00",
+   "title": "E2 preview: tests expect 8 stories / 'Eight systems' after the SoundX merge; search-index generator points Studio at SoundX AI",
+   "date_sast": "2026-10-21 08:27 SAST"
+  },
+  {
+   "hash": "0d67ca9",
+   "date": "2026-10-21T08:10:49+02:00",
+   "title": "E2 preview: SoundX Studio merged into SoundX AI (merged build sxa 399b630, one card, Studio URL redirects + SW retirement, search/commands, verify-merge 26/26)",
+   "date_sast": "2026-10-21 08:10 SAST"
+  },
+  {
+   "hash": "193b894",
+   "date": "2026-10-21T07:53:24+02:00",
+   "title": "E1 follow-up: new title in generators (search index, profile, SEO JSON-LD) so a rebuild keeps it",
+   "date_sast": "2026-10-21 07:53 SAST"
+  },
+  {
+   "hash": "8aaf926",
+   "date": "2026-10-21T07:51:24+02:00",
+   "title": "DEPLOY-PLAN: E1 executed record",
+   "date_sast": "2026-10-21 07:51 SAST"
+  },
+  {
+   "hash": "331cad4",
+   "date": "2026-10-21T07:46:01+02:00",
+   "title": "E1: title -> 'AI & ML Engineer / Full-Stack Developer' (hero, <title>, meta/OG, JSON-LD, r\u00e9sum\u00e9, KB/search, new hashed chunk 254-be763ae564f7eb94)",
+   "date_sast": "2026-10-21 07:46 SAST"
+  },
+  {
+   "hash": "9d71d70",
+   "date": "2026-10-21T07:27:17+02:00",
+   "title": "Option D4 executed (godmode poster) and verified live",
+   "date_sast": "2026-10-21 07:27 SAST"
+  },
+  {
+   "hash": "f95d864",
+   "date": "2026-10-21T07:25:28+02:00",
+   "title": "D4: godmode showcase poster = clean Forex app screenshot, no autoplay; verify-godmode 14/14",
+   "date_sast": "2026-10-21 07:25 SAST"
+  },
+  {
+   "hash": "d57f084",
+   "date": "2026-10-21T06:58:37+02:00",
+   "title": "Option D3 executed (godmode CSP fix) and verified live",
+   "date_sast": "2026-10-21 06:58 SAST"
+  },
+  {
+   "hash": "0063386",
+   "date": "2026-10-21T06:54:43+02:00",
+   "title": "D3: godmode self-hosts Font Awesome 6.4.0 + three r128, local-only Omni websocket; verify-godmode 12/12",
+   "date_sast": "2026-10-21 06:54 SAST"
+  },
+  {
+   "hash": "cb19d9c",
+   "date": "2026-10-21T06:47:23+02:00",
+   "title": "Option D executed (nginx quote CORS + D + D2) and verified live",
+   "date_sast": "2026-10-21 06:47 SAST"
+  },
+  {
+   "hash": "685e108",
+   "date": "2026-10-21T06:20:13+02:00",
+   "title": "Sync live mirror with D",
+   "date_sast": "2026-10-21 06:20 SAST"
+  },
+  {
+   "hash": "d5c53bc",
+   "date": "2026-10-21T06:20:10+02:00",
+   "title": "D fix: bg falls back to main's first block (/work/, /case-studies/ had no section), capped to first screen; v=d3; live-d check",
+   "date_sast": "2026-10-21 06:20 SAST"
+  },
+  {
+   "hash": "93cbf8a",
+   "date": "2026-10-21T06:02:46+02:00",
+   "title": "D: plan wording/times",
+   "date_sast": "2026-10-21 06:02 SAST"
+  },
+  {
+   "hash": "1770351",
+   "date": "2026-10-21T06:02:38+02:00",
+   "title": "D: DEPLOY-PLAN option D, speed before/after",
+   "date_sast": "2026-10-21 06:02 SAST"
+  },
+  {
+   "hash": "ec46ea8",
+   "date": "2026-10-21T05:58:45+02:00",
+   "title": "D: stage built + dry run (27 files, 0 drift), verify3 allows documented D hosts, refreshed screenshots",
+   "date_sast": "2026-10-21 05:58 SAST"
+  },
+  {
+   "hash": "d4f0a65",
+   "date": "2026-10-21T05:26:31+02:00",
+   "title": "D: footer status sits in footer padding (no height change, scroll colour triggers intact), no status on /plan/ (nothing is sent), prod-origin test shim, v=d2",
+   "date_sast": "2026-10-21 05:26 SAST"
+  },
+  {
+   "hash": "a064337",
+   "date": "2026-10-21T05:03:03+02:00",
+   "title": "D: load-event module bootstrap, CSS injected by JS (LCP parity), measure PAGES env",
+   "date_sast": "2026-10-21 05:03 SAST"
+  },
+  {
+   "hash": "1d1cd95",
+   "date": "2026-10-21T04:51:37+02:00",
+   "title": "D: demo video + recorder, dot field slightly stronger",
+   "date_sast": "2026-10-21 04:51 SAST"
+  },
+  {
+   "hash": "c4bfb4d",
+   "date": "2026-10-21T04:49:49+02:00",
+   "title": "D: theme-aware ink for Next pages, plan chip space reserved (CLS 0.055->0), motion tests 36/36",
+   "date_sast": "2026-10-21 04:49 SAST"
+  },
+  {
+   "hash": "1c2dcd0",
+   "date": "2026-10-21T04:43:23+02:00",
+   "title": "D: motion layer (cursor, bg, marquee, progress, footer status) + page injection",
+   "date_sast": "2026-10-21 04:43 SAST"
+  },
+  {
+   "hash": "d8aefb7",
+   "date": "2026-10-21T04:36:27+02:00",
+   "title": "Sync live mirror with C",
+   "date_sast": "2026-10-21 04:36 SAST"
+  },
+  {
+   "hash": "6472284",
+   "date": "2026-10-21T04:28:12+02:00",
+   "title": "Option C executed and verified live",
+   "date_sast": "2026-10-21 04:28 SAST"
+  },
+  {
+   "hash": "552c0d0",
+   "date": "2026-10-21T04:11:56+02:00",
+   "title": "Follow-ups report; preview.zip rebuilt",
+   "date_sast": "2026-10-21 04:11 SAST"
+  }
+ ]
+}

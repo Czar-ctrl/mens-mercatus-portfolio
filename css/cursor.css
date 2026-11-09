@@ -1,0 +1,71 @@
+/* Custom cursor: Cartel red ring + red center. Hidden on touch / coarse pointer. */
+.mm-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 22px; height: 22px;
+  margin: -11px 0 0 -11px;
+  border: 1.5px solid #c8102e;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate3d(-100px, -100px, 0);
+  transition: width 0.18s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              height 0.18s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              margin 0.18s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              border-color 0.18s, box-shadow 0.18s;
+  /* do NOT transition transform — laggy trail feel */
+  will-change: transform;
+  contain: layout style;
+  opacity: 0;
+  box-shadow: 0 0 0 1px rgba(200, 16, 46, 0.25);
+}
+.mm-cursor.is-on { opacity: 1; }
+.mm-cursor::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 4px; height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: #c8102e;
+}
+.mm-cursor.is-hover {
+  width: 34px; height: 34px;
+  margin: -17px 0 0 -17px;
+  border-color: var(--mm-gold, #c8102e);
+  box-shadow: 0 0 0 1px rgba(200, 16, 46, 0.28);
+}
+.mm-cursor.is-hover::after {
+  background: #c8102e;
+  width: 5px; height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+}
+
+/* Inherit — avoid body * { cursor:none !important } which thrash-matches every node */
+html.has-custom-cursor,
+body.has-custom-cursor {
+  cursor: none;
+}
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor [role="button"],
+body.has-custom-cursor input,
+body.has-custom-cursor textarea,
+body.has-custom-cursor select,
+body.has-custom-cursor .card,
+body.has-custom-cursor .hud-link {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .mm-cursor { display: none !important; }
+  html.has-custom-cursor,
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button {
+    cursor: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-cursor { transition: none; }
+}

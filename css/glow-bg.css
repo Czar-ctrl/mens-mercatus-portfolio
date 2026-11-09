@@ -1,0 +1,59 @@
+/* Soft cursor-following glow — gold portfolio chrome. No particles. */
+.glow-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--mm-black);
+  background-image:
+    radial-gradient(
+      520px circle at var(--mx) var(--my),
+      var(--mm-gold-soft) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      820px circle at calc(var(--mx) + 6%) calc(var(--my) - 5%),
+      rgba(245, 245, 245, 0.045) 0%,
+      transparent 50%
+    ),
+    radial-gradient(ellipse at 50% 120%, #1f1f1f 0%, var(--mm-black) 58%);
+  will-change: background-image;
+}
+.glow-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(245, 245, 245, 0.035) 0%,
+    transparent 42%
+  );
+}
+
+body.is-cartel-theme .glow-bg {
+  background-image:
+    radial-gradient(
+      520px circle at var(--mx) var(--my),
+      var(--cartel-red-dim) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      820px circle at calc(var(--mx) + 6%) calc(var(--my) - 5%),
+      rgba(245, 245, 245, 0.045) 0%,
+      transparent 50%
+    ),
+    radial-gradient(ellipse at 50% 120%, #242424 0%, var(--mm-black) 58%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-bg {
+    background-image:
+      radial-gradient(ellipse at 50% 30%, var(--mm-gold-soft) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 120%, #1f1f1f 0%, var(--mm-black) 58%);
+  }
+  body.is-cartel-theme .glow-bg {
+    background-image:
+      radial-gradient(ellipse at 50% 30%, var(--cartel-red-dim) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 120%, #242424 0%, var(--mm-black) 58%);
+  }
+}

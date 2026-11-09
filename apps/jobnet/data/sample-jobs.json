@@ -1,0 +1,167 @@
+{
+ "note": "SAMPLE DATA - fictional companies and text written for this demo.",
+ "jobs": [
+  {
+   "id": "s01",
+   "title": "AI Engineer (LLM Agents)",
+   "company": "Kopano Ledger",
+   "location": "Johannesburg",
+   "mode": "hybrid",
+   "salary": [
+    65000,
+    85000
+   ],
+   "days": 0,
+   "source": "LinkedIn",
+   "text": "Build agentic workflows with LLMs and tool calling for finance ops. Python and TypeScript, retrieval (RAG) over policy documents, embeddings in pgvector, human review before any payment action. Deploy behind nginx on Linux; monitoring and rate limiting matter. Azure is a plus."
+  },
+  {
+   "id": "s02",
+   "title": "Senior .NET Developer (C#, Azure)",
+   "company": "Thaba Logistics",
+   "location": "Pretoria",
+   "mode": "on-site",
+   "salary": [
+    55000,
+    70000
+   ],
+   "days": 2,
+   "source": "Glassdoor",
+   "text": "C# and ASP.NET Core Web API services, Entity Framework and SQL Server, Azure DevOps CI/CD pipelines, microservices, unit testing. Agile Scrum team. Exposure to Angular on the front end."
+  },
+  {
+   "id": "s03",
+   "title": "Full-Stack Engineer (React + .NET)",
+   "company": "Umoya Health",
+   "location": "Cape Town",
+   "mode": "remote",
+   "salary": null,
+   "days": 1,
+   "source": "LinkedIn",
+   "text": "React and TypeScript front end with an ASP.NET Core 8 minimal API in C#. Realtime updates over WebSockets, Redis cache, PostgreSQL. Secure API keys server side, health checks and logging. Vite build, Tailwind."
+  },
+  {
+   "id": "s04",
+   "title": "Machine Learning Engineer (Computer Vision)",
+   "company": "Ilanga Robotics",
+   "location": "Durban",
+   "mode": "on-site",
+   "salary": [
+    70000,
+    95000
+   ],
+   "days": 6,
+   "source": "Glassdoor",
+   "text": "Train PyTorch models for object detection and image segmentation, MLOps on AWS SageMaker, model serving, Spark data pipelines. Strong statistics and computer vision background required."
+  },
+  {
+   "id": "s05",
+   "title": "Automation Developer (AI + Workflows)",
+   "company": "Sizwe Retail Group",
+   "location": "Johannesburg",
+   "mode": "hybrid",
+   "salary": [
+    50000,
+    62000
+   ],
+   "days": 3,
+   "source": "LinkedIn",
+   "text": "Automate back-office workflows: scheduled scraping of supplier price lists, LLM extraction from invoices, WhatsApp notifications with human approval. Python, Node.js, cron, REST APIs, Docker."
+  },
+  {
+   "id": "s06",
+   "title": "Senior Java Engineer",
+   "company": "Rand Clearing",
+   "location": "Johannesburg",
+   "mode": "on-site",
+   "salary": [
+    80000,
+    100000
+   ],
+   "days": 4,
+   "source": "LinkedIn",
+   "text": "Java 21, Spring Boot, Kafka microservices, Kubernetes on AKS, Oracle and SQL Server. Jenkins CI/CD. Payments domain."
+  },
+  {
+   "id": "s07",
+   "title": "Generative AI Developer",
+   "company": "Mvula Insurance",
+   "location": "Cape Town",
+   "mode": "hybrid",
+   "salary": [
+    60000,
+    80000
+   ],
+   "days": 1,
+   "source": "Glassdoor",
+   "text": "Generative AI and large language model apps with Gemini and OpenAI APIs, LangChain, retrieval augmented generation, ChromaDB, guardrails and human-in-the-loop review, responsible AI. Python FastAPI backends."
+  },
+  {
+   "id": "s08",
+   "title": "Data Engineer (Spark)",
+   "company": "Nala Analytics",
+   "location": "Remote (SA)",
+   "mode": "remote",
+   "salary": [
+    60000,
+    75000
+   ],
+   "days": 9,
+   "source": "LinkedIn",
+   "text": "Build ETL pipelines in Spark and Databricks, Snowflake warehouse, Airflow orchestration, SQL, big data on GCP."
+  },
+  {
+   "id": "s09",
+   "title": "Frontend Engineer (Audio Tools)",
+   "company": "Isigqi Labs",
+   "location": "Remote (global)",
+   "mode": "remote",
+   "salary": [
+    55000,
+    72000
+   ],
+   "days": 2,
+   "source": "LinkedIn",
+   "text": "TypeScript and React UI for a browser music tool. Web Audio API, audio DSP, on-device ML in the browser (ONNX), automated testing with e2e suites."
+  },
+  {
+   "id": "s10",
+   "title": "AI Solutions Consultant (SMB)",
+   "company": "Bheka Digital",
+   "location": "Johannesburg",
+   "mode": "hybrid",
+   "salary": null,
+   "days": 0,
+   "source": "Glassdoor",
+   "text": "Scope and ship AI agents and LLM automation for small businesses: document processing, chat assistants, scheduling and CRM workflows. Client facing; .NET or Python; secure deployment on a VPS; clear approval steps."
+  },
+  {
+   "id": "s11",
+   "title": "Go Backend Engineer",
+   "company": "Khanya Cloud",
+   "location": "Cape Town",
+   "mode": "remote",
+   "salary": [
+    75000,
+    90000
+   ],
+   "days": 12,
+   "source": "LinkedIn",
+   "text": "Golang services, gRPC, Kubernetes, Terraform on AWS, observability with OpenTelemetry."
+  },
+  {
+   "id": "s12",
+   "title": "Junior Support Analyst",
+   "company": "Lerato Telecoms",
+   "location": "Durban",
+   "mode": "on-site",
+   "salary": [
+    18000,
+    24000
+   ],
+   "days": 1,
+   "source": "Glassdoor",
+   "text": "First-line support, ticket triage, basic SQL queries, Office 365."
+  }
+ ]
+}

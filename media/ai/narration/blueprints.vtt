@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:07.105
+Mercatus Blueprints is a static portfolio pack: reference drawings and screens, not a live service.
+
+2
+00:00:07.055 --> 00:00:09.603
+It holds seven schematics.
+
+3
+00:00:09.603 --> 00:00:23.594
+The overall system architecture, the AI Assist integration pipeline, a Kubernetes topology, the event mode data flow, close friends GPS and ping, compliance gates, and the five jobs pillars.
+
+4
+00:00:23.594 --> 00:00:34.135
+The event mode screens walk through a signup gate, rate lock, check-in, points, vehicle checklist, no-show, dispute, payout and settings.
+
+5
+00:00:34.135 --> 00:00:42.380
+Compliance is designed in, with consent gates for minimum wage, POPIA and transport rules documented beside the mockups.
+
+6
+00:00:42.380 --> 00:00:48.822
+And an AI in every tool plan shows how Assist wires into each surface, refusals included.
+
+7
+00:00:48.822 --> 00:00:54.988
+It is the thinking behind the products: how a system should behave before a single request goes live.

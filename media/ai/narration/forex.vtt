@@ -1,0 +1,41 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:05.122
+Forex Mercatus Codex is a research desk built so it cannot be mistaken for a brokerage.
+
+2
+00:00:05.072 --> 00:00:08.029
+The hard part is the boundary, not the chart.
+
+3
+00:00:08.029 --> 00:00:17.200
+It is a Python and Highcharts desk with Chart, Multi, Whales, Flow and Bot views, about eighty-seven megabytes, hosted on a VPS over HTTPS.
+
+4
+00:00:17.200 --> 00:00:24.700
+Public feeds from Yahoo, Kraken and Binance are fused, and when a feed is down the desk falls back to synthetic tape, which is labelled.
+
+5
+00:00:24.700 --> 00:00:28.053
+Each browser tab gets its own session-scoped paper bot.
+
+6
+00:00:28.053 --> 00:00:35.601
+There is a cap of twenty-four sessions, idle sessions expire after two hours, and public mid rates refresh about every sixty seconds.
+
+7
+00:00:35.601 --> 00:00:38.113
+The health JSON reports paper only.
+
+8
+00:00:38.113 --> 00:00:41.094
+There are no broker credentials and no order route.
+
+9
+00:00:41.094 --> 00:00:44.411
+The bot can summarise data and propose a paper action.
+
+10
+00:00:44.411 --> 00:00:46.875
+A policy gate blocks anything live.

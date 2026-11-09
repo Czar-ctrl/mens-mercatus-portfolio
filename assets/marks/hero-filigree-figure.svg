@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" fill="none" role="img" aria-hidden="true">
+  <!-- Abstract Bicycle-style filigree presence — Blueprint gold/red ornamental figure -->
+  <defs>
+    <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="55%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#a8892a"/>
+    </linearGradient>
+    <linearGradient id="gRed" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a11f1f"/>
+      <stop offset="100%" stop-color="#8b1a1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer framing scrolls (card-border language) -->
+  <g opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left outer flourish column -->
+    <path d="M90 120 C40 180 55 260 95 320 C55 380 40 460 90 520 C50 580 60 660 110 720"
+          stroke="url(#gGold)" stroke-width="1.35"/>
+    <path d="M110 140 C70 200 80 270 115 330 C75 390 65 470 112 530 C80 590 85 665 125 725"
+          stroke="url(#gRed)" stroke-width="1.1"/>
+    <!-- Right outer flourish column -->
+    <path d="M510 120 C560 180 545 260 505 320 C545 380 560 460 510 520 C550 580 540 660 490 720"
+          stroke="url(#gGold)" stroke-width="1.35"/>
+    <path d="M490 140 C530 200 520 270 485 330 C525 390 535 470 488 530 C520 590 515 665 475 725"
+          stroke="url(#gRed)" stroke-width="1.1"/>
+  </g>
+
+  <!-- Head: medallion knot -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="300" cy="155" rx="52" ry="58" stroke="url(#gGold)" stroke-width="1.5" fill="#d4af37" fill-opacity="0.1"/>
+    <ellipse cx="300" cy="155" rx="34" ry="38" stroke="url(#gRed)" stroke-width="1.2" fill="none"/>
+    <ellipse cx="300" cy="155" rx="18" ry="20" stroke="url(#gGold)" stroke-width="1.1" fill="#8b1a1a" fill-opacity="0.12"/>
+    <!-- Knot loops -->
+    <path d="M300 97 C270 105 255 130 268 155 C255 180 270 205 300 213"
+          stroke="url(#gGold)" stroke-width="1.25"/>
+    <path d="M300 97 C330 105 345 130 332 155 C345 180 330 205 300 213"
+          stroke="url(#gGold)" stroke-width="1.25"/>
+    <path d="M268 155 C280 140 320 140 332 155 C320 170 280 170 268 155Z"
+          stroke="url(#gRed)" stroke-width="1.15" fill="#d4af37" fill-opacity="0.08"/>
+    <!-- Spade-like crown curl -->
+    <path d="M300 78 C285 95 270 88 278 72 C288 58 300 68 300 78 C300 68 312 58 322 72 C330 88 315 95 300 78Z"
+          stroke="url(#gGold)" stroke-width="1.3" fill="#c9a227" fill-opacity="0.1"/>
+    <!-- Side ear scrolls -->
+    <path d="M248 148 C220 130 210 110 225 95 C245 78 265 100 255 125"
+          stroke="url(#gRed)" stroke-width="1.15"/>
+    <path d="M352 148 C380 130 390 110 375 95 C355 78 335 100 345 125"
+          stroke="url(#gRed)" stroke-width="1.15"/>
+  </g>
+
+  <!-- Neck / collar filigree -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M268 213 C275 235 285 248 300 252 C315 248 325 235 332 213"
+          stroke="url(#gGold)" stroke-width="1.4"/>
+    <path d="M278 220 C285 238 292 245 300 247 C308 245 315 238 322 220"
+          stroke="url(#gRed)" stroke-width="1.05"/>
+    <!-- Collar scrolls -->
+    <path d="M255 230 C230 245 215 270 235 285 C250 295 270 280 275 255"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+    <path d="M345 230 C370 245 385 270 365 285 C350 295 330 280 325 255"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+  </g>
+
+  <!-- Torso: nested ovals + S-curves -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="300" cy="400" rx="95" ry="130" stroke="url(#gGold)" stroke-width="1.55" fill="#8b1a1a" fill-opacity="0.08"/>
+    <ellipse cx="300" cy="400" rx="68" ry="95" stroke="url(#gRed)" stroke-width="1.25" fill="none"/>
+    <ellipse cx="300" cy="400" rx="40" ry="58" stroke="url(#gGold)" stroke-width="1.15" fill="#d4af37" fill-opacity="0.09"/>
+    <!-- Central diamond knot -->
+    <path d="M300 345 L325 400 L300 455 L275 400 Z"
+          stroke="url(#gGold)" stroke-width="1.35" fill="#a11f1f" fill-opacity="0.1"/>
+    <path d="M300 365 L312 400 L300 435 L288 400 Z"
+          stroke="url(#gRed)" stroke-width="1.1" fill="none"/>
+    <!-- Inner S-curves (rib / spine suggestion) -->
+    <path d="M255 320 C280 350 260 390 285 420 C260 450 275 480 300 495"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+    <path d="M345 320 C320 350 340 390 315 420 C340 450 325 480 300 495"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+    <path d="M270 340 C290 370 275 400 295 430"
+          stroke="url(#gRed)" stroke-width="1.0"/>
+    <path d="M330 340 C310 370 325 400 305 430"
+          stroke="url(#gRed)" stroke-width="1.0"/>
+  </g>
+
+  <!-- Shoulder / arm scrolls (trailing flourishes) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left arm scroll -->
+    <path d="M210 310 C160 300 120 330 115 380 C110 430 145 455 180 445 C210 435 220 400 205 375 C190 350 160 360 155 390"
+          stroke="url(#gGold)" stroke-width="1.45"/>
+    <path d="M200 325 C165 320 140 345 138 380 C136 415 160 435 185 425"
+          stroke="url(#gRed)" stroke-width="1.15"/>
+    <!-- Club-like curl at left hand end -->
+    <path d="M155 390 C140 405 125 400 130 385 C138 370 155 378 155 390 C155 378 172 370 180 385 C185 400 170 405 155 390Z"
+          stroke="url(#gGold)" stroke-width="1.2" fill="#c9a227" fill-opacity="0.1"/>
+    <!-- Right arm scroll -->
+    <path d="M390 310 C440 300 480 330 485 380 C490 430 455 455 420 445 C390 435 380 400 395 375 C410 350 440 360 445 390"
+          stroke="url(#gGold)" stroke-width="1.45"/>
+    <path d="M400 325 C435 320 460 345 462 380 C464 415 440 435 415 425"
+          stroke="url(#gRed)" stroke-width="1.15"/>
+    <path d="M445 390 C460 405 475 400 470 385 C462 370 445 378 445 390 C445 378 428 370 420 385 C415 400 430 405 445 390Z"
+          stroke="url(#gGold)" stroke-width="1.2" fill="#c9a227" fill-opacity="0.1"/>
+  </g>
+
+  <!-- Waist / hip baroque belt -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M220 520 C250 505 280 500 300 500 C320 500 350 505 380 520"
+          stroke="url(#gGold)" stroke-width="1.5"/>
+    <path d="M230 535 C260 520 285 515 300 515 C315 515 340 520 370 535"
+          stroke="url(#gRed)" stroke-width="1.15"/>
+    <!-- Center waist medallion -->
+    <circle cx="300" cy="518" r="16" stroke="url(#gGold)" stroke-width="1.3" fill="#8b1a1a" fill-opacity="0.12"/>
+    <circle cx="300" cy="518" r="8" stroke="url(#gRed)" stroke-width="1.0" fill="#d4af37" fill-opacity="0.1"/>
+    <!-- Side hip flourishes -->
+    <path d="M220 520 C195 540 185 575 210 595 C230 610 255 590 250 560"
+          stroke="url(#gGold)" stroke-width="1.25"/>
+    <path d="M380 520 C405 540 415 575 390 595 C370 610 345 590 350 560"
+          stroke="url(#gGold)" stroke-width="1.25"/>
+  </g>
+
+  <!-- Lower limbs as trailing scroll ends -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left leg scroll -->
+    <path d="M260 540 C240 580 230 640 250 700 C265 740 245 780 220 800 C200 818 185 805 195 785 C210 770 235 785 245 780"
+          stroke="url(#gGold)" stroke-width="1.4"/>
+    <path d="M270 550 C255 590 248 645 265 700 C275 730 265 760 250 775"
+          stroke="url(#gRed)" stroke-width="1.1"/>
+    <!-- Spade curl foot left -->
+    <path d="M220 800 C205 820 185 815 190 795 C198 775 220 785 220 800 C220 785 242 775 250 795 C255 815 235 820 220 800Z"
+          stroke="url(#gRed)" stroke-width="1.2" fill="#a11f1f" fill-opacity="0.1"/>
+    <!-- Right leg scroll -->
+    <path d="M340 540 C360 580 370 640 350 700 C335 740 355 780 380 800 C400 818 415 805 405 785 C390 770 365 790 355 780"
+          stroke="url(#gGold)" stroke-width="1.4"/>
+    <path d="M330 550 C345 590 352 645 335 700 C325 730 335 760 350 775"
+          stroke="url(#gRed)" stroke-width="1.1"/>
+    <path d="M380 800 C395 820 415 815 410 795 C402 775 380 785 380 800 C380 790 358 775 350 795 C345 815 365 820 380 800Z"
+          stroke="url(#gRed)" stroke-width="1.2" fill="#a11f1f" fill-opacity="0.1"/>
+  </g>
+
+  <!-- Interlocking mid-body flourishes (filigree weave) -->
+  <g stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M205 400 C230 370 270 360 300 360 C330 360 370 370 395 400"
+          stroke="url(#gGold)" stroke-width="1.15"/>
+    <path d="M215 420 C245 395 275 388 300 388 C325 388 355 395 385 420"
+          stroke="url(#gRed)" stroke-width="1.0"/>
+    <!-- Mirrored baroque C-scrolls -->
+    <path d="M180 280 C150 260 145 230 170 215 C195 200 215 225 200 250 C185 275 155 270 160 245"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+    <path d="M420 280 C450 260 455 230 430 215 C405 200 385 225 400 250 C415 275 445 270 440 245"
+          stroke="url(#gGold)" stroke-width="1.2"/>
+    <!-- Small club ornaments mid-torso sides -->
+    <path d="M175 450 C160 465 145 458 152 442 C160 428 175 438 175 450 C175 438 190 428 198 442 C205 458 190 465 175 450Z"
+          stroke="url(#gRed)" stroke-width="1.05" fill="#d4af37" fill-opacity="0.08"/>
+    <path d="M425 450 C410 465 395 458 402 442 C410 428 425 438 425 450 C425 438 440 428 448 442 C455 458 440 465 425 450Z"
+          stroke="url(#gRed)" stroke-width="1.05" fill="#d4af37" fill-opacity="0.08"/>
+  </g>
+
+  <!-- Corner card-frame ornaments (top & bottom) -->
+  <g stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M120 80 C150 55 200 50 240 70 C210 90 160 95 130 110 C115 95 110 85 120 80Z"
+          stroke="url(#gGold)" stroke-width="1.2" fill="#c9a227" fill-opacity="0.08"/>
+    <path d="M480 80 C450 55 400 50 360 70 C390 90 440 95 470 110 C485 95 490 85 480 80Z"
+          stroke="url(#gGold)" stroke-width="1.2" fill="#c9a227" fill-opacity="0.08"/>
+    <path d="M130 820 C160 850 220 860 270 840 C240 815 180 810 145 790 C125 800 120 810 130 820Z"
+          stroke="url(#gRed)" stroke-width="1.15" fill="#8b1a1a" fill-opacity="0.08"/>
+    <path d="M470 820 C440 850 380 860 330 840 C360 815 420 810 455 790 C475 800 480 810 470 820Z"
+          stroke="url(#gRed)" stroke-width="1.15" fill="#8b1a1a" fill-opacity="0.08"/>
+  </g>
+
+  <!-- Fine inner hairline accents -->
+  <g stroke-linecap="round" opacity="0.75">
+    <path d="M300 270 C300 300 300 330 300 360" stroke="url(#gGold)" stroke-width="1.0"/>
+    <path d="M300 455 C300 475 300 490 300 505" stroke="url(#gGold)" stroke-width="1.0"/>
+    <path d="M285 155 C290 145 310 145 315 155" stroke="url(#gRed)" stroke-width="0.95"/>
+    <path d="M240 400 C260 385 280 380 300 380 C320 380 340 385 360 400"
+          stroke="url(#gGold)" stroke-width="1.05"/>
+  </g>
+</svg>

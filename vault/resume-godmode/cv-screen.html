@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Katlego Mokoto — Interactive CV screen · Mens Mercatus">
+<title>CV · Screen · Katlego Mokoto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#050505; --panel:#0e0e0e; --line:#1f1f1f; --white:#f5f5f5; --muted:#888;
+  --red:#c8102e; --font:"Inter",system-ui,sans-serif; --mono:"Space Mono",monospace;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:var(--font); background:var(--bg); color:var(--white); min-height:100vh; }
+a { color:var(--red); }
+.shell { display:grid; grid-template-columns: 260px 1fr; min-height:100vh; }
+@media (max-width:900px) { .shell { grid-template-columns:1fr; } .rail { border-right:0; border-bottom:1px solid var(--line); } }
+.rail {
+  border-right:1px solid var(--line); background:var(--panel); padding:1.5rem 1.1rem;
+  position:sticky; top:0; height:100vh; overflow:auto;
+}
+@media (max-width:900px) { .rail { position:relative; height:auto; } }
+.logo {
+  font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:1.25rem;
+}
+.rail h1 { font-size:1.35rem; letter-spacing:-.02em; margin-bottom:.35rem; }
+.rail .hl { font-size:.75rem; color:var(--muted); margin-bottom:1rem; line-height:1.4; }
+.nav-tabs { display:flex; flex-direction:column; gap:.35rem; margin:1.25rem 0; }
+.nav-tabs button {
+  text-align:left; background:transparent; border:1px solid transparent; color:var(--muted);
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  padding:.55rem .7rem; border-radius:8px; cursor:pointer;
+}
+.nav-tabs button.active, .nav-tabs button:hover {
+  color:var(--white); border-color:var(--line); background:rgba(200,16,46,.12);
+}
+.rail-contact { font-size:.8rem; color:var(--muted); line-height:1.7; overflow:visible; }
+.rail-contact a { color:var(--white); text-decoration:none; }
+.rail-contact a[data-bind-href="site"],
+.rail-contact .site-link {
+  white-space: nowrap; overflow: visible; text-overflow: clip;
+  max-width: none; display: inline-block; word-break: keep-all;
+}
+.status {
+  display:inline-flex; align-items:center; gap:.35rem; margin:1rem 0;
+  font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:#ff6b7a;
+}
+.status i { width:7px; height:7px; border-radius:50%; background:var(--red); display:inline-block; box-shadow:0 0 10px rgba(200,16,46,.6); }
+.stage { padding:1.5rem 1.75rem 3rem; }
+.toolbar { display:flex; gap:.6rem; justify-content:flex-end; margin-bottom:1rem; flex-wrap:wrap; }
+.btn-print, .btn-ghost {
+  font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  padding:.5rem .85rem; border-radius:999px; border:1px solid var(--line); cursor:pointer;
+  background:var(--red); color:#fff;
+}
+.btn-ghost { background:transparent; color:var(--white); text-decoration:none; display:inline-flex; align-items:center; }
+.panel {
+  display:none; border:1px solid var(--line); border-radius:16px; padding:1.35rem;
+  background:linear-gradient(160deg, rgba(200,16,46,.05), transparent 35%), var(--panel);
+  animation: fade .35s ease;
+}
+.panel.active { display:block; }
+@keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+.panel h2 {
+  font-size:1.1rem; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem;
+}
+.panel h2::before { content:""; width:8px; height:8px; background:var(--red); border-radius:2px; }
+.hud-label { font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:.3rem; }
+.chips { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.5rem; }
+.chip {
+  font-family:var(--mono); font-size:10px; padding:.2rem .45rem; border-radius:6px;
+  background:rgba(200,16,46,.14); color:#e8a0a8; border:1px solid rgba(200,16,46,.25);
+}
+.flag-card, .proj-card, .domain-card {
+  border:1px solid var(--line); border-radius:12px; padding:1rem; margin-bottom:.75rem;
+  background:rgba(0,0,0,.25);
+}
+.flag-top { display:flex; justify-content:space-between; gap:.5rem; }
+.status-pill {
+  font-family:var(--mono); font-size:9px; letter-spacing:.12em; padding:.25rem .5rem;
+  border-radius:999px; border:1px solid rgba(200,16,46,.5); color:#ff8a95; height:fit-content;
+}
+.flag-card h3, .proj-card h3, .domain-card h3 { font-size:1.05rem; margin:.2rem 0 .4rem; }
+.flag-summary, .domain-card p, .lead { color:var(--muted); font-size:.9rem; }
+ul { margin:.4rem 0 .5rem 1.1rem; color:var(--muted); font-size:.88rem; }
+.proj-head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
+.period { font-family:var(--mono); font-size:11px; color:var(--muted); }
+.stack-group { margin-bottom:.8rem; }
+.pills { display:flex; flex-wrap:wrap; gap:.35rem; margin:.75rem 0; }
+.pill { font-size:12px; padding:.25rem .6rem; border-radius:999px; border:1px solid var(--line); color:var(--muted); }
+.foot { margin-top:1.5rem; font-size:.8rem; color:var(--muted); }
+@media print {
+  .no-print, .rail .nav-tabs, .toolbar { display:none !important; }
+  .shell { display:block; }
+  .rail { position:static; height:auto; border:0; padding:0 0 1rem; }
+  .panel { display:block !important; break-inside:avoid; margin-bottom:1rem; background:#fff; color:#111; border-color:#ccc; }
+  body { background:#fff; color:#111; }
+  .chip, .pill { color:#333; background:#eee; }
+  @page { margin:12mm; size:A4; }
+}
+
+/* PRINT_CONTACT_FIX */
+@media print {
+  .rail, .rail-contact { overflow: visible !important; }
+  .rail-contact a[data-bind-href="site"],
+  .rail-contact .site-link {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-width: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="logo">Mens Mercatus · Screen CV</div>
+    <h1 data-bind="name">Katlego Mokoto</h1>
+    <p class="hl" data-bind="headline"></p>
+    <div class="status"><i></i><span data-bind="status">AVAILABLE</span></div>
+    <div class="pills" data-roles></div>
+    <nav class="nav-tabs no-print" aria-label="Sections">
+      <button type="button" class="active" data-tab="overview">Overview</button>
+      <button type="button" data-tab="flagships">Flagships</button>
+      <button type="button" data-tab="stack">Stack</button>
+      <button type="button" data-tab="work">Work</button>
+      <button type="button" data-tab="narrative">Narrative</button>
+    </nav>
+    <div class="rail-contact">
+      <div><a data-bind-href="email" href="mailto:katlego.mokoto.km@gmail.com">katlego.mokoto.km@gmail.com</a></div>
+      <div><a data-bind-href="phone" href="tel:+27658424274">065 842 4274</a></div>
+      <div><a class="site-link" data-bind-href="site" href="https://mensmercatus.online">mensmercatus.online</a></div>
+      <div data-bind="location"></div>
+    </div>
+    <p class="foot no-print"><a href="cv-ats.html">ATS twin →</a> · <a href="cv-ats.pdf">PDF</a></p>
+  </aside>
+  <div class="stage">
+    <div class="toolbar no-print">
+      <button type="button" class="btn-print" onclick="printResume()">Print / Save PDF</button>
+      <a class="btn-ghost" href="index.html">All variants</a>
+    </div>
+    <section class="panel active" id="tab-overview">
+      <h2>Overview</h2>
+      <p class="lead" data-bind="tagline"></p>
+      <p class="lead" style="margin-top:.75rem" data-bind="targeting"></p>
+      <p class="lead" style="margin-top:.75rem" data-bind="portfolioProof"></p>
+      <div style="margin-top:1.25rem" data-domains></div>
+    </section>
+    <section class="panel" id="tab-flagships">
+      <h2>Flagship systems</h2>
+      <div data-flagships></div>
+    </section>
+    <section class="panel" id="tab-stack">
+      <h2>Technical stack</h2>
+      <div data-stack></div>
+    </section>
+    <section class="panel" id="tab-work">
+      <h2>Selected portfolio</h2>
+      <div data-projects></div>
+    </section>
+    <section class="panel" id="tab-narrative">
+      <h2>Experience narrative</h2>
+      <ul data-narrative></ul>
+      <p class="foot" style="margin-top:1.5rem" data-bind="footer"></p>
+    </section>
+  </div>
+</div>
+
+<script>
+/* Mens Mercatus · Katlego Mokoto — single source of truth for CV variants.
+   Grounded in Katlego_Mokoto_Resume_AI_Engineering.pdf + mensmercatus.online (contact + index).
+   Do not invent employers, degrees, or dates beyond these sources. */
+window.RESUME_DATA = {
+  meta: {
+    name: "Katlego Mokoto",
+    brand: "Mens Mercatus",
+    status: "AVAILABLE",
+    headline: "AI Engineer · AI Systems Architect · Agentic / LLM Developer",
+    tagline: "AI engineer and developer — products, platforms, and agentic systems.",
+    location: "Johannesburg · Homelake / Randfontein · South Africa",
+    remote: "Global — Remote",
+    site: "https://mensmercatus.online",
+    siteLabel: "mensmercatus.online",
+    email: "katlego.mokoto.km@gmail.com",
+    emailAlt: "katlego.mokoto@icloud.com",
+    phone: "065 842 4274",
+    phoneIntl: "+27658424274",
+    roles: ["Systems architect", "Full-stack engineer", ".NET developer", "AI architect"],
+    targeting:
+      "Targeting AI engineering / AI developer roles at OpenAI, Anthropic, Google DeepMind, Meta AI, Microsoft AI, NVIDIA, and applied-AI startups (xAI, Waymo, ElevenLabs, Scale AI, Sierra, Cursor, Perplexity, Cognition, Replit, Mercor).",
+    portfolioProof:
+      "Portfolio proof: Mens Mercatus Sound Deck, Forex Mercatus Codex, JobNet, Flutter overlay, Antigravity / local LLM stack."
+  },
+  stack: {
+    languages: ["Python", "TypeScript", "JavaScript", "SQL", "Bash", "Solidity"],
+    frontend: ["React", "Next.js", "Flutter", "Tailwind", "Web Audio / DAW UIs"],
+    ai: ["LLM orchestration", "RAG", "LangChain", "Ollama", "Agent Zero", "prompt/tool agents", "ChromaDB", "local inferencing (Apple Silicon M4)"],
+    backend: ["FastAPI", "Node.js", "Express", "Django", "WebSockets", "Redis"],
+    data: ["PostgreSQL", "Pandas", "NumPy", "yfinance", "OR-Tools"],
+    cloud: ["Nebius", "Docker", "Linux", "CI/CD", "AWS", "edge / local-first AI"],
+    audio: ["Web Audio API", "mic capture", "stem DSP", "generative synthesis"],
+    systems: ["P2P/BLE mesh", "agentic workflows", "Cursor IDE automation"]
+  },
+  domains: [
+    {
+      title: "Agentic AI & Local Compute",
+      tags: ["OLLAMA", "AGENT ZERO", "CURSOR", "RAG", "CHROMADB", "APPLE SILICON M4"],
+      body: "Design and ship sovereign agent stacks: tool-using agents, RAG over live data, local LLM orchestration to cut API dependency, and high-throughput inferencing on Apple Silicon."
+    },
+    {
+      title: "Applied AI Product Engineering",
+      tags: ["FULL-STACK", "WEB AUDIO", "AUTOMATION", "USER-FACING AI TOOLS"],
+      body: "Build end-to-end AI products (generation UIs, copilots, job-automation meshes) with production-minded UX, offline-capable clients, and clear human-in-the-loop controls."
+    },
+    {
+      title: "Quantitative & Realtime Systems",
+      tags: ["LANGCHAIN", "YFINANCE", "HIGHCHARTS", "PYTHON DESKS"],
+      body: "Fuse market data pipelines with LLMs and interactive desks for analysis, alerting, and decision support under latency and reliability constraints."
+    }
+  ],
+  flagships: [
+    {
+      id: "soundx",
+      name: "SoundX / Sound Deck",
+      period: "2026",
+      kind: "Browser DAW / AI music",
+      status: "DEMO",
+      statusNote: "Honest demo — sound stays in the browser, not a hosted session.",
+      summary: "Original browser DAW with AI Producer (order-taking studio assistant), demo stem split, 16-step beats, mic/vocal pipelines, VST slot framework, and in-house text-to-music / stem / continuation generation.",
+      bullets: [
+        "Generate, demo play, mic, and AI Producer on mensmercatus.online apps hub.",
+        "Gold/black/white Mens Mercatus product UI; no third-party music-site dependency."
+      ],
+      chips: ["Web Audio", "Agents", "DSP", "TypeScript/JS"]
+    },
+    {
+      id: "jobnet",
+      name: "JobNet",
+      period: "2026",
+      kind: "Career automation",
+      status: "DEMO",
+      statusNote: "Draft-only — live read-only shortlist demo; never applies or sends mail.",
+      summary: "Weekday pipeline: noon multi-board scrape; CV tailor + AI Hawk draft fills with human confirm before submit; Gmail reply watch + SMS/email notify.",
+      bullets: [
+        "Noon scrape across top AI employers + early-stage trackers.",
+        "3 AM CV tailor + draft fills; human-in-the-loop gates before any submit."
+      ],
+      chips: ["Automation", "Agents", "Gmail", "macOS shell"]
+    },
+    {
+      id: "cartel",
+      name: "Mercatus Blueprint",
+      period: "2026",
+      kind: "Event-mode pack",
+      status: "DEMO",
+      statusNote: "Static event-mode pack; Assist LIVE path with DEMO fallback if VPS down.",
+      summary: "Screens, schematics, and compliance gates on the site. Assist LIVE: same-origin /api/cartel/ → VPS robot.",
+      bullets: [
+        "Event-mode product pack with architecture diagrams and compliance gates.",
+        "Human-in-the-loop assist path with honest DEMO labels."
+      ],
+      chips: ["Event systems", "Compliance", "Assist", "UI systems"]
+    },
+    {
+      id: "forex",
+      name: "Forex Mercatus Codex",
+      period: "2026",
+      kind: "Python desk :8790",
+      status: "DEMO",
+      statusNote: "Simulated paper research only — not a brokerage.",
+      summary: "~87MB Python + Highcharts desk for FX workflows; Chart, Multi, Whales, Flow, Bot. Hosted on VPS as live paper research.",
+      bullets: [
+        "Inventory and load-path optimization for faster cold start and clearer static serving.",
+        "Market data fused with interactive analysis desks."
+      ],
+      chips: ["Python", "Highcharts", "yfinance", "Paper only"]
+    }
+  ],
+  projects: [
+    {
+      name: "Project Antigravity",
+      period: "Mar 2026 – Present",
+      role: "AI Systems Architect & Founder",
+      bullets: [
+        "Sovereign, decentralized AI OS for autonomous task execution and specialized agentic workflows.",
+        "Terminal-first AI tooling on M4 with Ollama; Nebius for scalable training/deploy of custom models; Agent Zero + Cursor orchestration."
+      ],
+      chips: ["Ollama", "Agent Zero", "Nebius", "LLM Ops"]
+    },
+    {
+      name: "Mens Mercatus Ecosystem",
+      period: "Ongoing · mensmercatus.online",
+      role: "Full-stack & AI trading systems",
+      bullets: [
+        "Telegram AI trading assistant: RAG + live financial feeds for XAUUSD / cyclical models (SMT, Gann frameworks) with institutional-order context.",
+        "Brand, UI/UX, and static portfolio architecture for the Mens Mercatus digital ecosystem."
+      ],
+      chips: ["Python", "LangChain", "ChromaDB", "Next.js"]
+    },
+    {
+      name: "Messmakers / Flutter Overlay",
+      period: "2026",
+      role: "Mobile UI systems",
+      bullets: [
+        "Flutter package fixing z-order: gray AI sound/volume bar above white social band; theme extension, haptics, demo app — drop-in for Messmakers / ThinkPulse clients."
+      ],
+      chips: ["Flutter", "Dart", "UI systems"]
+    },
+    {
+      name: "ProxNet · Infrastructure.log",
+      period: "Parallel systems work",
+      role: "Edge & mesh",
+      bullets: [
+        "BLE/WebRTC mesh social (offline-first) and M4 SSD arrays for model weights / vector DBs — edge-ready AI compute hygiene."
+      ],
+      chips: ["React Native", "P2P", "Edge"]
+    }
+  ],
+  narrative: [
+    "Hands-on builder of agentic products: copilots that execute studio/job/market actions with explicit user confirmation gates.",
+    "Comfortable in Python and TypeScript full-stack; fast iteration with Cursor, local models, and cloud GPUs when needed.",
+    "Background in fleet/logistics optimization (OR-Tools) and diesel/mechanical operations — strong systems thinking under real constraints."
+  ],
+  footer:
+    "Portfolio: mensmercatus.online · Extended careers pack available on request · Homelake / Randfontein · Open to remote / global AI eng roles."
+};
+
+</script>
+<script>
+(function () {
+  const D = window.RESUME_DATA;
+  if (!D) return;
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+  function fillText(attr, val) {
+    $$(`[data-bind="${attr}"]`).forEach(el => { el.textContent = val; });
+  }
+  function fillHref(attr, href, label) {
+    $$(`[data-bind-href="${attr}"]`).forEach(el => {
+      el.setAttribute("href", href);
+      if (label != null && !el.dataset.keepLabel) el.textContent = label;
+    });
+  }
+
+  fillText("name", D.meta.name);
+  fillText("headline", D.meta.headline);
+  fillText("tagline", D.meta.tagline);
+  fillText("location", D.meta.location);
+  fillText("remote", D.meta.remote);
+  fillText("status", D.meta.status);
+  fillText("brand", D.meta.brand);
+  fillText("email", D.meta.email);
+  fillText("emailAlt", D.meta.emailAlt);
+  fillText("phone", D.meta.phone);
+  fillText("siteLabel", D.meta.siteLabel);
+  fillText("targeting", D.meta.targeting);
+  fillText("portfolioProof", D.meta.portfolioProof);
+  fillText("footer", D.meta.footer || D.footer);
+  fillHref("email", "mailto:" + D.meta.email, D.meta.email);
+  fillHref("emailAlt", "mailto:" + D.meta.emailAlt, D.meta.emailAlt);
+  fillHref("phone", "tel:" + D.meta.phoneIntl, D.meta.phone);
+  fillHref("site", D.meta.site, D.meta.siteLabel);
+
+  const roles = $("[data-roles]");
+  if (roles) {
+    roles.innerHTML = D.meta.roles.map(r => `<span class="pill">${r}</span>`).join("");
+  }
+
+  const stack = $("[data-stack]");
+  if (stack) {
+    const labels = {
+      languages: "Languages", frontend: "Frontend", ai: "AI / ML",
+      backend: "Backend", data: "Data", cloud: "Cloud & Infra",
+      audio: "Audio / Realtime", systems: "Systems"
+    };
+    stack.innerHTML = Object.keys(labels).map(k => {
+      if (!D.stack[k]) return "";
+      return `<div class="stack-group"><div class="hud-label">${labels[k]}</div>
+        <div class="chips">${D.stack[k].map(s => `<span class="chip">${s}</span>`).join("")}</div></div>`;
+    }).join("");
+  }
+
+  const domains = $("[data-domains]");
+  if (domains) {
+    domains.innerHTML = D.domains.map(d => `
+      <article class="domain-card">
+        <div class="hud-label">${d.tags.join(" · ")}</div>
+        <h3>${d.title}</h3>
+        <p>${d.body}</p>
+      </article>`).join("");
+  }
+
+  const flagships = $("[data-flagships]");
+  if (flagships) {
+    flagships.innerHTML = D.flagships.map(f => `
+      <article class="flag-card" data-id="${f.id}">
+        <div class="flag-top">
+          <div>
+            <div class="hud-label">${f.period} · ${f.kind}</div>
+            <h3>${f.name}</h3>
+          </div>
+          <span class="status-pill" title="${f.statusNote}">${f.status}</span>
+        </div>
+        <p class="flag-summary">${f.summary}</p>
+        <ul>${f.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="chips">${f.chips.map(c => `<span class="chip">${c}</span>`).join("")}</div>
+      </article>`).join("");
+  }
+
+  const projects = $("[data-projects]");
+  if (projects) {
+    projects.innerHTML = D.projects.map(p => `
+      <article class="proj-card">
+        <div class="proj-head">
+          <div>
+            <h3>${p.name}</h3>
+            <div class="role">${p.role}</div>
+          </div>
+          <div class="period">${p.period}</div>
+        </div>
+        <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="chips">${p.chips.map(c => `<span class="chip">${c}</span>`).join("")}</div>
+      </article>`).join("");
+  }
+
+  const narrative = $("[data-narrative]");
+  if (narrative) {
+    narrative.innerHTML = D.narrative.map(n => `<li>${n}</li>`).join("");
+  }
+
+  // ATS plain render
+  const ats = $("[data-ats]");
+  if (ats) {
+    const stackLines = Object.entries({
+      "Languages": D.stack.languages,
+      "Frontend": D.stack.frontend,
+      "AI / ML": D.stack.ai,
+      "Backend": D.stack.backend,
+      "Data": D.stack.data,
+      "Cloud & Infra": D.stack.cloud,
+      "Audio / Realtime": D.stack.audio,
+      "Systems": D.stack.systems
+    }).map(([k,v]) => `<p><strong>${k}:</strong> ${v.join(", ")}</p>`).join("");
+
+    ats.innerHTML = `
+      <header class="ats-header">
+        <h1>${D.meta.name}</h1>
+        <p class="ats-headline">${D.meta.headline}</p>
+        <p class="ats-contact">
+          ${D.meta.email} · ${D.meta.phone} · ${D.meta.siteLabel} · ${D.meta.location} · ${D.meta.remote}
+        </p>
+        <p class="ats-status">Status: ${D.meta.status}</p>
+      </header>
+      <section>
+        <h2>Summary</h2>
+        <p>${D.meta.tagline}</p>
+        <p>${D.meta.targeting}</p>
+        <p>${D.meta.portfolioProof}</p>
+      </section>
+      <section>
+        <h2>Technical Stack</h2>
+        ${stackLines}
+      </section>
+      <section>
+        <h2>Core Domains</h2>
+        ${D.domains.map(d => `<h3>${d.title}</h3><p>${d.body}</p><p><em>${d.tags.join(" · ")}</em></p>`).join("")}
+      </section>
+      <section>
+        <h2>Selected AI Portfolio</h2>
+        ${D.flagships.map(f => `
+          <h3>${f.name} — ${f.period} · ${f.kind} [${f.status}]</h3>
+          <p>${f.summary}</p>
+          <ul>${f.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+          <p><em>${f.chips.join(", ")}</em></p>
+        `).join("")}
+        ${D.projects.map(p => `
+          <h3>${p.name} — ${p.period}</h3>
+          <p><strong>${p.role}</strong></p>
+          <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+          <p><em>${p.chips.join(", ")}</em></p>
+        `).join("")}
+      </section>
+      <section>
+        <h2>Selected Experience Narrative</h2>
+        <ul>${D.narrative.map(n => `<li>${n}</li>`).join("")}</ul>
+      </section>
+      <footer class="ats-footer"><p>${D.footer}</p></footer>
+    `;
+  }
+
+  window.printResume = () => window.print();
+})();
+</script>
+
+<script>
+document.querySelectorAll("[data-tab]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("[data-tab]").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+  });
+});
+</script>
+</body>
+</html>

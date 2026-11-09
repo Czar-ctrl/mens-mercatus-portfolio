@@ -1,0 +1,10 @@
+{
+  "name": "FX Mercatus Codex",
+  "short_name": "FMC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6fb",
+  "theme_color": "#f5f6fb",
+  "orientation": "any",
+  "icons": []
+}

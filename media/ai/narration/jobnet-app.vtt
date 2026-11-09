@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:04.257
+JobNet Application is one app for the whole job-search loop.
+
+2
+00:00:04.207 --> 00:00:11.887
+JobNet scrapes public LinkedIn and Glassdoor listings off this site, and the shortlist comes from its read-only public API.
+
+3
+00:00:11.887 --> 00:00:23.558
+Sentence embeddings, running in a background worker on your device, compare each requirement with real CV evidence, and BM25 takes over instantly when the model isn't loaded.
+
+4
+00:00:23.558 --> 00:00:30.469
+AI Hawk, formerly Drop Net, then drafts a tailored cover note and CV synopsis for the role you pick.
+
+5
+00:00:30.469 --> 00:00:36.755
+It runs from templates on this device, with no model call, and nothing is stored or sent.
+
+6
+00:00:36.755 --> 00:00:41.635
+You review the draft, then copy it or forward it by email yourself.
+
+7
+00:00:41.635 --> 00:00:45.216
+Nothing is ever sent or applied for automatically.

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Katlego Mokoto — Editorial CV · Mens Mercatus">
+<title>CV · Editorial · Katlego Mokoto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a0a0a;
+  --paper: #fafafa;
+  --red: #c8102e;
+  --muted: #555;
+  --line: #e2e2e2;
+  --soft: #f3f3f3;
+  --font: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--red); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.toolbar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; gap: .75rem; justify-content: flex-end;
+  padding: .65rem 1.5rem;
+  background: rgba(250,250,250,.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.btn-print, .btn-ghost {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  padding: .5rem .9rem; border: 1px solid var(--ink); background: var(--ink); color: #fff;
+  cursor: pointer; border-radius: 2px;
+}
+.btn-ghost {
+  background: transparent; color: var(--ink);
+  text-decoration: none; display: inline-flex; align-items: center;
+}
+
+/* —— Hero —— */
+.hero {
+  position: relative;
+  min-height: 38vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 3.5rem 8vw 2.5rem;
+  background: var(--ink); color: #fff; overflow: hidden;
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(105deg, transparent 42%, rgba(200,16,46,.52) 100%),
+    radial-gradient(circle at 12% 85%, rgba(200,16,46,.32), transparent 48%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 920px; }
+.kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.55); margin-bottom: .85rem;
+}
+.hero h1 {
+  font-size: clamp(2.75rem, 8.5vw, 5rem);
+  font-weight: 800; letter-spacing: -.045em; line-height: .94;
+  margin-bottom: .85rem;
+}
+.hero .sub {
+  font-size: clamp(.95rem, 2vw, 1.15rem);
+  font-weight: 300; max-width: 34rem;
+  color: rgba(255,255,255,.78); margin-bottom: 1.35rem;
+  letter-spacing: -.01em;
+}
+
+/* Contact: gmail + phone only; location subtle */
+.meta-bar {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: .55rem 1.35rem;
+  font-size: .88rem;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 1.1rem;
+}
+.meta-bar a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.32);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.meta-bar .loc {
+  color: rgba(255,255,255,.48);
+  font-size: .8rem;
+  letter-spacing: .01em;
+}
+.meta-bar .live {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .14em;
+  color: #ff6b7a; display: inline-flex; align-items: center; gap: .4rem;
+  margin-left: auto;
+}
+.meta-bar .live::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red);
+}
+
+/* —— Sheet —— */
+.sheet { max-width: 920px; margin: 0 auto; padding: 2.75rem 8vw 4.5rem; }
+.intro {
+  font-size: 1.08rem; font-weight: 400; color: var(--muted);
+  max-width: 40rem; margin-bottom: 2.25rem; padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--line); letter-spacing: -.01em;
+}
+.intro .proof { display: block; margin-top: .55rem; font-size: .92rem; color: #666; }
+.intro .proof a {
+  color: var(--ink); border-bottom: 1px solid var(--line);
+  font-weight: 500; white-space: nowrap;
+}
+
+.col-grid {
+  display: grid; grid-template-columns: 1fr 1.45fr;
+  gap: 2.75rem; margin-bottom: 2.5rem;
+}
+@media (max-width: 800px) {
+  .col-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .meta-bar .live { margin-left: 0; }
+}
+
+.side-block { margin-bottom: 1.75rem; }
+.side-block:last-child { margin-bottom: 0; }
+.side-block h2, .main-block > h2 {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--red); margin-bottom: .85rem; font-weight: 700;
+}
+.main-block > h2 + h2,
+.main-block > h2.spaced { margin-top: 2.25rem; }
+
+.chip-line {
+  font-size: .84rem; color: var(--muted); margin-bottom: .3rem; line-height: 1.45;
+}
+.chip-line strong { color: var(--ink); font-weight: 600; }
+
+.role-list { list-style: none; }
+.role-list li {
+  font-size: .92rem; padding: .4rem 0;
+  border-bottom: 1px solid var(--line); color: #333;
+}
+.role-list li:last-child { border-bottom: 0; }
+
+/* Flagships / projects */
+.feature {
+  margin-bottom: 1.85rem; padding-bottom: 1.65rem;
+  border-bottom: 1px solid var(--line);
+}
+.feature:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.feature-top {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem; flex-wrap: wrap;
+}
+.feature h3 {
+  font-size: 1.28rem; font-weight: 700; letter-spacing: -.025em;
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: .35rem;
+}
+.feature .when {
+  font-family: var(--mono); font-size: 10.5px; color: var(--muted); letter-spacing: .04em;
+}
+.feature .kind {
+  font-size: .82rem; color: var(--muted); margin: .2rem 0 .65rem; line-height: 1.4;
+}
+.demo {
+  display: inline-block; font-family: var(--mono); font-size: 8.5px; letter-spacing: .12em;
+  padding: .18rem .4rem; border: 1px solid var(--red); color: var(--red);
+  vertical-align: middle; font-weight: 700; line-height: 1;
+}
+.feature p { color: var(--muted); margin-bottom: .45rem; font-size: .93rem; }
+.feature ul {
+  margin: .35rem 0 .55rem 1.1rem; color: #333; font-size: .9rem;
+}
+.feature li { margin-bottom: .2rem; }
+.tags {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em; color: var(--muted);
+}
+
+/* Narrative band */
+.narrative-block {
+  background: var(--ink); color: #fff;
+  padding: 2.15rem 8vw; margin: 0 -8vw 2.5rem;
+}
+.narrative-block h2 {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+  color: #ff6b7a; margin-bottom: 1.1rem; font-weight: 700;
+}
+.narrative-block ul { margin-left: 1.15rem; max-width: 40rem; }
+.narrative-block li {
+  margin-bottom: .55rem; color: rgba(255,255,255,.82); font-size: .95rem;
+}
+.narrative-block li:last-child { margin-bottom: 0; }
+
+/* Footer — portfolio link fully visible */
+.foot {
+  font-size: .84rem; color: var(--muted);
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: .65rem 1.25rem;
+  padding-top: 1.35rem; border-top: 1px solid var(--line);
+}
+.foot .portfolio {
+  color: var(--ink); font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap; overflow: visible;
+}
+.foot .meta-note { color: #777; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { font-size: 8.6pt !important; }
+  .hero {
+    min-height: auto !important; padding: 0.75rem 0 0.55rem !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .hero-inner { max-width: none !important; overflow: visible !important; }
+  .hero h1 { font-size: 20pt !important; margin-bottom: 0.4rem !important; }
+  .hero .sub { font-size: 9pt !important; margin-bottom: 0.45rem !important; }
+  .kicker { margin-bottom: 0.4rem !important; font-size: 8pt !important; }
+  .meta-bar {
+    gap: 0.35rem 1rem !important; font-size: 8pt !important;
+    padding-top: 0.4rem !important; overflow: visible !important;
+  }
+  .meta-bar a, .meta-bar .loc, .meta-bar .live {
+    white-space: nowrap !important; overflow: visible !important;
+  }
+  .sheet { padding: 0.55rem 0 0 !important; }
+  .intro {
+    font-size: 8.5pt !important; margin-bottom: 0.55rem !important;
+    padding-bottom: 0.45rem !important;
+  }
+  .intro .proof { font-size: 8pt !important; margin-top: 0.25rem !important; }
+  .col-grid { gap: 0.75rem !important; margin-bottom: 0.55rem !important; }
+  .side-block { margin-bottom: 0.45rem !important; }
+  .side-block h2, .main-block > h2 { margin-bottom: 0.4rem !important; font-size: 8pt !important; }
+  .main-block > h2.spaced { margin-top: 0.85rem !important; }
+  .chip-line { font-size: 7.2pt !important; margin-bottom: 0.15rem !important; }
+  .role-list li { font-size: 8pt !important; padding: 0.15rem 0 !important; }
+  .feature {
+    margin-bottom: 0.4rem !important; padding-bottom: 0.35rem !important;
+    break-inside: avoid;
+  }
+  .feature h3 { font-size: 10.5pt !important; }
+  .feature p, .feature ul, .kind { font-size: 7.8pt !important; }
+  .feature .when, .tags { font-size: 7pt !important; }
+  .demo { font-size: 6.5pt !important; padding: 0.1rem 0.28rem !important; }
+  .narrative-block {
+    margin: 0.4rem 0 !important; padding: 0.55rem 0.65rem !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .narrative-block li { font-size: 7.8pt !important; margin-bottom: 0.18rem !important; }
+  .foot { font-size: 7.5pt !important; padding-top: 0.4rem !important; }
+  .foot .portfolio { white-space: nowrap !important; overflow: visible !important; }
+  /* Keep page count tight: hide 3rd+ selected projects in print */
+  [data-projects-ed] .feature:nth-child(n+3) { display: none !important; }
+  @page { margin: 8mm; size: A4; }
+}
+</style>
+<!-- mm-seo --><link rel="canonical" href="https://mensmercatus.online/vault/cv-editorial.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="CV · Editorial · Katlego Mokoto"><meta property="og:description" content="Katlego Mokoto — Editorial CV · Mens Mercatus"><meta property="og:url" content="https://mensmercatus.online/vault/cv-editorial.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CV · Editorial · Katlego Mokoto"><meta name="twitter:description" content="Katlego Mokoto — Editorial CV · Mens Mercatus"><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "CV · Editorial · Katlego Mokoto", "url": "https://mensmercatus.online/vault/cv-editorial.html", "description": "Katlego Mokoto — Editorial CV · Mens Mercatus", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+
+<div class="toolbar no-print">
+  <button type="button" class="btn-print" onclick="printResume()">Print / Save PDF</button>
+  <a class="btn-ghost" href="index.html">All variants</a>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker" data-bind="brand">Mens Mercatus</p>
+    <h1 data-bind="name">Katlego Mokoto</h1>
+    <p class="sub" data-bind="headline"></p>
+    <div class="meta-bar">
+      <a data-bind-href="email" href="mailto:katlego.mokoto.km@gmail.com">katlego.mokoto.km@gmail.com</a>
+      <a data-bind-href="phone" href="tel:+27658424274">065 842 4274</a>
+      <span class="loc" data-bind="locationShort"></span>
+      <span class="live" data-bind="status">AVAILABLE</span>
+    </div>
+  </div>
+</header>
+
+<main class="sheet">
+  <p class="intro">
+    <span data-bind="tagline"></span>
+    <span class="proof">
+      Portfolio · <a class="site-link" data-bind-href="site" href="https://mensmercatus.online">mensmercatus.online</a>
+      — <span data-bind="portfolioProof"></span>
+    </span>
+  </p>
+
+  <div class="col-grid">
+    <aside>
+      <div class="side-block">
+        <h2>Roles</h2>
+        <ul class="role-list" data-roles-plain></ul>
+      </div>
+      <div class="side-block">
+        <h2>Stack</h2>
+        <div data-stack-plain></div>
+      </div>
+      <div class="side-block">
+        <h2>Availability</h2>
+        <p class="chip-line"><strong>Status</strong> — <span data-bind="status">AVAILABLE</span></p>
+        <p class="chip-line" data-bind="remote"></p>
+      </div>
+    </aside>
+
+    <div class="main-block">
+      <h2>Flagships</h2>
+      <div data-flagships-ed></div>
+      <h2 class="spaced">Selected work</h2>
+      <div data-projects-ed></div>
+    </div>
+  </div>
+
+  <div class="narrative-block">
+    <h2>Narrative</h2>
+    <ul data-narrative></ul>
+  </div>
+
+  <footer class="foot">
+    <span>
+      Portfolio:
+      <a class="portfolio" data-bind-href="site" href="https://mensmercatus.online">mensmercatus.online</a>
+      <span class="meta-note"> · Homelake / Randfontein · Open to remote AI eng roles</span>
+    </span>
+    <a class="no-print" href="cv-editorial.pdf">PDF twin →</a>
+  </footer>
+</main>
+
+<script>
+/* Mens Mercatus · Katlego Mokoto — editorial CV (variant B).
+   Grounded in portfolio + Blueprint ASP.NET robot + THINK (React 19/Vite/TS). Updated 2026-10-06.
+   Do not invent employers, degrees, or dates beyond these sources. */
+window.RESUME_DATA = {
+  meta: {
+    name: "Katlego Mokoto",
+    brand: "Mens Mercatus",
+    status: "AVAILABLE",
+    headline: "AI Engineer · AI Systems Architect · Full-Stack + .NET / C#",
+    tagline: "AI engineer and developer — products, platforms, agentic systems, and ASP.NET backends.",
+    location: "Johannesburg, South Africa · Open to Johannesburg, Pretoria, Cape Town & Durban (on-site, hybrid or remote)",
+    remote: "On-site, hybrid or remote · SA metros + global",
+    site: "https://mensmercatus.online",
+    siteLabel: "mensmercatus.online",
+    email: "katlego.mokoto.km@gmail.com",
+    emailAlt: "katlego.mokoto@icloud.com",
+    phone: "065 842 4274",
+    phoneIntl: "+27658424274",
+    roles: ["Systems architect", "Full-stack engineer", ".NET / C# developer", "AI architect"],
+    targeting:
+      "Targeting AI engineering / AI developer / full-stack .NET roles at OpenAI, Anthropic, Google DeepMind, Meta AI, Microsoft AI, NVIDIA, and applied-AI startups (xAI, Waymo, ElevenLabs, Scale AI, Sierra, Cursor, Perplexity, Cognition, Replit, Mercor).",
+    portfolioProof:
+      "Portfolio proof: Blueprint .NET robot (ASP.NET Core + Gemini), THINK (React 19 + Vite + TypeScript), Mens Mercatus Sound Dex, Forex Mercatus Codex, JobNet, Antigravity / local LLM stack. Walkthrough: mensmercatus.online/assets/video/walkthrough.mp4"
+  },
+  stack: {
+    languages: ["Python", "TypeScript", "C#", "JavaScript", "SQL", "Bash", "Solidity"],
+    frontend: ["React", "React 19", "Next.js", "Vite", "Flutter", "Tailwind", "Web Audio / DAW UIs"],
+    ai: ["LLM orchestration", "RAG", "LangChain", "Ollama", "Agent Zero", "Gemini (OpenAI-compatible API)", "prompt/tool agents", "ChromaDB", "local inferencing (Apple Silicon M4)"],
+    backend: ["ASP.NET Core 8", ".NET / C#", "FastAPI", "Node.js", "Express", "Django", "WebSockets", "Redis"],
+    data: ["PostgreSQL", "Pandas", "NumPy", "yfinance", "OR-Tools"],
+    cloud: ["Nebius", "Docker", "Linux", "systemd", "nginx", "Cloudflare", "CI/CD", "AWS", "Ubuntu VPS", "edge / local-first AI"],
+    audio: ["Web Audio API", "mic capture", "stem DSP", "generative synthesis", "live-voice WebSocket relay"],
+    systems: ["P2P/BLE mesh", "agentic workflows", "Cursor IDE automation", "per-IP rate limits"]
+  },
+  domains: [
+    {
+      title: "Agentic AI & Local Compute",
+      tags: ["OLLAMA", "AGENT ZERO", "CURSOR", "RAG", "CHROMADB", "APPLE SILICON M4", "GEMINI"],
+      body: "Design and ship sovereign agent stacks: tool-using agents, RAG over live data, local LLM orchestration to cut API dependency, and high-throughput inferencing on Apple Silicon. Cloud path uses Gemini via an OpenAI-compatible chat/completions client."
+    },
+    {
+      title: "Applied AI Product Engineering",
+      tags: ["FULL-STACK", "ASP.NET", "REACT 19", "WEB AUDIO", "AUTOMATION", "USER-FACING AI TOOLS"],
+      body: "Build end-to-end AI products (generation UIs, copilots, job-automation meshes, multimodal workspaces) with production-minded UX, offline-capable clients, and clear human-in-the-loop controls."
+    },
+    {
+      title: ".NET / C# backends & VPS ops",
+      tags: ["ASP.NET CORE 8", "SYSTEMD", "NGINX", "CLOUDFLARE", "UBUNTU VPS"],
+      body: "Ship ASP.NET Core 8 minimal APIs that call Gemini through an OpenAI-compatible interface, with retries on 429/5xx, running as systemd services behind nginx on an Ubuntu VPS with Cloudflare in front of the static site."
+    }
+  ],
+  flagships: [
+    {
+      id: "cartel-dotnet",
+      name: "Mercatus Assist / Blueprint Robot",
+      period: "2026",
+      kind: "ASP.NET Core 8 · Gemini",
+      status: "LIVE",
+      statusNote: "LIVE path via /api/cartel/ → VPS robot; DEMO fallback if backend unhealthy.",
+      summary: "ASP.NET Core 8 minimal API (C#) that calls Gemini through an OpenAI-compatible chat/completions client so the provider can be swapped in config. Exponential backoff retries on 429/5xx. Runs as a systemd service on an Ubuntu VPS behind nginx; static site on DreamHost sits behind Cloudflare.",
+      bullets: [
+        "Live Assist chat at mensmercatus.online/apps/mercatus-assist/ with labelled DEMO fallback when the robot is down.",
+        "Same-origin PHP proxy → VPS; architecture notes at mensmercatus.online/apps/net-workspace/."
+      ],
+      chips: ["C#", "ASP.NET Core 8", "Gemini", "systemd", "nginx", "Cloudflare"]
+    },
+    {
+      id: "think",
+      name: "THINK — Hybrid Social & AI",
+      period: "2026",
+      kind: "React 19 + Vite + TypeScript",
+      status: "LIVE",
+      statusNote: "Public demo with per-IP daily caps on chat, image, video, and live-voice.",
+      summary: "Multimodal Gemini workspace (chat, live voice, Net Sites, Net Code, Netzar Protocol, Net Learn). Front end is React 19 + Vite + TypeScript; server-side Node proxy calls Gemini and relays live-voice over WebSocket, with per-IP rate limits.",
+      bullets: [
+        "Live at mensmercatus.online/think/.",
+        "60s portfolio walkthrough: mensmercatus.online/assets/video/walkthrough.mp4."
+      ],
+      chips: ["React 19", "Vite", "TypeScript", "Gemini proxy", "WebSocket live-voice"]
+    },
+    {
+      id: "soundx",
+      name: "SoundX / Sound Dex",
+      period: "2026",
+      kind: "Browser DAW / AI music",
+      status: "DEMO",
+      statusNote: "Honest demo — sound stays in the browser, not a hosted session.",
+      summary: "Original browser DAW with AI Producer (order-taking studio assistant), demo stem split, 16-step beats, mic/vocal pipelines, VST slot framework, and in-house text-to-music / stem / continuation generation.",
+      bullets: [
+        "Generate, demo play, mic, and AI Producer on mensmercatus.online apps hub.",
+        "Gold/black/white Mens Mercatus product UI; no third-party music-site dependency."
+      ],
+      chips: ["Web Audio", "Agents", "DSP", "TypeScript/JS"]
+    },
+    {
+      id: "jobnet",
+      name: "JobNet",
+      period: "2026",
+      kind: "Career automation",
+      status: "DEMO",
+      statusNote: "Draft-only — live read-only shortlist demo; never applies or sends mail.",
+      summary: "Weekday pipeline: noon multi-board scrape; CV tailor + AI Hawk draft fills with human confirm before submit; Gmail reply watch + SMS/email notify.",
+      bullets: [
+        "Noon scrape across top AI employers + early-stage trackers.",
+        "3 AM CV tailor + draft fills; human-in-the-loop gates before any submit."
+      ],
+      chips: ["Automation", "Agents", "Gmail", "macOS shell"]
+    },
+    {
+      id: "forex",
+      name: "Forex Mercatus Codex",
+      period: "2026",
+      kind: "Python desk :8790",
+      status: "DEMO",
+      statusNote: "Simulated paper research only — not a brokerage.",
+      summary: "~87MB Python + Highcharts desk for FX workflows; Chart, Multi, Whales, Flow, Bot. Hosted on VPS as live paper research.",
+      bullets: [
+        "Inventory and load-path optimization for faster cold start and clearer static serving.",
+        "Market data fused with interactive analysis desks."
+      ],
+      chips: ["Python", "Highcharts", "yfinance", "Paper only"]
+    }
+  ],
+  projects: [
+    {
+      name: "Project Antigravity",
+      period: "Mar 2026 – Present",
+      role: "AI Systems Architect & Founder",
+      bullets: [
+        "Sovereign, decentralized AI OS for autonomous task execution and specialized agentic workflows.",
+        "Terminal-first AI tooling on M4 with Ollama; Nebius for scalable training/deploy of custom models; Agent Zero + Cursor orchestration."
+      ],
+      chips: ["Ollama", "Agent Zero", "Nebius", "LLM Ops"]
+    },
+    {
+      name: "Mens Mercatus Ecosystem",
+      period: "Ongoing · mensmercatus.online",
+      role: "Full-stack, .NET & AI systems",
+      bullets: [
+        "Telegram AI trading assistant: RAG + live financial feeds for XAUUSD / cyclical models (SMT, Gann frameworks) with institutional-order context.",
+        "Brand, UI/UX, and portfolio architecture including the Blueprint ASP.NET Assist robot and the THINK multimodal workspace."
+      ],
+      chips: ["Python", "C# / ASP.NET", "LangChain", "ChromaDB", "React / Next.js"]
+    },
+    {
+      name: "Messmakers / Flutter Overlay",
+      period: "2026",
+      role: "Mobile UI systems",
+      bullets: [
+        "Flutter package fixing z-order: gray AI sound/volume bar above white social band; theme extension, haptics, demo app — drop-in for Messmakers / ThinkPulse clients."
+      ],
+      chips: ["Flutter", "Dart", "UI systems"]
+    },
+    {
+      name: "ProxNet · Infrastructure.log",
+      period: "Parallel systems work",
+      role: "Edge & mesh",
+      bullets: [
+        "BLE/WebRTC mesh social (offline-first) and M4 SSD arrays for model weights / vector DBs — edge-ready AI compute hygiene."
+      ],
+      chips: ["React Native", "P2P", "Edge"]
+    }
+  ],
+  narrative: [
+    "Hands-on builder of agentic products: copilots that execute studio/job/market actions with explicit user confirmation gates.",
+    "Comfortable in Python, TypeScript, and C# / ASP.NET Core; ships Gemini-backed APIs on a VPS (systemd + nginx) and React 19 fronts on the portfolio.",
+    "Background in fleet/logistics optimization (OR-Tools) and diesel/mechanical operations — strong systems thinking under real constraints."
+  ],
+  footer:
+    "Portfolio: mensmercatus.online · THINK: /think/ · Walkthrough: /assets/video/walkthrough.mp4 · Johannesburg, South Africa · Open to Johannesburg, Pretoria, Cape Town & Durban (on-site, hybrid or remote) · AI eng and .NET roles."
+};
+</script>
+<script>
+(function () {
+  const D = window.RESUME_DATA;
+  if (!D) return;
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+  function fillText(attr, val) {
+    $$(`[data-bind="${attr}"]`).forEach(el => { el.textContent = val; });
+  }
+  function fillHref(attr, href, label) {
+    $$(`[data-bind-href="${attr}"]`).forEach(el => {
+      el.setAttribute("href", href);
+      if (label != null && !el.dataset.keepLabel) el.textContent = label;
+    });
+  }
+
+  fillText("name", D.meta.name);
+  fillText("headline", D.meta.headline);
+  fillText("tagline", D.meta.tagline);
+  fillText("location", D.meta.location);
+  fillText("locationShort", D.meta.locationShort || D.meta.location);
+  fillText("remote", D.meta.remote);
+  fillText("status", D.meta.status);
+  fillText("brand", D.meta.brand);
+  fillText("portfolioProof", D.meta.portfolioProof);
+  fillHref("email", "mailto:" + D.meta.email, D.meta.email);
+  fillHref("phone", "tel:" + D.meta.phoneIntl, D.meta.phone);
+  fillHref("site", D.meta.site, D.meta.siteLabel);
+
+  const roles = $("[data-roles-plain]");
+  if (roles) roles.innerHTML = D.meta.roles.map(r => `<li>${r}</li>`).join("");
+
+  const stack = $("[data-stack-plain]");
+  if (stack) {
+    const map = {
+      languages: "Languages", frontend: "Frontend", ai: "AI / ML",
+      backend: "Backend", data: "Data", cloud: "Cloud",
+      audio: "Audio", systems: "Systems"
+    };
+    stack.innerHTML = Object.keys(map).map(k =>
+      `<p class="chip-line"><strong>${map[k]}</strong> — ${D.stack[k].join(", ")}</p>`
+    ).join("");
+  }
+
+  const flags = $("[data-flagships-ed]");
+  if (flags) {
+    flags.innerHTML = D.flagships.map(f => `
+      <article class="feature">
+        <div class="feature-top">
+          <h3>${f.name}<span class="demo">${f.status}</span></h3>
+          <span class="when">${f.period}</span>
+        </div>
+        <div class="kind">${f.kind} · ${f.statusNote}</div>
+        <p>${f.summary}</p>
+        <ul>${f.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="tags">${f.chips.join(" · ")}</div>
+      </article>`).join("");
+  }
+
+  const projs = $("[data-projects-ed]");
+  if (projs) {
+    projs.innerHTML = D.projects.map(p => `
+      <article class="feature">
+        <div class="feature-top">
+          <h3>${p.name}</h3>
+          <span class="when">${p.period}</span>
+        </div>
+        <div class="kind">${p.role}</div>
+        <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="tags">${p.chips.join(" · ")}</div>
+      </article>`).join("");
+  }
+
+  const narrative = $("[data-narrative]");
+  if (narrative) {
+    narrative.innerHTML = D.narrative.map(n => `<li>${n}</li>`).join("");
+  }
+
+  window.printResume = () => window.print();
+})();
+</script>
+</body>
+</html>

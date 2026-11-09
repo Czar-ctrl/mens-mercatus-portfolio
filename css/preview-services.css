@@ -1,0 +1,52 @@
+/* Option F — /services/ packages (preview). Extends preview-ai-f tokens. */
+.mm-svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:1.6rem}
+@media(max-width:900px){.mm-svc-grid{grid-template-columns:1fr}}
+.mm-svc-card{display:flex;flex-direction:column;gap:10px;padding:22px 22px 20px;border-radius:18px;border:1px solid var(--mm-line2);
+  background:var(--mm-card);transition:border-color .2s var(--mm-ease),transform .2s var(--mm-ease),box-shadow .2s var(--mm-ease)}
+.mm-svc-card:hover{border-color:var(--mm-coral);transform:translateY(-2px);box-shadow:0 16px 36px -20px rgba(0,0,0,.5)}
+.mm-svc-card:focus-within{outline:2px solid var(--mm-coral);outline-offset:3px}
+.mm-svc-card .tag{font:500 11px/1 var(--mm-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mm-coral)}
+.mm-svc-card h2{font:600 clamp(1.25rem,2.4vw,1.55rem)/1.25 var(--mm-disp);letter-spacing:-.015em;margin:0}
+.mm-svc-card .for{font-size:.95rem;line-height:1.5;color:var(--mm-mute);margin:0}
+.mm-svc-card .price{font:600 1.35rem/1.2 var(--mm-disp);letter-spacing:-.02em;margin:.2rem 0 0}
+.mm-svc-card .price small{display:block;font:500 12px/1.4 var(--mm-font);color:var(--mm-mute);letter-spacing:0;margin-top:4px}
+.mm-svc-card .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.mm-svc-card .meta span{font-size:12.5px;padding:6px 10px;border-radius:999px;border:1px solid var(--mm-line);color:var(--mm-mute);min-height:32px;display:inline-flex;align-items:center}
+.mm-svc-card ul{margin:.4rem 0 0;padding-left:1.15rem;font-size:.92rem;line-height:1.5}
+.mm-svc-card li{margin-bottom:6px}
+.mm-svc-card .need{margin-top:8px;padding:12px 14px;border-radius:12px;background:rgba(255,143,128,.06);border:1px solid rgba(255,143,128,.18);font-size:.88rem;line-height:1.45;color:var(--mm-mute)}
+.mm-svc-card .need b{color:inherit;font-weight:600;color:var(--mm-fg,inherit)}
+html:not(.dark) .mm-svc-card .need{background:rgba(192,40,63,.05);border-color:rgba(192,40,63,.15)}
+.mm-svc-card .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
+.mm-svc-card .actions .mm-btn{min-height:44px;flex:1 1 auto;justify-content:center;text-align:center}
+.mm-svc-care{grid-column:1/-1}
+@media(min-width:901px){.mm-svc-care{max-width:100%}}
+.mm-svc-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:1.2rem}
+@media(max-width:800px){.mm-svc-proof{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.mm-svc-proof{grid-template-columns:1fr}}
+.mm-svc-proof a{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border-radius:14px;border:1px solid var(--mm-line2);
+  background:var(--mm-card);text-decoration:none;color:inherit;min-height:44px;transition:border-color .2s var(--mm-ease),transform .2s var(--mm-ease)}
+.mm-svc-proof a:hover{border-color:var(--mm-coral);transform:translateY(-1px)}
+.mm-svc-proof a:focus-visible{outline:2px solid var(--mm-coral);outline-offset:3px}
+.mm-svc-proof b{font:600 1rem/1.3 var(--mm-disp)}
+.mm-svc-proof span{font-size:.85rem;color:var(--mm-mute);line-height:1.4}
+.mm-svc-faq details{border:1px solid var(--mm-line2);border-radius:14px;padding:0 16px;margin-bottom:10px;background:var(--mm-card)}
+.mm-svc-faq summary{cursor:pointer;font-weight:600;padding:14px 0;min-height:44px;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mm-svc-faq summary::-webkit-details-marker{display:none}
+.mm-svc-faq summary::after{content:"+";font:600 1.1rem/1 var(--mm-mono);color:var(--mm-coral)}
+.mm-svc-faq details[open] summary::after{content:"–"}
+.mm-svc-faq summary:focus-visible{outline:2px solid var(--mm-coral);outline-offset:2px;border-radius:8px}
+.mm-svc-faq .ans{padding:0 0 16px;font-size:.95rem;line-height:1.55;color:var(--mm-mute)}
+.mm-svc-banner{margin-top:1.4rem;padding:14px 16px;border-radius:14px;border:1px dashed rgba(255,143,128,.45);font-size:.9rem;line-height:1.45;color:var(--mm-mute)}
+.mm-svc-banner strong{color:var(--mm-coral)}
+.mm-svc-offer[hidden]{display:none !important}
+.mm-svc-offer{margin-top:1.2rem;padding:18px 20px;border-radius:16px;border:1px solid var(--mm-coral);background:rgba(255,143,128,.08)}
+.mm-svc-offer h2{font:600 1.2rem/1.3 var(--mm-disp);margin:0 0 6px}
+@media (prefers-reduced-motion:reduce){
+  .mm-svc-card,.mm-svc-proof a{transition:none}
+  .mm-svc-card:hover,.mm-svc-proof a:hover{transform:none}
+}
+@media(max-width:390px){
+  .mm-svc-card{padding:16px}
+  .mm-svc-card .price{font-size:1.2rem}
+}
