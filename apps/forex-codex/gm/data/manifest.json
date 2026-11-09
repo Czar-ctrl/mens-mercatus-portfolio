@@ -1,0 +1,201 @@
+{
+ "generated": "2026-10-20T16:38:31+00:00",
+ "symbols": {
+  "XAUUSD": {
+   "label": "Gold / XAUUSD (PAXG proxy)",
+   "vendor_symbol": "PAXGUSDT",
+   "source": "Binance spot PAXGUSDT",
+   "licence": "Binance public market data (spot klines), fetched via the public REST API. Displayed for non-commercial, educational use with attribution; Binance Terms of Use apply. Not a broker feed.",
+   "decimals": 2,
+   "tfs": {
+    "5m": {
+     "file": "XAUUSD_5m.json",
+     "bars": 4033,
+     "from": 1790114100,
+     "to": 1791323700
+    },
+    "15m": {
+     "file": "XAUUSD_15m.json",
+     "bars": 5760,
+     "from": 1786140000,
+     "to": 1791323100
+    },
+    "1h": {
+     "file": "XAUUSD_1h.json",
+     "bars": 6695,
+     "from": 1767222000,
+     "to": 1791320400
+    },
+    "4h": {
+     "file": "XAUUSD_4h.json",
+     "bars": 1674,
+     "from": 1767225600,
+     "to": 1791316800
+    },
+    "1d": {
+     "file": "XAUUSD_1d.json",
+     "bars": 279,
+     "from": 1767225600,
+     "to": 1791244800
+    }
+   },
+   "zero_volume_5m_bars": 8,
+   "window": {
+    "start": "2026-01-01",
+    "end": "2026-10-06"
+   },
+   "fetched_at": "2026-10-07T01:32:09+02:00"
+  },
+  "EURUSD": {
+   "label": "EUR/USD (EURUSDT proxy)",
+   "vendor_symbol": "EURUSDT",
+   "source": "Binance spot EURUSDT",
+   "licence": "Binance public market data (spot klines), fetched via the public REST API. Displayed for non-commercial, educational use with attribution; Binance Terms of Use apply. Not a broker feed.",
+   "decimals": 5,
+   "tfs": {
+    "5m": {
+     "file": "EURUSD_5m.json",
+     "bars": 4033,
+     "from": 1790114100,
+     "to": 1791323700
+    },
+    "15m": {
+     "file": "EURUSD_15m.json",
+     "bars": 5760,
+     "from": 1786140000,
+     "to": 1791323100
+    },
+    "1h": {
+     "file": "EURUSD_1h.json",
+     "bars": 6695,
+     "from": 1767222000,
+     "to": 1791320400
+    },
+    "4h": {
+     "file": "EURUSD_4h.json",
+     "bars": 1674,
+     "from": 1767225600,
+     "to": 1791316800
+    },
+    "1d": {
+     "file": "EURUSD_1d.json",
+     "bars": 279,
+     "from": 1767225600,
+     "to": 1791244800
+    }
+   },
+   "zero_volume_5m_bars": 0,
+   "window": {
+    "start": "2026-01-01",
+    "end": "2026-10-06"
+   },
+   "fetched_at": "2026-10-07T01:30:22+02:00"
+  },
+  "GBPUSD": {
+   "label": "GBP/USD (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 5,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "GBPUSD_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "USDJPY": {
+   "label": "USD/JPY (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 3,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "USDJPY_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "USDCHF": {
+   "label": "USD/CHF (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 5,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "USDCHF_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "AUDUSD": {
+   "label": "AUD/USD (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 5,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "AUDUSD_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "USDCAD": {
+   "label": "USD/CAD (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 5,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "USDCAD_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "NZDUSD": {
+   "label": "NZD/USD (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 5,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "NZDUSD_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  },
+  "USDZAR": {
+   "label": "USD/ZAR (ECB daily fix)",
+   "source": "ECB reference rate via Frankfurter",
+   "licence": "European Central Bank euro foreign exchange reference rates via Frankfurter (frankfurter.dev, MIT-licensed service). ECB permits reuse with the source acknowledged. Daily reference fix, close only (no intraday high/low).",
+   "decimals": 4,
+   "close_only": true,
+   "tfs": {
+    "1d": {
+     "file": "USDZAR_1d.json",
+     "bars": 511,
+     "from": 1728259200,
+     "to": 1791331200
+    }
+   }
+  }
+ },
+ "notes": "All prices are historical: Binance series end 6 Oct 2026 23:55 SAST, ECB fixes end 7 Oct 2026. Nothing here is a live quote. PAXGUSDT and EURUSDT are crypto-exchange proxies for XAUUSD and EURUSD; they track spot closely but are not identical (spread, basis, weekend trading)."
+}

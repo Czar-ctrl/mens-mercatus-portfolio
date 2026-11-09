@@ -1,0 +1,1 @@
+{"ok":true,"model":"logistic regression, walk-forward 70/30","p_up":0.387,"oos_hit_rate":0.5862,"baseline":0.4138,"train_n":135,"test_n":58,"weights":{"bias":-0.3837,"ret1":0.0092,"ret5":-0.0189,"rsi":0.0044,"money_flow":0.0,"hyper_wave":0.0077,"trend":-0.0757,"range":-0.0283},"note":"Out-of-sample hit rate near baseline means no edge. This is a research readout."}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="gm-lite">
+<head>
+  <meta charset="UTF-8" /><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Mens Mercatus SoundX — AI Producer, Atlanta 808, Stem DNA, Ghost layer, Ogg export, co-producer, session versions" />
+  <title>Mens Mercatus SoundX</title>
+<link rel="canonical" href="https://mensmercatus.online/apps/sound-deck/">
+<meta property="og:title" content="SoundX · Mens Mercatus">
+<meta property="og:description" content="Mens Mercatus SoundX — AI producer, stems, beats, vocals, mic. Katlego Mokoto, AI engineer and developer.">
+<meta property="og:url" content="https://mensmercatus.online/apps/sound-deck/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+<meta property="og:site_name" content="Mens Mercatus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoundX · Mens Mercatus">
+<meta name="twitter:description" content="Mens Mercatus SoundX — AI producer, stems, beats, vocals, mic. Katlego Mokoto, AI engineer and developer.">
+<meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <script>
+  /* sx-theme-boot: apply saved theme before paint to avoid flash */
+  (function () {
+    try {
+      var t = localStorage.getItem('mm-sound-deck-theme') || 'blink';
+      var a = localStorage.getItem('mm-sound-deck-accent');
+      document.documentElement.setAttribute('data-sx-theme', t);
+      if (a && /^#[0-9A-Fa-f]{3,8}$/.test(a)) {
+        document.documentElement.style.setProperty('--gold', a);
+        document.documentElement.style.setProperty('--accent', a);
+      }
+    } catch (e) {}
+  })();
+  </script>
+  <link rel="stylesheet" href="css/app.css?v=20261008md" />
+  <link rel="stylesheet" href="css/godmode-w23.css?v=20261008md" />
+  <link rel="stylesheet" href="../../css/ambient-bg.css?v=20261005k" />
+  <link rel="stylesheet" href="../../css/pages.css" />
+  <link rel="stylesheet" href="../../css/demo-kit.css?v=20261006a" />
+  <link rel="stylesheet" href="../../css/godmode.css?v=20261006a" />
+<!-- mm-motion --><script type="module">addEventListener("load",function(){if(!matchMedia("(hover: hover) and (pointer: fine)").matches)return;var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";s.setAttribute('data-no-g','');s.setAttribute('data-no-status','');s.setAttribute('data-no-reveal','');document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body>
+  <div class="app" data-deck>
+  <nav class="mm-four-strip" aria-label="Four flagship systems" style="margin:0;border:none;border-radius:0">
+    <a class="mm-four-home" href="../../index.html"><img class="gm-mark" src="../../assets/marks/mark-wheat-16.svg" width="16" height="16" alt="">Home</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="./" aria-current="page">SoundX</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="../jobnet/" target="_blank" rel="noopener">JobNet</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="../../blueprint/" target="_blank" rel="noopener">Blueprint</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="/apps/forex-codex/" target="_blank" rel="noopener">Forex</a>
+  </nav>
+    <header data-transport></header>
+
+    <div class="workspace" data-workspace>
+      <aside class="side-panel" data-library-panel aria-label="Sample library"></aside>
+      <div class="splitter" data-split="lib" role="separator" aria-orientation="vertical" aria-label="Resize library panel" tabindex="0"></div>
+
+      <main class="timeline-wrap" data-timeline aria-label="Timeline — Pattern, Piano and Song views">
+        <div class="view-modes" data-view-modes role="tablist" aria-label="View mode">
+          <div class="view-seg">
+            <button type="button" role="tab" data-view-mode="pattern" aria-selected="false" title="Channel rack — instrument rows × 16 steps">Pattern</button>
+            <button type="button" role="tab" data-view-mode="piano" aria-selected="false" title="Piano roll — notes × beats for the selected / a new clip">Piano</button>
+            <button type="button" role="tab" data-view-mode="song" aria-selected="true" class="active" title="Arrangement timeline">Song</button>
+          </div>
+          <span class="view-modes-hint" data-view-hint>Song · arrange clips on tracks · Pattern picker → Place Pattern</span>
+        </div>
+      </main>
+      <div class="splitter" data-split="ai" role="separator" aria-orientation="vertical" aria-label="Resize producer panel" tabindex="0"></div>
+
+      <aside class="ai-panel" aria-label="Producer panels">
+        <div class="tabs" role="tablist">
+          <button type="button" class="active" data-tab="aiproducer" role="tab" aria-selected="true">AI Producer</button>
+          <button type="button" data-tab="stems" role="tab">Stems</button>
+          <button type="button" data-tab="beats" role="tab">Beats</button>
+          <button type="button" data-tab="loops" role="tab" title="Live Loops-style clip grid">Loops</button>
+          <button type="button" data-tab="drummer" role="tab" title="Virtual Drummer — DEMO AI">Drummer</button>
+          <button type="button" data-tab="808" role="tab" title="Atlanta 808 bass — DEMO Web Audio">808</button>
+          <button type="button" data-tab="pedals" role="tab" title="Pedalboard FX chain">Pedals</button>
+          <button type="button" data-tab="voice" role="tab" title="Voice Assist · Mercatus Bot">Voice</button>
+          <button type="button" data-tab="vocals" role="tab">Vocals</button>
+          <button type="button" data-tab="mic" role="tab">Mic</button>
+          <button type="button" data-tab="instruments" role="tab">Instruments</button>
+          <button type="button" data-tab="plugins" role="tab" title="Plugin catalog, browser inserts, VST Rack (bridge) and Packs">Plugins &amp; Packs</button>
+          <button type="button" data-tab="synth" role="tab">Synth</button>
+          <button type="button" data-tab="generate" role="tab">Generate</button>
+          <button type="button" data-tab="godmode" role="tab" title="Dice Forge · Tradingfloor Form · God Mode hub">God Mode</button>
+        </div>
+        <div class="tab-panes">
+          <div data-pane="aiproducer" role="tabpanel"></div>
+          <div data-pane="stems" role="tabpanel" hidden></div>
+          <div data-pane="beats" role="tabpanel" hidden></div>
+          <div data-pane="loops" role="tabpanel" hidden></div>
+          <div data-pane="drummer" role="tabpanel" hidden></div>
+          <div data-pane="808" role="tabpanel" hidden></div>
+          <div data-pane="pedals" role="tabpanel" hidden></div>
+          <div data-pane="voice" role="tabpanel" hidden></div>
+          <div data-pane="vocals" role="tabpanel" hidden></div>
+          <div data-pane="mic" role="tabpanel" hidden></div>
+          <div data-pane="instruments" role="tabpanel" hidden></div>
+          <div data-pane="plugins" role="tabpanel" hidden></div>
+          <div data-pane="synth" role="tabpanel" hidden></div>
+          <div data-pane="generate" role="tabpanel" hidden></div>
+          <div data-pane="godmode" role="tabpanel" hidden></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="splitter splitter-row" data-split="mixer" role="separator" aria-orientation="horizontal" aria-label="Resize mixer" tabindex="0"></div>
+    <section class="mixer" data-mixer aria-label="Mixer"></section>
+
+    <footer class="status-bar">
+      <span data-status-bar>Booting…</span>
+      <span><a class="status-link" href="../../index.html">Home</a> · <a class="status-link" href="../index.html">Apps</a> · <a class="status-link gm-assist-link" data-gm-assist href="../mercatus-assist/?from=sound-deck" target="_blank" rel="noopener">Assist</a> · <a class="status-link" href="../jobnet/" target="_blank" rel="noopener">JobNet</a> · <a class="status-link" href="../../blueprint/" target="_blank" rel="noopener">Blueprint</a> · <a class="status-link" href="/apps/forex-codex/" target="_blank" rel="noopener">Forex</a> · <a class="status-link" href="../../vault/SoundDeck_Skeleton_Architecture_Brief.pdf" target="_blank" rel="noopener">Architecture PDF</a></span>
+    </footer>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="../../js/ambient-bg.js?v=bp1" defer></script>
+  <script src="../../js/demo-kit.js?v=20261006a"></script>
+  <script type="module" src="js/main.js?v=20261009ml"></script>
+  <script src="../../js/godmode.js?v=bp1" data-gm="lite" data-gm-tool="sound-deck" defer></script>
+</body>
+</html>

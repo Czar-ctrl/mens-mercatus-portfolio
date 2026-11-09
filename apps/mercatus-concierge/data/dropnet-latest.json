@@ -1,0 +1,20 @@
+{
+  "schema": "dropnet-aihawk-digest/v1",
+  "brand": "DropNet \u00b7 AI Hawk \u00b7 Mercatus Careers",
+  "generated_at": "2026-10-06T12:10:00+02:00",
+  "timezone": "Africa/Johannesburg",
+  "counts": {
+    "total": 16,
+    "top_matches": 6,
+    "also_worth_a_look": 10,
+    "high": 6,
+    "medium": 8,
+    "low": 2
+  },
+  "boards": [
+    "linkedin",
+    "glassdoor"
+  ],
+  "careers_drop_hash": "#/drop",
+  "scope_note": "LinkedIn + Glassdoor. Draft-only digest. Never auto-apply. Morning quiet-hours only."
+}

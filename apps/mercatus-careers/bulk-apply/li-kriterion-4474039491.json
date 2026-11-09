@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-kriterion-4474039491",
+  "jobId": "li-kriterion-4474039491",
+  "title": "Intermediate Software Engineer",
+  "company": "Kriterion",
+  "location": "Pretoria, Gauteng, South Africa",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4474039491",
+  "signal": "high",
+  "packet": "Here is a draft apply packet for the Intermediate Software Engineer role at Kriterion:\n\n### Cover Letter Draft\n\nSubject: Application for Intermediate Software Engineer - [Your Name]\n\nDear Kriterion Hiring Team,\n\nI am writing to express my strong interest in the Intermediate Software Engineer position in Pretoria, as advertised on your careers page. My background as an AI/Systems Engineer, with practical experience in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems, aligns well with your focus on AI-driven predictive maintenance and condition monitoring for heavy machinery.\n\nThe opportunity to combine my technical software skills with a foundational understanding of mechanics is particularly compelling. I am eager to contribute to solutions that enhance the reliability and efficiency of industrial operations through advanced AI. My experience developing robust systems and leveraging cutting-edge AI methodologies would be a valuable asset to your team.\n\nThank you for considering my application. I have attached my CV for your review and welcome the opportunity to discuss how my skills and passion can benefit Kriterion.\n\nSincerely,\n[Your Name]\n\n---\n\n### Fit Notes\n\nThis role is a strong match due to:\n\n*   **Domain Overlap:** Your mechanic background provides unique insight into heavy machinery, directly relevant to Kriterion's predictive maintenance focus.\n*   **Technical Alignment:** Your skills in Python, TypeScript, LLMs, RAG, agents, .NET, and distributed systems are core to developing advanced AI/SaaS solutions.\n*   **Experience Level:** The \"Intermediate\" requirement (2+ years) fits your profile as an AI/Systems Engineer.\n*   **Location & Interest:** Pretoria-based SaaS in a field you're passionate about.\n\n---\n\n### How to Submit Checklist\n\n1.  **Visit Kriterion's Careers Page:** Navigate to their official website and find the careers or jobs section.\n2.  **Locate the Role:** Find the \"Intermediate Software Engineer\" position in Pretoria.\n3.  **Prepare Your Documents:** Ensure your CV/resume is up-to-date.\n4.  **Customise Cover Letter:** Adapt the draft above with your specific details and any additional points you wish to highlight.\n5.  **Apply Online:** Submit your application through Kriterion's designated portal.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:47:31.041844+00:00"
+}

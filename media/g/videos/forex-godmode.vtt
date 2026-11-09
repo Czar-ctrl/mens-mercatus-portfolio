@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.600 --> 00:00:05.370
+This is Forex Mercatus Codex, a gold-first research terminal for paper trading only.
+
+2
+00:00:05.380 --> 00:00:08.310
+There is no broker connection and no live orders.
+
+3
+00:00:08.320 --> 00:00:11.480
+It charts real historical data for nine symbols.
+
+4
+00:00:11.490 --> 00:00:18.030
+A strategy lab runs walk-forward tests and Monte Carlo, and on-device machine learning reports its honest out-of-sample score.
+
+5
+00:00:18.040 --> 00:00:21.990
+Model outputs are probabilities with measured error, never guarantees.
+
+6
+00:00:22.000 --> 00:00:26.550
+There are risk tools, a pattern scanner, a South African session clock and a trade journal.
+
+7
+00:00:26.560 --> 00:00:28.630
+Everything runs in your browser.

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="author" content="Mens Mercatus Inc"/>
+<meta name="robots" content="noindex"/>
+<title>Rate lock · Mercatus Blueprints</title>
+<link rel="stylesheet" href="../../css/tokens.css?v=20261005h">
+<link rel="stylesheet" href="../../css/base.css?v=20261005h">
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- mm-seo --><meta name="description" content="National Minimum Wage floor applies when the engagement is employment. Lock the rate before accept."><link rel="canonical" href="https://mensmercatus.online/cartel/event/rate-lock.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="Rate lock · Mercatus Blueprints"><meta property="og:description" content="National Minimum Wage floor applies when the engagement is employment. Lock the rate before accept."><meta property="og:url" content="https://mensmercatus.online/cartel/event/rate-lock.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Rate lock · Mercatus Blueprints"><meta name="twitter:description" content="National Minimum Wage floor applies when the engagement is employment. Lock the rate before accept."><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Rate lock · Mercatus Blueprints", "url": "https://mensmercatus.online/cartel/event/rate-lock.html", "description": "National Minimum Wage floor applies when the engagement is employment. Lock the rate before accept.", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <img class="mark" src="assets/mark-wheat-16.svg" width="16" height="16" alt="" decoding="async" />
+    <div class="wordmark">Mercatus Blueprints <span>· Event</span></div>
+    <div class="spacer"></div>
+    <span class="chip">Static mockup</span>
+  </header>
+  <main class="main">
+
+<a class="nav-back" href="index.html">← Hub</a>
+<p class="kicker">Pricing</p>
+<h1>Rate lock</h1>
+<p class="lead">National Minimum Wage floor applies when the engagement is employment. Lock the rate before accept.</p>
+
+<div class="gate">
+  <strong>NMW gate · R30.23 / hour</strong>
+  <ul>
+    <li>Floor: National Minimum Wage (illustrative 2026 figure used in mockups).</li>
+    <li>Rate must be locked before the worker accepts the shift.</li>
+    <li>Where employment applies: 4-hour rule — if called in and sent home early, pay for at least four hours at the locked rate (subject to applicable BCEA / sectoral rules).</li>
+    <li>Assist never invents or coaches payout amounts.</li>
+  </ul>
+</div>
+
+<div class="grid-2">
+  <div class="stat"><div class="n">R30.23</div><div class="l">NMW floor / hr</div></div>
+  <div class="stat"><div class="n">R42.00</div><div class="l">Locked offer / hr</div></div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row between"><div class="title">Shift · Venue steward</div><span class="badge solid">Unlocked →</span></div>
+  <div class="meta">Sat 04 Oct · 16:00–22:00 · 6 h scheduled</div>
+  <div class="meta" style="margin-top:6px">4-hour rule: if employment and early release after call-in → min 4 h at locked rate.</div>
+  <div class="progress"><i style="width:0%"></i></div>
+</div>
+
+<button class="btn btn-primary btn-block" id="lockRateBtn">Lock rate before accept</button>
+<div class="card hidden" id="lockedCard" style="margin-top:12px;border-color:#C8102E">
+  <div class="title">Locked · R42.00 / hr</div>
+  <div class="meta">Accept is now enabled. Escrow will hold estimated wage + fees.</div>
+</div>
+<button type="button" class="btn btn-assist btn-block" style="margin-top:8px" data-assist="rate" data-assist-text="Offer is above NMW floor. Lock before accept. Assist will not quote a different payout amount.">Assist</button>
+<div class="assist-strip" data-assist-strip="rate"></div>
+
+  </main>
+  <footer class="footer">Mens Mercatus Inc · Illustrative UI · Assist DEMO strips</footer>
+</div>
+<script src="js/app.js"></script>
+<script>
+document.getElementById('lockRateBtn').addEventListener('click', function () {
+  MC.set('rate.locked', true);
+  this.textContent = 'Rate locked';
+  this.disabled = true;
+  document.getElementById('lockedCard').classList.remove('hidden');
+});
+</script>
+</body>
+</html>

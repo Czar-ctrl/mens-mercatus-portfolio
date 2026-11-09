@@ -1,0 +1,106 @@
+/* Design tokens — Mens Mercatus "godmode" (2026-10-05)
+   Red / black / white only, per MERCATUS_CARTEL_SYSTEM_PROMPT. Spacing and hierarchy over decoration.
+   Legacy --mm-gold* / --mm-ivory* names are kept so existing selectors resolve; they now map to red / white. */
+:root {
+  /* Canvas — black */
+  --mm-black: #0a0a0a;
+  --mm-black-elevated: #111111;
+  --mm-graphite: #0a0a0a;
+  --mm-graphite-2: #121212;
+  --mm-panel: rgba(255, 255, 255, 0.035);
+  --mm-panel-solid: #121212;
+  --mm-panel-2: #171717;
+
+  /* White (legacy "ivory" names kept so older selectors resolve) */
+  --mm-ivory: #f5f5f5;
+  --mm-ivory-dim: rgba(245, 245, 245, 0.72);
+  --mm-ivory-soft: rgba(245, 245, 245, 0.12);
+  --mm-ivory-glass: rgba(255, 255, 255, 0.05);
+  --mm-ivory-glass-strong: rgba(255, 255, 255, 0.08);
+
+  /* Hairlines */
+  --mm-line: rgba(255, 255, 255, 0.08);
+  --mm-line-strong: rgba(255, 255, 255, 0.16);
+  --mm-line-gold: rgba(200, 16, 46, 0.4);
+
+  /* Text */
+  --mm-white: #f5f5f5;
+  --mm-muted: rgba(245, 245, 245, 0.64);
+  --mm-dim: rgba(245, 245, 245, 0.42);
+
+  /* Accent — Cartel red (legacy --mm-gold-* names now resolve to red) */
+  --mm-gold: #c8102e;
+  --mm-gold-bright: #e01838;
+  --mm-gold-soft: rgba(200, 16, 46, 0.12);
+  --mm-gold-glow: rgba(200, 16, 46, 0.22);
+  --mm-red-ink: #ff4d6a; /* red for small text on black (AA contrast) */
+
+  /* Surfaces */
+  --mm-glass: rgba(10, 10, 10, 0.9);
+  --mm-glass-card: rgba(255, 255, 255, 0.03);
+  --mm-glass-border: rgba(255, 255, 255, 0.09);
+  --mm-glass-border-hover: rgba(200, 16, 46, 0.55);
+
+  --cartel-red: #c8102e;
+  --cartel-red-dim: rgba(200, 16, 46, 0.18);
+
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, Menlo, monospace;
+  --font-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Type scale — display → caption (Artasaka-leaning hero weight) */
+  --text-display: clamp(3rem, 7.5vw, 5rem);
+  --text-h1: clamp(2rem, 4.5vw, 3rem);
+  --text-h2: clamp(1.55rem, 3vw, 2.15rem);
+  --text-h3: 1.1rem;
+  --text-body: 1.02rem;
+  --text-body-sm: 0.92rem;
+  --text-caption: 0.78rem;
+  --text-micro: 0.68rem;
+  --leading-tight: 1.05;
+  --leading-snug: 1.35;
+  --leading-body: 1.65;
+  --tracking-display: -0.052em;
+  --tracking-tight: -0.03em;
+  --tracking-label: 0.14em;
+
+  /* 8px spacing base */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  --nav-h: 64px;
+  --sidebar-w: 300px;
+
+  /* 12–16px radii */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+
+  /* 150–250ms ease-out */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.22s;
+  --dur-fast: 0.15s;
+  --dur-med: 0.2s;
+  --mx: 50%;
+  --my: 50%;
+  --cursor-x: -100px;
+  --cursor-y: -100px;
+  --container: 1180px;
+  --container-pad: 2rem;
+}

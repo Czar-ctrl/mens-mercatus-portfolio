@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-hirexe-4475562744",
+  "jobId": "li-hirexe-4475562744",
+  "title": "AI Implementation Engineer (Claude Cowork)",
+  "company": "HIREXE",
+  "location": "South Africa (remote, EST time zone required)",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4475562744",
+  "signal": "medium",
+  "packet": "Here's a draft application packet for the AI Implementation Engineer role.\n\n**Cover Draft:**\n\nDear HIREXE Hiring Team,\n\nI am writing to express my keen interest in the AI Implementation Engineer (Claude Cowork) position advertised. My background in AI/Systems Engineering, with a strong focus on Python, TypeScript, LLMs, RAG, and agent-based systems, aligns directly with the requirements for deploying agentic Claude Cowork solutions. I am particularly drawn to this role due to its direct match with my experience in automation and agent work, and I am prepared to meet the EST time zone requirement.\n\n**Fit Notes:**\n\n*   **Role Alignment:** Directly matches my experience in deploying and managing complex AI systems, including agentic workflows and integrations.\n*   **Technical Skills:** Proficient in Python, TypeScript, LLMs, RAG, and distributed systems, essential for the role's technical demands.\n*   **Time Zone:** I understand and can commit to the EST working hours requirement.\n*   **Company Focus:** HIREXE's focus on AI implementation is a perfect fit for my career aspirations.\n\n**How to Submit:**\n\n1.  Visit the HIREXE careers page.\n2.  Locate the AI Implementation Engineer (Claude Cowork) role.\n3.  Follow the instructions to submit your application.\n4.  Upload your CV and any requested supporting documents.\n5.  Complete any pre-screening questions or assessments.\n\nNext: Open the HIREXE careers site to begin your submission.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:40.860467+00:00"
+}

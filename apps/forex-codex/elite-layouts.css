@@ -1,0 +1,842 @@
+/* ==========================================================================
+   MENS MERCATUS LAB — 30 ELITE IMPERIAL & HAUTE COUTURE LAYOUTS
+   ========================================================================== */
+
+/* Universal Layout Root Defaults */
+:root {
+  --layout-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --layout-font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --layout-font-display: 'Inter', sans-serif;
+  --layout-radius: 12px;
+  --layout-radius-sm: 6px;
+  --layout-radius-lg: 20px;
+  --layout-transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --layout-glass-blur: 16px;
+  --layout-border-width: 1px;
+}
+
+/* ==========================================================================
+   UNIVERSAL MULTI-TOOL VARIABLE BRIDGE & ELEMENT STYLING
+   ========================================================================== */
+[data-elite-layout] {
+  --bg: var(--bg-primary) !important;
+  --bg2: var(--bg-secondary) !important;
+  --bg-base: var(--bg-primary) !important;
+  --bg-panel: var(--bg-secondary) !important;
+  --panel: var(--bg-secondary) !important;
+  --card-bg: var(--bg-card) !important;
+  --bg-input: var(--bg-elevated) !important;
+  --surface: var(--bg-card) !important;
+
+  --text: var(--text-primary) !important;
+  --ink: var(--text-primary) !important;
+  --text-main: var(--text-primary) !important;
+  --text-dim: var(--text-secondary) !important;
+  --dim: var(--text-secondary) !important;
+  --muted: var(--text-secondary) !important;
+  --text-muted: var(--text-secondary) !important;
+
+  --primary: var(--accent-primary) !important;
+  --secondary: var(--accent-secondary) !important;
+  --accent: var(--accent-primary) !important;
+  --accent2: var(--accent-secondary) !important;
+  --glow: var(--accent-glow) !important;
+
+  --border: var(--border-color) !important;
+  --line: var(--border-subtle) !important;
+}
+
+[data-elite-layout] body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-elite-layout] .chrome,
+[data-elite-layout] .hub-header,
+[data-elite-layout] header,
+[data-elite-layout] nav {
+  background-color: var(--bg2) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+[data-elite-layout] .panel,
+[data-elite-layout] .card,
+[data-elite-layout] .rail,
+[data-elite-layout] .code,
+[data-elite-layout] .feature-card,
+[data-elite-layout] aside {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+[data-elite-layout] input,
+[data-elite-layout] textarea,
+[data-elite-layout] select {
+  background-color: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+[data-elite-layout] button.primary,
+[data-elite-layout] .btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   CATEGORY 1: IMPERIAL & SOVEREIGN DESKS (1 - 6)
+   ========================================================================== */
+
+/* 1. Monaco Sovereign */
+[data-elite-layout="monaco-sovereign"] {
+  --bg-primary: #070b14;
+  --bg-secondary: #0d1527;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-elevated: #162038;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-primary: #d4af37; /* Monaco Gold */
+  --accent-secondary: #38bdf8;
+  --accent-glow: rgba(212, 175, 55, 0.25);
+  --border-color: rgba(212, 175, 55, 0.22);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15), transparent 70%);
+}
+
+/* 2. Mayfair Family Office */
+[data-elite-layout="mayfair-family-office"] {
+  --bg-primary: #08140e;
+  --bg-secondary: #0e2219;
+  --bg-card: rgba(18, 38, 28, 0.85);
+  --bg-elevated: #183d29;
+  --text-primary: #fefce8;
+  --text-secondary: #a7f3d0;
+  --accent-primary: #ca8a04; /* Polished Brass */
+  --accent-secondary: #10b981; /* British Racing Green */
+  --accent-glow: rgba(202, 138, 4, 0.3);
+  --border-color: rgba(202, 138, 4, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --status-positive: #34d399;
+  --status-negative: #fb7185;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15), transparent 70%);
+}
+
+/* 3. Zurich Vault Terminal */
+[data-elite-layout="zurich-vault-terminal"] {
+  --bg-primary: #121316;
+  --bg-secondary: #1a1c22;
+  --bg-card: rgba(30, 33, 40, 0.9);
+  --bg-elevated: #262933;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-primary: #e2e8f0; /* Matte Platinum */
+  --accent-secondary: #3b82f6;
+  --accent-glow: rgba(226, 232, 240, 0.2);
+  --border-color: rgba(226, 232, 240, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: linear-gradient(180deg, rgba(226, 232, 240, 0.08), transparent 60%);
+}
+
+/* 4. Dubai Skydeck Apex */
+[data-elite-layout="dubai-skydeck-apex"] {
+  --bg-primary: #0a0604;
+  --bg-secondary: #180e07;
+  --bg-card: rgba(33, 19, 10, 0.85);
+  --bg-elevated: #2b180d;
+  --text-primary: #fffbeb;
+  --text-secondary: #fed7aa;
+  --accent-primary: #f59e0b; /* Desert Amber */
+  --accent-secondary: #fbbf24;
+  --accent-glow: rgba(245, 158, 11, 0.35);
+  --border-color: rgba(245, 158, 11, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.22), transparent 70%);
+}
+
+/* 5. Singapore Marina Nexus */
+[data-elite-layout="singapore-marina-nexus"] {
+  --bg-primary: #021217;
+  --bg-secondary: #042028;
+  --bg-card: rgba(6, 42, 53, 0.85);
+  --bg-elevated: #0a3a49;
+  --text-primary: #ecfeff;
+  --text-secondary: #a5f3fc;
+  --accent-primary: #06b6d4; /* Lagoon Cyan */
+  --accent-secondary: #10b981;
+  --accent-glow: rgba(6, 182, 212, 0.35);
+  --border-color: rgba(6, 182, 212, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #34d399;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.2), transparent 70%);
+}
+
+/* 6. Luxembourg Private Reserve */
+[data-elite-layout="luxembourg-private-reserve"] {
+  --bg-primary: #0b0714;
+  --bg-secondary: #150f26;
+  --bg-card: rgba(29, 21, 51, 0.85);
+  --bg-elevated: #2b1f4c;
+  --text-primary: #faf5ff;
+  --text-secondary: #d8b4fe;
+  --accent-primary: #a855f7; /* Royal Amethyst */
+  --accent-secondary: #c084fc;
+  --accent-glow: rgba(168, 85, 247, 0.35);
+  --border-color: rgba(168, 85, 247, 0.26);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #22c55e;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.2), transparent 70%);
+}
+
+/* ==========================================================================
+   CATEGORY 2: HAUTE COUTURE & ELITE DESIGNER ATELIERS (7 - 12)
+   ========================================================================== */
+
+/* 7. Milan Runway Atelier */
+[data-elite-layout="milan-runway-atelier"] {
+  --bg-primary: #050505;
+  --bg-secondary: #111111;
+  --bg-card: rgba(20, 20, 20, 0.95);
+  --bg-elevated: #222222;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --accent-primary: #ffffff; /* Ultra Monochrome Stark */
+  --accent-secondary: #e5e5e5;
+  --accent-glow: rgba(255, 255, 255, 0.2);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 50%);
+}
+
+/* 8. Paris Haute Couture */
+[data-elite-layout="paris-haute-couture"] {
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f3efe8;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-elevated: #ffffff;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --accent-primary: #b45309; /* Rose Gold / Ochre */
+  --accent-secondary: #4338ca;
+  --accent-glow: rgba(180, 83, 9, 0.2);
+  --border-color: rgba(180, 83, 9, 0.22);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --status-positive: #059669;
+  --status-negative: #dc2626;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(180, 83, 9, 0.12), transparent 70%);
+}
+
+/* 9. Tokyo Avant-Garde */
+[data-elite-layout="tokyo-avant-garde"] {
+  --bg-primary: #0a0012;
+  --bg-secondary: #170026;
+  --bg-card: rgba(33, 2, 54, 0.85);
+  --bg-elevated: #2e054a;
+  --text-primary: #fff0f9;
+  --text-secondary: #f472b6;
+  --accent-primary: #ec4899; /* Cyber Magenta */
+  --accent-secondary: #06b6d4;
+  --accent-glow: rgba(236, 72, 153, 0.4);
+  --border-color: rgba(236, 72, 153, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.25), transparent 70%);
+}
+
+/* 10. Kyoto Zen Minimalist */
+[data-elite-layout="kyoto-zen-minimalist"] {
+  --bg-primary: #f5f4ef;
+  --bg-secondary: #eae8df;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-elevated: #ffffff;
+  --text-primary: #292524;
+  --text-secondary: #78716c;
+  --accent-primary: #44403c; /* Sumi Charcoal */
+  --accent-secondary: #059669; /* Moss Green */
+  --accent-glow: rgba(68, 64, 60, 0.15);
+  --border-color: rgba(68, 64, 60, 0.18);
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --status-positive: #059669;
+  --status-negative: #dc2626;
+  --hero-gradient: linear-gradient(180deg, rgba(68, 64, 60, 0.05), transparent 70%);
+}
+
+/* 11. Scandinavian Fjord Nordic */
+[data-elite-layout="scandinavian-fjord-nordic"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e2eaf1;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-primary: #0284c7; /* Fjord Glacier Blue */
+  --accent-secondary: #0ea5e9;
+  --accent-glow: rgba(2, 132, 199, 0.2);
+  --border-color: rgba(2, 132, 199, 0.2);
+  --border-subtle: rgba(0, 0, 0, 0.07);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: linear-gradient(180deg, rgba(2, 132, 199, 0.08), transparent 70%);
+}
+
+/* 12. Antwerp Diamond Cut */
+[data-elite-layout="antwerp-diamond-cut"] {
+  --bg-primary: #07090e;
+  --bg-secondary: #0e121c;
+  --bg-card: rgba(18, 24, 38, 0.9);
+  --bg-elevated: #1e283e;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --accent-primary: #38bdf8; /* Prismatic Diamond */
+  --accent-secondary: #818cf8;
+  --accent-glow: rgba(56, 189, 248, 0.35);
+  --border-color: rgba(56, 189, 248, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --status-positive: #34d399;
+  --status-negative: #fb7185;
+  --hero-gradient: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.25), transparent 70%);
+}
+
+/* ==========================================================================
+   CATEGORY 3: HIGH-FREQUENCY & GODMODE QUANT CITADEL (13 - 18)
+   ========================================================================== */
+
+/* 13. Citadel Dark Matrix */
+[data-elite-layout="citadel-dark-matrix"] {
+  --bg-primary: #020804;
+  --bg-secondary: #051408;
+  --bg-card: rgba(8, 28, 14, 0.9);
+  --bg-elevated: #0d381b;
+  --text-primary: #86efac;
+  --text-secondary: #4ade80;
+  --accent-primary: #22c55e; /* Phosphor Matrix */
+  --accent-secondary: #16a34a;
+  --accent-glow: rgba(34, 197, 94, 0.4);
+  --border-color: rgba(34, 197, 94, 0.35);
+  --border-subtle: rgba(34, 197, 94, 0.12);
+  --status-positive: #4ade80;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.2), transparent 70%);
+}
+
+/* 14. Renaissance Alpha Core */
+[data-elite-layout="renaissance-alpha-core"] {
+  --bg-primary: #051015;
+  --bg-secondary: #091b22;
+  --bg-card: rgba(12, 33, 42, 0.88);
+  --bg-elevated: #123e4f;
+  --text-primary: #e0f2fe;
+  --text-secondary: #7dd3fc;
+  --accent-primary: #0284c7; /* Alpha Cyan */
+  --accent-secondary: #f59e0b; /* Bronze Badge */
+  --accent-glow: rgba(2, 132, 199, 0.35);
+  --border-color: rgba(2, 132, 199, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.2), transparent 70%);
+}
+
+/* 15. Two Sigma Hologram */
+[data-elite-layout="two-sig-hologram"] {
+  --bg-primary: #050614;
+  --bg-secondary: #0c0f2b;
+  --bg-card: rgba(18, 22, 58, 0.85);
+  --bg-elevated: #1e2468;
+  --text-primary: #e0e7ff;
+  --text-secondary: #a5b4fc;
+  --accent-primary: #6366f1; /* Deep Ultraviolet */
+  --accent-secondary: #818cf8;
+  --accent-glow: rgba(99, 102, 241, 0.4);
+  --border-color: rgba(99, 102, 241, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #34d399;
+  --status-negative: #f87171;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%);
+}
+
+/* 16. Jump Speed Optical */
+[data-elite-layout="jump-speed-optical"] {
+  --bg-primary: #0a0304;
+  --bg-secondary: #170709;
+  --bg-card: rgba(36, 12, 16, 0.88);
+  --bg-elevated: #45171f;
+  --text-primary: #ffe4e6;
+  --text-secondary: #f43f5e;
+  --accent-primary: #e11d48; /* Laser Crimson */
+  --accent-secondary: #fb7185;
+  --accent-glow: rgba(225, 29, 72, 0.4);
+  --border-color: rgba(225, 29, 72, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.22), transparent 70%);
+}
+
+/* 17. Manhattan Black Tower */
+[data-elite-layout="manhattan-black-tower"] {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0c;
+  --bg-card: rgba(16, 16, 20, 0.95);
+  --bg-elevated: #1f1f27;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --accent-primary: #2563eb; /* Wall St Cobalt */
+  --accent-secondary: #3b82f6;
+  --accent-glow: rgba(37, 99, 235, 0.35);
+  --border-color: rgba(37, 99, 235, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.2), transparent 70%);
+}
+
+/* 18. Geneva Macro Horology */
+[data-elite-layout="geneva-macro-horology"] {
+  --bg-primary: #0a0d13;
+  --bg-secondary: #131924;
+  --bg-card: rgba(24, 32, 47, 0.9);
+  --bg-elevated: #25334a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent-primary: #eab308; /* Horological Brass */
+  --accent-secondary: #93c5fd;
+  --accent-glow: rgba(234, 179, 8, 0.3);
+  --border-color: rgba(234, 179, 8, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #22c55e;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(234, 179, 8, 0.16), transparent 70%);
+}
+
+/* ==========================================================================
+   CATEGORY 4: AGI & FRONTIER RESEARCH LABORATORIES (19 - 24)
+   ========================================================================== */
+
+/* 19. DeepMind Gemini Omni */
+[data-elite-layout="deepmind-gemini-omni"] {
+  --bg-primary: #060913;
+  --bg-secondary: #0c1224;
+  --bg-card: rgba(16, 24, 48, 0.88);
+  --bg-elevated: #1a2854;
+  --text-primary: #ffffff;
+  --text-secondary: #93c5fd;
+  --accent-primary: #3b82f6; /* Gemini Blue */
+  --accent-secondary: #8b5cf6; /* Omni Purple */
+  --accent-glow: rgba(59, 130, 246, 0.4);
+  --border-color: rgba(139, 92, 246, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.25), rgba(139, 92, 246, 0.15) 50%, transparent 80%);
+}
+
+/* 20. Anthropic Claude Neural */
+[data-elite-layout="anthropic-claude-neural"] {
+  --bg-primary: #14110f;
+  --bg-secondary: #211c19;
+  --bg-card: rgba(43, 36, 32, 0.9);
+  --bg-elevated: #3f352f;
+  --text-primary: #fcf9f5;
+  --text-secondary: #d6ccc2;
+  --accent-primary: #d97706; /* Warm Terracotta */
+  --accent-secondary: #f59e0b;
+  --accent-glow: rgba(217, 119, 6, 0.3);
+  --border-color: rgba(217, 119, 6, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.16), transparent 70%);
+}
+
+/* 21. OpenAI Stargate Supercluster */
+[data-elite-layout="openai-stargate-supercluster"] {
+  --bg-primary: #040814;
+  --bg-secondary: #08112b;
+  --bg-card: rgba(12, 25, 60, 0.88);
+  --bg-elevated: #162f73;
+  --text-primary: #f0fdf4;
+  --text-secondary: #a7f3d0;
+  --accent-primary: #10a37f; /* OpenAI Mint Emerald */
+  --accent-secondary: #06b6d4;
+  --accent-glow: rgba(16, 163, 127, 0.38);
+  --border-color: rgba(16, 163, 127, 0.32);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #34d399;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(16, 163, 127, 0.22), transparent 70%);
+}
+
+/* 22. CERN Quantum Collider */
+[data-elite-layout="cern-quantum-collider"] {
+  --bg-primary: #020617;
+  --bg-secondary: #07102e;
+  --bg-card: rgba(13, 27, 72, 0.88);
+  --bg-elevated: #163285;
+  --text-primary: #e0f2fe;
+  --text-secondary: #93c5fd;
+  --accent-primary: #38bdf8; /* Quantum Ion Blue */
+  --accent-secondary: #818cf8;
+  --accent-glow: rgba(56, 189, 248, 0.4);
+  --border-color: rgba(56, 189, 248, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --status-positive: #22c55e;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.25), transparent 70%);
+}
+
+/* 23. MIT Media Lab Kinetic */
+[data-elite-layout="mit-media-lab-kinetic"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #171717;
+  --bg-card: rgba(26, 26, 26, 0.92);
+  --bg-elevated: #333333;
+  --text-primary: #fafafa;
+  --text-secondary: #a3a3a3;
+  --accent-primary: #facc15; /* Kinetic Caution Yellow */
+  --accent-secondary: #f43f5e;
+  --accent-glow: rgba(250, 204, 21, 0.35);
+  --border-color: rgba(250, 204, 21, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --status-positive: #22c55e;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(250, 204, 21, 0.18), transparent 70%);
+}
+
+/* 24. Bell Labs Analog Revival */
+[data-elite-layout="bell-labs-analog-revival"] {
+  --bg-primary: #12100d;
+  --bg-secondary: #1e1b17;
+  --bg-card: rgba(38, 33, 28, 0.92);
+  --bg-elevated: #4d4439;
+  --text-primary: #fef3c7;
+  --text-secondary: #fde68a;
+  --accent-primary: #f59e0b; /* Vacuum Tube Glow */
+  --accent-secondary: #ea580c;
+  --accent-glow: rgba(245, 158, 11, 0.4);
+  --border-color: rgba(245, 158, 11, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.22), transparent 70%);
+}
+
+/* ==========================================================================
+   CATEGORY 5: IMPERIAL AEROSPACE & AUTONOMOUS COMMAND (25 - 30)
+   ========================================================================== */
+
+/* 25. Lockheed Skunkworks Stealth */
+[data-elite-layout="lockheed-skunkworks-stealth"] {
+  --bg-primary: #040507;
+  --bg-secondary: #0a0d12;
+  --bg-card: rgba(14, 18, 25, 0.92);
+  --bg-elevated: #1e2634;
+  --text-primary: #e2e8f0;
+  --text-secondary: #64748b;
+  --accent-primary: #94a3b8; /* Stealth Carbon Grey */
+  --accent-secondary: #38bdf8;
+  --accent-glow: rgba(148, 163, 184, 0.25);
+  --border-color: rgba(148, 163, 184, 0.22);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(148, 163, 184, 0.12), transparent 70%);
+}
+
+/* 26. SpaceX Starship Glass */
+[data-elite-layout="spacex-starship-glass"] {
+  --bg-primary: #030712;
+  --bg-secondary: #0b1329;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-elevated: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-primary: #0284c7; /* Rocket Burn Blue */
+  --accent-secondary: #38bdf8;
+  --accent-glow: rgba(2, 132, 199, 0.4);
+  --border-color: rgba(56, 189, 248, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.25), transparent 70%);
+}
+
+/* 27. Palantir Foundry Recon */
+[data-elite-layout="palantir-foundry-recon"] {
+  --bg-primary: #050b11;
+  --bg-secondary: #0c1824;
+  --bg-card: rgba(16, 32, 48, 0.9);
+  --bg-elevated: #1d3c5b;
+  --text-primary: #f0fdfa;
+  --text-secondary: #5eead4;
+  --accent-primary: #14b8a6; /* Tactical Teal */
+  --accent-secondary: #06b6d4;
+  --accent-glow: rgba(20, 184, 166, 0.35);
+  --border-color: rgba(20, 184, 166, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.2), transparent 70%);
+}
+
+/* 28. NORAD Bunker Command */
+[data-elite-layout="norad-bunker-command"] {
+  --bg-primary: #0a0700;
+  --bg-secondary: #171002;
+  --bg-card: rgba(36, 25, 5, 0.9);
+  --bg-elevated: #4d360a;
+  --text-primary: #fef08a;
+  --text-secondary: #eab308;
+  --accent-primary: #eab308; /* Defense Amber */
+  --accent-secondary: #ef4444; /* DEFCON Red */
+  --accent-glow: rgba(234, 179, 8, 0.4);
+  --border-color: rgba(234, 179, 8, 0.35);
+  --border-subtle: rgba(234, 179, 8, 0.12);
+  --status-positive: #22c55e;
+  --status-negative: #ef4444;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(234, 179, 8, 0.25), transparent 70%);
+}
+
+/* 29. Rolls-Royce Aerospace */
+[data-elite-layout="rolls-royce-aerospace"] {
+  --bg-primary: #060a17;
+  --bg-secondary: #0f162e;
+  --bg-card: rgba(20, 30, 60, 0.88);
+  --bg-elevated: #1e2d5a;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --accent-primary: #1d4ed8; /* British Bespoke Blue */
+  --accent-secondary: #cbd5e1; /* Turbine Chrome */
+  --accent-glow: rgba(29, 78, 216, 0.35);
+  --border-color: rgba(203, 213, 225, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(29, 78, 216, 0.2), transparent 70%);
+}
+
+/* 30. Valhalla Godmode Sovereign */
+[data-elite-layout="valhalla-godmode-sovereign"] {
+  --bg-primary: #05020a;
+  --bg-secondary: #120822;
+  --bg-card: rgba(26, 12, 48, 0.92);
+  --bg-elevated: #3b1c6e;
+  --text-primary: #ffffff;
+  --text-secondary: #fbcfe8;
+  --accent-primary: #d946ef; /* Divine Prism Magenta */
+  --accent-secondary: #eab308; /* Imperial Crown Gold */
+  --accent-glow: rgba(217, 70, 239, 0.45);
+  --border-color: rgba(234, 179, 8, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --status-positive: #10b981;
+  --status-negative: #f43f5e;
+  --hero-gradient: radial-gradient(ellipse at 50% 0%, rgba(217, 70, 239, 0.28), rgba(234, 179, 8, 0.18) 50%, transparent 80%);
+}
+
+/* ==========================================================================
+   FLOATING IMPERIAL LAYOUT PICKER & CONTROLS
+   ========================================================================== */
+.elite-layout-picker-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  background: var(--bg-card, rgba(15, 23, 42, 0.9));
+  color: var(--text-primary, #fff);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(16px);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow, transparent);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.elite-layout-picker-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow, rgba(212, 175, 55, 0.4));
+}
+
+.elite-layout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 20px;
+}
+
+.elite-layout-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.elite-layout-dialog {
+  background: var(--bg-secondary, #0d1527);
+  color: var(--text-primary, #fff);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.15));
+  width: 100%;
+  max-width: 980px;
+  max-height: 85vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--accent-glow, transparent);
+  overflow: hidden;
+  animation: eliteModalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes eliteModalPop {
+  0% { transform: scale(0.95) translateY(10px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.elite-layout-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.elite-layout-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.elite-layout-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #94a3b8);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+.elite-layout-close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.elite-layout-categories {
+  display: flex;
+  gap: 8px;
+  padding: 12px 28px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
+  overflow-x: auto;
+}
+
+.elite-cat-pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary, #94a3b8);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.elite-cat-pill.active, .elite-cat-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary, #fff);
+  border-color: var(--border-color, rgba(255, 255, 255, 0.2));
+}
+
+.elite-layout-grid {
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.elite-card {
+  background: var(--bg-card, rgba(15, 23, 42, 0.6));
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.elite-card:hover {
+  border-color: var(--accent-primary, #38bdf8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.elite-card.current {
+  border-color: var(--accent-primary, #d4af37);
+  box-shadow: 0 0 15px var(--accent-glow, rgba(212, 175, 55, 0.3));
+}
+
+.elite-card-swatches {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.elite-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.elite-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary, #fff);
+}
+
+.elite-card-cat {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary, #38bdf8);
+  margin-bottom: 6px;
+}
+
+.elite-card-desc {
+  font-size: 12px;
+  color: var(--text-secondary, #94a3b8);
+  line-height: 1.4;
+}

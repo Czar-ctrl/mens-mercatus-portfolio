@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="gm-lite">
+<head>
+  <meta charset="UTF-8" /><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Mens Mercatus Sound Deck — AI Producer, Generate, stems, beats, vocals, mic, VST rack" />
+  <title>Mens Mercatus Sound Deck</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/app.css?v=20261006g" />
+  <link rel="stylesheet" href="../../css/ambient-bg.css?v=20261005i" />
+  <link rel="stylesheet" href="../../css/cursor.css" />
+  <link rel="stylesheet" href="../../css/pages.css" />
+  <link rel="stylesheet" href="../../css/demo-kit.css?v=20261005a" />
+  <link rel="stylesheet" href="../../css/godmode.css?v=20261005h" />
+</head>
+<body>
+  <div class="app" data-deck>
+  <nav class="mm-four-strip" aria-label="Four flagship systems" style="margin:0;border-radius:0;border-left:0;border-right:0;border-top:0;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <a class="mm-four-home" href="../../index.html"><img class="gm-mark" src="../../assets/marks/mark-wheat-16.svg" width="16" height="16" alt="">Home</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="./" aria-current="page">SoundX</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="../jobnet/" target="_blank" rel="noopener">JobNet</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="../../blueprint/" target="_blank" rel="noopener">Blueprint</a>
+    <span class="mm-four-sep" aria-hidden="true">·</span>
+    <a href="/apps/forex-codex/" target="_blank" rel="noopener">Forex</a>
+  </nav>
+    <header data-transport></header>
+
+    <div class="workspace" data-workspace>
+      <aside class="side-panel" data-library-panel aria-label="Sample library"></aside>
+      <div class="splitter" data-split="lib" role="separator" aria-orientation="vertical" aria-label="Resize library panel" tabindex="0"></div>
+
+      <main class="timeline-wrap" data-timeline aria-label="Timeline"></main>
+      <div class="splitter" data-split="ai" role="separator" aria-orientation="vertical" aria-label="Resize producer panel" tabindex="0"></div>
+
+      <aside class="ai-panel" aria-label="Producer panels">
+        <div class="tabs" role="tablist">
+          <button type="button" class="active" data-tab="aiproducer" role="tab" aria-selected="true">AI Producer</button>
+          <button type="button" data-tab="stems" role="tab">Stems</button>
+          <button type="button" data-tab="beats" role="tab">Beats</button>
+          <button type="button" data-tab="vocals" role="tab">Vocals</button>
+          <button type="button" data-tab="mic" role="tab">Mic</button>
+          <button type="button" data-tab="vst" role="tab">VST</button>
+          <button type="button" data-tab="synth" role="tab">Synth</button>
+          <button type="button" data-tab="generate" role="tab">Generate</button>
+          <button type="button" data-tab="fl" role="tab">FL Packs</button>
+          <button type="button" data-tab="godmode" role="tab">Godmode</button>
+        </div>
+        <div class="tab-panes">
+          <div data-pane="aiproducer" role="tabpanel"></div>
+          <div data-pane="stems" role="tabpanel" hidden></div>
+          <div data-pane="beats" role="tabpanel" hidden></div>
+          <div data-pane="vocals" role="tabpanel" hidden></div>
+          <div data-pane="mic" role="tabpanel" hidden></div>
+          <div data-pane="vst" role="tabpanel" hidden></div>
+          <div data-pane="synth" role="tabpanel" hidden></div>
+          <div data-pane="generate" role="tabpanel" hidden></div>
+          <div data-pane="fl" role="tabpanel" hidden></div>
+          <div data-pane="godmode" role="tabpanel" hidden></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="splitter splitter-row" data-split="mixer" role="separator" aria-orientation="horizontal" aria-label="Resize mixer" tabindex="0"></div>
+    <section class="mixer" data-mixer aria-label="Mixer"></section>
+
+    <footer class="status-bar">
+      <span data-status-bar>Booting…</span>
+      <span><a class="status-link" href="../../index.html">Home</a> · <a class="status-link" href="../index.html">Apps</a> · <a class="status-link gm-assist-link" data-gm-assist href="../mercatus-assist/?from=sound-deck" target="_blank" rel="noopener">Assist</a> · <a class="status-link" href="../jobnet/" target="_blank" rel="noopener">JobNet</a> · <a class="status-link" href="../../blueprint/" target="_blank" rel="noopener">Blueprint</a> · <a class="status-link" href="/apps/forex-codex/" target="_blank" rel="noopener">Forex</a> · <a class="status-link" href="../../vault/SoundDeck_Skeleton_Architecture_Brief.pdf" target="_blank" rel="noopener">Architecture PDF</a></span>
+    </footer>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="../../js/cursor.js" defer></script>
+  <script src="../../js/ambient-bg.js?v=20261005i" defer></script>
+  <script src="../../js/demo-kit.js?v=20261005a"></script>
+  <script type="module" src="js/main.js?v=20261006g"></script>
+  <script src="../../js/godmode.js?v=20261005h" data-gm="lite" data-gm-tool="sound-deck" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-prime-4476141726",
+  "jobId": "li-prime-4476141726",
+  "title": "Full-Stack Python Developer",
+  "company": "Prime South Africa",
+  "location": "Bryanston, Gauteng, South Africa (hybrid)",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4476141726",
+  "signal": "low",
+  "packet": "Here's a concise apply packet for the Full-Stack Python Developer role at Prime South Africa:\n\n### Cover Letter Draft\n\nSubject: Application for Full-Stack Python Developer \u2013 [Your Name]\n\nDear Hiring Manager,\n\nI am writing to express my keen interest in the Full-Stack Python Developer position at Prime South Africa in Bryanston, as advertised. My background as an AI / Systems Engineer, with a strong focus on Python, TypeScript, and robust distributed systems, aligns well with your need for developing Flask-based internal tools and integrating them with data-science models.\n\nWhile my recent experience includes advanced AI concepts like LLMs and RAG, the core of my work has always been building reliable, scalable Python applications and front-end interfaces. I am adept at creating efficient back-end services with Python and Flask, and crafting intuitive user experiences with TypeScript. My systems engineering expertise ensures that I approach development with an eye for performance, maintainability, and seamless integration, which I believe is crucial for internal tooling that supports data science initiatives.\n\nI am eager to contribute my full-stack development skills to Prime South Africa and learn more about this opportunity.\n\nSincerely,\n\n[Your Name]\n[Your Contact Information]\n\n### Fit Notes\n\n*   **Strong Python Foundation:** Your experience with Python, including advanced areas like LLMs and agents, demonstrates deep proficiency directly applicable to Flask development and data integration.\n*   **Full-Stack Capability:** Skills in TypeScript and front-end development directly address the need for internal tools with user interfaces.\n*   **Systems Thinking:** Your background in Systems Engineering and distributed systems is invaluable for building robust, scalable internal tools that reliably connect to data science models.\n*   **Adaptability:** Your ability to master complex AI/ML systems shows a strong learning aptitude, making you well-suited to adapt to specific data science integration challenges, even in a \"less AI-forward\" context.\n\n### How-to-Submit Checklist\n\n1.  **Review the Job Description:** Carefully read the full job posting on Prime South Africa's career site.\n2.  **Tailor Your CV:** Update your CV to highlight Python, Flask, TypeScript, distributed systems, and any relevant experience with internal tools or data integration.\n3.  **Finalise Cover Letter:** Adapt the draft above with specific examples from your experience where possible.\n4.  **Apply Online:** Submit your tailored CV and cover letter through Prime South Africa's official application portal.\n5.  **Follow Up (Optional):** If you don't hear back within a reasonable timeframe, consider a polite follow-up email.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:53.177998+00:00"
+}

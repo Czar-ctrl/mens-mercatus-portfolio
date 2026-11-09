@@ -1,0 +1,516 @@
+/* Mens Mercatus — site-wide ambient canvas + variant picker */
+
+#mm-ambient-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
+#mm-ambient-static,
+.mm-ambient-static {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 40%, rgba(180, 78, 18, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 75% 65%, rgba(49, 46, 129, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #0f172a 0%, #07080c 100%);
+}
+
+/* Ambient replaces soft glow chase */
+body.mm-has-ambient .glow-bg {
+  display: none !important;
+}
+
+body.mm-ambient-reduced #mm-ambient-bg {
+  display: none;
+}
+
+body.mm-ambient-reduced #mm-ambient-static,
+body.mm-ambient-reduced .mm-ambient-static {
+  display: block;
+}
+
+/* Keep page chrome above ambient — do NOT reset position on fixed nav/sidebar */
+body.mm-has-ambient {
+  background-color: #07080c;
+}
+
+body.mm-has-ambient .page {
+  position: relative;
+  z-index: 1;
+}
+
+body.mm-has-ambient .site-nav {
+  z-index: 100;
+}
+
+body.mm-has-ambient .sidebar {
+  z-index: 200;
+}
+
+body.mm-has-ambient .sidebar-overlay {
+  z-index: 150;
+}
+
+body.mm-has-ambient > .app {
+  position: relative;
+  z-index: 1;
+}
+
+body.mm-has-ambient .studio-topbar {
+  z-index: 100;
+}
+
+body.mm-has-ambient .studio-viewport-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   Variant picker — compact gold/navy pill, fixed bottom-left
+   --------------------------------------------------------------------------- */
+.mm-ambient-picker {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 9000;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 5px 3px 8px;
+  background: rgba(10, 10, 12, 0.97);
+  border: 1px solid rgba(200, 16, 46, 0.45);
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+  /* solid dark so yellow liquid/aurora cannot wash through */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.mm-ambient-picker-label {
+  font-family: var(--font-mono, "Space Mono", ui-monospace, Menlo, monospace);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8e6e0;
+  margin-right: 2px;
+  white-space: nowrap;
+}
+
+.mm-ambient-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #e8e6e0;
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 4px 7px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.mm-ambient-btn:hover {
+  background: #1a1a1e;
+  color: #f5f5f5;
+}
+
+.mm-ambient-btn.active {
+  background: linear-gradient(135deg, #c8102e 0%, #7a0a1c 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(200, 16, 46, 0.35);
+}
+
+.mm-ambient-btn.active:hover {
+  color: #ffffff;
+}
+
+.mm-ambient-btn:focus-visible {
+  outline: 2px solid #c8102e;
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-ambient-picker {
+    opacity: 0.75;
+  }
+  .mm-ambient-btn {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .mm-ambient-picker {
+    left: 8px;
+    bottom: 8px;
+    padding: 2px 4px 2px 6px;
+    gap: 2px;
+  }
+  .mm-ambient-picker-label {
+    display: none;
+  }
+  .mm-ambient-btn {
+    font-size: 9px;
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mm-ambient-picker {
+    max-width: calc(100vw - 16px);
+    overflow-x: auto;
+  }
+}
+
+/* Canvas atelier: keep architecture CTA above picker */
+#mm-arch-cta {
+  z-index: 9100;
+}
+
+/* Narrow / soft ambient: quieter static wash (JS sets mm-ambient-reduced + mm-ambient-narrow) */
+body.mm-ambient-narrow #mm-ambient-static,
+body.mm-ambient-narrow .mm-ambient-static {
+  background:
+    radial-gradient(ellipse 70% 50% at 40% 35%, rgba(180, 78, 18, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 70% 70%, rgba(49, 46, 129, 0.28) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #0f172a 0%, #07080c 100%);
+}
+
+@media (max-width: 720px) {
+  body.mm-has-ambient .glow-bg {
+    opacity: 0.35;
+  }
+}
+
+/* Sound Deck: the BG / Web / Particles / Liquid / Stars / Aurora rail is docked
+   in the status bar (see ambient-bg.js). It must not float over mixer faders,
+   mute, solo, transport, or arrange. Homepage rules live in pages.css and are untouched.
+   Hidden until the status bar exists and the dock class is applied. */
+body:has([data-deck]) .mm-ambient-picker:not(.mm-ambient-docked) {
+  display: none !important;
+}
+
+body:has([data-deck]) .status-bar {
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body:has([data-deck]) .mm-ambient-picker.mm-ambient-docked {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: auto;
+  margin: 0;
+  max-width: 100%;
+  flex: 0 1 auto;
+}
+
+@media (max-width: 720px) {
+  body:has([data-deck]) .mm-ambient-picker.mm-ambient-docked {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+}
+
+
+
+/* Reel Pulse — dark cinematic Cartel red/black/white (IG-inspired, no embed) */
+body.mm-ambient-reel-pulse.mm-ambient-reduced #mm-ambient-static,
+body.mm-ambient-reel-pulse.mm-ambient-reduced .mm-ambient-static,
+body.mm-ambient-reel-pulse #mm-ambient-static.mm-ambient-static-force {
+  display: block;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 42%, rgba(200, 16, 46, 0.32) 0%, transparent 58%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255, 255, 255, 0.04) 0%, transparent 45%),
+    linear-gradient(180deg, #0a0a0a 0%, #050505 55%, #000 100%);
+}
+
+body.mm-ambient-reel-pulse.mm-has-ambient {
+  background-color: #050505;
+}
+
+.mm-ambient-btn[data-ambient="reel-pulse"].active {
+  background: linear-gradient(135deg, #c8102e 0%, #1a0508 100%);
+  box-shadow: 0 0 12px rgba(200, 16, 46, 0.45);
+}
+
+
+/* ==========================================================================
+   Glass Light 3D (light-3d) — soft cream / frosted glass ambient
+   Inspired by floating-UI-over-daylight look (modulify / landdding / wonderlist).
+   When selected: lifts page chrome to a light palette for the session (localStorage).
+   html.gm / godmode pages never load this script; their dark chrome stays intact.
+   ========================================================================== */
+
+body.mm-ambient-light-3d.mm-has-ambient {
+  background-color: #f4f1ea;
+  color: #1a1a1a;
+  /* Token lift — keep Cartel red accents */
+  --mm-graphite: #f4f1ea;
+  --mm-graphite-2: #ebe7df;
+  --mm-black: #f4f1ea;
+  --mm-black-elevated: #ffffff;
+  --mm-panel: rgba(255, 255, 255, 0.55);
+  --mm-panel-solid: #ffffff;
+  --mm-panel-2: #faf8f4;
+  --mm-ivory: #1a1a1a;
+  --mm-ivory-dim: rgba(26, 26, 26, 0.7);
+  --mm-ivory-soft: rgba(26, 26, 26, 0.08);
+  --mm-ivory-glass: rgba(255, 255, 255, 0.62);
+  --mm-ivory-glass-strong: rgba(255, 255, 255, 0.82);
+  --mm-line: rgba(26, 26, 26, 0.08);
+  --mm-line-strong: rgba(26, 26, 26, 0.14);
+  --mm-line-gold: rgba(200, 16, 46, 0.35);
+  --mm-white: #1a1a1a;
+  --mm-muted: rgba(26, 26, 26, 0.58);
+  --mm-dim: rgba(26, 26, 26, 0.4);
+  --mm-glass: rgba(255, 255, 255, 0.78);
+  --mm-glass-card: rgba(255, 255, 255, 0.68);
+  --mm-glass-border: rgba(26, 26, 26, 0.08);
+  --mm-glass-border-hover: rgba(200, 16, 46, 0.45);
+}
+
+/* Soft static wash for reduced-motion / narrow */
+body.mm-ambient-light-3d.mm-ambient-reduced #mm-ambient-static,
+body.mm-ambient-light-3d.mm-ambient-reduced .mm-ambient-static,
+body.mm-ambient-light-3d #mm-ambient-static.mm-ambient-static-force {
+  display: block;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 18%, rgba(186, 210, 228, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(200, 16, 46, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 55% 40% at 85% 70%, rgba(170, 190, 150, 0.12) 0%, transparent 55%),
+    linear-gradient(180deg, #e8eef4 0%, #faf8f4 45%, #f4f1ea 100%);
+}
+
+body.mm-ambient-light-3d.mm-ambient-narrow #mm-ambient-static,
+body.mm-ambient-light-3d.mm-ambient-narrow .mm-ambient-static {
+  background:
+    radial-gradient(ellipse 65% 45% at 50% 25%, rgba(186, 210, 228, 0.32) 0%, transparent 55%),
+    linear-gradient(180deg, #eef2f6 0%, #f4f1ea 100%);
+}
+
+/* Picker — light chrome when Glass theme active */
+body.mm-ambient-light-3d .mm-ambient-picker {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(200, 16, 46, 0.28);
+  box-shadow: 0 8px 28px rgba(40, 35, 30, 0.1), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+body.mm-ambient-light-3d .mm-ambient-picker-label {
+  color: #3a3a3a;
+}
+body.mm-ambient-light-3d .mm-ambient-btn {
+  color: #2a2a2a;
+}
+body.mm-ambient-light-3d .mm-ambient-btn:hover {
+  background: rgba(26, 26, 26, 0.06);
+  color: #111;
+}
+body.mm-ambient-light-3d .mm-ambient-btn.active {
+  background: linear-gradient(135deg, #c8102e 0%, #9a0c22 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(200, 16, 46, 0.28);
+}
+.mm-ambient-btn[data-ambient="light-3d"].active {
+  background: linear-gradient(135deg, #ffffff 0%, #f0ebe3 100%);
+  color: #c8102e;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 2px 8px rgba(40, 35, 30, 0.08);
+  border: 1px solid rgba(200, 16, 46, 0.35);
+}
+body.mm-ambient-light-3d .mm-ambient-btn[data-ambient="light-3d"].active {
+  background: linear-gradient(135deg, #c8102e 0%, #9a0c22 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Nav / footer / cards — frosted glass surfaces */
+body.mm-ambient-light-3d .site-nav {
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: 0 8px 32px rgba(40, 35, 30, 0.06);
+  backdrop-filter: blur(18px) saturate(1.25);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25);
+}
+body.mm-ambient-light-3d .nav-links a:hover,
+body.mm-ambient-light-3d .nav-links a.is-active {
+  color: #111;
+}
+body.mm-ambient-light-3d .site-footer {
+  border-top-color: rgba(26, 26, 26, 0.08);
+  color: rgba(26, 26, 26, 0.55);
+}
+
+/* Cards: soft white glass + subtle 3D parallax (CSS vars from ambient JS) */
+body.mm-ambient-light-3d .card,
+body.mm-ambient-light-3d .discover-card,
+body.mm-ambient-light-3d .pipe-card,
+body.mm-ambient-light-3d .hub-card,
+body.mm-ambient-light-3d .app-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 18px 48px rgba(40, 35, 30, 0.08),
+    0 2px 8px rgba(40, 35, 30, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(22px) saturate(1.3);
+  -webkit-backdrop-filter: blur(22px) saturate(1.3);
+  transform: perspective(1400px) rotateX(var(--mm-l3d-rx, 0deg)) rotateY(var(--mm-l3d-ry, 0deg)) translate3d(var(--mm-l3d-ox, 0px), var(--mm-l3d-oy, 0px), 0);
+  transform-style: preserve-3d;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    transform 0.35s var(--ease-out);
+}
+body.mm-ambient-light-3d .card:hover,
+body.mm-ambient-light-3d .discover-card:hover,
+body.mm-ambient-light-3d .pipe-card:hover,
+body.mm-ambient-light-3d .hub-card:hover,
+body.mm-ambient-light-3d .app-card:hover {
+  border-color: rgba(200, 16, 46, 0.35);
+  box-shadow:
+    0 24px 56px rgba(40, 35, 30, 0.12),
+    0 4px 14px rgba(200, 16, 46, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.88);
+}
+body.mm-ambient-light-3d .card h3,
+body.mm-ambient-light-3d .discover-card h3,
+body.mm-ambient-light-3d .section-title {
+  color: #141414;
+}
+body.mm-ambient-light-3d .card p,
+body.mm-ambient-light-3d .section-lead {
+  color: rgba(26, 26, 26, 0.62);
+}
+
+/* Soft depth on page shell */
+body.mm-ambient-light-3d .page {
+  transform-style: preserve-3d;
+}
+
+/* Hero / tape / misc dark panels → light wash */
+body.mm-ambient-light-3d .mm-tape {
+  background: rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: none;
+}
+body.mm-ambient-light-3d .mm-tape-meta {
+  background: rgba(255, 255, 255, 0.85);
+  border-right: 1px solid rgba(26, 26, 26, 0.06);
+}
+body.mm-ambient-light-3d .hero-burnt-field,
+body.mm-ambient-light-3d .hero-orbit {
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+/* Sidebar light lift */
+body.mm-ambient-light-3d .sidebar {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(26, 26, 26, 0.08);
+  color: #1a1a1a;
+  box-shadow: 8px 0 40px rgba(40, 35, 30, 0.08);
+}
+body.mm-ambient-light-3d .sidebar-overlay {
+  background: rgba(244, 241, 234, 0.45);
+}
+
+/* Buttons stay Cartel-red primary; ghosts darken for contrast */
+body.mm-ambient-light-3d .btn-ghost {
+  color: #1a1a1a;
+  border-color: rgba(26, 26, 26, 0.16);
+}
+body.mm-ambient-light-3d .btn-ghost:hover {
+  border-color: #c8102e;
+  color: #c8102e;
+  background: rgba(200, 16, 46, 0.05);
+}
+
+/* Mobile nav drawer */
+@media (max-width: 720px) {
+  body.mm-ambient-light-3d .nav-links {
+    background: rgba(255, 255, 255, 0.96);
+  }
+}
+
+/* prefers-reduced-motion: kill 3D parallax tilt, keep soft surfaces */
+@media (prefers-reduced-motion: reduce) {
+  body.mm-ambient-light-3d .card,
+  body.mm-ambient-light-3d .discover-card,
+  body.mm-ambient-light-3d .pipe-card,
+  body.mm-ambient-light-3d .hub-card,
+  body.mm-ambient-light-3d .app-card {
+    transform: none !important;
+    transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  }
+}
+
+/* Godmode: keep dark when light-3d class sticks WITHOUT explicit mm-light toggle.
+   When html.mm-light is set (theme toggle / Glass sync), godmode.css light rules win. */
+html.gm:not(.mm-light) body.mm-ambient-light-3d,
+html.gm:not(.mm-light) body.mm-ambient-light-3d.mm-has-ambient {
+  background-color: var(--gm-black, #0a0a0a);
+  color: var(--gm-white, #f5f5f5);
+}
+
+
+/* —— Explicit light mode (html.mm-light) — mirrors Glass Light 3D page lift
+   Used by the header sun/moon toggle; works on godmode pages where ambient JS early-returns. */
+html.mm-light:not(.gm) body {
+  background-color: #f4f1ea;
+  color: #1a1a1a;
+}
+html.mm-light:not(.gm) .site-nav {
+  background: rgba(255, 252, 247, 0.88);
+  border-bottom-color: rgba(26, 26, 26, 0.1);
+}
+html.mm-light:not(.gm) .nav-brand,
+html.mm-light:not(.gm) .nav-links a.is-active { color: #1a1a1a; }
+html.mm-light:not(.gm) .nav-links a { color: #4a4a4a; }
+html.mm-light:not(.gm) .card,
+html.mm-light:not(.gm) .discover-card,
+html.mm-light:not(.gm) .pipe-card,
+html.mm-light:not(.gm) .hub-card,
+html.mm-light:not(.gm) .app-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+  box-shadow: 0 12px 28px rgba(40, 30, 10, 0.08);
+}
+html.mm-light:not(.gm) .card h3,
+html.mm-light:not(.gm) .discover-card h3,
+html.mm-light:not(.gm) .section-title { color: #1a1a1a; }
+html.mm-light:not(.gm) .card p,
+html.mm-light:not(.gm) .section-lead { color: #3d3d3d; }
+html.mm-light:not(.gm) .site-footer {
+  background: rgba(255, 252, 247, 0.9);
+  border-top-color: rgba(26, 26, 26, 0.1);
+  color: #3d3d3d;
+}
+html.mm-light:not(.gm) .mm-tape {
+  background: rgba(255, 252, 247, 0.92);
+  border-color: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+}

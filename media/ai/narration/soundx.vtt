@@ -1,0 +1,45 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:04.016
+SoundX is a studio you can open in a browser tab.
+
+2
+00:00:03.966 --> 00:00:08.077
+Most music demos send your audio to someone else's server.
+
+3
+00:00:08.077 --> 00:00:10.072
+This one does not.
+
+4
+00:00:10.072 --> 00:00:18.930
+Katlego built it as a browser DAW, with a library, pattern and song views, a mixer and a master bus, all on Web Audio.
+
+5
+00:00:18.930 --> 00:00:27.416
+A four-step path lets anyone Load Demo, press Play, shape the master, and Generate, with no account and no sign-in.
+
+6
+00:00:27.416 --> 00:00:34.339
+The AI Producer takes a written request and proposes drums, bass, keys or an arrangement idea.
+
+7
+00:00:34.339 --> 00:00:38.822
+Generate can listen to the buffer and estimate tempo from onsets.
+
+8
+00:00:38.822 --> 00:00:42.043
+But it never silently overwrites the session.
+
+9
+00:00:42.043 --> 00:00:46.779
+The producer proposes, and the session changes only when you apply it.
+
+10
+00:00:46.779 --> 00:00:52.440
+Synthesis, the optional microphone path, and export all stay in the browser.
+
+11
+00:00:52.440 --> 00:00:55.577
+Closing the tab leaves nothing on a server.

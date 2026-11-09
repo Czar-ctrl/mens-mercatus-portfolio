@@ -1,0 +1,361 @@
+{
+ "version": "sc-20261020",
+ "note": "Every sentence is quoted verbatim from the page or case study named in src. Nothing is generated.",
+ "items": {
+  "think": {
+   "title": "THINK",
+   "urls": [
+    "/think/"
+   ],
+   "case": "/case-studies/assist/",
+   "lead": {
+    "text": "THINK — Gemini multimodal workspace: chat, live voice, Net Sites, Net Code, Netzar Protocol, and Net Learn.",
+    "src": "think/index.html"
+   },
+   "pts": [
+    [
+     "What",
+     {
+      "text": "THINK is the live multimodal desk — chat, image, and live paths through the portfolio’s Gemini proxy.",
+      "src": "apps/mercatus-concierge/index.html"
+     }
+    ],
+    [
+     "Stack",
+     {
+      "text": "THINK: React 19 workspace with a server-side proxy and live-voice WebSocket relay.",
+      "src": "resume/index.html"
+     }
+    ],
+    [
+     "Security",
+     {
+      "text": "The model key stays on the server.",
+      "src": "case-studies/assist/index.html"
+     }
+    ],
+    [
+     "Limit",
+     {
+      "text": "THINK is a portfolio workspace with caps, not an unlimited production assistant.",
+      "src": "case-studies/assist/index.html"
+     }
+    ]
+   ],
+   "client": [
+    [
+     "What it is",
+     {
+      "text": "THINK for multimodal work: chat, image, live voice, sites, code, and learning.",
+      "src": "case-studies/assist/index.html"
+     }
+    ],
+    [
+     "What Katlego did",
+     {
+      "text": "THINK: React 19 workspace with a server-side proxy and live-voice WebSocket relay.",
+      "src": "resume/index.html"
+     }
+    ],
+    [
+     "How the AI is kept safe",
+     {
+      "text": "Live voice and image are capped per IP — that cap is the control, not a bug.",
+      "src": "case-studies/assist/index.html"
+     }
+    ],
+    [
+     "What it does not do",
+     {
+      "text": "Feed copy inside THINK is product content, not a résumé claim.",
+      "src": "case-studies/assist/index.html"
+     }
+    ]
+   ]
+  },
+  "assist": {
+   "title": "Mercatus Assist",
+   "urls": [
+    "/apps/mercatus-assist/"
+   ],
+   "case": "/case-studies/assist/",
+   "lead": {
+    "text": "Retrieval and intent routing run on your device with a small embedding model; Gemini writes the answer from the sources it was given, and every claim links back to the page it came from.",
+    "src": "apps/mercatus-assist/index.html"
+   },
+   "pts": [
+    [
+     "How",
+     {
+      "text": "Hybrid BM25 + MiniLM retrieval over the site's knowledge base, one Gemini call, citations checked before anything is shown.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ],
+    [
+     "AI",
+     {
+      "text": "Computed from retrieval similarity, so a weak match is visible instead of hidden.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ],
+    [
+     "Stack",
+     {
+      "text": "Shipped an ASP.NET Core 8 minimal API in C# that calls Gemini through an OpenAI-compatible chat completions client, so the provider can change in config.",
+      "src": "case-studies/assist/index.html"
+     }
+    ],
+    [
+     "Limit",
+     {
+      "text": "When it doesn't know, it says so.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ]
+   ],
+   "client": [
+    [
+     "What problem it solves",
+     {
+      "text": "Retrieval and intent routing run on your device with a small embedding model; Gemini writes the answer from the sources it was given, and every claim links back to the page it came from.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ],
+    [
+     "What Katlego did",
+     {
+      "text": "Shipped an ASP.NET Core 8 minimal API in C# that calls Gemini through an OpenAI-compatible chat completions client, so the provider can change in config.",
+      "src": "case-studies/assist/index.html"
+     }
+    ],
+    [
+     "How the AI is kept safe",
+     {
+      "text": "Your question and the matched site text go to the existing Assist API to get an answer; nothing new is stored on a server.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ],
+    [
+     "What it does not do",
+     {
+      "text": "When it doesn't know, it says so.",
+      "src": "apps/mercatus-assist/index.html"
+     }
+    ]
+   ]
+  },
+  "concierge": {
+   "title": "Mercatus Concierge",
+   "urls": [
+    "/apps/mercatus-concierge/",
+    "/apps/makedas-canvas/"
+   ],
+   "lead": {
+    "text": "Concierge is the guide through Mens Mercatus — a narrative shell over the desks you already run, not another product silo.",
+    "src": "apps/mercatus-concierge/index.html"
+   },
+   "pts": [
+    [
+     "Journey",
+     {
+      "text": "The Blueprints policy coach — live .NET robot on the portfolio.",
+      "src": "apps/mercatus-concierge/index.html"
+     }
+    ],
+    [
+     "Builder",
+     {
+      "text": "Pick a task to jump straight in. Everything runs in this browser and saves locally — no account, no credits.",
+      "src": "render:concierge-app"
+     }
+    ],
+    [
+     "Honesty",
+     {
+      "text": "Concierge names the surface honestly.",
+      "src": "apps/mercatus-concierge/index.html"
+     }
+    ],
+    [
+     "Limit",
+     {
+      "text": "Mocks stay mocks: chat replies, scores and the portal are local demos. No payments, no real sign-in, no AI calls.",
+      "src": "render:concierge-app"
+     }
+    ]
+   ],
+   "client": [
+    [
+     "What it is",
+     {
+      "text": "Concierge is the guide through Mens Mercatus — a narrative shell over the desks you already run, not another product silo.",
+      "src": "apps/mercatus-concierge/index.html"
+     }
+    ],
+    [
+     "What you can do",
+     {
+      "text": "Write a short brief, sharpen it with First Look, then pick a look.",
+      "src": "render:concierge-app"
+     }
+    ],
+    [
+     "What you can do",
+     {
+      "text": "Submit a venture asset and get an honest score out of 100 with feedback.",
+      "src": "render:concierge-app"
+     }
+    ],
+    [
+     "What it does not do",
+     {
+      "text": "Mocks stay mocks: chat replies, scores and the portal are local demos. No payments, no real sign-in, no AI calls.",
+      "src": "render:concierge-app"
+     }
+    ]
+   ]
+  },
+  "jobnet": {
+   "title": "JobNet Application",
+   "urls": [
+    "/apps/jobnet/",
+    "/apps/drop-net/"
+   ],
+   "case": "/case-studies/jobnet/",
+   "lead": {
+    "text": "JobNet scrapes public LinkedIn and Glassdoor listings, ranks them against real CV evidence, and AI Hawk (formerly Drop Net) drafts a tailored cover note and CV synopsis for the role you pick.",
+    "src": "apps/jobnet/index.html"
+   },
+   "pts": [
+    [
+     "How",
+     {
+      "text": "The shortlist comes from JobNet's read-only public API (the scheduled scrape runs off this site).",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "AI",
+     {
+      "text": "BM25 takes over instantly when the model isn't loaded.",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "Draft",
+     {
+      "text": "It runs from templates on this device: no LLM call, nothing stored or sent.",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "Limit",
+     {
+      "text": "Nothing is ever sent or applied for automatically.",
+      "src": "apps/jobnet/index.html"
+     }
+    ]
+   ],
+   "client": [
+    [
+     "What problem it solves",
+     {
+      "text": "JobNet scrapes public LinkedIn and Glassdoor listings, ranks them against real CV evidence, and AI Hawk (formerly Drop Net) drafts a tailored cover note and CV synopsis for the role you pick.",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "How it works",
+     {
+      "text": "The shortlist comes from JobNet's read-only public API (the scheduled scrape runs off this site).",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "How it is kept safe",
+     {
+      "text": "Inbox content, recruiter names and pay expectations never reach the public site.",
+      "src": "apps/jobnet/index.html"
+     }
+    ],
+    [
+     "What it does not do",
+     {
+      "text": "Draft-only: never auto-applies and never sends email.",
+      "src": "apps/jobnet/index.html"
+     }
+    ]
+   ]
+  },
+  "cartel": {
+   "title": "Mens Mercatus Blueprint",
+   "urls": [
+    "/blueprint/"
+   ],
+   "lead": {
+    "text": "Mens Mercatus Blueprint · static portfolio pack · no personal names on pack assets",
+    "src": "render:cartel"
+   },
+   "pts": [
+    [
+     "Event screens",
+     {
+      "text": "Signup gate, rate lock, check-in, points, vehicle, no-show, dispute, payout, close friends, settings.",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "Schematics",
+     {
+      "text": "Architecture, AI Assist, K8s, event flow, GPS ping, compliance, five jobs pillars.",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "Compliance",
+     {
+      "text": "NMW · POPIA · NLTA · consent gates documented for the mockups.",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "AI",
+     {
+      "text": "How Assist wires to each surface — refusals included.",
+      "src": "render:cartel"
+     }
+    ]
+   ],
+   "client": [
+    [
+     "What it is",
+     {
+      "text": "Mens Mercatus Blueprint · static portfolio pack · no personal names on pack assets",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "What is inside",
+     {
+      "text": "Signup gate, rate lock, check-in, points, vehicle, no-show, dispute, payout, close friends, settings.",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "How the rules are covered",
+     {
+      "text": "NMW · POPIA · NLTA · consent gates documented for the mockups.",
+      "src": "render:cartel"
+     }
+    ],
+    [
+     "How the AI fits",
+     {
+      "text": "How Assist wires to each surface — refusals included.",
+      "src": "render:cartel"
+     }
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "dropnet-apply-log/v1",
+  "product": "dropnet-aihawk",
+  "updated": null,
+  "note": "Apply / queue results. Automatic and Bulk modes append entries (browser mirror + agent writes).",
+  "entries": []
+}

@@ -1,0 +1,5 @@
+# AI Lab playground: allow the microphone (pitch detection, on click only). Parent blocks mic elsewhere.
+<IfModule mod_headers.c>
+  Header unset Permissions-Policy
+  Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>

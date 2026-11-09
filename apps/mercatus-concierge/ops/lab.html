@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Admin · Mercatus Lab Ops — local Concierge ops desk (internal).">
+  <meta name="theme-color" content="#070708">
+  <title>Ops · Lab — Mercatus Concierge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="ops-page">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="mark" href="../index.html">Mercatus <span>Concierge</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">← Journey</a></li>
+        <li><span class="nav-ops-label">Admin · Lab Ops</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section ops-desk" id="ops-lab">
+      <div class="wrap">
+        <p class="section-label">Admin · Mercatus Lab</p>
+        <h2 class="section-title">Ops desk</h2>
+        <p class="ops-lede">Internal board for cold-call follow-ups, DropNet lead notes (read-only), Concierge build, and Meeting Desk prep. Local Lab data only — no SaaS, no index.</p>
+
+        <div class="ops-banner" role="status" id="ops-banner">
+          <div class="ops-banner-main">
+            <strong>Powered by Mercatus Lab (local)</strong>
+            <span>— tasks from <code>ops/lab-tasks.json</code>; status moves cached in localStorage.</span>
+          </div>
+          <div class="ops-banner-meta" id="ops-banner-meta">
+            <span class="ops-pill">Engine · Lab</span>
+            <span class="ops-pill ops-pill--muted" id="ops-source-pill">JSON on disk</span>
+          </div>
+        </div>
+
+        <div class="ops-panel" id="lab-desk">
+          <div class="ops-panel-head">
+            <div>
+              <h3>Mercatus Lab Ops</h3>
+              <div id="ops-connection-status" class="ops-status ops-status--local" data-state="local">
+                <span class="ops-dot" aria-hidden="true"></span>
+                <strong>Local board</strong>
+                <span class="ops-status-detail">Zero SaaS · Lab JSON</span>
+              </div>
+            </div>
+            <div class="ops-actions">
+              <button type="button" class="btn btn-ghost" id="ops-reset-board" title="Clear local overrides">Reset board</button>
+              <button type="button" class="btn btn-primary" id="ops-refresh">Refresh</button>
+            </div>
+          </div>
+
+          <div class="ops-filters" id="ops-filters" role="tablist" aria-label="Filter by list">
+            <button type="button" class="ops-filter is-active" data-list="all" role="tab" aria-selected="true">All lists</button>
+          </div>
+
+          <div class="ops-kanban" id="ops-kanban" aria-live="polite">
+            <p class="ops-empty">Loading Lab tasks…</p>
+          </div>
+
+          <p class="ops-footnote">Lists: Cold-call pipeline · DropNet follow-ups · Concierge build · Meeting Desk prep. Drag a card between columns, or use the status control on each card.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span>© Mercatus Concierge · Lab Ops · internal</span>
+      <span class="foot-links">
+        <a href="../index.html">Journey</a>
+        <a href="../index.html#lab">Lab chapter</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="lab-desk.js"></script>
+</body>
+</html>

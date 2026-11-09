@@ -1,0 +1,45 @@
+{
+ "provenance": "real",
+ "label": "Trained on Katlego's own application tracker (Oct 2026), anonymised: only feature flags left the box, no rows, companies, roles or dates are shipped.",
+ "target": "Positive engagement (recruiter outreach, under review, JD promised, interview) vs. silence/viewed/rejection",
+ "features": [
+  "channel_ats",
+  "channel_direct",
+  "family_ai",
+  "family_dotnet_fullstack",
+  "family_offstack",
+  "senior_title",
+  "role_unknown"
+ ],
+ "feature_labels": {
+  "channel_ats": "Applied via company ATS",
+  "channel_direct": "Direct / email outreach",
+  "family_ai": "AI / ML role",
+  "family_dotnet_fullstack": ".NET / full-stack role",
+  "family_offstack": "Off-stack role (Java, Go, data eng.)",
+  "senior_title": "Senior / lead title",
+  "role_unknown": "Title not captured"
+ },
+ "weights": [
+  -0.4287,
+  0.381,
+  0.0333,
+  0.2626,
+  -0.284,
+  -1.1137,
+  -0.012
+ ],
+ "bias": -1.0006,
+ "l2": 1.0,
+ "metrics": {
+  "n": 25,
+  "positives": 5,
+  "base_rate": 0.2,
+  "loo_accuracy": 0.8,
+  "majority_baseline_accuracy": 0.8,
+  "loo_brier": 0.173,
+  "baseline_brier": 0.16,
+  "loo_auc": 0.49
+ },
+ "caveat": "Tiny sample: treat as a directional signal, not a forecast. Retrained from the private tracker each time the build script runs; the page only ever sees coefficients."
+}

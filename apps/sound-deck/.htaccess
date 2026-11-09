@@ -1,0 +1,6 @@
+# Allow microphone only under Sound Deck. Parent account .htaccess still
+# blocks camera/geolocation and blocks mic everywhere else.
+<IfModule mod_headers.c>
+  Header unset Permissions-Policy
+  Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>

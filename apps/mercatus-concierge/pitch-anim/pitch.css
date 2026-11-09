@@ -1,0 +1,733 @@
+/* Mercatus Concierge — pitch motion graphic (Maison Concierge / Mercatus Blueprints) */
+:root {
+  --pitch-red: #C8102E;
+  --pitch-black: #070708;
+  --pitch-cream: #F4EFE6;
+  --pitch-gold: #C4A574;
+  --pitch-loop: 14s;
+  --pitch-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pitch-reel {
+  --pr: var(--pitch-red);
+  --pb: var(--pitch-black);
+  --pc: var(--pitch-cream);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: min(520px, 72vh);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--pb);
+  border: 1px solid rgba(244, 239, 230, 0.08);
+  box-shadow:
+    0 1px 0 rgba(244, 239, 230, 0.04) inset,
+    0 0 40px rgba(196, 165, 116, 0.08),
+    0 28px 64px rgba(0, 0, 0, 0.5);
+  isolation: isolate;
+}
+
+.pitch-scene {
+  position: absolute;
+  inset: 0;
+  transform-origin: 55% 58%;
+  animation: pitch-camera var(--pitch-loop) var(--pitch-ease) infinite;
+  will-change: transform;
+}
+
+/* Dark desk surface */
+.pitch-desk {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 55% 70%, #161616 0%, var(--pb) 70%),
+    linear-gradient(180deg, #0e0e0e 0%, var(--pb) 100%);
+}
+
+.pitch-desk::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 18%;
+  height: 42%;
+  background:
+    linear-gradient(90deg, transparent, rgba(245, 240, 232, 0.03), transparent),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 24px,
+      rgba(245, 240, 232, 0.02) 24px,
+      rgba(245, 240, 232, 0.02) 25px
+    );
+  border-radius: 4px;
+  opacity: 0.7;
+  transform: perspective(600px) rotateX(58deg);
+  transform-origin: center bottom;
+  animation: pitch-desk-expand var(--pitch-loop) var(--pitch-ease) infinite;
+}
+
+/* Expanding canvas under the phone — holds the Veo clip */
+.pitch-canvas {
+  position: absolute;
+  left: 18%;
+  right: 14%;
+  bottom: 22%;
+  height: 38%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(244, 239, 230, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(196, 165, 116, 0.12),
+    0 12px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: scale(0.55) translateY(18%);
+  transform-origin: 60% 40%;
+  animation: pitch-canvas-in var(--pitch-loop) var(--pitch-ease) infinite;
+  z-index: 2;
+}
+
+.pitch-canvas video,
+.pitch-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: pitch-video-reveal var(--pitch-loop) linear infinite;
+}
+
+.pitch-canvas-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(196, 165, 116, 0.28);
+  border-radius: 8px;
+  box-shadow: inset 0 0 36px rgba(196, 165, 116, 0.08);
+  z-index: 1;
+}
+
+.pitch-canvas-label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 2;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pc);
+  background: rgba(10, 10, 10, 0.72);
+  padding: 0.25rem 0.45rem;
+  border-radius: 2px;
+  opacity: 0;
+  animation: pitch-canvas-label var(--pitch-loop) linear infinite;
+}
+
+/* Phone + hand */
+.pitch-hand {
+  position: absolute;
+  top: -8%;
+  left: 42%;
+  width: 74px;
+  height: 120px;
+  z-index: 5;
+  transform-origin: 50% 0%;
+  animation: pitch-hand var(--pitch-loop) var(--pitch-ease) infinite;
+  pointer-events: none;
+}
+
+.pitch-hand::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 38px;
+  height: 70px;
+  background: linear-gradient(180deg, #2a2420 0%, #1a1614 100%);
+  border-radius: 18px 18px 10px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.pitch-hand::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 48px;
+  width: 58px;
+  height: 36px;
+  background: #221e1a;
+  border-radius: 40% 40% 30% 30%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.pitch-phone {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 92px;
+  height: 178px;
+  margin-left: -46px;
+  z-index: 4;
+  transform-origin: 50% 90%;
+  animation: pitch-phone var(--pitch-loop) var(--pitch-ease) infinite;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.55));
+}
+
+.pitch-phone-bezel {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #1c1c1c, #0c0c0c);
+  border: 2px solid #2e2e2e;
+  padding: 8px 7px 10px;
+  box-shadow:
+    inset 0 0 0 1px rgba(245, 240, 232, 0.06),
+    0 0 20px rgba(200, 16, 46, 0.15);
+  position: relative;
+}
+
+.pitch-phone-bezel::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 28px;
+  height: 4px;
+  margin-left: -14px;
+  background: #151515;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.pitch-phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--pc);
+  position: relative;
+  animation: pitch-screen var(--pitch-loop) linear infinite;
+}
+
+.pitch-ui-stub {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 10px 10px;
+  background:
+    linear-gradient(180deg, var(--pc) 0%, #ebe4d8 100%);
+  color: var(--pb);
+  opacity: 0;
+  animation: pitch-ui-reveal var(--pitch-loop) linear infinite;
+}
+
+.pitch-ui-bar {
+  height: 4px;
+  width: 36%;
+  background: var(--pr);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.pitch-ui-title {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pr);
+  margin-bottom: 6px;
+}
+
+.pitch-ui-line {
+  height: 3px;
+  background: rgba(10, 10, 10, 0.18);
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.pitch-ui-line.short { width: 55%; }
+.pitch-ui-line.mid { width: 78%; }
+.pitch-ui-card {
+  margin-top: 8px;
+  flex: 1;
+  border-radius: 4px;
+  background: rgba(200, 16, 46, 0.12);
+  border: 1px solid rgba(200, 16, 46, 0.35);
+  display: flex;
+  align-items: flex-end;
+  padding: 6px;
+}
+
+.pitch-ui-card span {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.42rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pr);
+}
+
+/* Silhouette figure steps in from left */
+.pitch-figure {
+  position: absolute;
+  left: -8%;
+  bottom: 10%;
+  width: 78px;
+  height: 160px;
+  z-index: 3;
+  opacity: 0;
+  transform: translateX(-40%) scale(0.92);
+  animation: pitch-figure var(--pitch-loop) var(--pitch-ease) infinite;
+  filter: drop-shadow(0 0 24px rgba(196, 165, 116, 0.35));
+  pointer-events: none;
+}
+
+.pitch-figure-body {
+  position: absolute;
+  inset: 0;
+}
+
+.pitch-figure-body::before {
+  /* head */
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  border-radius: 50%;
+  background: #121212;
+  box-shadow: 0 0 14px rgba(196, 165, 116, 0.3);
+}
+
+.pitch-figure-body::after {
+  /* torso + legs silhouette */
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  width: 44px;
+  height: 112px;
+  margin-left: -22px;
+  background:
+    linear-gradient(180deg, #141414 0%, #0c0c0c 55%, transparent 100%);
+  clip-path: polygon(
+    28% 0%, 72% 0%,
+    88% 28%, 78% 28%, 90% 100%,
+    58% 100%, 52% 55%, 48% 100%,
+    10% 100%, 22% 28%, 12% 28%
+  );
+  box-shadow: 0 0 20px rgba(196, 165, 116, 0.25);
+}
+
+.pitch-figure-glow {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 40%;
+  background: radial-gradient(ellipse at center, rgba(196, 165, 116, 0.35), transparent 70%);
+  filter: blur(12px);
+  opacity: 0.85;
+}
+
+/* Narration overlay */
+.pitch-narration {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1.25rem 1.5rem;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 45%, rgba(10, 10, 10, 0.72) 100%);
+  opacity: 0;
+  animation: pitch-narration var(--pitch-loop) linear infinite;
+}
+
+.pitch-narration p {
+  font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--pc);
+  text-align: center;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.8);
+  max-width: 22ch;
+  line-height: 1.3;
+}
+
+.pitch-narration p span {
+  color: var(--pr);
+}
+
+/* Soft loop fade at end */
+.pitch-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  background: var(--pb);
+  opacity: 0;
+  pointer-events: none;
+  animation: pitch-loop-fade var(--pitch-loop) linear infinite;
+}
+
+/* Reduced-motion still */
+.pitch-still {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: var(--pb);
+}
+
+.pitch-still video,
+.pitch-still img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.pitch-still-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.25) 0%, rgba(10, 10, 10, 0.82) 100%);
+  z-index: 1;
+}
+
+.pitch-still-overlay p {
+  font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  font-weight: 500;
+  color: var(--pc);
+  text-align: center;
+  max-width: 22ch;
+  line-height: 1.3;
+}
+
+.pitch-still-overlay p span { color: var(--pr); }
+
+.pitch-still-badge {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pitch-gold, #C4A574);
+  margin-bottom: 0.75rem;
+}
+
+/* —— Keyframes (14s loop) ——
+   0–2s   (~0–14%): phone slides in
+   2–4s   (~14–29%): phone lays flat, UI stub
+   4–7s   (~29–50%): pull-back + canvas expands + video
+   7–11s  (~50–79%): figure steps in
+   11–14s (~79–100%): narration + soft fade/restart
+*/
+
+@keyframes pitch-phone {
+  0% {
+    transform: translateY(-120%) rotate(-18deg) scale(1.05);
+    opacity: 0;
+  }
+  8% { opacity: 1; }
+  14% {
+    transform: translateY(0) rotate(-6deg) scale(1);
+    opacity: 1;
+  }
+  22% {
+    transform: translateY(38%) rotate(0deg) scale(0.92);
+  }
+  29% {
+    transform: translateY(52%) rotate(2deg) scale(0.78) translateX(8%);
+  }
+  50% {
+    transform: translateY(58%) rotate(4deg) scale(0.62) translateX(18%);
+  }
+  79% {
+    transform: translateY(58%) rotate(4deg) scale(0.58) translateX(20%);
+    opacity: 1;
+  }
+  92% {
+    transform: translateY(58%) rotate(4deg) scale(0.58) translateX(20%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-120%) rotate(-18deg) scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes pitch-hand {
+  0% {
+    transform: translateY(-40%) scale(1);
+    opacity: 0;
+  }
+  6% { opacity: 1; }
+  14% {
+    transform: translateY(12%) scale(1);
+    opacity: 1;
+  }
+  22% {
+    transform: translateY(48%) scale(0.95);
+    opacity: 0.35;
+  }
+  28%, 100% {
+    transform: translateY(80%) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes pitch-screen {
+  0%, 12% {
+    background: #1a1a1a;
+  }
+  14%, 100% {
+    background: var(--pc);
+  }
+}
+
+@keyframes pitch-ui-reveal {
+  0%, 12% { opacity: 0; }
+  16%, 90% { opacity: 1; }
+  96%, 100% { opacity: 0; }
+}
+
+@keyframes pitch-camera {
+  0%, 28% {
+    transform: scale(1.08) translate(0, 0);
+  }
+  50% {
+    transform: scale(1) translate(0, 2%);
+  }
+  79% {
+    transform: scale(0.96) translate(-2%, 3%);
+  }
+  100% {
+    transform: scale(1.08) translate(0, 0);
+  }
+}
+
+@keyframes pitch-desk-expand {
+  0%, 28% {
+    opacity: 0.35;
+    transform: perspective(600px) rotateX(58deg) scaleX(0.7);
+  }
+  50%, 85% {
+    opacity: 0.85;
+    transform: perspective(600px) rotateX(58deg) scaleX(1.05);
+  }
+  100% {
+    opacity: 0.35;
+    transform: perspective(600px) rotateX(58deg) scaleX(0.7);
+  }
+}
+
+@keyframes pitch-canvas-in {
+  0%, 28% {
+    opacity: 0;
+    transform: scale(0.55) translateY(18%);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.88) translateY(4%);
+  }
+  50%, 85% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  95% {
+    opacity: 0.4;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.55) translateY(18%);
+  }
+}
+
+@keyframes pitch-video-reveal {
+  0%, 32% { opacity: 0; }
+  40%, 88% { opacity: 1; }
+  96%, 100% { opacity: 0; }
+}
+
+@keyframes pitch-canvas-label {
+  0%, 36% { opacity: 0; }
+  42%, 85% { opacity: 0.9; }
+  95%, 100% { opacity: 0; }
+}
+
+@keyframes pitch-figure {
+  0%, 48% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(8%) scale(1);
+  }
+  72%, 85% {
+    opacity: 1;
+    transform: translateX(18%) scale(1);
+  }
+  94% {
+    opacity: 0.3;
+    transform: translateX(22%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+@keyframes pitch-narration {
+  0%, 76% { opacity: 0; }
+  82% { opacity: 1; }
+  92% { opacity: 1; }
+  98%, 100% { opacity: 0; }
+}
+
+@keyframes pitch-loop-fade {
+  0%, 94% { opacity: 0; }
+  98% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
+/* prefers-reduced-motion: static framed still */
+@media (prefers-reduced-motion: reduce) {
+  .pitch-scene,
+  .pitch-fade {
+    display: none !important;
+  }
+
+  .pitch-still {
+    display: block;
+  }
+
+  .pitch-reel {
+    animation: none;
+  }
+}
+
+/* Compact hero stacking */
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  position: relative;
+  z-index: 1;
+}
+
+.assist-stage--compact .stage-body,
+.assist-stage--compact .assist-collapsed,
+.assist-stage--compact .assist-panel {
+  min-height: 0;
+}
+
+.assist-stage--compact .assist-collapsed {
+  min-height: 88px;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  justify-content: flex-start;
+}
+
+.assist-stage--compact .robot-sil {
+  width: 44px;
+  height: 52px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(196, 165, 116, 0.4));
+}
+
+.assist-stage--compact .robot-sil .head {
+  width: 26px;
+  height: 22px;
+}
+
+.assist-stage--compact .robot-sil .eye {
+  top: 7px;
+  width: 5px;
+  height: 5px;
+}
+
+.assist-stage--compact .robot-sil .eye.l { left: 5px; }
+.assist-stage--compact .robot-sil .eye.r { right: 5px; }
+
+.assist-stage--compact .robot-sil .torso {
+  width: 30px;
+  height: 22px;
+  margin-top: 4px;
+}
+
+.assist-stage--compact .robot-sil .core {
+  width: 7px;
+  height: 7px;
+  margin-top: 6px;
+}
+
+.assist-stage--compact .talk-cta {
+  font-size: 0.7rem;
+  padding: 0.55rem 1rem;
+}
+
+.assist-stage--compact .assist-panel {
+  min-height: 220px;
+}
+
+.assist-stage--compact .captions {
+  display: none;
+}
+
+.assist-stage--compact .stage-canvas {
+  inset: -4% -3%;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .pitch-reel {
+    aspect-ratio: 5 / 4;
+    max-height: 380px;
+  }
+
+  .pitch-phone {
+    width: 72px;
+    height: 140px;
+    margin-left: -36px;
+  }
+
+  .pitch-figure {
+    width: 58px;
+    height: 120px;
+  }
+
+  .pitch-narration {
+    padding-bottom: 1.1rem;
+  }
+
+  .pitch-narration p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .pitch-reel {
+    aspect-ratio: 16 / 11;
+    max-height: 480px;
+  }
+}

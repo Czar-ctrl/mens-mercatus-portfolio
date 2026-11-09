@@ -1,0 +1,74 @@
+# DreamHost-friendly static defaults
+DirectoryIndex index.html index.php
+Options -Indexes
+
+# Force HTTPS (also present in parent ~/.htaccess; kept here for site isolation)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Security headers (site-level; parent also sets nosniff/SAMEORIGIN/referrer/permissions)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.tailwindcss.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://images.unsplash.com https://img.youtube.com https://i.ytimg.com https://www.google.com https://*.googleusercontent.com; media-src 'self' blob: https://api.mensmercatus.online; connect-src 'self' https://api.mensmercatus.online https://api.github.com wss://api.mensmercatus.online http://127.0.0.1:17321 https://cloudflareinsights.com https://open.er-api.com; frame-src 'self' https://api.mensmercatus.online https://www.youtube.com https://youtube.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  <FilesMatch "\.(css|js|svg|png|jpg|webp|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(html|md)$">
+    Header set Cache-Control "public, max-age=300"
+  </FilesMatch>
+
+  # Sound Deck needs mic for optional Mic tab. Parent ~/.htaccess blocks
+  # microphone=() site-wide; unset+set here so we do not get dual headers
+  # (browsers intersect Permissions-Policy and the deny would still win).
+  <If "%{REQUEST_URI} =~ m#^/apps/sound-deck#">
+    Header unset Permissions-Policy
+    Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+  </If>
+  <If "%{REQUEST_URI} =~ m#^/think#">
+    Header unset Permissions-Policy
+    Header set Permissions-Policy "camera=(self), microphone=(self), geolocation=()"
+  </If>
+</IfModule>
+
+# Serve markdown as text for browser viewing
+AddType text/markdown .md
+AddType text/plain .txt
+
+# BP: the former /cartel/ section now lives at /blueprint/ (renamed 21 Oct 2026). Old links keep working.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^cartel(/(.*))?$ /blueprint/$2 [R=301,L]
+</IfModule>
+
+# Cartel robot PHP proxy (DreamHost CGI-safe; LIVE robot offline on grsec)
+# JobNet Application (option G): Drop Net / AI Hawk and the Careers desk merged into /apps/jobnet/. Query strings are kept.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # H3: keep the query BEFORE the #hawk fragment (Apache would otherwise append it after the fragment, and ?jd= deep links lose the vacancy)
+  RewriteCond %{QUERY_STRING} .
+  RewriteRule ^apps/drop-net/?(index\.html)?$ /apps/jobnet/?%{QUERY_STRING}#hawk [R=301,NE,QSD,L]
+  RewriteRule ^apps/drop-net/?(index\.html)?$ /apps/jobnet/#hawk [R=301,NE,L]
+  RewriteCond %{QUERY_STRING} !(^|&)desk=1(&|$)
+  RewriteRule ^apps/mercatus-careers/?(index\.html)?$ /apps/jobnet/ [R=302,L]
+  RewriteRule ^apps/jobnet/(owner|js/owner\.js) - [R=404,L]
+</IfModule>
+
+# H cleanup: internal plan docs are not part of the public site (moved to the repo; any copy left on the host answers 404).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule (^|/)docs/superpowers(/|$) - [R=404,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^api/cartel/?$ api/cartel/index.php [L]
+  RewriteRule ^api/cartel/(.+)$ api/cartel/index.php?path=/$1 [L,QSA]
+</IfModule>

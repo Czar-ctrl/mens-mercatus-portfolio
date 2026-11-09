@@ -1,0 +1,123 @@
+/* Cartel section chrome — red accents ONLY here */
+.is-cartel-theme .section-kicker,
+.cartel-page .section-kicker { color: var(--cartel-red); }
+.is-cartel-theme .btn-primary,
+.cartel-page .btn-primary {
+  background: var(--cartel-red);
+  color: #fff;
+  box-shadow: none;
+}
+.is-cartel-theme .btn-primary:hover,
+.cartel-page .btn-primary:hover {
+  background: #e01838;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(200, 16, 46, 0.28);
+}
+/* Scope cartel link hover so it does not override ambient chips or strip current-page */
+.is-cartel-theme a:hover:not(.mm-ambient-btn),
+.cartel-page a:hover:not(.mm-ambient-btn) {
+  color: #ff4d6a;
+}
+.is-cartel-theme .mm-ambient-btn:hover,
+.cartel-page .mm-ambient-btn:hover {
+  color: #f5f5f5;
+}
+.is-cartel-theme .mm-ambient-btn.active,
+.is-cartel-theme .mm-ambient-btn.active:hover,
+.cartel-page .mm-ambient-btn.active,
+.cartel-page .mm-ambient-btn.active:hover {
+  color: #ffffff;
+}
+.is-cartel-theme .mm-four-strip a[aria-current="page"],
+.is-cartel-theme .mm-four-strip a[aria-current="page"]:hover,
+.cartel-page .mm-four-strip a[aria-current="page"],
+.cartel-page .mm-four-strip a[aria-current="page"]:hover {
+  color: #ffffff;
+}
+.is-cartel-theme .nav-links a::after,
+.cartel-page .nav-links a::after { background: var(--cartel-red); }
+.is-cartel-theme .card:hover,
+.cartel-page .card:hover {
+  border-color: rgba(200, 16, 46, 0.5);
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(200, 16, 46, 0.16);
+}
+.is-cartel-theme .card .tag,
+.cartel-page .card .tag { color: var(--cartel-red); }
+.is-cartel-theme .card::before,
+.cartel-page .card::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200, 16, 46, 0.45) 40%,
+    rgba(245, 245, 245, 0.1) 70%,
+    transparent 100%
+  );
+}
+
+.cartel-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(200, 16, 46, 0.35);
+  background: rgba(200, 16, 46, 0.08);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.75rem;
+  font-size: 0.85rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cartel-banner img { width: 18px; height: 18px; }
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.15rem;
+}
+.diagram-tile {
+  border: 1px solid var(--mm-glass-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease);
+}
+.diagram-tile:hover {
+  border-color: rgba(200, 16, 46, 0.55);
+  transform: translateY(-3px);
+  color: inherit;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+.diagram-tile img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #080808;
+}
+.diagram-tile .cap {
+  padding: 0.95rem 1.1rem 1.1rem;
+  border-top: 1px solid var(--mm-line);
+}
+.diagram-tile .cap strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.015em;
+}
+.diagram-tile .cap span {
+  font-size: 0.75rem;
+  color: var(--mm-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-tile:hover {
+    transform: none;
+    box-shadow: 0 0 0 1px rgba(200, 16, 46, 0.35);
+  }
+}

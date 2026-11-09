@@ -1,0 +1,50 @@
+{
+ "note": "SAMPLE DATA - fictional companies and text written for this demo.",
+ "leads": [
+  {
+   "id": "l1",
+   "name": "Ubuntu Dental (sample)",
+   "sector": "Healthcare clinic",
+   "size": 12,
+   "budget": "R15k-R40k",
+   "digital": 3,
+   "text": "Reception staff answer the same WhatsApp questions about bookings and prices all day, manually copy patient forms into the practice system and chase unpaid invoices by phone."
+  },
+  {
+   "id": "l2",
+   "name": "Khumalo Freight (sample)",
+   "sector": "Logistics",
+   "size": 45,
+   "budget": "R50k+",
+   "digital": 4,
+   "text": "Dispatchers retype delivery notes from PDFs and emails into a spreadsheet, quote by hand and lose time routing trucks. They already use a .NET ERP with an API."
+  },
+  {
+   "id": "l3",
+   "name": "Marula Bakery (sample)",
+   "sector": "Food retail",
+   "size": 6,
+   "budget": "<R10k",
+   "digital": 1,
+   "text": "Owner wants a nicer Instagram page and a printed menu. Orders come in person; no recurring admin pain mentioned."
+  },
+  {
+   "id": "l4",
+   "name": "Sipho & Co Attorneys (sample)",
+   "sector": "Legal",
+   "size": 18,
+   "budget": "R30k-R50k",
+   "digital": 3,
+   "text": "Paralegals summarise long contracts and search old matters by hand; client intake emails are sorted manually. Confidentiality is critical, so data must stay on their own server."
+  },
+  {
+   "id": "l5",
+   "name": "Thandeka Property (sample)",
+   "sector": "Real estate",
+   "size": 9,
+   "budget": "R15k-R40k",
+   "digital": 2,
+   "text": "Agents answer the same listing questions, schedule viewings over WhatsApp and write listing descriptions from scratch for every property."
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="gm">
+<head><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<script>
+try{if(localStorage.getItem('mm-color-mode')==='light')document.documentElement.classList.add('mm-light');}catch(e){}
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Event Net — interactive DEMO of one Mercatus Blueprint Event shift: signup gate, NMW rate lock, geofenced check-in, vehicle checklist, supervisor-gated Netza payout. Simulated in-browser.">
+<meta name="theme-color" content="#0a0a0a">
+<title>.NET Event · Mens Mercatus</title>
+<link rel="canonical" href="https://mensmercatus.online/apps/event-net/">
+<meta property="og:title" content=".NET Event · Mens Mercatus">
+<meta property="og:description" content="Event Net — Mercatus Blueprint Event shift demo. Built by Katlego Mokoto, AI engineer and developer, systems architect.">
+<meta property="og:url" content="https://mensmercatus.online/apps/event-net/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+<meta property="og:site_name" content="Mens Mercatus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=".NET Event · Mens Mercatus">
+<meta name="twitter:description" content="Event Net — Mercatus Blueprint Event shift demo. Built by Katlego Mokoto, AI engineer and developer, systems architect.">
+<meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/tokens.css?v=20261006c">
+<link rel="stylesheet" href="../../css/base.css?v=20261006c">
+<link rel="stylesheet" href="../../css/glow-bg.css">
+<link rel="stylesheet" href="../../css/ambient-bg.css?v=20261006c">
+<link rel="stylesheet" href="../../css/cursor.css?v=20261006c">
+<link rel="stylesheet" href="../../css/nav.css?v=20261006c">
+<link rel="stylesheet" href="../../css/sidebar.css?v=20261006c">
+<link rel="stylesheet" href="../../css/cartel.css">
+<link rel="stylesheet" href="../../css/pages.css?v=20261006c">
+<link rel="stylesheet" href="../../css/demo-kit.css?v=20261005h">
+<style>
+  .ev-progress { display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem; margin-bottom:0.9rem; }
+  .ev-progress .mm-demo-bar__progress { flex:1 1 200px; }
+  .ev-panel { min-width:0; }
+  .ev-body p { margin:0 0 0.75rem; color:var(--mm-muted); }
+  .ev-checks { display:grid; gap:0.45rem; margin:0 0 0.9rem; }
+  .ev-checks label { display:flex; gap:0.55rem; align-items:flex-start; font-size:0.92rem; }
+  .ev-checks input { margin-top:0.25rem; accent-color:#c8102e; }
+  .ev-figs { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:0.6rem; margin:0 0 0.9rem; }
+  .ev-figs div { padding:0.7rem; border:1px solid rgba(246,242,234,0.12); border-radius:10px; background:rgba(0,0,0,0.25); }
+  .ev-figs b { display:block; font-size:1.25rem; color:#fff; font-weight:600; }
+  .ev-figs span { font-size:0.75rem; color:var(--mm-dim); }
+  .ev-result { margin:0.75rem 0 0; padding:0.6rem 0.8rem; border-radius:10px; font-size:0.88rem; }
+  .ev-result:empty { display:none; }
+  .ev-result.is-ok { border:1px solid rgba(255,255,255,0.4); background:rgba(255,255,255,0.04); }
+  .ev-result.is-bad { border:1px solid #c8102e; background:rgba(200,16,46,0.12); }
+  .ev-foot { margin-top:1rem; padding-top:0.8rem; border-top:1px solid rgba(246,242,234,0.08); }
+  .ev-preview { margin-top:0.9rem; }
+  .ev-preview iframe { width:100%; height:520px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; background:#000; }
+</style>
+
+<link rel="stylesheet" href="../../css/godmode.css?v=20261006c">
+<!-- mm-motion --><script type="module">addEventListener("load",function(){var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body data-page="apps">
+<div class="glow-bg" aria-hidden="true"></div>
+<header class="site-nav" role="banner">
+  <div class="nav-inner">
+    <div class="nav-brands">
+      <a class="nav-brand" href="../../index.html" aria-label="Mens Mercatus home">
+        <img class="gm-mark" src="../../assets/marks/mark-wheat-16.svg" width="16" height="16" alt="">
+        <span class="word">Mens Mercatus <span class="gm-ctx">· Event Net</span></span>
+      </a>
+    </div>
+    <button class="nav-burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
+      <a href="../../index.html" data-nav="home">Home</a>
+      <a href="../../hub.html" data-nav="hub">Hub</a>
+      <a href="../../apps/index.html" data-nav="apps" class="is-active">Apps</a>
+      <a href="../../blueprint/index.html" data-nav="cartel">Blueprint</a>
+      <a href="../../vault/index.html" data-nav="vault">Vault</a>
+      <a href="../../contact.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" type="button" data-sidebar-open aria-expanded="false" aria-controls="vault-sidebar" aria-label="Open vault sidebar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="sidebar-overlay" id="sidebar-overlay" data-sidebar-close aria-hidden="true"></div>
+<aside class="sidebar" id="vault-sidebar" aria-hidden="true" aria-label="Vault sidebar" role="dialog">
+  <div class="sidebar-head">
+    <div>
+      <div class="hud-label">HUD · Vault</div>
+      <h2>Schematics &amp; docs</h2>
+    </div>
+    <button class="sidebar-close" type="button" data-sidebar-close aria-label="Close sidebar">✕</button>
+  </div>
+  <div class="sidebar-body">
+    <div class="hud-group">
+      <div class="hud-group-label">Seven schematics</div>
+    <a class="hud-link" href="../../blueprint/diagrams/overall-system-architecture.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+      <span class="txt"><strong>Architecture</strong><span>Overall system · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/ai-assist-integration-pipeline.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg></span>
+      <span class="txt"><strong>AI Assist</strong><span>Integration pipeline · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/kubernetes-topology.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="spin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span>
+      <span class="txt"><strong>Kubernetes</strong><span>Topology · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/event-mode-data-flow.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M5 6h6v4H5zM13 14h6v4h-6z"/><path d="M11 8h4v6"/></svg></span>
+      <span class="txt"><strong>Event mode</strong><span>Data flow · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/close-friends-gps-ping-flow.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20"/><path d="M2 12h4M18 12h4"/></svg></span>
+      <span class="txt"><strong>Close friends</strong><span>GPS + ping · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/compliance-gates.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/></svg></span>
+      <span class="txt"><strong>Compliance</strong><span>Gates · SVG</span></span>
+    </a>
+    <a class="hud-link" href="../../blueprint/diagrams/five-jobs-pillars.svg" target="_blank" rel="noopener">
+      <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M4 10h16v9H4z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+      <span class="txt"><strong>Five Jobs</strong><span>Pillars · SVG</span></span>
+    </a>
+    </div>
+    <div class="hud-group">
+      <div class="hud-group-label">Galleries &amp; packs</div>
+      <a class="hud-link" href="../../blueprint/event/diagrams.html">
+        <span class="ico"><svg class="spin" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 16-5-5-4 4-2-2-5 5"/></svg></span>
+        <span class="txt"><strong>Diagrams gallery</strong><span>Event pack viewer</span></span>
+      </a>
+      <a class="hud-link" href="../../blueprint/README.html">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M9 13h6M9 17h6"/></svg></span>
+        <span class="txt"><strong>Blueprint README</strong><span>Product pack overview</span></span>
+      </a>
+      <a class="hud-link" href="../../blueprint/docs/event-mode-compliance.html">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/></svg></span>
+        <span class="txt"><strong>Event compliance</strong><span>Reader</span></span>
+      </a>
+      <a class="hud-link" href="../../blueprint/docs/ai-in-every-tool-plan.html">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg></span>
+        <span class="txt"><strong>AI in every tool</strong><span>Plan · reader</span></span>
+      </a>
+    </div>
+    <div class="hud-group">
+      <div class="hud-group-label">CV · Resume · Portfolio PDFs</div>
+      <a class="hud-link" href="../../vault/cv-placeholder.html">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
+        <span class="txt"><strong>CV placeholder</strong><span>Drop BLUEPRINT.pdf here</span></span>
+      </a>
+      <a class="hud-link" href="../../vault/net-portfolio.pdf" target="_blank" rel="noopener">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></span>
+        <span class="txt"><strong>Net portfolio</strong><span>PDF</span></span>
+      </a>
+      <a class="hud-link" href="../../vault/net-portfolio-v2.pdf" target="_blank" rel="noopener">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></span>
+        <span class="txt"><strong>Net portfolio v2</strong><span>PDF</span></span>
+      </a>
+      <a class="hud-link" href="../../vault/index.html">
+        <span class="ico"><svg class="stroke-anim" viewBox="0 0 24 24"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M9 13h6M9 17h6"/></svg></span>
+        <span class="txt"><strong>Vault hub</strong><span>All docs</span></span>
+      </a>
+    </div>
+  </div>
+  <div class="sidebar-foot">Mens Mercatus · local vault</div>
+</aside>
+<div class="page">
+
+<section class="section">
+  <div class="container">
+    <nav class="mm-four-strip" aria-label="Four flagship systems">
+      <a class="mm-four-home" href="../../index.html">Home</a>
+      <span class="mm-four-sep" aria-hidden="true">·</span>
+      <a href="../../blueprint/event/">Blueprint Event</a>
+      <span class="mm-four-sep" aria-hidden="true">·</span>
+      <a href="../mercatus-assist/">Assist</a>
+      <span class="mm-four-sep" aria-hidden="true">·</span>
+      <a href="../index.html">All apps</a>
+    </nav>
+    <div class="section-head">
+      <p class="section-kicker">Event Net · .NET Event</p>
+      <h2 class="section-title">Run one Blueprint Event shift</h2>
+      <p class="section-lead">Event Net is the .NET Event surface of Mercatus Blueprint (festival staffing). Step a worker through the real product rules from the Blueprint Event pack — signup gates, NMW rate lock, geofenced check-in, goods-only vehicle checklist, and supervisor-gated Netza payout — all simulated in your browser.</p>
+    </div>
+    <span id="ev-status"></span>
+    <div id="ev-walk"></div>
+
+    <div class="ev-shell mm-demo-panel">
+      <p id="ev-count" class="mm-demo-note" style="margin:0 0 0.5rem"></p>
+      <div class="mm-demo-grid mm-demo-grid--2" style="margin-top:1rem">
+        <div id="ev-panel" class="ev-panel" aria-live="polite"></div>
+        <div>
+          <p class="mm-demo-label">Shift event log</p>
+          <pre id="ev-log" class="mm-demo-out" style="min-height:160px"></pre>
+          <div id="ev-finale" class="placeholder-note" hidden style="margin-top:0.9rem"><strong>Shift complete (DEMO).</strong> That is the full Event loop. In production the .NET Event API would persist each step, escrow would be held server-side, and Assist would coach — never decide — each gate. <a href="../mercatus-assist/">Ask Assist about a gate →</a></div>
+          <p style="margin-top:0.75rem"><button type="button" class="mm-demo-chip mm-demo-chip--ghost" id="ev-reset">Reset shift</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="placeholder-note" style="margin-top:1.5rem"><strong>Honest scope.</strong> The Event .NET backend is not hosted on this site. Stages run on in-browser state; figures (R30.23 floor, R42.00 locked, 6 h, escrow ESC-88421) are the pack's own illustrative mockup values — not offers, balances, or payouts.</div>
+    <div class="btn-row" style="margin-top:1.25rem">
+      <a class="btn btn-primary" href="../../blueprint/event/index.html">Open Blueprint Event hub (12 screens)</a>
+      <a class="btn btn-ghost" href="../../blueprint/event/diagrams.html">Event schematics</a>
+      <a class="btn btn-ghost" href="../../vault/MercatusCartel_Skeleton_Architecture_Brief.pdf" target="_blank" rel="noopener">Architecture PDF</a>
+      <a class="btn btn-ghost" href="../index.html">← Apps hub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Mens Mercatus Inc · Katlego Mokoto</span>
+    <span><a href="../../contact.html">Contact</a> · <a href="../../blueprint/index.html">Blueprint</a> · <a href="../../vault/index.html">Vault</a></span>
+  </div>
+</footer>
+</div>
+<script src="../../js/cursor.js?v=bp1" defer></script>
+<script src="../../js/ambient-bg.js?v=bp1" defer></script>
+<script src="../../js/glow.js?v=20261006c" defer></script>
+<script src="../../js/nav.js" defer></script>
+<script src="../../js/sidebar.js" defer></script>
+<script src="../../js/main.js" defer></script>
+<script src="../../js/demo-kit.js?v=20261005a" defer></script>
+<script src="demo-event.js?v=bp1" defer></script>
+<script src="../../js/godmode.js?v=bp1" data-gm-tool="event" defer></script>
+<script src="../../js/theme-toggle.js?v=20261006c" defer></script>
+</body>
+</html>

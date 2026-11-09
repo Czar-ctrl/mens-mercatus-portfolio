@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Katlego Mokoto — ATS Resume · Mens Mercatus">
+<title>CV · ATS · Katlego Mokoto</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Calibri", "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #111; background: #fff; line-height: 1.45; font-size: 11pt;
+}
+.toolbar {
+  display: flex; gap: .5rem; justify-content: flex-end; padding: .75rem 1rem;
+  background: #f5f5f5; border-bottom: 1px solid #ddd;
+}
+.btn-print, .btn-ghost {
+  font-size: 10pt; padding: .4rem .8rem; border: 1px solid #333; background: #111; color: #fff; cursor: pointer; text-decoration: none;
+}
+.btn-ghost { background: #fff; color: #111; }
+.page { max-width: 8.5in; margin: 0 auto; padding: .6in .7in; }
+.ats-header { text-align: center; margin-bottom: 14pt; border-bottom: 1.5pt solid #111; padding-bottom: 8pt; }
+.ats-header h1 { font-size: 18pt; letter-spacing: .02em; text-transform: uppercase; }
+.ats-headline { font-size: 10.5pt; margin-top: 4pt; }
+.ats-contact { font-size: 9.5pt; margin-top: 4pt; }
+.ats-status { font-size: 9.5pt; margin-top: 2pt; }
+section { margin-bottom: 12pt; }
+h2 {
+  font-size: 11pt; text-transform: uppercase; letter-spacing: .06em;
+  border-bottom: 1pt solid #333; padding-bottom: 2pt; margin-bottom: 6pt;
+}
+h3 { font-size: 11pt; margin-top: 8pt; margin-bottom: 2pt; }
+p, li { font-size: 10pt; margin-bottom: 3pt; }
+ul { margin-left: 16pt; margin-bottom: 4pt; }
+em { font-style: italic; color: #333; }
+.ats-footer { margin-top: 12pt; font-size: 9pt; color: #444; border-top: 1pt solid #ccc; padding-top: 6pt; }
+@media print {
+  .no-print { display: none !important; }
+  .page { padding: 0; max-width: none; }
+  @page { margin: 0.55in; size: letter; }
+}
+</style>
+<style>/* PRINT_TIGHT */
+@media print {
+  body { font-size: 9pt !important; }
+  .page { padding: 0 !important; }
+  .ats-header { margin-bottom: 8pt !important; padding-bottom: 4pt !important; }
+  .ats-header h1 { font-size: 14pt !important; }
+  .ats-headline, .ats-contact, .ats-status { font-size: 8.5pt !important; }
+  section { margin-bottom: 7pt !important; }
+  h2 { font-size: 10pt !important; margin-bottom: 3pt !important; padding-bottom: 1pt !important; }
+  h3 { font-size: 9.5pt !important; margin-top: 4pt !important; }
+  p, li { font-size: 8.5pt !important; margin-bottom: 1.5pt !important; }
+  /* ATS: drop duplicate project detail that overlaps flagships — keep Antigravity + Ecosystem only if space */
+  @page { margin: 0.45in; size: letter; }
+}
+
+/* PRINT_CONTACT_FIX */
+@media print {
+  .ats-contact {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: break-word !important;
+    font-size: 8pt !important;
+  }
+}
+/* /PRINT_TIGHT */</style>
+<!-- mm-seo --><link rel="canonical" href="https://mensmercatus.online/vault/cv-ats.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="CV · ATS · Katlego Mokoto"><meta property="og:description" content="Katlego Mokoto — ATS Resume · Mens Mercatus"><meta property="og:url" content="https://mensmercatus.online/vault/cv-ats.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CV · ATS · Katlego Mokoto"><meta name="twitter:description" content="Katlego Mokoto — ATS Resume · Mens Mercatus"><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "CV · ATS · Katlego Mokoto", "url": "https://mensmercatus.online/vault/cv-ats.html", "description": "Katlego Mokoto — ATS Resume · Mens Mercatus", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="toolbar no-print">
+  <button type="button" class="btn-print" onclick="printResume()">Print / Save PDF</button>
+  <a class="btn-ghost" href="cv-screen.html">Screen twin</a>
+  <a class="btn-ghost" href="index.html">All variants</a>
+</div>
+<main class="page">
+  <div data-ats></div>
+</main>
+
+<script>
+/* Mens Mercatus · Katlego Mokoto — single source of truth for CV variants.
+   Grounded in portfolio + Blueprint ASP.NET robot + THINK (React 19/Vite/TS). Updated 2026-10-06.
+   Do not invent employers, degrees, or dates beyond these sources. */
+window.RESUME_DATA = {
+  meta: {
+    name: "Katlego Mokoto",
+    brand: "Mens Mercatus",
+    status: "AVAILABLE",
+    headline: "AI Engineer · AI Systems Architect · Full-Stack + .NET / C#",
+    tagline: "AI engineer and developer — products, platforms, agentic systems, and ASP.NET backends.",
+    location: "Johannesburg, South Africa · Open to Johannesburg, Pretoria, Cape Town & Durban (on-site, hybrid or remote)",
+    remote: "On-site, hybrid or remote · SA metros + global",
+    site: "https://mensmercatus.online",
+    siteLabel: "mensmercatus.online",
+    email: "katlego.mokoto.km@gmail.com",
+    emailAlt: "katlego.mokoto@icloud.com",
+    phone: "065 842 4274",
+    phoneIntl: "+27658424274",
+    roles: ["Systems architect", "Full-stack engineer", ".NET / C# developer", "AI architect"],
+    targeting:
+      "Targeting AI engineering / AI developer / full-stack .NET roles at OpenAI, Anthropic, Google DeepMind, Meta AI, Microsoft AI, NVIDIA, and applied-AI startups (xAI, Waymo, ElevenLabs, Scale AI, Sierra, Cursor, Perplexity, Cognition, Replit, Mercor).",
+    portfolioProof:
+      "Portfolio proof: Blueprint .NET robot (ASP.NET Core + Gemini), THINK (React 19 + Vite + TypeScript), Mens Mercatus Sound Dex, Forex Mercatus Codex, JobNet, Antigravity / local LLM stack. Walkthrough: mensmercatus.online/assets/video/walkthrough.mp4"
+  },
+  stack: {
+    languages: ["Python", "TypeScript", "C#", "JavaScript", "SQL", "Bash", "Solidity"],
+    frontend: ["React", "React 19", "Next.js", "Vite", "Flutter", "Tailwind", "Web Audio / DAW UIs"],
+    ai: ["LLM orchestration", "RAG", "LangChain", "Ollama", "Agent Zero", "Gemini (OpenAI-compatible API)", "prompt/tool agents", "ChromaDB", "local inferencing (Apple Silicon M4)"],
+    backend: ["ASP.NET Core 8", ".NET / C#", "FastAPI", "Node.js", "Express", "Django", "WebSockets", "Redis"],
+    data: ["PostgreSQL", "Pandas", "NumPy", "yfinance", "OR-Tools"],
+    cloud: ["Nebius", "Docker", "Linux", "systemd", "nginx", "Cloudflare", "CI/CD", "AWS", "Ubuntu VPS", "edge / local-first AI"],
+    audio: ["Web Audio API", "mic capture", "stem DSP", "generative synthesis", "live-voice WebSocket relay"],
+    systems: ["P2P/BLE mesh", "agentic workflows", "Cursor IDE automation", "per-IP rate limits"]
+  },
+  domains: [
+    {
+      title: "Agentic AI & Local Compute",
+      tags: ["OLLAMA", "AGENT ZERO", "CURSOR", "RAG", "CHROMADB", "APPLE SILICON M4", "GEMINI"],
+      body: "Design and ship sovereign agent stacks: tool-using agents, RAG over live data, local LLM orchestration to cut API dependency, and high-throughput inferencing on Apple Silicon. Cloud path uses Gemini via an OpenAI-compatible chat/completions client."
+    },
+    {
+      title: "Applied AI Product Engineering",
+      tags: ["FULL-STACK", "ASP.NET", "REACT 19", "WEB AUDIO", "AUTOMATION", "USER-FACING AI TOOLS"],
+      body: "Build end-to-end AI products (generation UIs, copilots, job-automation meshes, multimodal workspaces) with production-minded UX, offline-capable clients, and clear human-in-the-loop controls."
+    },
+    {
+      title: ".NET / C# backends & VPS ops",
+      tags: ["ASP.NET CORE 8", "SYSTEMD", "NGINX", "CLOUDFLARE", "UBUNTU VPS"],
+      body: "Ship ASP.NET Core 8 minimal APIs that call Gemini through an OpenAI-compatible interface, with retries on 429/5xx, running as systemd services behind nginx on an Ubuntu VPS with Cloudflare in front of the static site."
+    }
+  ],
+  flagships: [
+    {
+      id: "cartel-dotnet",
+      name: "Mercatus Assist / Blueprint Robot",
+      period: "2026",
+      kind: "ASP.NET Core 8 · Gemini",
+      status: "LIVE",
+      statusNote: "LIVE path via /api/cartel/ → VPS robot; DEMO fallback if backend unhealthy.",
+      summary: "ASP.NET Core 8 minimal API (C#) that calls Gemini through an OpenAI-compatible chat/completions client so the provider can be swapped in config. Exponential backoff retries on 429/5xx. Runs as a systemd service on an Ubuntu VPS behind nginx; static site on DreamHost sits behind Cloudflare.",
+      bullets: [
+        "Live Assist chat at mensmercatus.online/apps/mercatus-assist/ with labelled DEMO fallback when the robot is down.",
+        "Same-origin PHP proxy → VPS; architecture notes at mensmercatus.online/apps/net-workspace/."
+      ],
+      chips: ["C#", "ASP.NET Core 8", "Gemini", "systemd", "nginx", "Cloudflare"]
+    },
+    {
+      id: "think",
+      name: "THINK — Hybrid Social & AI",
+      period: "2026",
+      kind: "React 19 + Vite + TypeScript",
+      status: "LIVE",
+      statusNote: "Public demo with per-IP daily caps on chat, image, video, and live-voice.",
+      summary: "Multimodal Gemini workspace (chat, live voice, Net Sites, Net Code, Netzar Protocol, Net Learn). Front end is React 19 + Vite + TypeScript; server-side Node proxy calls Gemini and relays live-voice over WebSocket, with per-IP rate limits.",
+      bullets: [
+        "Live at mensmercatus.online/think/.",
+        "60s portfolio walkthrough: mensmercatus.online/assets/video/walkthrough.mp4."
+      ],
+      chips: ["React 19", "Vite", "TypeScript", "Gemini proxy", "WebSocket live-voice"]
+    },
+    {
+      id: "soundx",
+      name: "SoundX / Sound Dex",
+      period: "2026",
+      kind: "Browser DAW / AI music",
+      status: "DEMO",
+      statusNote: "Honest demo — sound stays in the browser, not a hosted session.",
+      summary: "Original browser DAW with AI Producer (order-taking studio assistant), demo stem split, 16-step beats, mic/vocal pipelines, VST slot framework, and in-house text-to-music / stem / continuation generation.",
+      bullets: [
+        "Generate, demo play, mic, and AI Producer on mensmercatus.online apps hub.",
+        "Gold/black/white Mens Mercatus product UI; no third-party music-site dependency."
+      ],
+      chips: ["Web Audio", "Agents", "DSP", "TypeScript/JS"]
+    },
+    {
+      id: "jobnet",
+      name: "JobNet",
+      period: "2026",
+      kind: "Career automation",
+      status: "DEMO",
+      statusNote: "Draft-only — live read-only shortlist demo; never applies or sends mail.",
+      summary: "Weekday pipeline: noon multi-board scrape; CV tailor + AI Hawk draft fills with human confirm before submit; Gmail reply watch + SMS/email notify.",
+      bullets: [
+        "Noon scrape across top AI employers + early-stage trackers.",
+        "3 AM CV tailor + draft fills; human-in-the-loop gates before any submit."
+      ],
+      chips: ["Automation", "Agents", "Gmail", "macOS shell"]
+    },
+    {
+      id: "forex",
+      name: "Forex Mercatus Codex",
+      period: "2026",
+      kind: "Python desk :8790",
+      status: "DEMO",
+      statusNote: "Simulated paper research only — not a brokerage.",
+      summary: "~87MB Python + Highcharts desk for FX workflows; Chart, Multi, Whales, Flow, Bot. Hosted on VPS as live paper research.",
+      bullets: [
+        "Inventory and load-path optimization for faster cold start and clearer static serving.",
+        "Market data fused with interactive analysis desks."
+      ],
+      chips: ["Python", "Highcharts", "yfinance", "Paper only"]
+    }
+  ],
+  projects: [
+    {
+      name: "Project Antigravity",
+      period: "Mar 2026 – Present",
+      role: "AI Systems Architect & Founder",
+      bullets: [
+        "Sovereign, decentralized AI OS for autonomous task execution and specialized agentic workflows.",
+        "Terminal-first AI tooling on M4 with Ollama; Nebius for scalable training/deploy of custom models; Agent Zero + Cursor orchestration."
+      ],
+      chips: ["Ollama", "Agent Zero", "Nebius", "LLM Ops"]
+    },
+    {
+      name: "Mens Mercatus Ecosystem",
+      period: "Ongoing · mensmercatus.online",
+      role: "Full-stack, .NET & AI systems",
+      bullets: [
+        "Telegram AI trading assistant: RAG + live financial feeds for XAUUSD / cyclical models (SMT, Gann frameworks) with institutional-order context.",
+        "Brand, UI/UX, and portfolio architecture including the Blueprint ASP.NET Assist robot and the THINK multimodal workspace."
+      ],
+      chips: ["Python", "C# / ASP.NET", "LangChain", "ChromaDB", "React / Next.js"]
+    },
+    {
+      name: "Messmakers / Flutter Overlay",
+      period: "2026",
+      role: "Mobile UI systems",
+      bullets: [
+        "Flutter package fixing z-order: gray AI sound/volume bar above white social band; theme extension, haptics, demo app — drop-in for Messmakers / ThinkPulse clients."
+      ],
+      chips: ["Flutter", "Dart", "UI systems"]
+    },
+    {
+      name: "ProxNet · Infrastructure.log",
+      period: "Parallel systems work",
+      role: "Edge & mesh",
+      bullets: [
+        "BLE/WebRTC mesh social (offline-first) and M4 SSD arrays for model weights / vector DBs — edge-ready AI compute hygiene."
+      ],
+      chips: ["React Native", "P2P", "Edge"]
+    }
+  ],
+  narrative: [
+    "Hands-on builder of agentic products: copilots that execute studio/job/market actions with explicit user confirmation gates.",
+    "Comfortable in Python, TypeScript, and C# / ASP.NET Core; ships Gemini-backed APIs on a VPS (systemd + nginx) and React 19 fronts on the portfolio.",
+    "Background in fleet/logistics optimization (OR-Tools) and diesel/mechanical operations — strong systems thinking under real constraints."
+  ],
+  footer:
+    "Portfolio: mensmercatus.online · THINK: /think/ · Walkthrough: /assets/video/walkthrough.mp4 · Johannesburg, South Africa · Open to Johannesburg, Pretoria, Cape Town & Durban (on-site, hybrid or remote) · AI eng and .NET roles."
+};
+
+</script>
+<script>
+(function () {
+  const D = window.RESUME_DATA;
+  if (!D) return;
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+  function fillText(attr, val) {
+    $$(`[data-bind="${attr}"]`).forEach(el => { el.textContent = val; });
+  }
+  function fillHref(attr, href, label) {
+    $$(`[data-bind-href="${attr}"]`).forEach(el => {
+      el.setAttribute("href", href);
+      if (label != null && !el.dataset.keepLabel) el.textContent = label;
+    });
+  }
+
+  fillText("name", D.meta.name);
+  fillText("headline", D.meta.headline);
+  fillText("tagline", D.meta.tagline);
+  fillText("location", D.meta.location);
+  fillText("remote", D.meta.remote);
+  fillText("status", D.meta.status);
+  fillText("brand", D.meta.brand);
+  fillText("email", D.meta.email);
+  fillText("emailAlt", D.meta.emailAlt);
+  fillText("phone", D.meta.phone);
+  fillText("siteLabel", D.meta.siteLabel);
+  fillText("targeting", D.meta.targeting);
+  fillText("portfolioProof", D.meta.portfolioProof);
+  fillText("footer", D.meta.footer || D.footer);
+  fillHref("email", "mailto:" + D.meta.email, D.meta.email);
+  fillHref("emailAlt", "mailto:" + D.meta.emailAlt, D.meta.emailAlt);
+  fillHref("phone", "tel:" + D.meta.phoneIntl, D.meta.phone);
+  fillHref("site", D.meta.site, D.meta.siteLabel);
+
+  const roles = $("[data-roles]");
+  if (roles) {
+    roles.innerHTML = D.meta.roles.map(r => `<span class="pill">${r}</span>`).join("");
+  }
+
+  const stack = $("[data-stack]");
+  if (stack) {
+    const labels = {
+      languages: "Languages", frontend: "Frontend", ai: "AI / ML",
+      backend: "Backend", data: "Data", cloud: "Cloud & Infra",
+      audio: "Audio / Realtime", systems: "Systems"
+    };
+    stack.innerHTML = Object.keys(labels).map(k => {
+      if (!D.stack[k]) return "";
+      return `<div class="stack-group"><div class="hud-label">${labels[k]}</div>
+        <div class="chips">${D.stack[k].map(s => `<span class="chip">${s}</span>`).join("")}</div></div>`;
+    }).join("");
+  }
+
+  const domains = $("[data-domains]");
+  if (domains) {
+    domains.innerHTML = D.domains.map(d => `
+      <article class="domain-card">
+        <div class="hud-label">${d.tags.join(" · ")}</div>
+        <h3>${d.title}</h3>
+        <p>${d.body}</p>
+      </article>`).join("");
+  }
+
+  const flagships = $("[data-flagships]");
+  if (flagships) {
+    flagships.innerHTML = D.flagships.map(f => `
+      <article class="flag-card" data-id="${f.id}">
+        <div class="flag-top">
+          <div>
+            <div class="hud-label">${f.period} · ${f.kind}</div>
+            <h3>${f.name}</h3>
+          </div>
+          <span class="status-pill" title="${f.statusNote}">${f.status}</span>
+        </div>
+        <p class="flag-summary">${f.summary}</p>
+        <ul>${f.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="chips">${f.chips.map(c => `<span class="chip">${c}</span>`).join("")}</div>
+      </article>`).join("");
+  }
+
+  const projects = $("[data-projects]");
+  if (projects) {
+    projects.innerHTML = D.projects.map(p => `
+      <article class="proj-card">
+        <div class="proj-head">
+          <div>
+            <h3>${p.name}</h3>
+            <div class="role">${p.role}</div>
+          </div>
+          <div class="period">${p.period}</div>
+        </div>
+        <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="chips">${p.chips.map(c => `<span class="chip">${c}</span>`).join("")}</div>
+      </article>`).join("");
+  }
+
+  const narrative = $("[data-narrative]");
+  if (narrative) {
+    narrative.innerHTML = D.narrative.map(n => `<li>${n}</li>`).join("");
+  }
+
+  // ATS plain render
+  const ats = $("[data-ats]");
+  if (ats) {
+    const stackLines = Object.entries({
+      "Languages": D.stack.languages,
+      "Frontend": D.stack.frontend,
+      "AI / ML": D.stack.ai,
+      "Backend": D.stack.backend,
+      "Data": D.stack.data,
+      "Cloud & Infra": D.stack.cloud,
+      "Audio / Realtime": D.stack.audio,
+      "Systems": D.stack.systems
+    }).map(([k,v]) => `<p><strong>${k}:</strong> ${v.join(", ")}</p>`).join("");
+
+    ats.innerHTML = `
+      <header class="ats-header">
+        <h1>${D.meta.name}</h1>
+        <p class="ats-headline">${D.meta.headline}</p>
+        <p class="ats-contact">
+          ${D.meta.email} · ${D.meta.phone} · ${D.meta.siteLabel} · ${D.meta.location} · ${D.meta.remote}
+        </p>
+        <p class="ats-status">Status: ${D.meta.status}</p>
+      </header>
+      <section>
+        <h2>Summary</h2>
+        <p>${D.meta.tagline}</p>
+        <p>${D.meta.targeting}</p>
+        <p>${D.meta.portfolioProof}</p>
+      </section>
+      <section>
+        <h2>Technical Stack</h2>
+        ${stackLines}
+      </section>
+      <section>
+        <h2>Core Domains</h2>
+        ${D.domains.map(d => `<h3>${d.title}</h3><p>${d.body}</p><p><em>${d.tags.join(" · ")}</em></p>`).join("")}
+      </section>
+      <section>
+        <h2>Selected AI Portfolio</h2>
+        ${D.flagships.map(f => `
+          <h3>${f.name} — ${f.period} · ${f.kind} [${f.status}]</h3>
+          <p>${f.summary}</p>
+          <ul>${f.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+          <p><em>${f.chips.join(", ")}</em></p>
+        `).join("")}
+        ${D.projects.map(p => `
+          <h3>${p.name} — ${p.period}</h3>
+          <p><strong>${p.role}</strong></p>
+          <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+          <p><em>${p.chips.join(", ")}</em></p>
+        `).join("")}
+      </section>
+      <section>
+        <h2>Selected Experience Narrative</h2>
+        <ul>${D.narrative.map(n => `<li>${n}</li>`).join("")}</ul>
+      </section>
+      <footer class="ats-footer"><p>${D.footer}</p></footer>
+    `;
+  }
+
+  window.printResume = () => window.print();
+})();
+</script>
+
+</body>
+</html>

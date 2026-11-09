@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="color-scheme" content="dark light" />
+<title>Sound Deck AI · Phone Remote</title>
+<style>
+  :root { --bg:#0b0d12; --panel:#141821; --el:#1c2230; --text:#eef1f7; --muted:#9aa4b8; --acc:#f5b041; --on:#111; --line:#2a3242; }
+  html[data-mode="light"] { --bg:#f4f5f8; --panel:#ffffff; --el:#eef0f5; --text:#171a21; --muted:#4f5868; --acc:#b35c00; --on:#fff; --line:#d5d9e2; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); min-height:100dvh; display:flex; flex-direction:column; gap:12px; padding:14px; user-select:none; }
+  header { display:flex; align-items:center; justify-content:space-between; }
+  h1 { font-size:18px; margin:0; letter-spacing:-.01em } h1 b { color:var(--acc) }
+  .chip { font-size:11px; padding:3px 9px; border-radius:99px; border:1px solid var(--line); color:var(--muted); }
+  .chip.ok { background:var(--acc); color:var(--on); border-color:transparent; }
+  .row { display:flex; gap:8px; align-items:center; }
+  button { font:inherit; font-weight:700; border-radius:14px; border:1px solid var(--line); background:var(--el); color:var(--text); padding:12px; }
+  button:active { transform:scale(.97); }
+  .primary { background:var(--acc); color:var(--on); border-color:transparent; flex:1; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .pad { aspect-ratio:1; border-radius:16px; font-size:11px; display:flex; align-items:flex-end; padding:8px; position:relative; overflow:hidden; }
+  .pad::before { content:""; position:absolute; inset:0; background:var(--c,var(--acc)); opacity:.22; }
+  .pad.hit::before { opacity:.75; }
+  .pad span { position:relative; text-align:left; word-break:break-word; }
+  #xy { height:150px; border-radius:16px; background:linear-gradient(135deg,var(--el),var(--panel)); border:1px solid var(--line); position:relative; touch-action:none; }
+  #dot { position:absolute; width:26px; height:26px; margin:-13px; border-radius:50%; background:var(--acc); left:50%; top:50%; box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 25%,transparent); }
+  .lbl { font-size:11px; color:var(--muted); }
+  input[type=range] { flex:1; accent-color:var(--acc); }
+  .steps { display:grid; grid-template-columns:repeat(16,1fr); gap:3px; } .steps i { height:6px; border-radius:3px; background:var(--el); } .steps i.on { background:var(--acc); }
+</style>
+</head>
+<body>
+<header><h1>Sound Deck <b>AI</b> remote</h1><span id="st" class="chip">connecting…</span></header>
+<div class="steps" id="steps"></div>
+<div class="row"><button class="primary" id="play">▶ Play</button><button id="stop">■ Stop</button><button id="theme" aria-label="Toggle light or dark">◐</button></div>
+<div class="row"><span class="lbl">BPM</span><input id="bpm" type="range" min="60" max="200" value="120" /><b id="bpmv">120</b></div>
+<div class="grid" id="pads"></div>
+<div class="lbl">XY — left/right: filter · up/down: reverb</div>
+<div id="xy"><div id="dot"></div></div>
+<script>
+(() => {
+  const q = new URLSearchParams(location.search); const room = (q.get('room') || '').replace(/[^0-9a-z]/gi, '');
+  const root = document.documentElement; const mk = 'soundx-ai:sda-color-mode'; // same key (and namespace) as the main app
+  const setMode = (m) => { root.dataset.mode = m; try { localStorage.setItem(mk, m); } catch (e) {} };
+  try { if (localStorage.getItem('soundx-ai:mm-theme-v') !== '2') { localStorage.setItem(mk, 'dark'); localStorage.setItem('soundx-ai:mm-theme-v', '2'); } } catch (e) {}
+  setMode(localStorage.getItem(mk) || 'dark'); // dark by default (mm-theme-v2)
+  document.getElementById('theme').onclick = () => setMode(root.dataset.mode === 'light' ? 'dark' : 'light');
+  const st = document.getElementById('st'); const padsEl = document.getElementById('pads'); const stepsEl = document.getElementById('steps');
+  for (let i = 0; i < 16; i++) stepsEl.appendChild(document.createElement('i'));
+  let ws, playing = false, padNames = [];
+  const send = (m) => ws && ws.readyState === 1 && ws.send(JSON.stringify(m));
+  const renderPads = (pads) => {
+    const key = pads.map((p) => p.name).join('|'); if (key === padNames.join('|')) return; padNames = pads.map((p) => p.name);
+    padsEl.innerHTML = ''; pads.forEach((p, i) => { const b = document.createElement('button'); b.className = 'pad'; b.style.setProperty('--c', p.color || ''); b.innerHTML = '<span></span>'; b.firstChild.textContent = p.name;
+      b.addEventListener('pointerdown', (e) => { e.preventDefault(); send({ type: 'pad', index: i, velocity: 0.95 }); b.classList.add('hit'); navigator.vibrate && navigator.vibrate(8); setTimeout(() => b.classList.remove('hit'), 110); });
+      padsEl.appendChild(b); });
+  };
+  if (!padsEl.children.length) renderPads(Array.from({ length: 16 }, (_, i) => ({ name: 'Pad ' + (i + 1) })));
+  const connect = () => {
+    if (!room) { st.textContent = 'no room code'; return; }
+    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/remote?room=' + room + '&role=phone');
+    ws.onopen = () => { st.textContent = 'room ' + room; };
+    ws.onclose = () => { st.className = 'chip'; st.textContent = 'reconnecting…'; setTimeout(connect, 1500); };
+    ws.onmessage = (e) => { let m; try { m = JSON.parse(e.data); } catch (_) { return; }
+      if (m.type === 'peers') { st.className = m.deck ? 'chip ok' : 'chip'; st.textContent = m.deck ? 'connected · room ' + room : 'waiting for studio…'; }
+      if (m.type === 'state') { playing = !!m.isPlaying; document.getElementById('play').textContent = playing ? '❚❚ Pause' : '▶ Play';
+        document.getElementById('bpmv').textContent = m.bpm; if (document.activeElement !== bpm) bpm.value = m.bpm;
+        [...stepsEl.children].forEach((c, i) => c.classList.toggle('on', playing && i === m.step % 16)); if (Array.isArray(m.pads)) renderPads(m.pads); } };
+  };
+  const bpm = document.getElementById('bpm');
+  bpm.oninput = () => { document.getElementById('bpmv').textContent = bpm.value; send({ type: 'bpm', value: Number(bpm.value) }); };
+  document.getElementById('play').onclick = () => send({ type: 'transport', action: playing ? 'stop' : 'play' });
+  document.getElementById('stop').onclick = () => send({ type: 'transport', action: 'stop' });
+  const xy = document.getElementById('xy'), dot = document.getElementById('dot');
+  const move = (e) => { const r = xy.getBoundingClientRect(); const x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)); const y = Math.max(0, Math.min(1, 1 - (e.clientY - r.top) / r.height));
+    dot.style.left = x * 100 + '%'; dot.style.top = (1 - y) * 100 + '%'; send({ type: 'xy', x, y }); };
+  xy.addEventListener('pointerdown', (e) => { xy.setPointerCapture(e.pointerId); move(e); }); xy.addEventListener('pointermove', (e) => { if (e.buttons) move(e); });
+  connect();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+ "note": "SAMPLE DATA - fictional companies and text written for this demo.",
+ "emails": [
+  {
+   "id": "e1",
+   "subject": "Next steps - AI Engineer role",
+   "body": "Hi, thanks for applying. We enjoyed your profile and would like to invite you to a 45-minute technical interview next week. Please share a few time slots that work for you."
+  },
+  {
+   "id": "e2",
+   "subject": "Your application",
+   "body": "Thank you for your interest in the position. After careful consideration we have decided to move forward with other candidates whose experience more closely matches our needs. We wish you well in your search."
+  },
+  {
+   "id": "e3",
+   "subject": "Application received",
+   "body": "We confirm receipt of your application. Our talent team reviews every submission and will be in touch if your profile is shortlisted. No further action is required."
+  },
+  {
+   "id": "e4",
+   "subject": "Quick chat?",
+   "body": "Hello! I came across your profile and think you could be a strong fit for a contract role we're hiring for. Are you free for a quick call on Thursday to discuss?"
+  },
+  {
+   "id": "e5",
+   "subject": "Update on your application",
+   "body": "Unfortunately the role has been filled internally. We will keep your CV on file for future opportunities."
+  },
+  {
+   "id": "e6",
+   "subject": "Thanks - we've got it",
+   "body": "This is an automated message to let you know your application was submitted successfully. You can track its status in the candidate portal."
+  }
+ ],
+ "train": {
+  "interview": [
+   "We would like to invite you to an interview",
+   "Please share your availability for a call with the hiring manager",
+   "Can we schedule a technical interview next week",
+   "You have been shortlisted for the next round",
+   "We'd love to set up a video call to discuss the role",
+   "Are you available for a chat on Friday",
+   "Next step is a take-home assessment and a panel interview",
+   "The team was impressed and would like to meet you",
+   "Book a slot for your first-round interview using this link",
+   "I'd like to arrange a screening call to discuss the opportunity",
+   "Could you join a 30 minute teams meeting tomorrow",
+   "Following your application we invite you to the assessment stage"
+  ],
+  "reject": [
+   "Unfortunately we will not be progressing your application",
+   "We have decided to move forward with other candidates",
+   "The position has been filled",
+   "After careful consideration you were not successful this time",
+   "We regret to inform you that your application was unsuccessful",
+   "We will keep your CV on file for future roles",
+   "Your profile does not match our current requirements",
+   "We are not able to offer you an interview at this stage",
+   "Thank you for your time but we have chosen another candidate",
+   "The role has been put on hold and closed",
+   "Sadly we won't be moving ahead",
+   "Other applicants more closely match the requirements"
+  ],
+  "ack": [
+   "We have received your application",
+   "Thank you for applying, our team will review it",
+   "This is an automated confirmation of your submission",
+   "Your application was submitted successfully",
+   "We confirm receipt of your CV",
+   "You can track the status of your application in the portal",
+   "Thanks for your interest, we'll be in touch if shortlisted",
+   "No reply is needed to this message",
+   "Your application is under review",
+   "We review every application and respond within two weeks",
+   "Thank you, your documents have been received",
+   "This mailbox is not monitored"
+  ]
+ }
+}

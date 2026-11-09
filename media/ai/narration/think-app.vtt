@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:08.668
+THINK is a Gemini multimodal workspace: chat, live voice, Net Sites, Net Code, Netzar Protocol and Net Learn, hosted on Mens Mercatus.
+
+2
+00:00:08.618 --> 00:00:14.447
+It is the live multimodal desk, with chat, image and live paths through the portfolio's Gemini proxy.
+
+3
+00:00:14.447 --> 00:00:21.707
+Katlego built it as a React 19 workspace, with Vite and TypeScript, a server-side proxy and a live-voice WebSocket relay.
+
+4
+00:00:21.707 --> 00:00:23.906
+The model key stays on the server.
+
+5
+00:00:23.906 --> 00:00:28.618
+Live voice and image are capped per IP, and that cap is the control, not a bug.
+
+6
+00:00:28.618 --> 00:00:33.425
+THINK is a portfolio workspace with caps, not an unlimited production assistant.
+
+7
+00:00:33.425 --> 00:00:37.584
+And the feed copy inside THINK is product content, not a résumé claim.

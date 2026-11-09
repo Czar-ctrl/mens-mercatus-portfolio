@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-entelect-4460447887",
+  "jobId": "li-entelect-4460447887",
+  "title": "Senior .NET Software Engineer",
+  "company": "Entelect",
+  "location": "Johannesburg Metropolitan Area",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4460447887",
+  "signal": "low",
+  "packet": "Here's a draft apply packet for the Senior .NET Software Engineer role at Entelect.\n\n**Cover Draft:**\n\nDear Entelect Hiring Team,\n\nI am writing to express my keen interest in the Senior .NET Software Engineer position in Johannesburg, as advertised. My background in AI and Systems Engineering, with a strong foundation in .NET and distributed systems, aligns well with the role's requirements for .NET web/mobile delivery, containerisation, and CI/CD. I am particularly drawn to Entelect's innovative work in this space.\n\nWhile my recent focus has been on Python, TypeScript, LLMs, RAG, and agent development, I possess a solid understanding of .NET and have experience building robust distributed systems. I am confident in my ability to quickly adapt and contribute effectively to your .NET-focused projects.\n\nThank you for considering my application. I look forward to the possibility of discussing how my skills can benefit Entelect.\n\nSincerely,\n\n[Candidate Name]\n\n**Fit Notes:**\n\n*   **Role Alignment:** Senior .NET Software Engineer.\n*   **Company:** Entelect.\n*   **Location:** Johannesburg Metropolitan Area.\n*   **Key Requirements:** .NET web/mobile delivery, containerisation, CI.\n*   **Candidate Strengths:** AI/Systems Engineering background, Python, TypeScript, LLMs, RAG, agents, .NET, distributed systems.\n*   **Potential Gaps/Considerations:** While .NET is listed, the candidate's recent focus is on other languages. Emphasise adaptability and existing .NET knowledge. The high applicant count (135) suggests a need for a strong, concise application.\n\n**How to Submit Checklist:**\n\n*   [ ] Open the Entelect careers portal or the specific job listing.\n*   [ ] Complete all required fields on the application form.\n*   [ ] Upload your updated CV.\n*   [ ] Paste the drafted cover letter into the designated section.\n*   [ ] Review all information for accuracy before final submission.\n*   [ ] Note any specific instructions or additional documents requested by Entelect.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:45.479248+00:00"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="author" content="Mens Mercatus Inc"/>
+<meta name="robots" content="noindex"/>
+<title>Signup gate · Mens Mercatus Blueprint</title>
+<link rel="stylesheet" href="../../css/tokens.css?v=20261005h">
+<link rel="stylesheet" href="../../css/base.css?v=20261005h">
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- mm-seo --><meta name="description" content="Age, health declaration, and criminal-check references before Event roster access."><link rel="canonical" href="https://mensmercatus.online/blueprint/event/signup-gate.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="Signup gate · Mens Mercatus Blueprint"><meta property="og:description" content="Age, health declaration, and criminal-check references before Event roster access."><meta property="og:url" content="https://mensmercatus.online/blueprint/event/signup-gate.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Signup gate · Mens Mercatus Blueprint"><meta name="twitter:description" content="Age, health declaration, and criminal-check references before Event roster access."><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Signup gate · Mens Mercatus Blueprint", "url": "https://mensmercatus.online/blueprint/event/signup-gate.html", "description": "Age, health declaration, and criminal-check references before Event roster access.", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <img class="mark" src="assets/mark-wheat-16.svg" width="16" height="16" alt="" decoding="async" />
+    <div class="wordmark">Mens Mercatus Blueprint <span>· Event</span></div>
+    <div class="spacer"></div>
+    <span class="chip">Static mockup</span>
+  </header>
+  <main class="main">
+
+<a class="nav-back" href="index.html">← Hub</a>
+<p class="kicker">Onboarding</p>
+<h1>Signup gate</h1>
+<p class="lead">Age, health declaration, and criminal-check references before Event roster access.</p>
+
+<div class="gate">
+  <strong>Compliance gate</strong>
+  <ul>
+    <li>Must be 18 or older (South Africa).</li>
+    <li>Health declaration on file for shift types that require it.</li>
+    <li>Criminal-check reference IDs collected — verification is operator-side, not stored as raw certificates in-app.</li>
+    <li>POPIA: SA ID numbers redacted in Assist logs; never paste full ID back.</li>
+  </ul>
+</div>
+
+<form data-gate-form>
+  <div class="card">
+    <div class="check"><input type="checkbox" data-required id="c1"/><label for="c1">I confirm I am 18 years of age or older.</label></div>
+    <div class="check"><input type="checkbox" data-required id="c2"/><label for="c2">I have completed the health declaration for the shift types I will accept.</label></div>
+    <div class="check"><input type="checkbox" data-required id="c3"/><label for="c3">I consent to providing criminal-check reference numbers for operator verification.</label></div>
+    <div class="check"><input type="checkbox" data-required id="c4"/><label for="c4">I understand goods transport ≠ passenger transport (NLTA). No unlicensed passenger coaching.</label></div>
+  </div>
+  <div class="card">
+    <div class="title">Criminal-check refs</div>
+    <div class="meta" style="margin-top:8px">Reference ID (illustrative)</div>
+    <div class="mono" style="margin-top:4px;padding:10px;background:#0A0A0A;border:1px solid #2A2A2A;border-radius:6px">CCR-2026-88421</div>
+  </div>
+  <button type="button" class="btn btn-primary btn-block" data-gate-submit disabled>Continue to roster</button>
+  <button type="button" class="btn btn-assist btn-block" style="margin-top:8px" data-assist="signup" data-assist-text="Confirm all four gates. Criminal-check refs are references only — never upload SASSA credentials.">Assist</button>
+  <div class="assist-strip" data-assist-strip="signup"></div>
+</form>
+
+  </main>
+  <footer class="footer">Mens Mercatus Inc · Illustrative UI · Assist DEMO strips</footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

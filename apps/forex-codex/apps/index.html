@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERCATUS DUAL DESK // Quant & Aureum Earth Observation Suite</title>
+  <meta name="description" content="Sovereign High-End Dual Cockpit: Mercatus Quant Desk & Aureum Earth Observation with 50-Toolbox Superpowers.">
+  <style>
+    :root {
+      --bg: #02050e;
+      --bar-bg: rgba(9, 14, 26, 0.9);
+      --border: rgba(56, 189, 248, 0.25);
+      --accent-cyan: #00ffd1;
+      --accent-blue: #38bdf8;
+      --text: #f8fafc;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    nav {
+      background: var(--bar-bg);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .brand-title {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #00ffd1, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .view-toggles {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      gap: 4px;
+    }
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .toggle-btn:hover { color: #fff; }
+    .toggle-btn.active {
+      background: rgba(56, 189, 248, 0.2);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+    .popout-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .pop-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .pop-btn:hover {
+      background: rgba(0, 255, 209, 0.15);
+      border-color: var(--accent-cyan);
+      color: #fff;
+    }
+    .workspace-frames {
+      flex: 1;
+      display: flex;
+      height: calc(100vh - 53px);
+      width: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #030712;
+    }
+    .frame-wrap {
+      flex: 1;
+      height: 100%;
+      position: relative;
+    }
+    .frame-wrap:not(:first-child) {
+      border-left: 1px solid var(--border);
+    }
+  </style>
+<!-- mm-motion --><script type="module">addEventListener("load",function(){var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";s.setAttribute('data-bg','');s.setAttribute('data-no-g','');s.setAttribute('data-no-status','');document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body>
+
+  <nav data-mm-bg>
+    <div class="brand-title">
+      <span>⚡ MERCATUS DUAL DESK COCKPIT</span>
+      <span style="font-family:var(--font-mono);font-size:10px;padding:2px 6px;background:rgba(0,255,209,0.15);color:#00ffd1;border-radius:4px;border:1px solid rgba(0,255,209,0.3);">V0.5.2 STANDALONE</span>
+    </div>
+
+    <div class="view-toggles">
+      <button class="toggle-btn active" id="btn-view-split">⚡ Dual Split View</button>
+      <button class="toggle-btn" id="btn-view-quant">📈 Quant Desk Only</button>
+      <button class="toggle-btn" id="btn-view-aureum">🛰️ Aureum EO Only</button>
+    </div>
+
+    <div class="popout-actions">
+      <a href="./quant-desk/index.html" target="_blank" class="pop-btn" title="Open Quant Desk in separate Chrome tab">
+        ↗ Standalone Quant Desk
+      </a>
+      <a href="./aureum-eo/index.html" target="_blank" class="pop-btn" title="Open Aureum EO in separate Chrome tab">
+        ↗ Standalone Aureum EO
+      </a>
+    </div>
+  </nav>
+
+  <div class="workspace-frames" id="frames-container">
+    <div class="frame-wrap" id="wrap-quant">
+      <iframe src="./quant-desk/index.html" title="Mercatus Quant Desk"></iframe>
+    </div>
+    <div class="frame-wrap" id="wrap-aureum">
+      <iframe src="./aureum-eo/index.html" title="Mercatus Aureum Earth Observation"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const wrapQuant = document.getElementById('wrap-quant');
+    const wrapAureum = document.getElementById('wrap-aureum');
+    const btnSplit = document.getElementById('btn-view-split');
+    const btnQuant = document.getElementById('btn-view-quant');
+    const btnAureum = document.getElementById('btn-view-aureum');
+
+    function setActiveBtn(btn) {
+      [btnSplit, btnQuant, btnAureum].forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    btnSplit.onclick = () => {
+      setActiveBtn(btnSplit);
+      wrapQuant.style.display = 'block';
+      wrapAureum.style.display = 'block';
+    };
+
+    btnQuant.onclick = () => {
+      setActiveBtn(btnQuant);
+      wrapQuant.style.display = 'block';
+      wrapAureum.style.display = 'none';
+    };
+
+    btnAureum.onclick = () => {
+      setActiveBtn(btnAureum);
+      wrapQuant.style.display = 'none';
+      wrapAureum.style.display = 'block';
+    };
+  </script>
+</body>
+</html>

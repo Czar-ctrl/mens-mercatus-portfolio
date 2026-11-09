@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="gm">
+<head><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<script>
+try{if(localStorage.getItem('mm-color-mode')==='light')document.documentElement.classList.add('mm-light');}catch(e){}
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mercatus Assist — a grounded AI assistant for Katlego Mokoto's portfolio: on-device MiniLM retrieval and intent routing, Gemini answers with cited sources, recruiter fit check, voice, and honest fallbacks.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Mercatus Assist · Mens Mercatus</title>
+<link rel="canonical" href="https://mensmercatus.online/apps/mercatus-assist/">
+<meta property="og:title" content="Mercatus Assist · Mens Mercatus">
+<meta property="og:description" content="Mercatus Assist — a grounded AI assistant for Katlego Mokoto's portfolio: on-device MiniLM retrieval and intent routing, Gemini answers with cited sources, recruiter fit check, voice, and honest fallbacks.">
+<meta property="og:url" content="https://mensmercatus.online/apps/mercatus-assist/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+<meta property="og:site_name" content="Mens Mercatus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mercatus Assist · Mens Mercatus">
+<meta name="twitter:description" content="Mercatus Assist — a grounded AI assistant for Katlego Mokoto's portfolio: on-device MiniLM retrieval and intent routing, Gemini answers with cited sources, recruiter fit check, voice, and honest fallbacks.">
+<meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../../assets/marks/mark-wheat-16-on-black.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/tokens.css?v=20261006c">
+<link rel="stylesheet" href="../../css/base.css?v=20261006c">
+<link rel="stylesheet" href="../../css/glow-bg.css">
+<link rel="stylesheet" href="../../css/ambient-bg.css?v=20261006c">
+<link rel="stylesheet" href="../../css/cursor.css?v=20261006c">
+<link rel="stylesheet" href="../../css/nav.css?v=20261006c">
+<link rel="stylesheet" href="../../css/sidebar.css?v=20261006c">
+<link rel="stylesheet" href="../../css/cartel.css">
+<link rel="stylesheet" href="../../css/pages.css?v=20261006c">
+<link rel="stylesheet" href="/css/assist.css?v=as1" data-mm-as>
+<style>
+  /* Mercatus Assist v2 page (option AS). The app box reserves its height so nothing shifts when it mounts (CLS ~0). */
+  .asx-wrap{display:grid;gap:1.5rem;grid-template-columns:1fr;align-items:start}
+  @media (min-width:1000px){.asx-wrap{grid-template-columns:minmax(0,1.6fr) minmax(280px,.9fr)}}
+  #as-app{min-height:760px}
+  #as-app:not(.as-ready){border:1px solid rgba(255,255,255,.1);border-radius:18px;background:#0b0909}
+  @media (max-width:767px){#as-app{min-height:820px}}
+  .asx-kick{font:700 .72rem/1 "Space Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#ff5a5f;margin:0 0 .7rem}
+  .asx-h1{font:700 clamp(2rem,4.2vw,3.1rem)/1.05 Inter,system-ui,sans-serif;letter-spacing:-.02em;margin:0 0 .8rem;color:#fff}
+  .asx-lead{max-width:62ch;color:#b9b1b2;font-size:1.02rem;line-height:1.6;margin:0 0 1.6rem}
+  .asx-side{display:grid;gap:1rem}
+  .asx-card{border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1rem 1.1rem;background:rgba(255,255,255,.025)}
+  .asx-card h2{font:700 .95rem/1.3 Inter,system-ui,sans-serif;margin:0 0 .6rem;color:#fff}
+  .asx-feat{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.88rem;color:#b9b1b2;line-height:1.45}
+  .asx-feat b{color:#fff;font-weight:600}
+  .asx-tag{display:inline-block;font:700 .6rem/1 "Space Mono",monospace;letter-spacing:.06em;padding:.25rem .4rem;border-radius:5px;margin-right:.35rem;vertical-align:1px;border:1px solid rgba(255,255,255,.2);color:#ddd}
+  .asx-tag.l{border-color:rgba(46,204,113,.5);color:#b8f5cf}.asx-tag.p{border-color:rgba(255,191,90,.5);color:#ffcf8a}
+  .asx-links{display:flex;flex-wrap:wrap;gap:.5rem}
+  .asx-links a{display:inline-flex;padding:.5rem .75rem;border:1px solid rgba(255,255,255,.16);border-radius:10px;color:#fff;text-decoration:none;font-size:.84rem}
+  /* the showcase TL;DR bar (js/ai/enhance.js) is replaced on this page by the Explain tab, and would sit over the chat input */
+  .mm-csbar,#mm-cs-drawer{display:none!important}
+  .asx-links a:hover{border-color:#e2283b;background:rgba(226,40,59,.1)}
+</style>
+<link rel="stylesheet" href="../../css/godmode.css?v=20261006c">
+<!-- preview showcase AI --><script src="/js/ai/config.js?v=m3"></script><link rel="stylesheet" href="/css/preview-ai.css?v=w3c"/><script defer src="/js/ai/ai-boot.js?v=m1"></script><!-- /preview showcase AI --><script defer src="/js/proof-strip.js?v=3"></script><!-- mm-seo --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mercatus Assist", "url": "https://mensmercatus.online/apps/mercatus-assist/", "description": "Mercatus Assist — a grounded AI assistant for Katlego Mokoto's portfolio: on-device MiniLM retrieval and intent routing, Gemini answers with cited sources, recruiter fit check, voice, and honest fallbacks.", "applicationCategory": "WebApplication", "operatingSystem": "Web browser", "image": "https://mensmercatus.online/media/assist.webp", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}, "isAccessibleForFree": true}</script><!-- /mm-seo --><!-- mm-motion --><script type="module">addEventListener("load",function(){var s=document.createElement("script");s.src="/js/mm-motion.js?v=m5";s.setAttribute('data-bg','');document.head.appendChild(s)})</script><!-- /mm-motion --></head>
+<body class="is-cartel-theme" data-page="apps">
+<div class="glow-bg" aria-hidden="true"></div>
+<header class="site-nav" role="banner">
+  <div class="nav-inner">
+    <div class="nav-brands">
+      <a class="nav-brand" href="../../index.html" aria-label="Mens Mercatus home">
+        <img class="gm-mark" src="../../assets/marks/mark-wheat-16.svg" width="16" height="16" alt="">
+        <span class="word">Mens Mercatus <span class="gm-ctx">· Assist</span></span>
+      </a>
+    </div>
+    <button class="nav-burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
+      <a href="../../index.html" data-nav="home">Home</a>
+      <a href="../../hub.html" data-nav="hub">Hub</a>
+      <a href="../../apps/index.html" data-nav="apps" class="is-active">Apps</a>
+      <a href="../../blueprint/index.html" data-nav="cartel">Blueprint</a>
+      <a href="../../vault/index.html" data-nav="vault">Vault</a>
+      <a href="../../contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="page">
+<main id="main">
+<section class="section">
+  <div class="container">
+    <p class="asx-kick">AI assistant · RAG · on-device ML · preview</p>
+    <h1 class="asx-h1">Mercatus Assist</h1>
+    <p class="asx-lead">Ask anything about Katlego's work. Retrieval and intent routing run on your device with a small embedding model; Gemini writes the answer from the sources it was given, and every claim links back to the page it came from. When it doesn't know, it says so.</p>
+    <div class="asx-wrap">
+      <div id="as-app" aria-label="Mercatus Assist"><noscript><p style="padding:1rem">Mercatus Assist needs JavaScript. You can still read <a href="/work/">all work</a> or email <a href="mailto:katlego.mokoto.km@gmail.com">katlego.mokoto.km@gmail.com</a>.</p></noscript></div>
+      <aside class="asx-side" aria-label="About this assistant">
+        <div class="asx-card">
+          <h2>What's inside</h2>
+          <ul class="asx-feat">
+            <li><span class="asx-tag l">LIVE</span><b>Grounded answers.</b> Hybrid BM25 + MiniLM retrieval over the site's knowledge base, one Gemini call, citations checked before anything is shown.</li>
+            <li><span class="asx-tag l">ON DEVICE</span><b>Intent router.</b> Nearest-centroid + 2-NN over MiniLM vectors: recruiter, client, tech, booking. Each gets its own answer style and actions.</li>
+            <li><span class="asx-tag l">ON DEVICE</span><b>Confidence meter.</b> Computed from retrieval similarity, so a weak match is visible instead of hidden.</li>
+            <li><span class="asx-tag l">LIVE</span><b>Recruiter fit.</b> Paste a job post: requirement-by-requirement match against the real CV, honest gaps, then a written summary.</li>
+            <li><span class="asx-tag l">LIVE</span><b>Explain a project.</b> Reads a case-study page and explains it for a recruiter, a business owner or an engineer.</li>
+            <li><span class="asx-tag l">ON DEVICE</span><b>Architecture lens.</b> Draws a live data-flow diagram of the project being discussed.</li>
+            <li><span class="asx-tag l">ON DEVICE</span><b>Skill evidence.</b> Each claimed skill links to the case study, app or dated build-log entry that shows it.</li>
+            <li><span class="asx-tag l">LIVE</span><b>Three lengths, four languages.</b> English, isiZulu, Afrikaans or Sesotho (translated by Gemini, marked as such).</li>
+            <li><span class="asx-tag l">ON DEVICE</span><b>Voice.</b> Speak a question; hear the answer in an en-ZA voice where your device has one.</li>
+            <li><span class="asx-tag p">PREVIEW</span><b>Streaming.</b> Answers are revealed progressively; true token streaming is a prepared server change.</li>
+          </ul>
+        </div>
+        <div class="asx-card">
+          <h2>Privacy</h2>
+          <p class="asx-feat" style="display:block">The conversation lives in this browser tab only (sessionStorage) and the Clear button wipes it. No cookies, no tracking. Your question and the matched site text go to the existing Assist API to get an answer; nothing new is stored on a server.</p>
+        </div>
+        <div class="asx-card">
+          <h2>Go deeper</h2>
+          <div class="asx-links">
+            <a href="/case-studies/assist/">Case study</a>
+            <a href="/docs/mens-mercatus-portfolio-systems.pdf?v=b106ef14" target="_blank" rel="noopener">Technical overview (PDF)</a>
+            <a href="/work/">All work</a>
+            <a href="raw-shell.html">Original policy-coach chat</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Mens Mercatus Inc · Katlego Mokoto</span>
+    <span><a href="../../contact.html">Contact</a> · <a href="../../blueprint/index.html">Blueprint</a> · <a href="../../vault/index.html">Vault</a></span>
+  </div>
+</footer>
+</div>
+<script src="frontend/api-config.js?v=bp1"></script>
+<script src="/js/assist/launcher.js?v=as1" defer></script>
+<script src="../../js/cursor.js?v=bp1" defer></script>
+<script src="../../js/ambient-bg.js?v=bp1" defer></script>
+<script src="../../js/glow.js?v=20261006c" defer></script>
+<script src="../../js/nav.js" defer></script>
+<script src="../../js/godmode.js?v=bp1" data-gm-tool="assist" defer></script>
+<script src="../../js/theme-toggle.js?v=20261006c" defer></script>
+</body>
+</html>

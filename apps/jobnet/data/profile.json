@@ -1,0 +1,1196 @@
+{
+ "name": "Katlego Mokoto",
+ "title": "AI & ML Engineer / Full-Stack Developer",
+ "years": 4,
+ "availability": "Available immediately",
+ "locations": [
+  "Johannesburg",
+  "Pretoria",
+  "Cape Town",
+  "Durban"
+ ],
+ "modes": [
+  "on-site",
+  "hybrid",
+  "remote"
+ ],
+ "summary": "I build agentic workflows and full-stack systems a teammate can review, deploy, and trust: career pipelines, multimodal assistants, and research desks, with a human decision on every irreversible step.",
+ "projects": [
+  {
+   "id": "assist",
+   "name": "Mercatus Assist and THINK",
+   "tag": "Multimodal assistant",
+   "url": "/case-studies/assist/",
+   "skills": [
+    "csharp",
+    "dotnet",
+    "api",
+    "gemini",
+    "openai",
+    "react",
+    "typescript",
+    "vite",
+    "websockets",
+    "linux",
+    "systemd",
+    "nginx",
+    "cloudflare",
+    "security",
+    "monitoring",
+    "node"
+   ],
+   "bullets": [
+    "ASP.NET Core 8 minimal API (C#) calls Gemini through an OpenAI-compatible client, with exponential backoff on HTTP 429 and 5xx.",
+    "systemd on Ubuntu, nginx, Cloudflare. API key stays on the VPS. Per-IP caps. Labelled demo fallback when unhealthy.",
+    "THINK front end: React 19, Vite, TypeScript, live-voice WebSocket relay."
+   ]
+  },
+  {
+   "id": "jobnet",
+   "name": "JobNet",
+   "tag": "Career pipeline",
+   "url": "/case-studies/jobnet/",
+   "skills": [
+    "agents",
+    "llm",
+    "automation",
+    "scraping",
+    "embeddings",
+    "hitl",
+    "pipelines",
+    "python"
+   ],
+   "bullets": [
+    "Daily scrape at 20:00 SAST. A sentence embedding ranks each posting against the case studies and keeps one role per company.",
+    "A letter is sent only when the posting prints an employer address. A 15:00 SAST mail reports the previous run."
+   ]
+  },
+  {
+   "id": "forex",
+   "name": "Forex Mercatus Codex",
+   "tag": "Paper research desk",
+   "url": "/case-studies/forex/",
+   "skills": [
+    "python",
+    "pandas",
+    "ml",
+    "linux",
+    "monitoring",
+    "api",
+    "data"
+   ],
+   "bullets": [
+    "Python and Highcharts desk, about 87 MB, hosted on a VPS (port 8790) over HTTPS.",
+    "Pandas, NumPy, and yfinance feed the paper models. Session cap 24, 2-hour idle TTL, quotes about every 60 seconds. Public health JSON. No orders."
+   ]
+  },
+  {
+   "id": "soundx",
+   "name": "SoundX",
+   "tag": "Browser studio",
+   "url": "/case-studies/soundx/",
+   "skills": [
+    "typescript",
+    "webaudio",
+    "dsp",
+    "hitl",
+    "javascript"
+   ],
+   "bullets": [
+    "TypeScript and Web Audio. Load demo, play, shape, generate. Audio stays in the browser.",
+    "AI Producer proposes a DSP chain. Generate can estimate tempo from onsets in the local buffer. The person applies it. No sign-in."
+   ]
+  },
+  {
+   "id": "sda",
+   "name": "Sound Deck AI",
+   "tag": "On-device AI studio",
+   "url": "/apps/soundx-ai/",
+   "skills": [
+    "react",
+    "typescript",
+    "webaudio",
+    "ml",
+    "ondevice",
+    "agents",
+    "dsp",
+    "testing"
+   ],
+   "bullets": [
+    "AI drum station and studio with 20 on-device AI tools, a plugin rack, Afro sample packs and 22 themes; audio stays on the machine.",
+    "Tempo and key detection, hum-to-MIDI, clash-fixing EQ and Mix QA run in the browser; a Producer Agent turns a brief into a full beat."
+   ]
+  }
+ ],
+ "experience": [
+  {
+   "when": "Mar 2026 – present",
+   "role": "AI systems architect and founder",
+   "org": "Project Antigravity",
+   "bullets": [
+    "Local-first agent tooling on Apple Silicon M4 with Ollama, Agent Zero, and Cursor.",
+    "Nebius for training and deploy experiments."
+   ]
+  },
+  {
+   "when": "Ongoing",
+   "role": "Full-stack, .NET, and AI systems",
+   "org": "Mens Mercatus",
+   "bullets": [
+    "Mercatus Assist, THINK, JobNet, Forex Mercatus Codex, and SoundX: Python, React 19, ASP.NET Core 8, and local audio DSP.",
+    "Human approval on send, orders, and studio changes. API keys stay on the VPS."
+   ]
+  },
+  {
+   "when": "Before the portfolio",
+   "role": "Operations and optimization",
+   "org": "Earlier systems work",
+   "bullets": [
+    "Fleet and logistics optimization with OR-Tools.",
+    "Diesel and mechanical operations. Systems thinking under physical constraints."
+   ]
+  }
+ ],
+ "stack": {
+  "Languages": "Python, TypeScript, C#, JavaScript, SQL, Bash",
+  "Frontend": "React 19, Next.js, Vite, TypeScript, Tailwind, Flutter, Web Audio studio UI",
+  "AI": "LLM orchestration, RAG, LangChain, ChromaDB, Ollama, Gemini, Agent Zero, tool-using agents with human approval",
+  "Machine learning": "Pandas, NumPy, yfinance, OR-Tools, regime and paper-research models, DSP and stem analysis",
+  "Backend": "ASP.NET Core 8, FastAPI, Node.js, WebSockets, Redis",
+  "Data": "PostgreSQL, Pandas, NumPy, yfinance, OR-Tools",
+  "Infra": "Docker, Linux, systemd, nginx, Cloudflare, Ubuntu VPS, Nebius"
+ },
+ "skills": [
+  {
+   "key": "csharp",
+   "label": "C#",
+   "aliases": [
+    "c#",
+    "c sharp",
+    "csharp"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Mercatus Assist: ASP.NET Core 8 minimal API in C#",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "dotnet",
+   "label": ".NET / ASP.NET Core",
+   "aliases": [
+    "\\.net\\b",
+    "dotnet",
+    "asp\\.?net",
+    "\\.net core",
+    "web api"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Mercatus Assist: ASP.NET Core 8 service",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "python",
+   "label": "Python",
+   "aliases": [
+    "python"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Forex Mercatus Codex: Python desk",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "typescript",
+   "label": "TypeScript",
+   "aliases": [
+    "typescript",
+    "\\bts\\b"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "THINK: React 19 + TypeScript",
+     "/case-studies/assist/"
+    ],
+    [
+     "SoundX: TypeScript + Web Audio",
+     "/case-studies/soundx/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "javascript",
+   "label": "JavaScript",
+   "aliases": [
+    "javascript",
+    "\\bjs\\b",
+    "es6"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "SoundX browser studio",
+     "/case-studies/soundx/"
+    ],
+    [
+     "Stack list",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "react",
+   "label": "React",
+   "aliases": [
+    "react"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "THINK: React 19 workspace",
+     "/case-studies/assist/"
+    ],
+    [
+     "Sound Deck AI",
+     "/apps/soundx-ai/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "nextjs",
+   "label": "Next.js",
+   "aliases": [
+    "next\\.?js"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Frontend)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "vite",
+   "label": "Vite",
+   "aliases": [
+    "\\bvite\\b"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "THINK: React 19 + Vite",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "tailwind",
+   "label": "Tailwind CSS",
+   "aliases": [
+    "tailwind"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Frontend)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "flutter",
+   "label": "Flutter / Dart",
+   "aliases": [
+    "flutter",
+    "\\bdart\\b"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Labs: Flutter overlay package",
+     "/labs/"
+    ],
+    [
+     "Stack list",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "node",
+   "label": "Node.js",
+   "aliases": [
+    "node\\.?js",
+    "\\bnode\\b",
+    "express"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Backend)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "fastapi",
+   "label": "FastAPI",
+   "aliases": [
+    "fastapi"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Python, Backend)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "api",
+   "label": "REST / API design",
+   "aliases": [
+    "\\brest\\b",
+    "restful",
+    "\\bapis?\\b",
+    "api design",
+    "minimal api"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Mercatus Assist: minimal API with retries and caps",
+     "/case-studies/assist/"
+    ],
+    [
+     "Forex desk: public health JSON",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "websockets",
+   "label": "WebSockets / realtime",
+   "aliases": [
+    "websocket",
+    "real-?time"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "THINK: live-voice WebSocket relay",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "redis",
+   "label": "Redis",
+   "aliases": [
+    "redis"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Backend)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "sql",
+   "label": "SQL / PostgreSQL",
+   "aliases": [
+    "\\bsql\\b",
+    "postgres",
+    "postgresql",
+    "relational database",
+    "databases?"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Languages, Data)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "llm",
+   "label": "LLMs / generative AI",
+   "aliases": [
+    "\\bllms?\\b",
+    "large language model",
+    "generative ai",
+    "gen ?ai",
+    "\\bgpt",
+    "foundation model"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Mercatus Assist: Gemini behind a service",
+     "/case-studies/assist/"
+    ],
+    [
+     "JobNet: tailored drafts from résumé context",
+     "/case-studies/jobnet/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "gemini",
+   "label": "Gemini",
+   "aliases": [
+    "gemini"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Mercatus Assist calls Gemini server-side",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "openai",
+   "label": "OpenAI-compatible APIs",
+   "aliases": [
+    "openai",
+    "azure openai",
+    "chat ?completions"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "Assist uses an OpenAI-compatible client (provider: Gemini)",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": "OpenAI-compatible client, not OpenAI itself"
+  },
+  {
+   "key": "agents",
+   "label": "AI agents / agentic workflows",
+   "aliases": [
+    "agent",
+    "agentic",
+    "tool[- ]use",
+    "tool calling",
+    "function calling",
+    "orchestrat"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "JobNet: scheduled agent pipeline with a send gate",
+     "/case-studies/jobnet/"
+    ],
+    [
+     "RAG and agents map",
+     "/rag/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "rag",
+   "label": "RAG / retrieval",
+   "aliases": [
+    "\\brag\\b",
+    "retrieval",
+    "semantic search"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "RAG and agents: Assist is the retrieval path",
+     "/rag/"
+    ],
+    [
+     "Stack list (AI)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "embeddings",
+   "label": "Embeddings / vector search",
+   "aliases": [
+    "embedding",
+    "vector (db|database|store|search)",
+    "pinecone",
+    "weaviate",
+    "faiss",
+    "pgvector"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "JobNet: sentence embedding ranks postings",
+     "/case-studies/jobnet/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "chromadb",
+   "label": "ChromaDB",
+   "aliases": [
+    "chroma"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (AI)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "langchain",
+   "label": "LangChain",
+   "aliases": [
+    "langchain",
+    "llamaindex"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (AI)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "ollama",
+   "label": "Local LLMs (Ollama)",
+   "aliases": [
+    "ollama",
+    "local (llm|model)s?",
+    "on-?prem(ise)? (llm|model)"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Project Antigravity: Ollama on Apple Silicon M4",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "ondevice",
+   "label": "On-device / browser ML",
+   "aliases": [
+    "on-?device",
+    "edge (ai|ml|inference)",
+    "in-?browser",
+    "webgpu",
+    "onnx",
+    "tensorflow\\.?js"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Sound Deck AI: on-device AI tools",
+     "/apps/soundx-ai/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "ml",
+   "label": "Machine learning",
+   "aliases": [
+    "machine learning",
+    "\\bml\\b",
+    "predictive model",
+    "statistical model",
+    "data science"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Machine learning)",
+     "/resume/"
+    ],
+    [
+     "Sound Deck AI on-device models",
+     "/apps/soundx-ai/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "pandas",
+   "label": "Pandas / NumPy",
+   "aliases": [
+    "pandas",
+    "numpy"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Forex desk: Pandas, NumPy, yfinance",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "dsp",
+   "label": "Audio / DSP",
+   "aliases": [
+    "\\bdsp\\b",
+    "audio",
+    "signal processing",
+    "web audio"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "SoundX: Web Audio engine",
+     "/case-studies/soundx/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "webaudio",
+   "label": "Web Audio",
+   "aliases": [
+    "web audio"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "SoundX",
+     "/case-studies/soundx/"
+    ],
+    [
+     "Sound Deck AI",
+     "/apps/soundx-ai/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "docker",
+   "label": "Docker",
+   "aliases": [
+    "docker",
+    "container"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Stack list (Infra)",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "kubernetes",
+   "label": "Kubernetes",
+   "aliases": [
+    "kubernetes",
+    "\\bk8s\\b",
+    "\\baks\\b",
+    "\\beks\\b",
+    "\\bgke\\b"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "Blueprints: Kubernetes topology schematic (design only)",
+     "/blueprint/"
+    ]
+   ],
+   "note": "Design drawing only; no production cluster on the site"
+  },
+  {
+   "key": "linux",
+   "label": "Linux / VPS ops",
+   "aliases": [
+    "linux",
+    "ubuntu",
+    "\\bvps\\b",
+    "bash",
+    "shell scripting"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Assist on Ubuntu VPS",
+     "/case-studies/assist/"
+    ],
+    [
+     "Forex desk hosted on a VPS",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "systemd",
+   "label": "systemd",
+   "aliases": [
+    "systemd"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Assist runs as a systemd service",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "nginx",
+   "label": "nginx / reverse proxy",
+   "aliases": [
+    "nginx",
+    "reverse proxy"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Assist behind nginx",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "cloudflare",
+   "label": "Cloudflare / CDN",
+   "aliases": [
+    "cloudflare",
+    "\\bcdn\\b"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Static site behind Cloudflare",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "security",
+   "label": "API security / rate limiting",
+   "aliases": [
+    "security",
+    "secure",
+    "rate limit",
+    "api keys?",
+    "secrets",
+    "owasp",
+    "auth"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Assist: key isolation + per-IP caps",
+     "/case-studies/assist/"
+    ],
+    [
+     "Forex: no broker credentials, no order route",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "monitoring",
+   "label": "Monitoring / health checks",
+   "aliases": [
+    "monitor",
+    "observab",
+    "health check",
+    "logging",
+    "telemetry"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Forex: public health JSON",
+     "/case-studies/forex/"
+    ],
+    [
+     "Assist: health-driven labelled fallback",
+     "/case-studies/assist/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "hitl",
+   "label": "Human-in-the-loop / responsible AI",
+   "aliases": [
+    "human[- ]in[- ]the[- ]loop",
+    "responsible ai",
+    "ai safety",
+    "guardrail",
+    "human review",
+    "approval"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "JobNet: send gate, no auto-apply",
+     "/case-studies/jobnet/"
+    ],
+    [
+     "SoundX: you apply producer changes",
+     "/case-studies/soundx/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "automation",
+   "label": "Automation / scripting",
+   "aliases": [
+    "automat",
+    "scheduled",
+    "cron",
+    "workflow"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "JobNet: scheduled pipeline + macOS automation",
+     "/case-studies/jobnet/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "scraping",
+   "label": "Data collection / scraping",
+   "aliases": [
+    "scrap",
+    "crawl"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "JobNet: daily scrape of public listings",
+     "/case-studies/jobnet/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "pipelines",
+   "label": "Data pipelines",
+   "aliases": [
+    "pipeline",
+    "\\betl\\b",
+    "elt\\b"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "JobNet: collect → match → draft → gate",
+     "/case-studies/jobnet/"
+    ]
+   ],
+   "note": "An application pipeline, not a data-warehouse ETL"
+  },
+  {
+   "key": "data",
+   "label": "Market / time-series data",
+   "aliases": [
+    "time[- ]series",
+    "market data",
+    "financial data"
+   ],
+   "level": "shipped",
+   "evidence": [
+    [
+     "Forex desk: fused public feeds",
+     "/case-studies/forex/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "ortools",
+   "label": "Optimisation (OR-Tools)",
+   "aliases": [
+    "or-?tools",
+    "optimi[sz]ation",
+    "operations research",
+    "logistics"
+   ],
+   "level": "listed",
+   "evidence": [
+    [
+     "Earlier work: fleet and logistics optimisation",
+     "/resume/"
+    ]
+   ],
+   "note": ""
+  },
+  {
+   "key": "mlops",
+   "label": "Model training / deploy (MLOps)",
+   "aliases": [
+    "mlops",
+    "model deploy",
+    "fine-?tun",
+    "training pipeline",
+    "model serving"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "Project Antigravity: Nebius training and deploy experiments",
+     "/resume/"
+    ]
+   ],
+   "note": "Experiments, not a production MLOps platform"
+  },
+  {
+   "key": "testing",
+   "label": "Automated testing",
+   "aliases": [
+    "unit test",
+    "automated test",
+    "\\btdd\\b",
+    "test automation",
+    "e2e",
+    "integration test",
+    "testing"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "Sound Deck AI change log: 78 unit + 55 e2e tests",
+     "/ai/#feed"
+    ]
+   ],
+   "note": "Counts from a change log; case studies note test files are private"
+  },
+  {
+   "key": "git",
+   "label": "Git / version control",
+   "aliases": [
+    "\\bgit\\b",
+    "github",
+    "gitlab",
+    "version control"
+   ],
+   "level": "partial",
+   "evidence": [
+    [
+     "Résumé: no public GitHub; repository walkthroughs on request",
+     "/resume/"
+    ]
+   ],
+   "note": "No public GitHub profile listed"
+  },
+  {
+   "key": "cicd",
+   "label": "CI/CD",
+   "aliases": [
+    "ci/cd",
+    "\\bci\\b",
+    "continuous (integration|delivery|deployment)",
+    "github actions",
+    "azure devops",
+    "jenkins"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "aws",
+   "label": "AWS",
+   "aliases": [
+    "\\baws\\b",
+    "amazon web services",
+    "sagemaker",
+    "lambda"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "azure",
+   "label": "Azure",
+   "aliases": [
+    "azure(?! openai)"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "gcp",
+   "label": "Google Cloud",
+   "aliases": [
+    "\\bgcp\\b",
+    "google cloud",
+    "vertex"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site (Gemini is called via an API)"
+  },
+  {
+   "key": "pytorch",
+   "label": "PyTorch / TensorFlow",
+   "aliases": [
+    "pytorch",
+    "tensorflow(?!\\.js)",
+    "keras",
+    "jax\\b"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "cv",
+   "label": "Computer vision",
+   "aliases": [
+    "computer vision",
+    "image (classification|segmentation)",
+    "object detection",
+    "opencv",
+    "\\byolo"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "java",
+   "label": "Java / Kotlin",
+   "aliases": [
+    "\\bjava\\b",
+    "kotlin",
+    "spring"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "go",
+   "label": "Go / Rust",
+   "aliases": [
+    "\\bgolang\\b",
+    "\\bgo\\b(?= |,|\\))",
+    "\\brust\\b"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "angular",
+   "label": "Angular / Vue",
+   "aliases": [
+    "angular",
+    "\\bvue"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "sqlserver",
+   "label": "SQL Server / Entity Framework",
+   "aliases": [
+    "sql server",
+    "mssql",
+    "entity framework",
+    "\\bef core\\b"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "spark",
+   "label": "Spark / big data",
+   "aliases": [
+    "spark",
+    "hadoop",
+    "databricks",
+    "snowflake",
+    "big data"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "agile",
+   "label": "Agile / Scrum",
+   "aliases": [
+    "agile",
+    "scrum",
+    "kanban",
+    "jira"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  },
+  {
+   "key": "microservices",
+   "label": "Microservices",
+   "aliases": [
+    "microservice"
+   ],
+   "level": "gap",
+   "evidence": [],
+   "note": "Not evidenced on the site"
+  }
+ ],
+ "education": "Self-taught.",
+ "facts_source": "Published portfolio profile (/resume/, case studies), confirmed by Katlego 20 Oct 2026. Contact details and pay deliberately omitted."
+}

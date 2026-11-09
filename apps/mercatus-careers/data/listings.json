@@ -1,0 +1,202 @@
+{
+  "ok": true,
+  "run": {
+    "run_id": "jobnet-hawk-2026-11-03-2000",
+    "scraped_at": "2026-11-03T20:00:02+02:00",
+    "timezone": "Africa/Johannesburg",
+    "boards": [
+      "linkedin"
+    ],
+    "scope_note": "AI Hawk daily scrape at 20:00 SAST. Email apply only when the posting prints an address.",
+    "counts": {
+      "shortlist": 14,
+      "linkedin": 14
+    }
+  },
+  "n": 14,
+  "listings": [
+    {
+      "id": "li-4484641455",
+      "source": "linkedin",
+      "title": "Senior Developer: Important: Completion of the assessment below is mandatory. Applications without a completed assessment will not be reviewed.",
+      "company": "Evalex Talent Solutions",
+      "location": "Johannesburg Metropolitan Area",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484641455",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: SoundX (0.21 cosine). Matched on SoundX, Mercatus Assist, Forex Mercatus Codex.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4484692642",
+      "source": "linkedin",
+      "title": "Full-Stack Software Developer",
+      "company": "Virtustant",
+      "location": "South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484692642",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.16 cosine). Matched on Stack, Forex Mercatus Codex, JobNet.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4484379807",
+      "source": "linkedin",
+      "title": "Sr. Full-Stack Software Engineer | $50-$100/hr Remote",
+      "company": "Remotefolio",
+      "location": "South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484379807",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.15 cosine). Matched on Stack, Forex Mercatus Codex, THINK.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4474465799",
+      "source": "linkedin",
+      "title": "Machine Learning Engineer",
+      "company": "Mind Detect",
+      "location": "City of Cape Town, Western Cape, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4474465799",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.13 cosine). Matched on Stack.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486882378",
+      "source": "linkedin",
+      "title": "Senior Machine Learning Engineer",
+      "company": "Myn",
+      "location": "Heidelberg, Gauteng, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486882378",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.12 cosine). Matched on Stack.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486418710",
+      "source": "linkedin",
+      "title": "Machine Learning Engineer (Remote, Pretoria)",
+      "company": "Blacksmith Agency",
+      "location": "South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486418710",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.12 cosine). Matched on Stack.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4484394671",
+      "source": "linkedin",
+      "title": "Intermediate Software Developer",
+      "company": "Ria Money Transfer",
+      "location": "Johannesburg, Gauteng, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484394671",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Forex Mercatus Codex (0.06 cosine). Matched on Forex Mercatus Codex, Mercatus Assist.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486070447",
+      "source": "linkedin",
+      "title": "Software Engineer",
+      "company": "DigiCert",
+      "location": "Cape Town, Western Cape, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486070447",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Forex Mercatus Codex (0.06 cosine). Matched on Forex Mercatus Codex, THINK.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4484675778",
+      "source": "linkedin",
+      "title": "Software Developer \u2013 Data, Automation & AI",
+      "company": "Hunterlodge Advertising",
+      "location": "Pretoria Metropolitan Area",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484675778",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.06 cosine). Matched on Stack, Forex Mercatus Codex.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486040708",
+      "source": "linkedin",
+      "title": "Technology Lead, AI & ML (Corporate & Investment Banking)",
+      "company": "Stanbic Bank Tanzania",
+      "location": "Johannesburg Metropolitan Area",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486040708",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Stack (0.05 cosine). Matched on Stack, JobNet.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4484667940",
+      "source": "linkedin",
+      "title": "SENIOR SOFTWARE DEVELOPER",
+      "company": "Resourgenix (Pty) Ltd",
+      "location": "Durban, KwaZulu-Natal, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4484667940",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: Forex Mercatus Codex (0.04 cosine). Matched on Forex Mercatus Codex.",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4487002189",
+      "source": "linkedin",
+      "title": "Senior Data Scientist",
+      "company": "Incubeta",
+      "location": "City of Cape Town, Western Cape, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4487002189",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: SoundX (0.01 cosine).",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486840316",
+      "source": "linkedin",
+      "title": "Senior Analytics Engineer",
+      "company": "Bash",
+      "location": "Cape Town, Western Cape, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486840316",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: SoundX (0.01 cosine).",
+      "description": "description__text--rich\"> <section class=\""
+    },
+    {
+      "id": "li-4486849532",
+      "source": "linkedin",
+      "title": "Platform Engineer",
+      "company": "Lensing.ai (formerly Everest Systems)",
+      "location": "City of Cape Town, Western Cape, South Africa",
+      "posted": "2026-11-03T20:00:02+02:00",
+      "url": "https://za.linkedin.com/jobs/view/4486849532",
+      "signal": "medium",
+      "new_since_last_run": true,
+      "why": "Closest case study: THINK (0.00 cosine).",
+      "description": "description__text--rich\"> <section class=\""
+    }
+  ],
+  "do_not_auto_apply": true
+}

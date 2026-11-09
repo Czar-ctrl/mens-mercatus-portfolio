@@ -1,0 +1,2 @@
+onnxruntime-web 1.31.0-dev.20260914 (MIT, Microsoft) — ort-wasm-simd-threaded.asyncify.{mjs,wasm} (the build bundled inside transformers.min.js expects this variant)
+https://github.com/microsoft/onnxruntime/blob/main/LICENSE

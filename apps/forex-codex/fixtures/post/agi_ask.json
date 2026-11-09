@@ -1,0 +1,1 @@
+{"ok":true,"source":"rule-rag","answer":"Q: What is the gamma regime right now?\nBased on journal memory and desk state (bias=None, conf=None, ensemble action=None), the grounded answer is: stay process-first; weight recent lessons from your journal:\nNo journal history yet.","memory":"No journal history yet.","host_error":"ModuleNotFoundError: No module named 'tools'"}

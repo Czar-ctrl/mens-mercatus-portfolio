@@ -1,0 +1,8 @@
+DirectoryIndex index.php
+Options -Indexes
+# DreamHost PHP CGI: avoid PATH_INFO ("No input file specified"); use query path=
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(.+)$ index.php?path=/$1 [L,QSA]

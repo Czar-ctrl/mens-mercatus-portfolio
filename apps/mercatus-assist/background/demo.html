@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercatus Blueprint — background demo</title>
+  <link rel="stylesheet" href="cursor-reactive-bg.css" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+    .mm-app { display: grid; place-items: center; padding: 2rem; text-align: center; }
+    h1 { font-weight: 500; letter-spacing: 0.04em; font-size: 1.25rem; margin: 0 0 0.5rem; }
+    p { color: #a0a0a0; font-size: 0.9rem; margin: 0; max-width: 28rem; }
+    .accent { color: #c8102e; }
+  </style>
+</head>
+<body>
+  <div class="mm-bg" aria-hidden="true"></div>
+  <main class="mm-app">
+    <div>
+      <h1>Mercatus Blueprint <span class="accent">·</span> canvas</h1>
+      <p>Move the cursor. Soft red spotlight follows — no particles, no clutter.</p>
+    </div>
+  </main>
+  <script src="cursor-reactive-bg.js?v=bp1"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "id": "bulk-li-parvana-4473661037",
+  "jobId": "li-parvana-4473661037",
+  "title": "AI Analyst",
+  "company": "Parvana",
+  "location": "Cape Town, Western Cape, South Africa (hybrid)",
+  "source": "linkedin",
+  "url": "https://za.linkedin.com/jobs/view/4473661037",
+  "signal": "medium",
+  "packet": "Here's a draft application packet for the AI Analyst role at Parvana.\n\n**Cover Letter Draft:**\n\nDear Parvana Hiring Team,\n\nI am writing to express my keen interest in the AI Analyst position in Cape Town, as advertised. With a strong background in AI and Systems Engineering, encompassing Python, TypeScript, LLMs, RAG, and distributed systems, I am eager to contribute to Parvana's innovative work in developing AI agents and automation for your global investment firm. My experience aligns well with the fintech and Forex Mercatus Codex aspects of your portfolio, and I am confident in my ability to drive impactful solutions.\n\nSincerely,\n[Your Name]\n\n**Fit Notes:**\n\n*   **Role Alignment:** Directly matches \"AI Analyst\" with a focus on AI agents and automation.\n*   **Company Fit:** \"Global investment firm\" and \"fintech/Forex Mercatus Codex\" align with the candidate's technical skills and potential interest in financial applications.\n*   **Location:** Cape Town, hybrid, is specified.\n*   **Skills Match:** Candidate's skills (Python, TypeScript, LLMs, RAG, agents, .NET, distributed systems) are highly relevant to AI development and automation.\n\n**How to Submit Checklist:**\n\n*   Visit the Parvana careers page.\n*   Locate the AI Analyst role in Cape Town.\n*   Prepare your CV and any relevant portfolio links.\n*   Complete the online application form, attaching your CV.\n*   Tailor your application to any specific questions asked by Parvana.",
+  "mode": "assist",
+  "model": "gemini-2.5-flash-lite",
+  "status": "draft_queued",
+  "needsApprovalForLive": true,
+  "liveBlocked": {
+    "linkedin_apply": true,
+    "glassdoor_apply": true,
+    "employer_ats_submit": true,
+    "gmail_send": true
+  },
+  "updated": "2026-10-07T02:48:34.258287+00:00"
+}

@@ -1,0 +1,191 @@
+/* Page-wide silk ambient layer + tilt + reveal polish */
+.mm-silk-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  contain: strict;
+}
+.mm-silk-layer canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: auto;
+}
+.mm-silk-guilloche {
+  position: absolute;
+  inset: -10%;
+  opacity: 0.11;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><pattern id='g' width='80' height='80' patternUnits='userSpaceOnUse'><circle cx='40' cy='40' r='34' fill='none' stroke='%23c8102e' stroke-width='0.4' opacity='0.55'/><circle cx='40' cy='40' r='22' fill='none' stroke='%23d4af37' stroke-width='0.35' opacity='0.35'/></pattern></defs><rect width='400' height='400' fill='url(%23g)'/></svg>");
+  background-size: 260px 260px;
+  mix-blend-mode: screen;
+  animation: mm-silk-drift 56s linear infinite;
+  will-change: transform;
+}
+.mm-silk-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+  background-image: url("../assets/marks/paper-grain.png");
+  background-size: 180px 180px;
+}
+html.mm-light .mm-silk-guilloche {
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+}
+html.mm-light .mm-silk-grain {
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+}
+
+/* Content above silk — do NOT override position:fixed chrome */
+body.mm-has-silk .mm-tape,
+body.mm-has-silk .mm-desk,
+body.mm-has-silk .page,
+body.mm-has-silk .hero,
+body.mm-has-silk .mm-picks,
+body.mm-has-silk .site-footer {
+  position: relative;
+  z-index: 1;
+}
+body.mm-has-silk .site-nav { z-index: 100; }
+body.mm-has-silk .gm-assist { z-index: 9980; }
+body.mm-has-silk .sidebar { z-index: 200; }
+body.mm-has-silk .sidebar-overlay { z-index: 190; }
+body.mm-has-silk .mm-palette { z-index: 9000; }
+body.mm-has-silk .glow-bg { opacity: 0; pointer-events: none; }
+
+/* Full-bleed markets / hero — kill cream gutter */
+body.mm-has-silk,
+html.mm-light body.mm-has-silk {
+  overflow-x: clip;
+  max-width: 100%;
+}
+.mm-tape,
+.mm-desk,
+.hero--forbidden,
+.hero--silk {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+}
+body.mm-has-silk .hero--forbidden,
+body.mm-has-silk .hero--silk {
+  background: transparent;
+}
+body.mm-has-silk .hero-silk {
+  background: transparent;
+}
+body.mm-has-silk .hero-silk--veil-only canvas,
+body.mm-has-silk .hero-silk--veil-only .hero-silk-guilloche,
+body.mm-has-silk .hero-silk--veil-only .hero-silk-grain {
+  display: none !important;
+}
+body.mm-has-silk .hero-silk-spotlight {
+  background:
+    radial-gradient(
+      ellipse 38% 44% at var(--sx, var(--mm-silk-x, 68%)) var(--sy, var(--mm-silk-y, 46%)),
+      rgba(200, 16, 46, 0.18) 0%,
+      transparent 70%
+    );
+}
+html.mm-light body.mm-has-silk .hero-silk-veil {
+  background:
+    linear-gradient(90deg, rgba(242, 238, 229, 0.88) 0%, rgba(242, 238, 229, 0.55) 28%, rgba(242, 238, 229, 0.15) 55%, rgba(242, 238, 229, 0.35) 100%),
+    linear-gradient(180deg, rgba(242, 238, 229, 0.5) 0%, rgba(242, 238, 229, 0.1) 30%, rgba(242, 238, 229, 0.55) 100%);
+}
+body.mm-has-silk:not(.mm-light-context) .hero-silk-veil,
+html:not(.mm-light) body.mm-has-silk .hero-silk-veil {
+  background:
+    linear-gradient(90deg, rgba(7, 7, 8, 0.78) 0%, rgba(7, 7, 8, 0.45) 30%, rgba(7, 7, 8, 0.12) 58%, rgba(7, 7, 8, 0.3) 100%),
+    linear-gradient(180deg, rgba(7, 7, 8, 0.4) 0%, rgba(7, 7, 8, 0.08) 28%, rgba(7, 7, 8, 0.55) 100%);
+}
+
+/* Tilt cards */
+.mm-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.discover-card.mm-tilt:hover {
+  border-color: rgba(200, 16, 46, 0.55);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(200, 16, 46, 0.28),
+    0 0 28px rgba(200, 16, 46, 0.15);
+}
+html.mm-light .discover-card.mm-tilt:hover {
+  box-shadow:
+    0 18px 40px rgba(40, 30, 10, 0.12),
+    0 0 0 1px rgba(200, 16, 46, 0.3),
+    0 0 24px rgba(200, 16, 46, 0.1);
+}
+.mm-ace-card.mm-tilt {
+  transition: box-shadow 0.25s ease;
+}
+
+/* Scroll reveal */
+.mm-reveal {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.mm-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mm-silk-guilloche { animation: none !important; }
+  .mm-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .mm-tilt { transform: none !important; }
+}
+
+
+/* gutter kill — full-bleed stage, no cream strip */
+/* gutter kill */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+.mm-silk-layer {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+.mm-silk-layer canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.hero--forbidden,
+.hero--silk,
+.mm-tape,
+.mm-desk {
+  width: 100% !important;
+  max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+/* ace tilt uses CSS vars — never set transform on .mm-ace-card itself */
+.mm-ace-card.mm-tilt {
+  transform: none !important;
+}

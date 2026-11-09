@@ -1,0 +1,413 @@
+{
+ "note": "Mercatus Assist v2 architecture lens. Each node and edge is taken from the case study / app page linked in 'source'. Edit here; no build step.",
+ "projects": {
+  "assist": {
+   "name": "Mercatus Assist",
+   "source": "/case-studies/assist/",
+   "match": [
+    "/case-studies/assist/",
+    "/apps/mercatus-assist/"
+   ],
+   "kw": [
+    "assist",
+    "think",
+    "asp.net",
+    "gemini",
+    "robot"
+   ],
+   "nodes": [
+    [
+     "Browser chat",
+     "client"
+    ],
+    [
+     "Same-origin PHP proxy (Blueprint API)",
+     "edge"
+    ],
+    [
+     "nginx \u00b7 api.mensmercatus.online",
+     "edge"
+    ],
+    [
+     "ASP.NET Core 8 minimal API (systemd)",
+     "server"
+    ],
+    [
+     "Gemini 2.5 Flash \u2192 fallback chain",
+     "model"
+    ],
+    [
+     "Labelled demo fallback",
+     "guard"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     "HTTPS POST"
+    ],
+    [
+     1,
+     2,
+     "server-side curl"
+    ],
+    [
+     2,
+     3,
+     "127.0.0.1:5080"
+    ],
+    [
+     3,
+     4,
+     "OpenAI-compatible, backoff on 429/5xx"
+    ],
+    [
+     3,
+     5,
+     "when unhealthy"
+    ]
+   ]
+  },
+  "assist2": {
+   "name": "Mercatus Assist v2 (this assistant)",
+   "source": "/apps/mercatus-assist/",
+   "match": [],
+   "kw": [
+    "rag",
+    "retrieval",
+    "this assistant",
+    "how do you work",
+    "embedding",
+    "intent"
+   ],
+   "nodes": [
+    [
+     "Your question",
+     "client"
+    ],
+    [
+     "MiniLM embedding (on device)",
+     "model"
+    ],
+    [
+     "Intent router (centroid + 2-NN)",
+     "model"
+    ],
+    [
+     "Hybrid retrieval BM25 + cosine over site KB",
+     "data"
+    ],
+    [
+     "Grounded prompt + guardrails",
+     "guard"
+    ],
+    [
+     "Gemini via the Blueprint API",
+     "model"
+    ],
+    [
+     "Citation check \u2192 answer + sources",
+     "guard"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     "in browser"
+    ],
+    [
+     1,
+     2,
+     ""
+    ],
+    [
+     1,
+     3,
+     "384-d vector"
+    ],
+    [
+     3,
+     4,
+     "top chunks"
+    ],
+    [
+     2,
+     4,
+     "answer style"
+    ],
+    [
+     4,
+     5,
+     "one call"
+    ],
+    [
+     5,
+     6,
+     "uncited \u2192 sources only"
+    ]
+   ]
+  },
+  "jobnet": {
+   "name": "JobNet Application",
+   "source": "/case-studies/jobnet/",
+   "match": [
+    "/case-studies/jobnet/",
+    "/apps/jobnet/",
+    "/apps/drop-net/"
+   ],
+   "kw": [
+    "jobnet",
+    "job net",
+    "drop net",
+    "ai hawk",
+    "jobnet application",
+    "applications"
+   ],
+   "nodes": [
+    [
+     "Daily scrape 20:00 SAST",
+     "data"
+    ],
+    [
+     "Sentence-embedding ranker vs case studies",
+     "model"
+    ],
+    [
+     "One role per company",
+     "guard"
+    ],
+    [
+     "AI Hawk drafts the letter (only if employer address printed)",
+     "server"
+    ],
+    [
+     "Katlego reviews and sends",
+     "human"
+    ],
+    [
+     "15:00 SAST run report",
+     "data"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     "postings"
+    ],
+    [
+     1,
+     2,
+     "ranked"
+    ],
+    [
+     2,
+     3,
+     ""
+    ],
+    [
+     3,
+     4,
+     "draft only"
+    ],
+    [
+     0,
+     5,
+     "next day"
+    ]
+   ]
+  },
+  "forex": {
+   "name": "Forex Mercatus Codex",
+   "source": "/case-studies/forex/",
+   "match": [
+    "/case-studies/forex/",
+    "/apps/forex-codex/"
+   ],
+   "kw": [
+    "forex",
+    "codex",
+    "trading",
+    "yfinance",
+    "highcharts",
+    "forex mercatus codex"
+   ],
+   "nodes": [
+    [
+     "yfinance quotes (~60 s)",
+     "data"
+    ],
+    [
+     "Pandas + NumPy paper models",
+     "model"
+    ],
+    [
+     "Python + Highcharts desk (VPS, HTTPS)",
+     "server"
+    ],
+    [
+     "Public health JSON",
+     "edge"
+    ],
+    [
+     "Paper only \u00b7 no orders",
+     "guard"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     "prices"
+    ],
+    [
+     1,
+     2,
+     "signals"
+    ],
+    [
+     2,
+     3,
+     ""
+    ],
+    [
+     2,
+     4,
+     "rule"
+    ]
+   ]
+  },
+  "soundx": {
+   "name": "SoundX",
+   "source": "/case-studies/soundx/",
+   "match": [
+    "/case-studies/soundx/"
+   ],
+   "kw": [
+    "soundx",
+    "sound x",
+    "web audio",
+    "dsp",
+    "music"
+   ],
+   "nodes": [
+    [
+     "Local audio buffer",
+     "data"
+    ],
+    [
+     "Web Audio (TypeScript)",
+     "client"
+    ],
+    [
+     "Tempo from onsets",
+     "model"
+    ],
+    [
+     "AI Producer proposes a DSP chain",
+     "model"
+    ],
+    [
+     "Person applies it",
+     "human"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     "stays in browser"
+    ],
+    [
+     1,
+     2,
+     ""
+    ],
+    [
+     2,
+     3,
+     ""
+    ],
+    [
+     3,
+     4,
+     "proposal"
+    ]
+   ]
+  },
+  "sda": {
+   "name": "SoundX AI",
+   "source": "/apps/soundx-ai/",
+   "match": [
+    "/apps/soundx-ai/"
+   ],
+   "kw": [
+    "soundx ai",
+    "drum",
+    "beat",
+    "hum-to-midi",
+    "producer agent"
+   ],
+   "nodes": [
+    [
+     "Audio on your machine",
+     "data"
+    ],
+    [
+     "Tempo + key detection",
+     "model"
+    ],
+    [
+     "Hum-to-MIDI",
+     "model"
+    ],
+    [
+     "Clash-fixing EQ + Mix QA",
+     "model"
+    ],
+    [
+     "Producer Agent: brief \u2192 beat",
+     "model"
+    ],
+    [
+     "You keep or undo",
+     "human"
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1,
+     ""
+    ],
+    [
+     0,
+     2,
+     ""
+    ],
+    [
+     1,
+     3,
+     ""
+    ],
+    [
+     2,
+     4,
+     ""
+    ],
+    [
+     3,
+     5,
+     ""
+    ],
+    [
+     4,
+     5,
+     ""
+    ]
+   ]
+  }
+ }
+}

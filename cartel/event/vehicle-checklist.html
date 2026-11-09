@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><script>/* mm-theme-v2: dark by default; one-time reset of older saved light choices */try{(function(){var s=localStorage;if(s.getItem('mm-theme-v')!=='2'){var b=s.getItem('mm-ambient-before-light');s.removeItem('theme');s.removeItem('mm-color-mode');if(s.getItem('mm-ambient-variant')==='light-3d'){s.setItem('mm-ambient-variant',b&&b!=='light-3d'?b:'web')}s.setItem('mm-theme-v','2')}})()}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="author" content="Mens Mercatus Inc"/>
+<meta name="robots" content="noindex"/>
+<title>Vehicle checklist · Mercatus Blueprints</title>
+<link rel="stylesheet" href="../../css/tokens.css?v=20261005h">
+<link rel="stylesheet" href="../../css/base.css?v=20261005h">
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- mm-seo --><meta name="description" content="Pre and post photos, fuel, and damage notes. Goods transport only in this flow."><link rel="canonical" href="https://mensmercatus.online/cartel/event/vehicle-checklist.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Mens Mercatus"><meta property="og:title" content="Vehicle checklist · Mercatus Blueprints"><meta property="og:description" content="Pre and post photos, fuel, and damage notes. Goods transport only in this flow."><meta property="og:url" content="https://mensmercatus.online/cartel/event/vehicle-checklist.html"><meta property="og:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Vehicle checklist · Mercatus Blueprints"><meta name="twitter:description" content="Pre and post photos, fuel, and damage notes. Goods transport only in this flow."><meta name="twitter:image" content="https://mensmercatus.online/assets/og/mens-mercatus-og.png"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Vehicle checklist · Mercatus Blueprints", "url": "https://mensmercatus.online/cartel/event/vehicle-checklist.html", "description": "Pre and post photos, fuel, and damage notes. Goods transport only in this flow.", "image": "https://mensmercatus.online/assets/og/mens-mercatus-og.png", "author": {"@type": "Person", "name": "Katlego Mokoto", "url": "https://mensmercatus.online/"}}</script><!-- /mm-seo --></head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <img class="mark" src="assets/mark-wheat-16.svg" width="16" height="16" alt="" decoding="async" />
+    <div class="wordmark">Mercatus Blueprints <span>· Event</span></div>
+    <div class="spacer"></div>
+    <span class="chip">Static mockup</span>
+  </header>
+  <main class="main">
+
+<a class="nav-back" href="index.html">← Hub</a>
+<p class="kicker">Fleet</p>
+<h1>Vehicle checklist</h1>
+<p class="lead">Pre and post photos, fuel, and damage notes. Goods transport only in this flow.</p>
+
+<div class="gate">
+  <strong>NLTA split</strong>
+  <ul>
+    <li>This checklist is for <em>goods</em> movement under Event / Jobs.</li>
+    <li>Passenger transport requires appropriate NLTA operating licence — Assist never coaches unlicensed passenger work.</li>
+  </ul>
+</div>
+
+<div data-tabs>
+  <div class="tabs">
+    <button class="tab on" data-tab="pre">Pre</button>
+    <button class="tab" data-tab="post">Post</button>
+  </div>
+    <div data-panel="pre">
+      <div class="grid-2">
+        <div class="photo-slot" data-photo="veh.pre.front">Front photo</div>
+        <div class="photo-slot" data-photo="veh.pre.rear">Rear photo</div>
+        <div class="photo-slot" data-photo="veh.pre.fuel">Fuel gauge</div>
+        <div class="photo-slot" data-photo="veh.pre.odo">Odometer</div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="check"><input type="checkbox" id="v1"/><label for="v1">No visible damage beyond logged notes</label></div>
+        <div class="check"><input type="checkbox" id="v2"/><label for="v2">Fuel level recorded</label></div>
+      </div>
+    </div>
+    <div data-panel="post" class="hidden">
+      <div class="grid-2">
+        <div class="photo-slot" data-photo="veh.post.front">Front photo</div>
+        <div class="photo-slot" data-photo="veh.post.rear">Rear photo</div>
+        <div class="photo-slot" data-photo="veh.post.fuel">Fuel gauge</div>
+        <div class="photo-slot" data-photo="veh.post.damage">Damage (if any)</div>
+      </div>
+    </div>
+</div>
+<button class="btn btn-primary btn-block">Submit checklist</button>
+<button type="button" class="btn btn-assist btn-block" style="margin-top:8px" data-assist="veh" data-assist-text="Capture all four pre slots. Goods only — do not use this flow for passengers.">Assist</button>
+<div class="assist-strip" data-assist-strip="veh"></div>
+
+  </main>
+  <footer class="footer">Mens Mercatus Inc · Illustrative UI · Assist DEMO strips</footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

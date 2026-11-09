@@ -1,0 +1,312 @@
+{
+ "generated": "2026-10-21T04:10:05+02:00",
+ "note": "Every figure is measured; source and date per item. Built by tools/proof/build_proof.py.",
+ "strips": {
+  "soundx": {
+   "pages": [
+    "/case-studies/soundx/"
+   ],
+   "items": [
+    {
+     "key": "soundx.explainer_s",
+     "value": 276,
+     "display": "4:36",
+     "label": "explainer runtime",
+     "source": "site/media/soundx-ai-explainer.mp4",
+     "how": "ffprobe duration, s",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "soundx.files_live",
+     "value": 21,
+     "display": "21",
+     "label": "files live under /apps/soundx-ai/",
+     "source": "site-pristine/apps/soundx-ai/ (live mirror, see site-pristine.SYNC.txt)",
+     "how": "file count",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "lcp_desktop:/apps/soundx-ai/",
+     "value": 1072,
+     "display": "1.1 s",
+     "label": "to largest paint on the live app (desktop)",
+     "source": "reports/speed/live-desktop.json (https://mensmercatus.online/apps/soundx-ai/)",
+     "how": "median LCP of 3 cold loads, desktop 1440x900, no throttling, ms",
+     "date": "2026-10-21T03:20:31+02:00"
+    },
+    {
+     "key": "verify:soundx",
+     "value": 23,
+     "display": "23/23",
+     "label": "automated browser checks passed",
+     "source": "screens/verify-results.json + screens/verify2-results.json + screens/verify3-results.json",
+     "how": "checks whose name mentions this project or page, keywords SoundX, soundx, Sound Deck AI",
+     "date": "2026-10-21T03:58:55+02:00"
+    }
+   ]
+  },
+  "forex": {
+   "pages": [
+    "/case-studies/forex/",
+    "/apps/forex-codex/"
+   ],
+   "items": [
+    {
+     "key": "forex.calendar_events",
+     "value": 86,
+     "display": "86",
+     "label": "economic events on this week’s live calendar",
+     "source": "https://api.mensmercatus.online/forex/api/calendar",
+     "how": "len(events), week=this, source=forexfactory",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "forex.symbols",
+     "value": 5,
+     "display": "5",
+     "label": "markets on the paper desk",
+     "source": "https://api.mensmercatus.online/forex/api/health",
+     "how": "len(symbols)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "forex.feeds",
+     "value": 5,
+     "display": "5",
+     "label": "data feeds wired in",
+     "source": "https://api.mensmercatus.online/forex/api/health",
+     "how": "len(data)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "forex.health_ms",
+     "value": 202,
+     "display": "202 ms",
+     "label": "API health response",
+     "source": "https://api.mensmercatus.online/forex/api/health",
+     "how": "median of 3 GETs from the build box, ms",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "lcp_desktop:/apps/forex-codex/",
+     "value": 1040,
+     "display": "1.0 s",
+     "label": "to largest paint on live (desktop)",
+     "source": "reports/speed/live-desktop.json (https://mensmercatus.online/apps/forex-codex/)",
+     "how": "median LCP of 3 cold loads, desktop 1440x900, no throttling, ms",
+     "date": "2026-10-21T03:20:31+02:00"
+    }
+   ]
+  },
+  "jobnet": {
+   "pages": [
+    "/case-studies/jobnet/",
+    "/apps/jobnet/"
+   ],
+   "items": [
+    {
+     "key": "jobnet.cards",
+     "value": 97,
+     "display": "97",
+     "label": "LinkedIn cards reviewed in the latest run",
+     "source": "https://api.mensmercatus.online/jobnet/api/health",
+     "how": "latest_run.counts.linkedin_cards_reviewed (run jobnet-noon-2026-10-20)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "jobnet.pages",
+     "value": 20,
+     "display": "20",
+     "label": "job pages read in that run",
+     "source": "https://api.mensmercatus.online/jobnet/api/health",
+     "how": "latest_run.counts.job_pages_read",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "jobnet.shortlist",
+     "value": 10,
+     "display": "10",
+     "label": "roles shortlisted for review",
+     "source": "https://api.mensmercatus.online/jobnet/api/health",
+     "how": "latest_run.counts.shortlist",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "jobnet.runs",
+     "value": 9,
+     "display": "9",
+     "label": "scrape runs on record",
+     "source": "https://api.mensmercatus.online/jobnet/api/health",
+     "how": "runs_available",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "jobnet.uptime_days",
+     "value": 13.9,
+     "display": "13.9",
+     "label": "days since the API process last restarted",
+     "source": "https://api.mensmercatus.online/jobnet/api/health",
+     "how": "uptime_s / 86400 (API process uptime)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "model.minilm_mb",
+     "value": 23.0,
+     "display": "23 MB",
+     "label": "on-device MiniLM model",
+     "source": "site/models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx",
+     "how": "bytes / 1e6",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "verify:jobnet",
+     "value": 7,
+     "display": "7/7",
+     "label": "automated browser checks passed",
+     "source": "screens/verify3-results.json",
+     "how": "checks whose name mentions this project or page, keywords JobNet",
+     "date": "2026-10-21T03:58:55+02:00"
+    }
+   ]
+  },
+  "assist": {
+   "pages": [
+    "/case-studies/assist/",
+    "/apps/mercatus-assist/"
+   ],
+   "items": [
+    {
+     "key": "cartel.endpoints",
+     "value": 3,
+     "display": "3",
+     "label": "live API endpoints",
+     "source": "https://api.mensmercatus.online/health",
+     "how": "len(endpoints)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "cartel.fallbacks",
+     "value": 2,
+     "display": "2",
+     "label": "fallback models behind the main one",
+     "source": "https://api.mensmercatus.online/health",
+     "how": "len(llmFallbackModels)",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "cartel.health_ms",
+     "value": 400,
+     "display": "400 ms",
+     "label": "API health response",
+     "source": "https://api.mensmercatus.online/health",
+     "how": "median of 3 GETs from the build box, ms",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "assist.files_live",
+     "value": 17,
+     "display": "17",
+     "label": "files live under /apps/mercatus-assist/",
+     "source": "site-pristine/apps/mercatus-assist/ (live mirror, see site-pristine.SYNC.txt)",
+     "how": "file count",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "lcp_desktop:/apps/mercatus-assist/",
+     "value": 936,
+     "display": "0.9 s",
+     "label": "to largest paint on live (desktop)",
+     "source": "reports/speed/live-desktop.json (https://mensmercatus.online/apps/mercatus-assist/)",
+     "how": "median LCP of 3 cold loads, desktop 1440x900, no throttling, ms",
+     "date": "2026-10-21T03:20:31+02:00"
+    },
+    {
+     "key": "verify:assist",
+     "value": 9,
+     "display": "9/9",
+     "label": "automated browser checks passed",
+     "source": "screens/verify-results.json + screens/verify3-results.json",
+     "how": "checks whose name mentions this project or page, keywords assist, Assist",
+     "date": "2026-10-21T03:58:55+02:00"
+    }
+   ]
+  },
+  "concierge": {
+   "pages": [
+    "/apps/mercatus-concierge/"
+   ],
+   "items": [
+    {
+     "key": "concierge.files_live",
+     "value": 56,
+     "display": "56",
+     "label": "files live under /apps/mercatus-concierge/",
+     "source": "site-pristine/apps/mercatus-concierge/ (live mirror, see site-pristine.SYNC.txt)",
+     "how": "file count",
+     "date": "2026-10-21T04:10:01+02:00"
+    },
+    {
+     "key": "lcp_desktop:/apps/mercatus-concierge/",
+     "value": 1100,
+     "display": "1.1 s",
+     "label": "to largest paint on live (desktop)",
+     "source": "reports/speed/live-desktop.json (https://mensmercatus.online/apps/mercatus-concierge/)",
+     "how": "median LCP of 3 cold loads, desktop 1440x900, no throttling, ms",
+     "date": "2026-10-21T03:20:31+02:00"
+    },
+    {
+     "key": "verify:concierge",
+     "value": 7,
+     "display": "7/7",
+     "label": "automated browser checks passed",
+     "source": "screens/verify-results.json + screens/verify3-results.json",
+     "how": "checks whose name mentions this project or page, keywords concierge, Concierge",
+     "date": "2026-10-21T03:58:55+02:00"
+    }
+   ]
+  },
+  "fleet": {
+   "pages": [
+    "/case-studies/fleet/"
+   ],
+   "items": [
+    {
+     "key": "fleet.tests",
+     "value": 406,
+     "display": "406",
+     "label": "automated tests passed (2 skipped)",
+     "source": "voice-agent-demo: python -m pytest (log /tmp/fleet-pytest.log)",
+     "how": "pytest summary line, 406 passed, 2 skipped",
+     "date": "2026-11-03T03:56:15+02:00"
+    },
+    {
+     "key": "fleet.walkthrough_s",
+     "value": 59.8,
+     "display": "59.8 s",
+     "label": "walkthrough runtime",
+     "source": "site/media/demo-fleet-voice.mp4",
+     "how": "ffprobe duration, s",
+     "date": "2026-11-03T04:05:06+02:00"
+    },
+    {
+     "key": "fleet.integrations",
+     "value": 12,
+     "display": "12",
+     "label": "optional integrations, each with a fallback",
+     "source": "GET /api/vehicle/integrations on the local app (127.0.0.1)",
+     "how": "item count in the API response; 2 enabled, 2 available, 8 on fallback",
+     "date": "2026-11-03T04:05:06+02:00"
+    },
+    {
+     "key": "fleet.fi_tools",
+     "value": 15,
+     "display": "15",
+     "label": "Fleet Intelligence tools",
+     "source": "voice_agent/static/vehicle_desk.html (tab group VI)",
+     "how": "count of fi-* tabs",
+     "date": "2026-11-03T04:05:06+02:00"
+    }
+   ]
+  }
+ }
+}

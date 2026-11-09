@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Mercatus Blueprint Robot</title>
+  <link rel="stylesheet" href="../../background/cursor-reactive-bg.css" />
+  <link rel="stylesheet" href="mercatus-cartel-robot.css" />
+</head>
+<body>
+  <div class="mm-bg" aria-hidden="true"></div>
+  <div class="mm-app mm-shell">
+    <div id="robot"></div>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="../../background/cursor-reactive-bg.js"></script>
+  <script src="mercatus-cartel-robot.js"></script>
+  <script>
+    MercatusCartelRobot.mountWelcome(() => {
+      MercatusCartelRobot.mountRobot(document.getElementById("robot"));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Mens Mercatus — PREVIEW wave 2 (2026-10-20). Revert = remove the "wave 2" include block.
+   Preloader · split headings · scroll-expanding reel · mouse-panned gallery · horizontal
+   services · background colour shifts · stacking sections · magnetic CTAs + contact pill ·
+   parallax scatter · cursor polish · typography, focus and footer refinements.
+   ========================================================================== */
+@font-face{font-family:"Satoshi";src:url("../fonts/satoshi/Satoshi-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("../fonts/satoshi/Satoshi-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@property --pv-r{syntax:"<length>";inherits:false;initial-value:0px}
+@property --pv-dim{syntax:"<number>";inherits:false;initial-value:0}
+:root{
+  --pv2-display:"Satoshi",var(--font-geist-sans,system-ui),system-ui,sans-serif;
+  --pv2-ink:#f4f1ec; --pv2-red:#e2475a; --pv2-coral:#ff8f80; --pv2-violet:#a78bfa; --pv2-teal:#2dd4bf;
+  --pv2-ease:cubic-bezier(.16,1,.3,1);
+  --pv-mask-h:100vh;
+}
+@media (max-width:767px){:root{--pv-mask-h:62vh}}
+
+/* ---------- 1) preloader (first visit per session) ---------- */
+html.pv-preload body::before{content:"";position:fixed;inset:0;z-index:2147483600;background:#0b0909}
+.pv-pre{position:fixed;inset:0;z-index:2147483601;display:grid;place-items:center;background:#0b0909;color:var(--pv2-ink);
+  -webkit-mask:radial-gradient(circle at 50% 50%,transparent var(--pv-r),#000 calc(var(--pv-r) + 1px));mask:radial-gradient(circle at 50% 50%,transparent var(--pv-r),#000 calc(var(--pv-r) + 1px))}
+.pv-pre-num{width:4.2ch;text-align:center;white-space:nowrap;font:700 clamp(3.5rem,9vw,7.5rem)/1 var(--pv2-display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.pv-pre-num small{font-size:.32em;vertical-align:top;margin-left:.15em;color:var(--pv2-coral)}
+.pv-pre-bar{position:absolute;left:50%;top:calc(50% + clamp(3rem,6vw,5rem));width:min(220px,50vw);height:1px;transform:translateX(-50%);background:rgba(255,255,255,.12);overflow:hidden}
+.pv-pre-bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--pv2-red),var(--pv2-violet),var(--pv2-teal))}
+.pv-pre-name{position:absolute;bottom:32px;left:0;right:0;text-align:center;font:500 .72rem/1 var(--font-geist-mono,ui-monospace),monospace;letter-spacing:.3em;text-transform:uppercase;color:rgba(244,241,236,.55)}
+
+/* ---------- 2) split headings ---------- */
+.pv-split .pv-w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .12em;margin:0 -.02em -.12em}
+.pv-split .pv-wi{display:inline-block;will-change:transform}
+.pv-sr2{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+
+/* ---------- 3+4) project reel: mouse-panned gallery that expands with scroll ---------- */
+.pv-js2 main#content > div > section:first-child{margin-bottom:var(--pv-mask-h)}
+.pv-js2.pv-mask-in main#content > div > section:first-child{margin-bottom:0}
+.pv-mask{position:relative;height:var(--pv-mask-h);overflow:hidden;z-index:11;contain:paint}
+.pv-mask-stage{position:relative;height:var(--pv-mask-h);width:100%;overflow:hidden}
+.pv-mask-copy{position:absolute;left:0;right:0;top:clamp(1.5rem,6vh,4rem);z-index:3;max-width:72rem;margin:0 auto;padding:0 1rem;pointer-events:none}
+@media (min-width:640px){.pv-mask-copy{padding:0 1.5rem}}
+.pv-mask-copy .pv-h2{max-width:34rem}
+.pv-reel{position:absolute;top:50%;left:50%;translate:-50% -42%;display:flex;gap:2vw;will-change:transform}
+.pv-tile{position:relative;flex:0 0 auto;width:26vw;aspect-ratio:16/10.4;margin:0;border-radius:16px;overflow:hidden;background:#0d0b0c;border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.85);text-decoration:none;color:var(--pv2-ink)}
+.pv-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--pv2-ease),filter .6s}
+.pv-tile:hover img{transform:scale(1.04)}
+.pv-tile figcaption,.pv-tile .pv-tcap{position:absolute;left:12px;bottom:10px;font:700 .8rem/1 var(--pv2-display);letter-spacing:.02em;padding:7px 10px;border-radius:999px;background:rgba(10,8,9,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12)}
+.pv-tile:nth-child(even){translate:0 3.5vw}
+html.pv-pin .pv-reel .pv-tile{transition:filter .45s,scale .45s}html.pv-pin .pv-reel.pv-touring .pv-tile{filter:brightness(.45) saturate(.6);scale:.94}html.pv-pin .pv-reel.pv-touring .pv-tile.pv-on{filter:none;scale:1}
+.pv-expander{position:absolute;inset:0;z-index:2;visibility:hidden;clip-path:inset(40% 37% 25% 37% round 16px);will-change:clip-path}
+.pv-expander img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:50% 50%}
+.pv-expander::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,7,0) 45%,rgba(8,6,7,.8));opacity:var(--pv-exp-shade,1)}
+.pv-exp-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(2rem,9vh,5rem);max-width:72rem;margin:0 auto;padding:0 1.5rem;opacity:0;color:#fff}
+.pv-exp-cap .pv-kicker{color:var(--pv2-coral)}
+.pv-exp-cap h3{font-family:var(--font-serif,Georgia),Georgia,serif;font-weight:400;font-size:clamp(2.6rem,6vw,5.4rem);line-height:.95;margin:.5rem 0 1.1rem;letter-spacing:-.01em}
+.pv-reel-nav{position:absolute;z-index:4;left:50%;bottom:clamp(.9rem,4vh,2.2rem);translate:-50% 0;display:flex;align-items:center;gap:.75rem;padding:5px;border-radius:999px;background:rgba(10,8,9,.55);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.pv-reel-btn{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:transparent;color:#f5f5f5;font:400 1.25rem/1 system-ui,sans-serif;cursor:pointer;transition:background .2s,border-color .2s}
+.pv-reel-btn:hover,.pv-reel-btn:focus-visible{background:#c8102e;border-color:#c8102e;outline:none}
+.pv-reel-btn:focus-visible{box-shadow:0 0 0 2px #fff}
+.pv-reel-hint{font:700 .62rem/1 "Space Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,245,245,.62);white-space:nowrap}
+@media (max-width:1023px){.pv-reel-hint{display:none}}
+@media (max-height:560px){.pv-reel-nav{bottom:.5rem}}
+html:not(.pv-pin) .pv-reel-nav{display:none}
+html.pv-pin .pv-reel{touch-action:pan-y}
+html.pv-swipe .pv-reel{position:static;translate:none;overflow-x:auto;scroll-snap-type:x mandatory;padding:calc(clamp(1.5rem,5vh,3rem) + 6.5rem) 1rem 1.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:none;height:100%;align-items:center;box-sizing:border-box}
+html.pv-swipe .pv-reel::-webkit-scrollbar{display:none}
+html.pv-swipe .pv-tile{width:72vw;scroll-snap-align:center}
+html.pv-swipe .pv-tile:nth-child(even){translate:none}
+html.pv-swipe .pv-expander,html.pv-swipe .pv-exp-cap{display:none}
+@media (min-width:768px){html.pv-swipe .pv-tile{width:34vw}}
+
+/* ---------- 5) horizontal services ---------- */
+.pv-hz{position:relative;z-index:12;overflow:hidden}
+.pv-hz-head{max-width:72rem;margin:0 auto;padding:3.5rem 1rem 0}
+@media (min-width:640px){.pv-hz-head{padding-left:1.5rem;padding-right:1.5rem}}
+.pv-hz-track{display:flex;gap:18px;padding:2rem max(1rem,calc((100vw - 72rem)/2 + 1.5rem)) 3.5rem;width:max-content;will-change:transform}
+.pv-panel{position:relative;width:min(520px,78vw);min-height:360px;flex:0 0 auto;display:flex;flex-direction:column;padding:26px 26px 22px}
+.pv-panel .pv-num{font:700 3.2rem/1 var(--pv2-display);letter-spacing:-.04em;background:linear-gradient(120deg,var(--pv2-coral),var(--pv2-violet) 60%,var(--pv2-teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pv-panel h3{font-family:var(--font-serif,Georgia),Georgia,serif;font-weight:400;font-size:2rem;line-height:1.02;margin:1rem 0 .5rem}
+.pv-panel p{color:var(--muted-foreground,#a3a3a3);font-size:.92rem;line-height:1.6;margin:0}
+.pv-panel .pv-pthumb{margin-top:auto;padding-top:18px}
+.pv-panel .pv-pthumb img{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:10px;border:1px solid var(--pv-line,rgba(255,255,255,.09));display:block}
+.pv-panel .pv-plink{display:inline-flex;margin-top:12px;font-weight:600;font-size:.86rem;color:inherit;text-decoration:none;gap:6px}
+.pv-panel-end{justify-content:center;align-items:flex-start;background:linear-gradient(140deg,rgba(226,71,90,.22),rgba(167,139,250,.14) 55%,rgba(45,212,191,.12))!important}
+.pv-panel-end h3{font-size:2.6rem}
+.pv-hz-progress{position:absolute;left:max(1rem,calc((100vw - 72rem)/2 + 1.5rem));right:max(1rem,calc((100vw - 72rem)/2 + 1.5rem));bottom:1.6rem;height:2px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.pv-hz-progress i{display:block;height:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--pv2-red),var(--pv2-violet),var(--pv2-teal))}
+html.pv-swipe .pv-hz-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+html.pv-swipe .pv-hz-viewport::-webkit-scrollbar{display:none}
+html.pv-swipe .pv-panel{scroll-snap-align:start;min-height:320px}
+html.pv-swipe .pv-hz-progress{display:none}
+
+/* ---------- 6) scroll-driven background colour (dark theme only) ---------- */
+html.dark.pv-js2 body{background-color:var(--pv-bg,var(--background));transition:background-color .9s var(--pv2-ease)}
+
+/* ---------- 7) stacking sections ("deck of cards") ---------- */
+html .pv-stack{position:sticky;z-index:var(--pv-z,10)}
+.pv-stack::after{content:"";position:absolute;inset:0;pointer-events:none;background:#000;opacity:calc(var(--pv-dim) * .6);border-radius:inherit;z-index:30}
+html .pv-over{position:relative;z-index:var(--pv-z,11);border-radius:28px 28px 0 0;background:var(--pv-bg,var(--background));
+  box-shadow:0 -1px 0 rgba(255,255,255,.08),0 -30px 60px -20px rgba(0,0,0,.65)}
+html .pv-stack.pv-over{position:sticky}
+html:not(.dark) .pv-over{background:var(--background);box-shadow:0 -1px 0 rgba(0,0,0,.06),0 -24px 50px -24px rgba(40,10,20,.25)}
+html.dark .pv-stack{background:var(--pv-bg,var(--background));transition:background-color .9s var(--pv2-ease)}
+html:not(.dark) .pv-stack{background:var(--background)}
+
+/* ---------- 8) magnetic CTAs + contact pill ---------- */
+.pv-mag{will-change:transform}
+.pv-pill{position:fixed;right:22px;bottom:22px;z-index:70;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 16px;border-radius:999px;
+  font:700 .9rem/1 var(--pv2-display);letter-spacing:.01em;color:#fff;text-decoration:none;
+  background:linear-gradient(135deg,rgba(226,71,90,.95),rgba(170,40,70,.95));box-shadow:0 14px 34px -12px rgba(226,71,90,.75),inset 0 1px 0 rgba(255,255,255,.25);
+  opacity:0;translate:0 14px;pointer-events:none;transition:opacity .45s var(--pv2-ease),translate .45s var(--pv2-ease)}
+.pv-pill.on{opacity:1;translate:0 0;pointer-events:auto}
+.pv-pill .dot{width:8px;height:8px;border-radius:50%;background:#7ef0c4;box-shadow:0 0 0 0 rgba(126,240,196,.7);animation:pv-ping 2.4s infinite}
+@keyframes pv-ping{0%{box-shadow:0 0 0 0 rgba(126,240,196,.6)}70%{box-shadow:0 0 0 9px rgba(126,240,196,0)}100%{box-shadow:0 0 0 0 rgba(126,240,196,0)}}
+@media (max-width:767px){.pv-pill{display:none}}
+
+/* ---------- 9) parallax scatter ---------- */
+.pv-scatter{position:relative;z-index:13;min-height:125vh;overflow:hidden;display:grid;place-items:center}
+.pv-scatter-copy{position:relative;z-index:3;text-align:center;max-width:40rem;padding:0 1.25rem}
+.pv-scatter-copy .pv-sub{margin-left:auto;margin-right:auto}
+.pv-float{position:absolute;z-index:1;will-change:transform}
+.pv-float img{display:block;width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -28px rgba(0,0,0,.9)}
+.pv-code{font:500 .76rem/1.5 var(--font-geist-mono,ui-monospace),monospace;color:#d9d5dc;padding:10px 12px;border-radius:10px;background:rgba(18,15,17,.85);border:1px solid rgba(255,255,255,.1);white-space:pre;box-shadow:0 20px 40px -24px rgba(0,0,0,.9)}
+.pv-code b{color:var(--pv2-violet);font-weight:500}.pv-code i{color:var(--pv2-teal);font-style:normal}.pv-code u{color:var(--pv2-coral);text-decoration:none}
+html:not(.dark) .pv-code{background:#fff;color:#2b2326;border-color:rgba(0,0,0,.1)}
+@media (max-width:767px){.pv-scatter{min-height:110vh}.pv-float.hide-m{display:none}}
+
+/* ---------- 10) cursor polish (extends the site's own dot + ring) ---------- */
+.site-cursor-ring{transition:scale .35s var(--pv2-ease),border-color .3s,background-color .3s}
+.site-cursor-dot{transition:scale .25s var(--pv2-ease)}
+html.pv-cur-link .site-cursor-ring{scale:1.9;border-color:rgba(255,143,128,.9);background-color:rgba(226,71,90,.08)}
+html.pv-cur-link .site-cursor-dot{scale:.5}
+html.has-site-cursor input,html.has-site-cursor textarea,html.has-site-cursor select,html.has-site-cursor [contenteditable]{cursor:auto}
+html.has-site-cursor input[type=text],html.has-site-cursor input[type=email],html.has-site-cursor textarea{cursor:text}
+
+/* ---------- typography, focus, footer refinements ---------- */
+#content h2,.pv-h2{text-wrap:balance;letter-spacing:-.012em}
+#content p{text-wrap:pretty}
+.pv-kicker,.pv-tag{font-feature-settings:"ss01"}
+:where(a,button,[role=button],summary,input,select,textarea,[tabindex]):focus-visible{outline:2px solid var(--pv2-coral);outline-offset:3px;border-radius:8px;box-shadow:0 0 0 6px rgba(226,71,90,.18)}
+html:not(.dark) :where(a,button,[role=button],summary,input,select,textarea,[tabindex]):focus-visible{outline-color:#b4233a;box-shadow:0 0 0 6px rgba(180,35,58,.14)}
+footer.relative{position:relative;overflow:hidden;z-index:14}
+footer.relative::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(226,71,90,.7),rgba(167,139,250,.6),rgba(45,212,191,.5),transparent)}
+footer.relative::after{content:"Mens Mercatus";position:absolute;left:50%;bottom:-.18em;transform:translateX(-50%);white-space:nowrap;pointer-events:none;z-index:0;
+  font-family:var(--font-serif,Georgia),Georgia,serif;font-size:clamp(4rem,15vw,13rem);line-height:1;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06)}
+html:not(.dark) footer.relative::after{-webkit-text-stroke-color:rgba(0,0,0,.06)}
+footer.relative > *{position:relative;z-index:1}
+footer.relative a{background-image:linear-gradient(currentColor,currentColor);background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .45s var(--pv2-ease),color .3s}
+footer.relative a:hover{background-size:100% 1px}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html.pv-preload body::before{display:none}
+  .pv-pill{transition:none}.pv-pill .dot{animation:none}
+  html.dark.pv-js2 body,.pv-stack{transition:none}
+  .site-cursor-ring,.site-cursor-dot{transition:none}
+}
+
+/* every home section is an opaque layer in DOM order, so stuck ("deck") sections never show through */
+html .pv-layer{z-index:var(--pv-z,10);background:var(--pv-bg,var(--background))}
+html .pv-layer:not(.pv-stack){position:relative}
+html:not(.dark) .pv-layer{background:var(--background)}
+html.dark .pv-layer{transition:background-color .9s var(--pv2-ease)}
+/* pinned horizontal section fills the viewport (nothing peeks below it), content centred under the nav */
+@media (min-width:768px){
+  html.pv-pin .pv-hz{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:3.5rem}
+  html.pv-pin .pv-hz-head{padding-top:0}
+}

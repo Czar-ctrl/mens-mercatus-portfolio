@@ -1,0 +1,3 @@
+*.local
+.env.local
+clickup/config.json
